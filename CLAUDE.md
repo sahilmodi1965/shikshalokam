@@ -1,6 +1,6 @@
 # CLAUDE.md — ShikshaLokam brain
 
-Read [`INTENT.md`](./INTENT.md) first. It defines who this brain serves, the roles, and the immutable principles that govern every session here. This file does not duplicate INTENT.md — it names cadence and operating reminders.
+Read [`INTENT.md`](./INTENT.md) first (who this brain serves, roles, immutable principles). Then [`ARCHITECTURE.md`](./ARCHITECTURE.md) (how the brain organises state, sessions, and learnings). This file does not duplicate either — it names cadence and operating reminders.
 
 ## Cadence
 
