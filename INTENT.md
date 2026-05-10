@@ -25,3 +25,4 @@ These are the immutable principles of how this brain operates. They change only 
 4. **Sessions integrate, they don't append.** Dropped content reconciles into structure, not silently absorbed.
 5. **No ghost features.** Nothing builds that wasn't asked for. Ideas queue for maintainer review.
 6. **Feedback is structural, not vibes.** A "this output isn't right" → ask whether the brain is mis-shaped or this is one-off. If mis-shaped, the brain changes.
+7. **Brains stay separate.** ShikshaLokam and Mantra4Change share architecture but never share content, voice, audience assumptions, or session state. Cross-brain mentions are explicitly named and sourced, never transplanted as fact.
