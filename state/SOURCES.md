@@ -32,6 +32,11 @@ Running index of every source consulted. Every claim in `state/*.md` cites one o
 - No 2025–2026 annual report or impact report fetched (likely exists; not surfaced this pass).
 - No state-level partner pilots named.
 
+## 2026-05-13 added by Sahil — caption voice enrichment (first user-supplied source)
+
+- [SM Captions 2025-26](https://docs.google.com/document/d/1CBg6cYWPg-_r-HjU6ZCkjoRVYld6gpo_SKqN68wwEeQ/edit) — a year of social captions Sonal authored for ShikshaLokam (Jun 2025 → Mar 2026, ~150–180 distinct posts). Canonical for caption voice; pulled into `state/voice.md` "Caption form" section. Owner: ayushtank@shikshalokam.org. *Fetched 2026-05-13 via Drive MCP.*
+- Second captions doc — Google Doc id `1dc38xR0t8sPMgBb1FJiOjjqeSol5dDL2Tyk5ikz6n5w`. Sonal shared this URL on 2026-05-13 but Drive access from Sahil's maintainer account returned "not found." Pending re-share before it can be sourced.
+
 ## How this file evolves
 
 Append new sources with a `## YYYY-MM-DD added by …` heading. Keep old entries even when superseded — provenance matters. When a source is fetched again, update its `*Fetched …*` line in place.
