@@ -19,7 +19,7 @@ Auto-injected at every session start. Budget ≤ 1,500 tokens (per `TOKEN_BUDGET
 
 ## Voice
 
-- [[voice/styleguide]] — *(canonical voice rules will come from Komal's brief; currently research-seeded)*
+- [[voice/styleguide]] — *(canonical voice rules will come from Sonal's brief; currently research-seeded)*
 - [[voice/exemplars/khushboo-newsletter-jan2024]] — *user-validated.* Khushboo's year-end newsletter: opening story-phrase, named-leader-zoom-in, three-line triplet sign-off, *har kadam shiksha ki oar..!* tagline, dandelion identity language.
 
 ## Sources (where claims come from)
@@ -36,4 +36,4 @@ Auto-injected at every session start. Budget ≤ 1,500 tokens (per `TOKEN_BUDGET
 
 ## Recent compile log
 
-See [[log]] for the append-only structural changes log. See `/LEDGER.md` for the chronological session record (what Komal did with the brain).
+See [[log]] for the append-only structural changes log. See `/LEDGER.md` for the chronological session record (what Sonal did with the brain).

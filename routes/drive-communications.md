@@ -56,4 +56,4 @@ This is the Shikshagraha communications nerve centre. ShikshaLokam is the organi
 
 ## How this brain uses these routes
 
-When Komal asks the brain a question about content history ("what's our positioning on women leadership?"), the brain first checks `wiki/sources/` and `wiki/concepts/`. If not found, the brain surfaces this route ("see the Strategy & Plans folder") rather than refetching. Monthly enrichment by Sahil pulls fresh material into `wiki/` with citations.
+When Sonal asks the brain a question about content history ("what's our positioning on women leadership?"), the brain first checks `wiki/sources/` and `wiki/concepts/`. If not found, the brain surfaces this route ("see the Strategy & Plans folder") rather than refetching. Monthly enrichment by Sahil pulls fresh material into `wiki/` with citations.

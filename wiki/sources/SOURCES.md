@@ -35,7 +35,7 @@ Running index of every source consulted. Every claim in `state/*.md` cites one o
 
 ## Known gaps in seeding
 
-- No insider documents or maintainer-shared URLs — Sahil's choice: Komal seeds insider context herself in onboarding.
+- No insider documents or maintainer-shared URLs — Sahil's choice: Sonal seeds insider context herself in onboarding.
 - No fetch of regional-language material.
 - No video / talk transcripts.
 - No funder-side material beyond SFPI references.

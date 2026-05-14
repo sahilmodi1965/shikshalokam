@@ -4,13 +4,13 @@ This repository is the **ShikshaLokam content brain** for the Shikshagraha movem
 
 ## Who this serves
 
-- **Brain user (daily):** Komal — `sonal@shikshalokam.org`. Drops, asks, refines. Does not restructure.
+- **Brain user (daily):** Sonal — `sonal@shikshalokam.org`. Drops, asks, refines. Does not restructure.
 - **Maintainers:** Sahil Modi (lead, $200), Sahid Modi ($20). Shape the brain, decide structure, run heavy work on their accounts.
 - **Movement:** Shikshagraha. ShikshaLokam is the organisation building the movement (analogy: INC was to Satyagraha what ShikshaLokam is to Shikshagraha). This brain serves both the org and the movement.
 
 ## Roles
 
-- **Brain user** — Komal, on a $20 Claude plan. Feeds and uses the brain daily for content output. Sessions stay focused and light.
+- **Brain user** — Sonal, on a $20 Claude plan. Feeds and uses the brain daily for content output. Sessions stay focused and light.
 - **Maintainers** — Sahil ($200 plan) and Sahid ($20 plan). Research seeds, indexing, refactors, repurposing. Heavy ops live on maintainer accounts so user sessions don't pay for them.
 - **Claude Code** — executes within the frame the maintainers set. Surfaces ambiguity, never silently restructures, never invents features.
 - **Future contributors** (e.g. a tech head) — join as maintainers via explicit handover. Roles expand; they do not collapse.

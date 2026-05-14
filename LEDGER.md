@@ -11,7 +11,7 @@ This file is the **proof the brain compounded**. If a session ended with no entr
 ## How an entry looks
 
 ```
-## 2026-05-14 14:23 UTC — Komal — bihar-chaupal-linkedin
+## 2026-05-14 14:23 UTC — Sonal — bihar-chaupal-linkedin
 
 - **Asked:** 250-word LinkedIn post on Charan, a child at the Hirehalli Shiksha Chaupal
 - **Produced:** drafts/2026-05-14-bihar-chaupal.md (review-ready)
@@ -75,6 +75,6 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
   - `wiki/index.md` populated with real entries (replaces the migration stub).
   - `SHOWCASE.md` written at brain root — the single human-readable page anyone can scroll to see this brain working.
 - **Learned:** Comms Strategy doc currently a stub (objectives + audience segments only); worth maintainer enrichment. Khushboo Awasthi appears in BOTH brains' leadership (this brain's COO + Mantra4Change's Co-Founder) — cross-brain references must explicitly name her dual role per INTENT principle 7.
-- **Status changes:** none yet — Komal's session-driven validation flips state as she uses the brain.
+- **Status changes:** none yet — Sonal's session-driven validation flips state as she uses the brain.
 - **Sources touched:** [[shikshagraha-narrative-2026]] [[shikshagraha-brief-collaterals-feb2026]] [[khushboo-newsletter-jan2024]]
-- **Note:** This is the first real enrichment after migration. Next enrichment is monthly (Sahil $200 plan); next weekly review is Fri May 23 with Sahid + Komal. The brain is now ready for Komal to test in a fresh terminal session.
+- **Note:** This is the first real enrichment after migration. Next enrichment is monthly (Sahil $200 plan); next weekly review is Fri May 23 with Sahid + Sonal. The brain is now ready for Sonal to test in a fresh terminal session.

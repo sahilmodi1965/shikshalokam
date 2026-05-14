@@ -41,4 +41,4 @@ Khushboo Awasthi is publicly Co-Founder & COO of **both** ShikshaLokam and Mantr
 - Identify the rest of the senior team (heads of programs, tech, partnerships)
 - Confirm whether Anita Karwal is current advisor / board / external
 - Roles for Rhea Mendiratta and Neeraj Doddamane
-- Komal's own role and how she should be described in content output
+- Sonal's own role and how she should be described in content output

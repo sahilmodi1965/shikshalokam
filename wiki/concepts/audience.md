@@ -10,7 +10,7 @@ _status: research-seeded
 
 # Audience
 
-Who ShikshaLokam's content speaks to. Inferred from homepage and welcomeaboard messaging — needs Komal's confirmation.
+Who ShikshaLokam's content speaks to. Inferred from homepage and welcomeaboard messaging — needs Sonal's confirmation.
 
 ## Primary audiences (by site framing)
 
@@ -22,13 +22,13 @@ Who ShikshaLokam's content speaks to. Inferred from homepage and welcomeaboard m
 
 ## Implied audience for content output
 
-The brain user (Komal) likely produces content aimed at:
+The brain user (Sonal) likely produces content aimed at:
 
 - **Practitioner audiences** (school leaders, district officials) — case studies, framing notes, peer-learning material
 - **Ecosystem audiences** (CSO partners, philanthropy) — convening invitations, movement updates, awards announcements
 - **Government counterparts** — formal communications, pilot proposals, MoU framing
 
-This split is **inferred, not user-validated.** Komal should confirm or correct.
+This split is **inferred, not user-validated.** Sonal should confirm or correct.
 
 ## Sensitivities
 

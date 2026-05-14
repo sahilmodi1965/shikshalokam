@@ -66,4 +66,4 @@ A long-form year-end newsletter signed by Khushboo Awasthi (Co-founder & COO, Sh
 
 ## How `shikshalokam-write` uses this
 
-For any Komal-driven newsletter, year-end letter, or stakeholder communication, draft to this rhythm: open with a unifying story phrase, name a leader/parent/student concretely, zoom out to numbers AFTER the story, close with the triplet + tagline. Keep ShikshaLokam's role visible without inflating — Sl provides the platform, the leaders carry the change.
+For any Sonal-driven newsletter, year-end letter, or stakeholder communication, draft to this rhythm: open with a unifying story phrase, name a leader/parent/student concretely, zoom out to numbers AFTER the story, close with the triplet + tagline. Keep ShikshaLokam's role visible without inflating — Sl provides the platform, the leaders carry the change.

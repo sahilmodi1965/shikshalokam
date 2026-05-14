@@ -60,7 +60,7 @@ Foundational Learning and Numeracy / Career Readiness Program / Early Childhood 
 
 ## How this brain uses it
 
-For ShikshaLokam: when Komal asks for any pitch collateral, this brief is the **structural template**. "Current numbers" → these (most recent visible). The Samaj-Sarkaar-Bazaar-Sanchar paragraph is canonical phrasing.
+For ShikshaLokam: when Sonal asks for any pitch collateral, this brief is the **structural template**. "Current numbers" → these (most recent visible). The Samaj-Sarkaar-Bazaar-Sanchar paragraph is canonical phrasing.
 
 ## Cross-references
 

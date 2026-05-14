@@ -12,7 +12,7 @@ If you are the daily user, you do not need to read this file. Open Claude Code, 
 
 - **Brand:** ShikshaLokam
 - **Movement / context:** Shikshagraha
-- **Daily user:** Komal (sonal@shikshalokam.org)
+- **Daily user:** Sonal (sonal@shikshalokam.org)
 - **Maintainers:** Sahil Modi (lead, $200), Sahid Modi ($20)
 - **Scaffolded from council revision:** content-brain-v1-2026-05-14 on 2026-05-14
 - **Brain config:** see `brain.yml` — `chat_shield`, `output_channel`, `compile_step`, `weekly_review_day`
@@ -115,7 +115,7 @@ The daily user is non-technical and never sees the ops layer. Apply all rules ab
 - **Handoff language:** *"I'll flag this — next time you ask about this, it'll be sharper."* That is the only hint the user gets that there's a separate fix process.
 - **The brain is read-only in the user's session at the prompt layer.** Daily user can chat freely; compile-step writes elsewhere.
 
-Brains where `chat_shield: false` (Pratik, Komal): the user CAN see paths, CAN ask "what's in voice.md," CAN read the brain. Transparency is the interface. Apply the rules above without the shielding clauses.
+Brains where `chat_shield: false` (Pratik, Sonal): the user CAN see paths, CAN ask "what's in voice.md," CAN read the brain. Transparency is the interface. Apply the rules above without the shielding clauses.
 
 ---
 

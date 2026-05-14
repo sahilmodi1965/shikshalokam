@@ -23,4 +23,4 @@ The SoW (May–September 2026) calls out "long-form outputs (e.g. coffee table b
 
 ## How the brain uses this
 
-When Komal asks "draft me a coffee table book entry for [leader name]," the brain pulls the V3 template, fills it from `wiki/` content, and produces a draft conforming to the format.
+When Sonal asks "draft me a coffee table book entry for [leader name]," the brain pulls the V3 template, fills it from `wiki/` content, and produces a draft conforming to the format.

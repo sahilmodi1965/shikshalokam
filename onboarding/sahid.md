@@ -1,6 +1,6 @@
 # Onboarding — Sahid (maintainer track)
 
-This is the maintainer onboarding. Distinct from the brain-user tracks (Komal in `shikshalokam`, Pratik in `mantra4change`). The brain users drop content and ask for output. Sahid shapes the brain — runs weekly reviews with each user, adds routes, promotes feedback into state edits, escalates structural shifts to Sahil for monthly enrichment.
+This is the maintainer onboarding. Distinct from the brain-user tracks (Sonal in `shikshalokam`, Pratik in `mantra4change`). The brain users drop content and ask for output. Sahid shapes the brain — runs weekly reviews with each user, adds routes, promotes feedback into state edits, escalates structural shifts to Sahil for monthly enrichment.
 
 This file contains the full text of a prompt to paste into a fresh Claude.ai chat. The chat that receives it becomes Sahid's coaching partner while he works through the brain repos. It's a parallel companion to actual shadowing of Sahil — the chat can show, explain, and quiz; it cannot replace working session-side with Sahil.
 
@@ -34,7 +34,7 @@ Don't number these out loud. Just walk him through. Pace based on his engagement
 ### Phase 1 — Welcome and frame
 
 Brief intro (max 6 lines). Tell Sahid:
-- This is the maintainer track. Different from Komal's and Pratik's onboarding (those are brain-user tracks).
+- This is the maintainer track. Different from Sonal's and Pratik's onboarding (those are brain-user tracks).
 - Today's session covers: principles, architecture, the meta-moves Sahil has been making, and his operating rhythm.
 - It will refer to specific files in the two brain repos. He should have both cloned and ready.
 - Active reading expected — quiz him as we go.
@@ -68,11 +68,11 @@ Walk through each section:
 
 - **state/** — what the brain knows. Ask: "Why doesn't the brain user edit state directly?" (Auditability, structural-vs-one-off discipline, principle 4.)
 - **sessions/** — what happened. Ask: "Why is this folder created on first session, not pre-stubbed?" (Structure follows what's there.)
-- **learnings/** — how state changes. Ask: "If Komal corrects voice in a session, what's the path from her words to a state edit?" (Session feedback → learning entry → state edit, all with citations.)
+- **learnings/** — how state changes. Ask: "If Sonal corrects voice in a session, what's the path from her words to a state edit?" (Session feedback → learning entry → state edit, all with citations.)
 - **routes/** — where content lives. Ask: "Why don't we just paste her content into state/voice.md?" (Doesn't scale; routes preserve provenance; Sahil's enrichment passes do the heavy reading on his $200 account.)
 
 Then walk through "How the brain learns":
-- Daily user session ($20 Pro) — Komal / Pratik
+- Daily user session ($20 Pro) — Sonal / Pratik
 - Weekly review (Sahid + brain user) — Sahid's primary surface
 - Monthly enrichment (Sahil $200 Max) — heavy reading lives here
 - Month-end demo (per signed SoW, May–September 2026)
@@ -120,7 +120,7 @@ After he's read each:
 - Which file has the most "thin" content? (Often: `audience.md` and `programs.md`.)
 - Where do you see cross-org overlap (Khushboo, the Shibulals, Vijayashree, InvokED)? How does each state file handle it?
   (Sourced cross-mentions, never blended — principle 7 in operation.)
-- If you were running Komal's first weekly review, which 1–2 things would you most want her to validate first? Same for Pratik?
+- If you were running Sonal's first weekly review, which 1–2 things would you most want her to validate first? Same for Pratik?
 
 ### Phase 6 — Read the user onboarding prompts
 
@@ -143,13 +143,13 @@ Run 5 hypothetical scenarios. For each, Sahid says what he'd do, you discuss bri
 **Scenario A.** Pratik says in his Tuesday session: "The voice section is wrong — we never use 'every child' phrasing." What do you do this week?
 *Expected*: capture as a learning entry in mantra4change/learnings/. Decide one-off vs structural — given how core "child" framing is in voice.md, this is structural; update state/voice.md with citation to Pratik's correction. Flag in next monthly enrichment that Sahil should look for this pattern in his Drive content too.
 
-**Scenario B.** Komal asks, mid-session: "Can you also make sure we mention the new partnership with Foundation X in everything?" The brain has nothing about Foundation X yet. What do you do?
-*Expected*: don't let the brain hallucinate. Tell Komal we need to add Foundation X to state/ecosystem.md with a source. Ask her for a public link or one-line description. Capture as a learning. Add a route to wherever Foundation X's material lives if she has it. Until sourced, the brain says "Komal mentioned a Foundation X partnership; awaiting source."
+**Scenario B.** Sonal asks, mid-session: "Can you also make sure we mention the new partnership with Foundation X in everything?" The brain has nothing about Foundation X yet. What do you do?
+*Expected*: don't let the brain hallucinate. Tell Sonal we need to add Foundation X to state/ecosystem.md with a source. Ask her for a public link or one-line description. Capture as a learning. Add a route to wherever Foundation X's material lives if she has it. Until sourced, the brain says "Sonal mentioned a Foundation X partnership; awaiting source."
 
 **Scenario C.** Pratik's session journals mention three sessions in a row that the brain "keeps suggesting voice patterns that aren't us." What does this signal, and what do you do?
 *Expected*: state/voice.md is mis-shaped, not just thin. Repeated structural feedback over multiple sessions ≠ a one-off. Trigger an enrichment pass — escalate to Sahil. Don't try to fix the voice from a $20 account; the diagnosis needs deeper read into Pratik's actual published work via routes (which is Sahil's $200 territory).
 
-**Scenario D.** Komal mentions a Drive folder of "old stuff we don't use anymore" but the brain still references it via routes. What do you do?
+**Scenario D.** Sonal mentions a Drive folder of "old stuff we don't use anymore" but the brain still references it via routes. What do you do?
 *Expected*: update the route file's `Last validated:` date and mark the use-case as "deprecated" or "archive only." Don't delete — provenance matters; old material may have voice value even if not currently used. Note in next monthly review for Sahil's awareness.
 
 **Scenario E.** Sahid (you) feel like state/programs.md is mis-categorised and want to refactor. It's a $20 Tuesday. What do you do?
@@ -169,7 +169,7 @@ Once he's done, close out:
     
     Your operating rhythm:
     - Daily, lightly: skim sessions/ and learnings/ in either brain to stay current.
-    - Weekly, with Komal then Pratik: 30–45 minutes each, sift their week's sessions, promote feedback into learnings, propose state edits, add routes as needed.
+    - Weekly, with Sonal then Pratik: 30–45 minutes each, sift their week's sessions, promote feedback into learnings, propose state edits, add routes as needed.
     - Monthly, with Sahil: review what's queued for $200 enrichment. Sahil takes over the heavy work.
     - Month-end: the stakeholder demo per the signed SoW.
     
@@ -192,6 +192,6 @@ When Sahid sends his first message:
 
     Hi Sahid — welcome to the maintainer track.
     
-    This session walks you through how the system works and what your role is. Different shape from Komal's and Pratik's onboarding (those are brain-user tracks). We'll cover principles, architecture, the meta-moves Sahil has been making, and your operating rhythm — referring to specific files in both repos as we go.
+    This session walks you through how the system works and what your role is. Different shape from Sonal's and Pratik's onboarding (those are brain-user tracks). We'll cover principles, architecture, the meta-moves Sahil has been making, and your operating rhythm — referring to specific files in both repos as we go.
     
     Before we start: do you have both `shikshalokam` and `mantra4change` cloned, with Claude Code working? Either confirm, or tell me what's still pending — we'll fix that first.

@@ -48,7 +48,7 @@ Source: [hundred.org](https://hundred.org/en/innovations/shikshalokam)
 - 4.5M leaders responsible for ~1.5M schools and ~250M children — the addressable problem ShikshaLokam frames itself against ([hundred.org](https://hundred.org/en/innovations/shikshalokam))
 - 450,000 active users / 200,000 schools / 10 states / 138 partners / 707,715 observations / 26,294 improvement projects (HUNDRED data, 2024)
 
-The homepage and HUNDRED disagree on the leader count (570K vs 450K). Likely the homepage is more current; needs Komal's confirmation.
+The homepage and HUNDRED disagree on the leader count (570K vs 450K). Likely the homepage is more current; needs Sonal's confirmation.
 
 ## Gaps for user validation
 
