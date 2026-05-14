@@ -1,5 +1,12 @@
-_status: research-seeded — awaiting user validation. Caption form section (below) is user-sourced from Sonal._
-_last updated: 2026-05-13_
+---
+type: voice
+title: "Voice"
+sources: ["[[SOURCES]]"]
+corrected_by: []
+created: 2026-05-14
+updated: 2026-05-13
+_status: research-seeded
+---
 
 # Voice
 

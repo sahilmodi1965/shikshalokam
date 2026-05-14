@@ -1,0 +1,42 @@
+schema_version: 1
+
+brand:
+  name: "ShikshaLokam"
+  slug: "shikshalokam"
+  movement: "Shikshagraha"   # null for standalone brains
+
+users:
+  daily:
+    - name: "Komal"
+      email: "sonal@shikshalokam.org"
+      plan: "$20"
+  maintainers:
+    - name: "Sahil Modi"
+      email: "modi.sahil.im@gmail.com"
+      plan: "$200"
+    - name: "Sahid Modi"
+      plan: "$20"
+
+config:
+  # When true, apply CLAUDE.md chat-shield rules — no paths, no flags, no technical terms surface to the daily user. Use for non-technical users (Mehr). When false, the user can read state files directly (Pratik, Komal).
+  chat_shield: false
+
+  # Where produced drafts land. "none" = drafts only in chat (no archive).
+  # "github-pages" = output/ + Pages workflow stub (requires repo admin to flip toggles).
+  # "drive" = drafts written via MCP to the user's Drive folder (requires MCP connection).
+  output_channel: "none"   # github-pages | drive | none
+
+  # Compile-step state. "deferred" = schema enforced, no subprocess runs. "active" = tools/compile.py runs on raw/ changes.
+  compile_step: "deferred"       # deferred | active
+
+  # Day of week for the Friday review ritual.
+  weekly_review_day: "friday"  # monday..sunday
+
+  # INTENT principle 7 enforcement. When true, lint blocks reads of sibling brain repos.
+  cross_brain_wall: true
+
+  # The single growing artefact at root. Always on; flag exists for future opt-out only.
+  ledger: true
+
+  # Token budget profile. "tight" = $20-plan defaults (TOKEN_BUDGET.md). "loose" = maintainer-only sessions.
+  budget_profile: "tight"

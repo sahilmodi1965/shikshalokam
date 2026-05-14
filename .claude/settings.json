@@ -1,11 +1,121 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "_comment": "ShikshaLokam brain — permission asymmetry + LEDGER-enforcing hooks. Permissions are tiered: daily user (chat_shield=false) writes only to raw/, output/, learnings/, LEDGER.md, and (if chat_shield: false) wiki/sources/. Compile-step writes to wiki/{sources,entities,concepts,synthesis,_index}/index.md/log.md. Voice (wiki/voice/**) is denied to compile-step; only brain-feedback (with user confirmation) and maintainer commits may touch it. SessionStart pulls origin/main; SessionEnd verifies LEDGER was touched, then auto-commits and pushes.",
+  "permissions": {
+    "defaultMode": "bypassPermissions",
+    "allow": [
+      "Read(./**)",
+      "Write(./raw/**)",
+      "Write(./output/**)",
+      "Write(./learnings/**)",
+      "Write(./LEDGER.md)",
+      "Write(./wiki/sources/**)",
+      "Write(./wiki/entities/**)",
+      "Write(./wiki/concepts/**)",
+      "Write(./wiki/synthesis/**)",
+      "Write(./wiki/_index/**)",
+      "Write(./wiki/index.md)",
+      "Write(./wiki/log.md)",
+      "Write(./routes/**)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:origin main)",
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git pull:*)",
+      "Bash(git fetch:*)",
+      "Bash(git show:*)",
+      "Bash(git tag:*)",
+      "Bash(pwd)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(date)",
+      "Bash(grep:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(wc:*)",
+      "Bash(pdftotext:*)"
+    ],
+    "ask": [],
+    "deny": [
+      "Write(./wiki/voice/**)",
+      "Edit(./wiki/voice/**)",
+      "Write(./INTENT.md)",
+      "Write(./CLAUDE.md)",
+      "Write(./ARCHITECTURE.md)",
+      "Write(./AGENTS.md)",
+      "Write(./TOKEN_BUDGET.md)",
+      "Write(./brain.yml)",
+      "Edit(./INTENT.md)",
+      "Edit(./CLAUDE.md)",
+      "Edit(./ARCHITECTURE.md)",
+      "Edit(./AGENTS.md)",
+      "Edit(./TOKEN_BUDGET.md)",
+      "Edit(./brain.yml)",
+
+      "Bash(git push:*--force*)",
+      "Bash(git push:*-f*)",
+      "Bash(git reset:*--hard*)",
+      "Bash(git rebase:*-i*)",
+      "Bash(git branch:*-D*)",
+      "Bash(git branch:*--delete*)",
+      "Bash(git checkout:*--orphan*)",
+      "Bash(git clean:*)",
+      "Bash(git filter-branch:*)",
+      "Bash(git update-ref:*)",
+
+      "Bash(rm:*)",
+      "Bash(rmdir:*)",
+      "Bash(sudo:*)",
+      "Bash(su:*)",
+      "Bash(chmod:*)",
+      "Bash(chown:*)",
+
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(ssh:*)",
+      "Bash(scp:*)",
+      "Bash(rsync:*)",
+
+      "Bash(brew:*install*)",
+      "Bash(brew:*uninstall*)",
+      "Bash(npm:*install*)",
+      "Bash(pip:*install*)",
+      "Bash(pip3:*install*)",
+      "Bash(pipx:*)",
+      "Bash(gem:*install*)",
+      "Bash(cargo:*install*)",
+      "Bash(apt:*)",
+      "Bash(apt-get:*)",
+
+      "Bash(docker:*)",
+      "Bash(kubectl:*)",
+      "Bash(terraform:*)",
+      "Bash(gcloud:*)",
+      "Bash(aws:*)",
+      "Bash(az:*)",
+
+      "Bash(gh auth:*)",
+      "Bash(gh repo delete:*)",
+      "Bash(gh repo edit:*)",
+      "Bash(gh repo archive:*)",
+      "Bash(gh secret:*)",
+      "Bash(gh workflow:*)",
+      "Bash(gh api:*DELETE*)",
+      "Bash(gh api:*PUT*)",
+      "Bash(gh pr close:*)",
+      "Bash(gh pr delete:*)"
+    ]
+  },
   "hooks": {
     "SessionStart": [
       {
+        "matcher": "*",
         "hooks": [
           {
             "type": "command",
-            "command": "git pull --ff-only origin main 2>&1 || true",
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" 2>/dev/null && git fetch origin main --quiet 2>/dev/null && [ -z \"$(git status --porcelain)\" ] && git pull --rebase --quiet origin main 2>/dev/null || true",
             "timeout": 20
           }
         ]
@@ -13,10 +123,11 @@
     ],
     "SessionEnd": [
       {
+        "matcher": "*",
         "hooks": [
           {
             "type": "command",
-            "command": "if [ -n \"$(git status --porcelain 2>/dev/null)\" ]; then git add -A && git commit -m \"session: auto-commit at session end ($(date -u +%Y-%m-%dT%H:%M:%SZ))\"; fi; git push origin main 2>&1 || true",
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" 2>/dev/null && TODAY=$(date -u +%Y-%m-%d) && if [ -n \"$(git status --porcelain 2>/dev/null)\" ]; then if ! head -50 LEDGER.md 2>/dev/null | grep -q \"^## ${TODAY}\"; then echo 'WARN: SessionEnd — no LEDGER.md entry for today. INTENT principle 2 may have been violated. Commit will proceed but brain-lint will flag.'; fi; git add -A && git commit -m \"session: $(date -u +%Y-%m-%dT%H:%M:%SZ)\" -q && git push origin main 2>&1 || true; fi",
             "timeout": 60
           }
         ]

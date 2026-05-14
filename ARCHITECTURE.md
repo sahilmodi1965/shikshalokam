@@ -1,102 +1,122 @@
 # ARCHITECTURE — ShikshaLokam brain
 
-This brain organises four things: **state**, **session**, and **learning**, plus **routes** to where content lives outside the repo.
+This brain organises four things: **state**, **session**, **learning**, **route** — plus the **LEDGER** as the single growing chronological surface.
 
-## `state/`
+## `wiki/` — state
 
-What the brain knows about ShikshaLokam. Long-running. Updated by user-validated corrections, never silently overwritten. Read by every session as context.
+What the brain knows about ShikshaLokam. Typed, frontmatter-contracted, `_status:`-tracked. Read by every session as context, via the index (never globbed).
 
-Initial files (may grow):
+### Five layers
 
-- `mission.md` — what the org exists for, scope, theory of change
-- `voice.md` — how this org sounds (tone, register, recurring phrases, what it avoids), with quoted samples + source URLs
-- `audience.md` — who the content speaks to (segments, intent, sensitivities)
-- `programs.md` — current initiatives, status, framing
-- `ecosystem.md` — partners, funders, peers, where this org sits in the wider field
-- `leadership.md` — who runs the org, public roles, public posture
-- `SOURCES.md` — running index of every source consulted, with last-fetched date
+| Layer | Path | What it holds | Body shape (fixed by `AGENTS.md`) |
+|---|---|---|---|
+| **sources** | `wiki/sources/<slug>.md` | One file per ingested source (PDF, URL, transcript, paste). Faithful extraction, no interpretation. | Faithful body, no synthesis. |
+| **entities** | `wiki/entities/<kebab>.md` | One file per named thing (person, partner, program, audience segment). | One-line definition / Key facts (cited) / Relationships / Open questions. |
+| **concepts** | `wiki/concepts/<kebab>.md` | One file per idea, framework, claim, or recurring theme. | TL;DR (≤80w) / Why it matters for ShikshaLokam / Supporting sources / Related concepts / Contradictions. |
+| **synthesis** | `wiki/synthesis/<kebab>.md` | Cross-cutting angles that connect multiple concepts and entities into a reusable POV. | The angle / Evidence trail / Counter-angle / Post hooks. |
+| **voice** | `wiki/voice/styleguide.md` + `wiki/voice/exemplars/` | Always/Never rules, words-we-use / words-we-avoid, supporting samples. Hand-curated. | Free-form, but each rule cites at least one exemplar. |
 
-Each state file declares its current `_status:_` at the top:
+### Frontmatter contract (every file)
 
-- `research-seeded — awaiting user validation` — initial; treat as provisional
-- `user-validated` — user has confirmed or corrected; treat as authoritative
-- `stale — needs revisit` — flagged downstream; queued for next maintainer pass
+```yaml
+---
+type: source | entity | concept | synthesis | voice
+title|name: "<canonical>"
+sources: [[s1]], [[s2]]   # empty list for type: source
+corrected_by: [issue-42, learnings/2026-05-12-pratik-pdf-stitched]
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+_status: research-seeded | user-validated | stale
+---
+```
 
-## `sessions/`
+`brain-lint` enforces the contract at commit time. Missing fields, missing `_status:`, invalid `_status:` values, or illegal transitions fail the commit.
 
-Per-session log. Written at session end by Claude Code. Format: `YYYY-MM-DD-<short-handle>.md`. Each entry: what was dropped or asked, what was produced, what felt rough, anything the user pushed back on.
+### Index files (auto-injected at SessionStart)
 
-Sessions are append-only history. State-changing feedback within a session creates a corresponding `learnings/` entry rather than mutating state silently.
+- `wiki/index.md` — master index, ≤1,500 tokens. One line per entity / concept / synthesis. Updated by compile-step (or maintainer when compile-step is `deferred`).
+- `wiki/_index/topic-summaries.md` — graphrag-style community summaries, ≤1,500 tokens. Regenerated when topic clusters shift.
+- `wiki/log.md` — append-only compile-step audit log. **Not the LEDGER.** This logs what the compile-step did to `wiki/`; the LEDGER logs what the daily user did with the brain.
 
-This folder is created on first session — not pre-stubbed.
+## `LEDGER.md` — session
 
-## `learnings/`
+**The single artefact that grows over time.** See `LEDGER.md` itself for format. One entry per session. Newest at top. Append-only. Lint-enforced.
 
-Bridge between session feedback and state.
+This is the **demo surface**. Stakeholders read it. Successors read it. The maintainer reads it at weekly review.
 
-Each learning entry: `YYYY-MM-DD-<topic>.md`. Contents:
+## `learnings/` — learning
 
-1. What the user said (verbatim or close)
-2. Whether this is one-off or structural (per INTENT principle 6)
-3. If structural: which state file changed, what the change was, link to commit
-4. If one-off: noted, but no state change
+Bridge between session feedback and state. Each entry: `learnings/<YYYY-MM-DD>-<topic>.md`. Created by `brain-feedback` skill OR Claude at session end when correction surfaced. Contents:
 
-This folder is created on first learning — not pre-stubbed.
+1. What the user said (verbatim or close).
+2. Whether this is one-off or structural (per INTENT principle 6).
+3. If structural: which `wiki/` file changed, what the change was, link to commit (filled at promotion time).
+4. If one-off: noted, no state change.
 
-## `routes/`
+Promoted to state by `brain-weekly-review` skill. A learning that never lands in a `corrected_by:` frontmatter list is by definition one-off.
 
-Pointers from the brain to where content actually lives — Google Drive folders, Notion pages, public URLs. Routes are the bridge between the in-repo brain (curated, scannable) and the live workspace (dynamic, large).
+## `routes/` — pointer
 
-Each route file:
+Pointers from the brain to where content lives outside the repo (Drive folders, Notion pages, public URLs). One file per use-case: `routes/<purpose>.md`. Each:
 
-- Names the use-case (e.g., "voice references — long-form donor pitches")
-- Points to a folder URL and/or specific file URLs
-- Notes what each pointer is canonical for, with last-validated date
+- Names the use-case ("voice references — long-form donor pitches").
+- Points to folder URL(s) and/or specific file URL(s).
+- Notes what each pointer is canonical for, with last-validated date.
 
-Why routes exist: the brain can't scale by re-pasting content every session. Routes give it a curated directory of where content lives. With routes, the brain can:
+**Why routes exist:** the brain can't scale by re-pasting content every session. Routes let the brain answer "for that, see your X folder" without ingesting the world. Routes are maintained by maintainers; the daily user requests additions in weekly review.
 
-- Tell the user where to look ("for that register, see your donor-pitches folder")
-- Be enriched periodically — maintainer sessions read route targets and pull voice samples / program details into `state/` with citations
-- Survive content churn — when files move in Drive, the route updates; `state/` files stay stable
+## `raw/` — input
 
-Routes are **created during onboarding** (the brain user shares their working folders) and **maintained by maintainers** thereafter. The brain user does not edit routes directly; they request additions in weekly review.
+Daily-user drops, any format. Append-only daily file: `raw/<YYYY-MM-DD>.md`. Compile-step consumes; once compiled, raw is preserved for audit but not re-read.
 
-This folder is created when the first route is added — not pre-stubbed.
+## `output/` — produced drafts (opt-in)
+
+Only present if `brain.yml: output_channel != "none"`. Holds produced drafts. The LEDGER references files here.
+
+---
 
 ## How the brain learns
 
-The brain has multiple feedback loops, each on the right plan and at the right timing:
+Multi-loop, each on the right plan and the right cadence.
 
-**Daily — brain user, $20 Pro.** Komal opens Claude Code, reads `state/` and `routes/` lazily (only what's relevant, not upfront), drops or refers to content, asks for output, gives feedback in plain English, writes a `sessions/` entry at end. Never edits `state/` directly. Token budget is protected by lazy reads, routing to Drive instead of embedding, and short scannable state files.
+### Daily — daily user, $20 plan
+Opens Claude Code, reads `wiki/index.md` + `wiki/_index/topic-summaries.md` (auto-injected, ≤3K tokens), drops or refers to content, asks for output, gives feedback. Writes one LEDGER entry at end. Never edits `wiki/**.md` directly. Token budget protected by lazy reads, routing to Drive instead of embedding, and short scannable state files.
 
-**Weekly review — Sahid + brain user.** Sift `sessions/` and `learnings/`. Promote session feedback into learning entries; promote learnings into state-file edits. Add new routes as the working set evolves.
+### Weekly — Sahid + daily user, $20 plan
+**`friday` 30 minutes.** Runs `brain-weekly-review` skill. Sifts `LEDGER.md` (this week's entries) and `learnings/`. Promotes session feedback into learning entries; promotes structural learnings into `wiki/**.md` edits (with `corrected_by:` references). Adds new routes as the working set evolves. Flips `_status:` for files contradicted by newer material to `stale`.
 
-**Monthly enrichment — Sahil, $200 Max.** Reads route targets (Drive folders, fresh InvokED material, partner press, public reports). Pulls voice samples and ecosystem updates into `state/` with citation. Updates `SOURCES.md`. Refactors state taxonomy if patterns emerge. Heavy reading lives here — not in user sessions.
+### Monthly — Sahil, $200 plan
+Reads route targets (Drive folders, fresh org material, partner press, public reports). Pulls voice samples and ecosystem updates into `wiki/` with citations. Updates `wiki/sources/SOURCES.md`. Refactors `wiki/` taxonomy if patterns emerge. Heavy reading lives here — not in user sessions.
 
-**Month-end stakeholder demo** — per the signed SoW (May–September 2026).
+### Month-end stakeholder demo
+Per the signed SoW. Daily user drives. LEDGER is part of the demo material.
 
-**Cross-org events** (InvokED, awards, new partnerships) trigger ad-hoc enrichment passes — maintainer responsibility.
+### Cross-org events (multi-brain engagements)
+InvokED, awards, new partnerships trigger ad-hoc enrichment passes — maintainer responsibility.
 
-### Handoffs
+---
 
-- Brain user → Sahid (weekly review): "this isn't quite right" → `learnings/` entry → state edit
-- Sahid → Sahil (when needed): "we should pull voice samples from the donor folder" → enrichment pass
-- Maintainers → brain user: structural shifts arrive as a short brief before the next session
+## Handoffs
 
-### Takeovers
+- **Daily user → Sahid (weekly):** "this isn't quite right" surfaces in LEDGER, captured in `learnings/`, promoted to state edit if structural.
+- **Sahid → Sahil (when needed):** "we should pull voice samples from the donor folder" → enrichment pass.
+- **Maintainers → daily user:** structural shifts arrive as a short brief before the next session (sometimes pinned in the LEDGER as a maintainer-authored entry).
 
-- Sahid can run enrichment on his $20 account for urgent / small items, with explicit awareness of token cost
-- Future tech-head contributors join as maintainers via explicit handover; roles expand, never collapse (per INTENT principle 3)
+## Takeovers
+
+- Sahid can run enrichment on his $20 account for urgent / small items, with explicit awareness of token cost.
+- Future tech-head contributors join as maintainers via explicit handover; roles expand, never collapse (per INTENT principle 3).
 
 Research-seeded state becomes `user-validated` only when explicitly confirmed by the brain user (or a maintainer recording the confirmation in a learning).
 
 ## Why this shape
 
-The brain has three temporal modes plus one spatial pointer:
+The brain has four temporal modes plus one spatial pointer:
 
-- **State** — what's always true (until corrected). Read first.
-- **Sessions** — what happened. Append-only, never rewritten.
-- **Learnings** — how state changes. Audit trail of how the brain got smarter.
-- **Routes** — where content lives outside the repo. Where to look, not what is.
+- **State** (`wiki/`) — what's always true (until corrected). Read first, via index.
+- **Session** (`LEDGER.md`) — what happened, chronological. The single growing artefact. Append-only.
+- **Learning** (`learnings/`) — how state changes. Audit trail of how the brain got smarter.
+- **Route** (`routes/`) — where content lives outside the repo.
+- **Input/output** (`raw/`, `output/`) — boundary surfaces.
 
-Without this separation, sessions silently mutate "the brain" (violating INTENT principle 4), feedback gets lost (violating principle 6), or the brain loses provenance (violating principle 1). Routes prevent the brain from ballooning under content load — content stays in Drive; the brain stays curated.
+Without this separation, sessions silently mutate "the brain" (violating INTENT principle 4), feedback gets lost (violating principle 6), or the brain loses provenance (violating principle 1). The `_status:` field on every `wiki/**.md` is the bridge that lets the compile-step engine run aggressively without corrupting brand fidelity — engine compiles freely from `research-seeded`, append-only over `user-validated`, never touches `stale`.

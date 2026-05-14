@@ -1,5 +1,12 @@
-_status: research-seeded — awaiting user validation_
-_last updated: 2026-05-10_
+---
+type: concept
+title: "Programs"
+sources: ["[[SOURCES]]"]
+corrected_by: []
+created: 2026-05-14
+updated: 2026-05-10
+_status: research-seeded
+---
 
 # Programs
 
