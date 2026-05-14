@@ -78,3 +78,14 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 - **Status changes:** none yet — Sonal's session-driven validation flips state as she uses the brain.
 - **Sources touched:** [[shikshagraha-narrative-2026]] [[shikshagraha-brief-collaterals-feb2026]] [[khushboo-newsletter-jan2024]]
 - **Note:** This is the first real enrichment after migration. Next enrichment is monthly (Sahil $200 plan); next weekly review is Fri May 23 with Sahid + Sonal. The brain is now ready for Sonal to test in a fresh terminal session.
+
+## 2026-05-14 20:30 UTC — Sahil (maintainer) — captions-2026-27-ingested
+
+- **Asked:** Sahil — pull the live SM Captions 2026-27 doc that's always being worked on, add as ongoing reference.
+- **Produced:**
+  - Updated `routes/captions.md` to reflect that the 2026-27 doc is now fetched + ingested (was previously "pending re-share").
+  - New voice exemplar: `wiki/voice/exemplars/sm-captions-2026-rhythm.md` with the canonical monthly weekday rhythm (Mon feedback / Tue research / Wed studio / Thu portrait / Fri InvokED) and 6 real April-May caption exemplars covering InvokED session teasers, research insights, event announcements (Skoll World Forum), coverage reposts (DEP Nagaland — sourced cross-brain mention of Mantra4Change), welcomes, and awards closing.
+- **Learned:** The 2026-27 captions doc is **always-being-worked-on** — needs monthly re-pull. Added that note to the route file so future enrichment passes know to refresh.
+- **Status changes:** `routes/captions.md` updated from "pending re-share" to "fetched + ingested 2026-05-14."
+- **Sources touched:** [[sm-captions-2026-rhythm]] [[captions]]
+- **Note:** The Nagaland DEP April caption is a sourced cross-brain reference (mentions Mantra4Change as partner) — kept verbatim per INTENT principle 7 (cross-brain references explicit + sourced, never transplanted).
