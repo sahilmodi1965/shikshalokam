@@ -54,12 +54,42 @@ Every Claude Code session opened in this repo follows this shape:
 - **Never invent features.** Suggestions queue in `learnings/` for maintainer review.
 - If `brain.yml: chat_shield: true` — apply the strict surface rules (no file paths, no flags, no technical terms in user-facing replies; errors phrased as creative choices; corrections re-routed silently to `learnings/`).
 
-### 3. End — the LEDGER rule (binding)
+### 3. End — the LEDGER rule + session-summary report (binding)
 **Every session writes exactly one entry to `LEDGER.md` before the session ends.** Append at the top of the file (new entries on top). Format defined in `LEDGER.md` itself. The entry records: what was asked, what was produced, what was learned (if anything), what `_status:` transitions occurred, what sources were touched.
 
 If the session leaves no `LEDGER.md` entry, INTENT principle 2 was violated: the brain didn't compound. `brain-lint` flags any commit that produced no ledger entry for the current session.
 
-After the entry is written, the `SessionEnd` hook (in `.claude/settings.json`) auto-commits the working tree and pushes to origin.
+**Then — before the session closes — surface a session summary to the daily user**, in plain language, even if `chat_shield: true`. Format:
+
+```
+**Today's session summary**
+
+I added to the brain:
+- <one-line per change, in human language — no jargon, no file paths under chat_shield>
+
+Your team page now reflects these changes:
+👉 https://sahilmodi1965.github.io/shikshalokam/
+
+GitHub Pages refreshes in ~60 seconds after I commit, so anyone on the
+Shikshagraha team can see what we worked on today.
+
+(Full record in LEDGER.md — newest entry on top.)
+```
+
+If nothing material changed (e.g. a pure Q&A session that produced no draft and no correction), the summary becomes:
+
+```
+**Today's session summary**
+
+You asked about X and I answered from what I already know. Nothing new
+landed in the brain today — that's fine, the team page hasn't changed.
+
+(See full record in LEDGER.md.)
+```
+
+This is **how Sonal Bhasin and the team see the brain compound in public**, not just locally. Skipping this report violates INTENT principle 2 in spirit (the brain compounded silently — invisible to the team it serves).
+
+After the report is shown, the `SessionEnd` hook (in `.claude/settings.json`) auto-commits the working tree and pushes to origin. The Pages rebuild is automatic.
 
 ---
 
