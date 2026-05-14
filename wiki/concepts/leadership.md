@@ -25,22 +25,38 @@ People publicly identified with ShikshaLokam.
 - **Khushboo Awasthi** — Co-Founder & COO, ShikshaLokam **and Mantra4Change** (cross-org role; documented at the source below). 13+ years across education and healthcare. Recognitions: Women Transforming India Awards 2021 (NITI Aayog); Schwab Social Innovator of the Year 2023; BW Education 40 Under 40 (2022); Ashoka Fellow. Advises Government of India on three Ministry of Education committees.
   Source: [shikshalokam.org/leading-is-like-living-in-goa](https://shikshalokam.org/leading-is-like-living-in-goa/) · Awards 2027 post tag list
 
-## Public-facing team (confirmed from Awards 2027 LinkedIn post, May 2026)
+## C-Suite / Heads (confirmed via LinkedIn + Awards 2027 post)
 
-The Shikshagraha Awards 2027 nominations announcement (posted by Shikshagraha, reposted by ShikshaLokam, May 2026) tags the active team. Treat as the canonical current roster. Specific roles to be confirmed at next maintainer pass / weekly review with Sonal Bhasin.
+Roles confirmed from LinkedIn discovery data ingested 14 May 2026. All Bengaluru-based unless noted.
 
-- **Sonal Bhasin** — **daily user of this brain.** Maintains SM Captions docs (2025-26 and 2026-27).
+- **Neeraj Doddamane** — **Chief Strategy Officer.** Skills: strategic partnerships, leadership development, large-scale systems, social entrepreneurship, government advocacy. Background includes Teaching Fellow, Operations Leader, South Zone Manager. ([LinkedIn](https://linkedin.com/in/ACoAAA4TwdoBSC2sXq6j3diMq5k5v2445bnH71w))
+- **Vijayashree Urs** — **Chief Technology Officer.** Skills: technology leadership, service delivery, program management, agile. Career: Engineering Project Manager → Senior Program Manager → Director, Software Development → CTO. **Named in the SoW as "Vijayashree's team" for engineering support.** Also on Mantra4Change's board (cross-org). ([LinkedIn](https://linkedin.com/in/ACoAAAALCaIBNd3bLekzCqZmGB4WR2yfwcmGluU))
+- **Gokul Tirumalai** — **Head of Solutions.** Director-level. Skills: software solutions, start-up leadership, GenAI, AI, product vision, team building. Co-founder background. ([LinkedIn](https://linkedin.com/in/ACoAAAAP8lABXWO9BE6UHQbLGyUGBWC3hSQydIs))
+- **Shwetha Kamath** — **Head of Ecosystem Development.** Career: brand communication → marketing comms → AVP marketing. Skills: integrated marketing, brand management, social-sector communications, fundraising, media relations. ([LinkedIn](https://linkedin.com/in/ACoAAAECFKkBHmSNHH8UraoT8WDs6MylhO8Hbi8))
+- **Sudha M S** — **Head of Product Management.** Director-level, Operations. Skills: software project management, solution architecture, enterprise architecture, programme management, PMP. ([LinkedIn](https://linkedin.com/in/ACoAAAIFMT8B5RAAFbTZuOiEDEUV3ShPKZl3NQ8))
+
+## Public-facing team (Awards 2027 LinkedIn post tag list, May 2026)
+
+Tagged in the Shikshagraha Awards 2027 nominations post. Roles to be confirmed at weekly review with Sonal Bhasin where not yet sourced.
+
+- **Sonal Bhasin** — **daily user of this brain.** Maintains SM Captions docs (2025-26 and 2026-27). Title TBC.
 - **Anish Saha, LL.M** — team
 - **Anubhuti Srivastava** — team
 - **Arshul M.** — team
 - **Joyeeta Ray** — team
-- **Neeraj Doddamane** — team (previously surfaced in search; confirmed in Awards 2027 post)
 - **Sharon Varghese** — team
-- **Shwetha Kamath** — team
 - **Syed Hyder Ali H** — team
 - **Vinaya Kurtkoti** — team
 - **Aquib Rizwan** — team
 - **Ayush Tank** — team
+
+## Surfaced via Shikshagraha movement LinkedIn page (May 2026)
+
+People publicly tagged to the Shikshagraha movement LinkedIn page. Parent-org assignment (SL vs M4C vs movement-direct) to be confirmed.
+
+- **Luv Kumar** — Manager, Strategic Communications. Pune-based. Skills: corporate social media, brand strategy, narrative, content marketing, press releases. ([LinkedIn](https://linkedin.com/in/ACoAAAaisC0Bqvn2JQ6r-au3fTHkq_nDXDJzLjQ))
+- **Nikita Pradhan** — Research and Design Leader. Bengaluru-based. Skills: process & impact evaluation, policy analysis, public policy, M&E, government liaison. ([LinkedIn](https://linkedin.com/in/ACoAABfRY6UBTOuUzsjdUVGzx1DpriYa5j4Z4Ng))
+- **Roddur Mitra** — Program Leader. Bengaluru-based. Skills: program design, fundraising, partnerships, government relations, community building. ([LinkedIn](https://linkedin.com/in/ACoAAC3g1msBpGHKDt9m_XYH5wDPY5iweEyVvGU))
 
 Also tagged in the post (cross-brand reference per INTENT principle 7):
 - **Santosh More** — CEO & Co-Founder, Mantra4Change

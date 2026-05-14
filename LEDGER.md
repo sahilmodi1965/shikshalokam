@@ -102,3 +102,14 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 - **Learned:** Sonal's full name is Sonal Bhasin. The Awards are instituted by SFPI (Shibulal Family Philanthropic Initiatives) — Mantra4Change is amplifier, not host. The "Women leading communities. Youth igniting change. Teachers and school leaders building the future from within the system." three-line frame is the canonical audience statement for Awards content — use verbatim.
 - **Status changes:** `wiki/concepts/leadership.md` flipped research-seeded → user-validated; identity files updated to canonical name "Sonal Bhasin".
 - **Sources touched:** [[awards-2027-nominations-live-2026-05]] [[awards-2027-linkedin-post]] [[leadership]]
+
+## 2026-05-14 22:00 UTC — Sahil (maintainer) — vibe-prospecting-team-discovery
+
+- **Asked:** Sahil — use Vibe Prospecting MCP to enrich team members in both brains, no email enrichment (free preview discovery only).
+- **Produced:**
+  - Updated `wiki/concepts/leadership.md` with a new "C-Suite / Heads" section: **Neeraj Doddamane** confirmed as Chief Strategy Officer (was research-seeded "role unclear"), **Vijayashree Urs** confirmed as CTO (the "Vijayashree's team" named in the SoW), **Gokul Tirumalai** as Head of Solutions, **Shwetha Kamath** as Head of Ecosystem Development (role newly attached), **Sudha M S** as Head of Product Management.
+  - Added "Surfaced via Shikshagraha movement LinkedIn page" sub-section: Luv Kumar (Comms Manager, Pune), Nikita Pradhan (Research & Design Leader), Roddur Mitra (Program Leader) — parent-org pending confirmation.
+- **Learned:** "Vijayashree's team" in the SoW = Vijayashree Urs's ShikshaLokam tech team. Significant — when Pratik or Sonal asks about engineering support, the brain can now route correctly. Five Heads (C-Suite + Ops) now have LinkedIn URLs + skill profiles attached.
+- **Status changes:** `wiki/concepts/leadership.md` already user-validated; now significantly enriched with role confirmations + LinkedIn provenance.
+- **Sources touched:** [[leadership]]
+- **Cost:** Zero credits — preview-only fetch (no email enrichment, no export). 50 prospects per company are available; previewing only 5 each kept the run free.
