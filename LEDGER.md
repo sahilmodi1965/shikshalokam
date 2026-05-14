@@ -113,3 +113,12 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 - **Status changes:** `wiki/concepts/leadership.md` already user-validated; now significantly enriched with role confirmations + LinkedIn provenance.
 - **Sources touched:** [[leadership]]
 - **Cost:** Zero credits — preview-only fetch (no email enrichment, no export). 50 prospects per company are available; previewing only 5 each kept the run free.
+
+## 2026-05-14 22:30 UTC — Sahil (maintainer) — vibe-team-export
+
+- **Asked:** Sahil — pull all 50 SL team members from Vibe Prospecting (cost 50 credits, no email enrichment).
+- **Produced:** Full 50-person SL team roster ingested into `wiki/concepts/leadership.md`. Comprehensive sections by function: C-Suite (3) → Heads & Directors (6) → Communications + Brand (8 incl. Sonal Bhasin) → Programs (14) → Product Development (4) → Engineering & Platform (14, the DIKSHA + product tech tier). Plus tagged-in-Awards-without-Vibe-data names and the 3 movement-page contributors.
+- **Learned:** SL has a sizable engineering tier (~14 people in Engineering & Platform) — consistent with DIKSHA being co-built. Sonal Bhasin's role: **Manager, Strategic Communications, based in Kanpur** (works from there, not Bengaluru). Vinay R is Head of Programs (NEW). Aishwarya Rastogi heads Impact Measurement and Data (NEW — important for evidence/M&E content). Anish Saha LL.M is Senior Leader Ecosystem Development.
+- **Status changes:** Leadership concept significantly enriched; 50 sourced LinkedIn URLs available.
+- **Sources touched:** [[leadership]]
+- **Cost:** 50 Explorium credits (no email enrichment). Dataset retained on Vibe Prospecting hub: `ds-89871931-4312-4f1d-991e-6f6079432c7f`.
