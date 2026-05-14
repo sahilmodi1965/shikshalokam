@@ -89,3 +89,16 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 - **Status changes:** `routes/captions.md` updated from "pending re-share" to "fetched + ingested 2026-05-14."
 - **Sources touched:** [[sm-captions-2026-rhythm]] [[captions]]
 - **Note:** The Nagaland DEP April caption is a sourced cross-brain reference (mentions Mantra4Change as partner) — kept verbatim per INTENT principle 7 (cross-brain references explicit + sourced, never transplanted).
+
+## 2026-05-14 21:30 UTC — Sahil (maintainer) — awards-2027-campaign-ingest
+
+- **Asked:** Sahil — ingest the live Shikshagraha Awards 2027 nominations LinkedIn post (posted by Shikshagraha team, reposted by ShikshaLokam).
+- **Produced:**
+  - New source: `wiki/sources/awards-2027-nominations-live-2026-05.md` with full verbatim post + canonical framings (SFPI institutional credit, three-line audience frame, four-language ladder, hashtag stack).
+  - New voice exemplar: `wiki/voice/exemplars/awards-2027-linkedin-post.md` — the canonical campaign-announcement voice pattern. Anatomy table breaks down each move (headline / institutional credit / purpose sentence / stacked three-line audience / direct ask / emoji-led link block / multilingual ladder / hashtag stack / tags).
+  - Updated `wiki/concepts/leadership.md` — added the 12 confirmed ShikshaLokam team members tagged in the post (Sonal Bhasin, Anish Saha LL.M, Anubhuti Srivastava, Arshul M., Joyeeta Ray, Neeraj Doddamane, Sharon Varghese, Shwetha Kamath, Syed Hyder Ali H, Vinaya Kurtkoti, Aquib Rizwan, Ayush Tank) + Gurudutt Ramachandra from the SM Captions welcome post. _status: research-seeded → user-validated.
+  - Updated identity files (brain.yml, INTENT, CLAUDE, README, SHOWCASE, wiki/index) — Sonal → Sonal Bhasin (full name confirmed from this post).
+  - Updated `docs/index.html` — new timeline entries + Sonal Bhasin everywhere + cross-link to the Awards 2027 ingest.
+- **Learned:** Sonal's full name is Sonal Bhasin. The Awards are instituted by SFPI (Shibulal Family Philanthropic Initiatives) — Mantra4Change is amplifier, not host. The "Women leading communities. Youth igniting change. Teachers and school leaders building the future from within the system." three-line frame is the canonical audience statement for Awards content — use verbatim.
+- **Status changes:** `wiki/concepts/leadership.md` flipped research-seeded → user-validated; identity files updated to canonical name "Sonal Bhasin".
+- **Sources touched:** [[awards-2027-nominations-live-2026-05]] [[awards-2027-linkedin-post]] [[leadership]]

@@ -36,4 +36,4 @@ Auto-injected at every session start. Budget ≤ 1,500 tokens (per `TOKEN_BUDGET
 
 ## Recent compile log
 
-See [[log]] for the append-only structural changes log. See `/LEDGER.md` for the chronological session record (what Sonal did with the brain).
+See [[log]] for the append-only structural changes log. See `/LEDGER.md` for the chronological session record (what Sonal Bhasin did with the brain).

@@ -4,7 +4,7 @@ The ShikshaLokam content brain. Holds the voice, mission, audience, programs, ec
 
 ## Who this is for
 
-- **Sonal** — daily user. Drops content, asks for drafts, gives feedback. Does not restructure.
+- **Sonal Bhasin** — daily user. Drops content, asks for drafts, gives feedback. Does not restructure.
 - **Maintainers (Sahil Modi (lead, $200), Sahid Modi ($20))** — shape the brain, run heavy ops on their accounts, hold the Friday review ritual.
 
 ## Open Claude Code here and just talk

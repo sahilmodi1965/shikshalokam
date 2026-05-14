@@ -2,9 +2,9 @@
 
 A single page anyone in the team can scroll to see this brain working. Maintainer-refreshed weekly. The voice rules, programs, and recent activity below come straight from the brain's current state.
 
-> **What this brain is:** a content brain for **ShikshaLokam**, the organisation building the **Shikshagraha** movement. It holds our voice, mission, audience, programs, leadership, and stories in one searchable place. Sonal opens Claude Code, asks for a draft or a fact, and the brain answers in our voice with sources attached. Every chat leaves a record. Every week the brain gets a little sharper.
+> **What this brain is:** a content brain for **ShikshaLokam**, the organisation building the **Shikshagraha** movement. It holds our voice, mission, audience, programs, leadership, and stories in one searchable place. Sonal Bhasin opens Claude Code, asks for a draft or a fact, and the brain answers in our voice with sources attached. Every chat leaves a record. Every week the brain gets a little sharper.
 >
-> *Daily user: **Sonal** — `sonal@shikshalokam.org`*
+> *Daily user: **Sonal Bhasin** — `sonal@shikshalokam.org`*
 > *Maintainers: Sahil Modi (lead, $200), Sahid Modi ($20)*
 > *Movement: **Shikshagraha** — ShikshaLokam is to Shikshagraha what INC was to Satyagraha. We build and amplify the movement.*
 
@@ -64,7 +64,7 @@ Civil Society · Government · Markets · Media · Shikshagraha Team
 
 *(annotated entries from `LEDGER.md` — newest first)*
 
-- **2026-05-14** — Maintainer enrichment pass: ingested 4 movement-level sources (Narrative, Brief for Collaterals Feb 2026, Note on Shikshagraha, Jan 2024 newsletter). Added 3 routes pointing to Drive. Extracted Khushboo's newsletter signature as canonical voice exemplar. wiki files flipped `research-seeded → user-validated` where Sonal had touched them.
+- **2026-05-14** — Maintainer enrichment pass: ingested 4 movement-level sources (Narrative, Brief for Collaterals Feb 2026, Note on Shikshagraha, Jan 2024 newsletter). Added 3 routes pointing to Drive. Extracted Khushboo's newsletter signature as canonical voice exemplar. wiki files flipped `research-seeded → user-validated` where Sonal Bhasin had touched them.
 - **2026-05-14** — Structural migration to unified content-brain shape: state/ → wiki/ typed nodes (7 files), LEDGER.md introduced, INTENT/ARCHITECTURE/AGENTS/TOKEN_BUDGET added, 6 brain-prefixed skills.
 
 *The LEDGER itself (top of file) is the live scroll — open `LEDGER.md` directly for the full chronological record.*
