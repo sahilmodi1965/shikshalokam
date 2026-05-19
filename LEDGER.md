@@ -56,6 +56,19 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 
 <!-- Entries appended below this line. Newest immediately below. -->
 
+## 2026-05-19 — Sahil (maintainer) — sl-communications-folder-ingest
+
+- **Asked:** Sahil — ingest the SL Communications Drive folder Sonal shared today (id `1P-6AHbwLkkGqPOxydhwTyZKUM8U6LP66`) and update the brain artefact.
+- **Produced:**
+  - New route `routes/drive-sl-communications.md` mapping the SL-org-specific Comms folder (distinct from movement-level `routes/drive-communications.md`). Two top-level subfolders (ShikshaLokam Resources, Social Media Content) — 25 items in Resources, plus already-routed captions docs in SM.
+  - New source `wiki/sources/shikshalokam-2-strategy-note-jul2025.md` (_status: research-seeded) — full ingest of the SL 2.0 Strategy Note (Jul 2025). **Fills the SL-org-narrative gap** — brain previously held movement narrative ([[shikshagraha-narrative-2026]]) but no canonical SL-org positioning doc. Captures: SL 1.0→2.0 evolution (platform→network→movement builder), SFPI/NILE origin, ELEVATE digital-public-goods program, 8-team internal structure, ecosystem roles map (Co-Builders/Strategic/Anchor/Collaborators/Momentum/Ambassadors/Advisors/Mentors), 10 verbs of the movement, I HAVE / I CAN / I WISH agency progression.
+  - New source `wiki/sources/shikshalokam-brazil-stories-may2026.md` (_status: research-seeded) — four collective-action case studies prepared for Lemann Foundation Summit (Brazil): Nagaland PBL, Punjab PEC (Schwab-recognised), Chhattisgarh ECE/Anganwadi, Bihar Shiksha Chaupals. Canonical multi-partner story template + freshest field numbers (Bihar: 55K women / 2,450 chaupals / 28K schools).
+  - Updated `wiki/index.md` (two new source wikilinks + new route wikilink + clarified movement-vs-SL-org route distinction), `wiki/sources/SOURCES.md` (2026-05-19 ingest section), `routes/drive-communications.md` (purpose clarified to "movement-level"; cross-link added to new SL-org route), `wiki/log.md` (compile entry).
+- **Learned:** nothing — research-seeded ingest pass on maintainer account, no user correction. Sonal hasn't yet engaged with these new sources.
+- **Status changes:** none on existing files. New files at `_status: research-seeded` (correct for maintainer-seeded content; flip to user-validated only after Sonal uses them).
+- **Sources touched:** [[shikshalokam-2-strategy-note-jul2025]] [[shikshalokam-brazil-stories-may2026]] [[drive-sl-communications]]
+- **Note:** Deferred for next enrichment pass per CLAUDE.md voice rule (voice commits must cite a `learnings/` slug): Vimal P. Thomas's "A Quiet Revolution in Jharkhand's Schools" blog FINAL from `SLC | Blogs 2025` — strong first-person field-reportage exemplar but requires a `learnings/` slug before touching `wiki/voice/**`. Also deferred: ShikshaLokam Overview 2025 (v2) shortcut, SL Brand Guidelines vs movement Brand Guidelines comparison, partner-state asset folders (Nagaland/TG/Meghalaya/Assam/AP/STEM).
+
 ## 2026-05-14 00:00 UTC — migration — content-brain-overlay-applied
 
 - **Asked:** Sahil (maintainer) — apply the unified content-brain overlay to ShikshaLokam.

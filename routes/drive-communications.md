@@ -1,16 +1,18 @@
 ---
 type: route
-purpose: "communications content lives here"
-last_validated: 2026-05-14
+purpose: "movement-level Shikshagraha communications content (shared with Mantra4Change)"
+last_validated: 2026-05-19
 maintainer: Sahil Modi
 ---
 
-# Communications — where ShikshaLokam / Shikshagraha content lives
+# Communications — movement-level Shikshagraha content
 
 **Primary folder (movement-level, shared with Mantra4Change):**
 [Comms Folder — Drive](https://drive.google.com/drive/folders/1DXCoOnC5DVoRXO3Q2G_y-r3LxsWVDA2P)
 
-This is the Shikshagraha communications nerve centre. ShikshaLokam is the organisation **building** the movement — most strategy, narrative, and brand artefacts here originate from or are signed off by ShikshaLokam.
+This is the Shikshagraha **movement-level** communications nerve centre. ShikshaLokam is the organisation **building** the movement — most strategy, narrative, and brand artefacts here originate from or are signed off by ShikshaLokam.
+
+> **For SL-org-specific content** (SL 2.0 Strategy Note, SL Brand Guidelines, SL 2-Pager, SL Story Decks, Brazil stories, partner-state assets, SLC blogs, flagship film), see **[[drive-sl-communications]]** — the separate SL-org folder Sonal shared on 2026-05-19.
 
 ## What's inside (canonical map, last validated 2026-05-14)
 

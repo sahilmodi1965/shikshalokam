@@ -47,6 +47,15 @@ Running index of every source consulted. Every claim in `state/*.md` cites one o
 - [SM Captions 2025-26](https://docs.google.com/document/d/1CBg6cYWPg-_r-HjU6ZCkjoRVYld6gpo_SKqN68wwEeQ/edit) — a year of social captions Sonal authored for ShikshaLokam (Jun 2025 → Mar 2026, ~150–180 distinct posts). Canonical for caption voice; pulled into `state/voice.md` "Caption form" section. Owner: ayushtank@shikshalokam.org. *Fetched 2026-05-13 via Drive MCP.*
 - Second captions doc — Google Doc id `1dc38xR0t8sPMgBb1FJiOjjqeSol5dDL2Tyk5ikz6n5w`. Sonal shared this URL on 2026-05-13 but Drive access from Sahil's maintainer account returned "not found." Pending re-share before it can be sourced.
 
+## 2026-05-19 added by Sahil — SL Communications folder ingest (Sonal share)
+
+Sonal shared the SL-org-specific [SL Communications Drive folder](https://drive.google.com/drive/folders/1P-6AHbwLkkGqPOxydhwTyZKUM8U6LP66) on 2026-05-19. Distinct from the movement-level Comms folder already routed in [[../routes/drive-communications]]. Full canonical map → [[../routes/drive-sl-communications]]. Two priority items ingested:
+
+- [ShikshaLokam 2.0 Strategy Note (Jul 2025)](https://docs.google.com/document/d/1O3auDLtgbiunHr0h0vK-moLJIja-IkshNGWR9N_LiGI/edit) — the foundational SL-org positioning doc. Fills the SL-org-narrative gap (brain previously held movement narrative only). Ingested into [[shikshalokam-2-strategy-note-jul2025]]. Owner: neeraj@shikshalokam.org. *Fetched 2026-05-19 via Drive MCP.*
+- [(For Print) Stories for Brazil presentation.pdf](https://drive.google.com/file/d/17LGIBJeM-xRxDwt7g2A0WTdIZy6hQf9n/view) — Lemann Foundation Summit slides; four collective-action case studies (Nagaland PBL, Punjab PEC, Chhattisgarh ECE, Bihar Chaupals). Ingested into [[shikshalokam-brazil-stories-may2026]]. Owner: sonal@shikshalokam.org. *Fetched 2026-05-19 via Drive MCP.*
+
+**Flagged for next monthly enrichment pass:** ShikshaLokam Overview 2025 (v2) shortcut to resolve; SL Brand Guidelines vs movement Brand Guidelines comparison; Vimal Jharkhand blog FINAL as voice exemplar (requires `learnings/` slug per CLAUDE.md voice rule); partner-state asset folders (Nagaland / TG / Meghalaya / Assam / AP / STEM Report).
+
 ## How this file evolves
 
 Append new sources with a `## YYYY-MM-DD added by …` heading. Keep old entries even when superseded — provenance matters. When a source is fetched again, update its `*Fetched …*` line in place.

@@ -2,7 +2,7 @@
 type: index
 tags: [master-index, auto-loaded]
 created: 2026-05-14
-updated: 2026-05-14
+updated: 2026-05-19
 ---
 
 # ShikshaLokam brain — master index
@@ -27,10 +27,13 @@ Auto-injected at every session start. Budget ≤ 1,500 tokens (per `TOKEN_BUDGET
 - [[sources/SOURCES]] — running citation index
 - [[sources/shikshagraha-narrative-2026]] — *user-validated.* Canonical movement narrative (Drive: Narrative for Shikshagraha doc). Satyagraha framing, four-actor Samaj/Sarkaar/Bazaar/Sanchar framework, 2030 vision. **"As ShikshaLokam" section** — own-impact statements (ACCESS / NARRATIVE / IMPACT).
 - [[sources/shikshagraha-brief-collaterals-feb2026]] — *user-validated.* Latest comprehensive movement stats (31K+ MIPs / 15 states / 33 districts / 21 partners / 1.03L women). Canonical brochure 7-section structure. Standees content. Design guidelines.
+- [[sources/shikshalokam-2-strategy-note-jul2025]] — *research-seeded.* SL-org positioning document. SL 1.0 → 2.0 evolution: platform → network → movement builder. SFPI/NILE origin, ELEVATE, ecosystem roles map (Co-Builders / Strategic Partners / Anchor / Collaborators / Momentum / Ambassadors / Advisors / Mentors), 10 verbs of the movement, I HAVE / I CAN / I WISH agency progression.
+- [[sources/shikshalokam-brazil-stories-may2026]] — *research-seeded.* Four canonical collective-action case studies prepared for Lemann Foundation Summit (Brazil): Nagaland PBL, Punjab PEC (Schwab-recognised), Chhattisgarh ECE/Anganwadi, Bihar Shiksha Chaupals. Template + numbers for multi-partner stories.
 
 ## Routes (where content lives outside this repo)
 
-- [[../routes/drive-communications]] — Comms folder map (Newsletters, Stories of Impact, Comms Strategy stub, Brand Guidelines, decks, events)
+- [[../routes/drive-communications]] — Movement-level Comms folder map (Newsletters, Stories of Impact, Comms Strategy stub, Brand Guidelines, decks, events)
+- [[../routes/drive-sl-communications]] — **SL-org-level** Comms folder map (Sonal's share, 2026-05-19): SL 2.0 Strategy Note, SL Brand Guidelines, SL 2-Pager, SL Story Decks, Brazil stories, partner-state assets, SLC blogs, flagship film
 - [[../routes/drive-assets]] — Movement-level PDFs (Handbook, Workbook, Youth Card, Co-creators)
 - [[../routes/drive-coffee-table-book]] — Long-form coffee table book template V3
 
