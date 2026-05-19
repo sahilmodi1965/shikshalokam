@@ -56,6 +56,23 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 
 <!-- Entries appended below this line. Newest immediately below. -->
 
+## 2026-05-19 — Sahil (on Sonal's behalf) — first-captions-demo + nav-fix
+
+- **Asked:** Sahil — (1) the main brain page is missing navigation to the new project workspaces; add it. (2) First captions demo: byte-sized informative posts anchored on research studies / surveys / reports that strengthen SL-aligned messaging — collective action + agency for education leaders.
+- **Produced:**
+  - **`docs/index.html` bar nav** — added `<nav class="bar-nav">` with Projects (lead, cascara colour), Why, Voice, Story, Roadmap. Sticky on scroll. Mobile breakpoint hides non-lead links and the chat CTA below 760px so the Projects link stays accessible.
+  - **3 caption variants drafted for Tuesday — Tech / Research Insight** in `projects/captions/page.md`, mirrored to `docs/projects/captions.html`:
+    - V1 LinkedIn (~95 words) — *"What if collective action could be measured?"* — Bihar Shiksha Chaupal numbers (55K women, 2,450 chaupals, 28K schools) + WEF *The Future is Collective* (2025) recognition. Both anchors verifiable in the brain ([[shikshalokam-brazil-stories-may2026]], [[drive-sl-communications]] § 2025-26).
+    - V2 LinkedIn (~95 words) — *"Reform begins with curriculum. Shikshagraha begins with the leader."* — OECD school-leadership research **paraphrased not quoted**, exact citation flagged for Sonal to verify before posting. Threads in the I HAVE / I CAN / I WISH agency framework from the SL 2.0 Strategy Note.
+    - V3 X/Twitter (245 chars) — *"Twenty years of ASER — the network is what's missing."* — Pratham's ASER cited as a longitudinal body of work, safe attribution for the byte format.
+  - **Captions tile counts updated** across `docs/index.html` § projects, `docs/projects/index.html` tile, and `docs/projects/captions.html` hero pill row (3 Tuesday variants drafted · 4 rhythm slots still empty).
+  - **`projects/captions/chatlog.md`** appended with the first real session entry (rhythm day, brief, variants, voice rules applied, open thread for next session).
+- **Learned:** one-off — Sahil's "where is the projects nav" was a direct correction; fixed in place. No learnings file needed (not structural — the bar simply needed an explicit nav element). The captions demo is the **first real test of the project-page architecture**: chat → page edit → HTML mirror → push → review. Loop ran end-to-end this turn.
+- **Status changes:** `projects/captions/page.md` stays at `_status: research-seeded` — Sonal hasn't reviewed yet. Will flip to `user-validated` on her first approval ("use this") or correction ("not my voice"), whichever lands first.
+- **Sources touched:** [[shikshalokam-brazil-stories-may2026]] [[drive-sl-communications]] [[shikshalokam-2-strategy-note-jul2025]] [[styleguide]]
+- **Voice notes:** V1 uses rhetorical-question opener + comma-dense stat block + "har kadam shiksha ki oar..!" sign-off. V2 uses pulled-finding opener + stacked short lines + I HAVE / I CAN / I WISH (SL 2.0 framework). V3 uses compressed stacked-line cadence with no closer (X format). All three end with the canonical hashtag stack (V1/V2 with full closer, V3 minimal).
+- **Note:** Three-beat session — combined with the prior architecture entry (committed in 7d2b485) those are the two LEDGER entries for 2026-05-19. Pushed manually within the session so Sahil could verify the nav + captions render live; SessionEnd hook will no-op on clean tree at session close. Open: Sonal can copy any variant title back into chat to flip its status to `approved`; pushback routes to learnings. Maintainer enrichment candidates surfaced for next pass: Karthik Muralidharan / J-PAL South Asia, IDR sector pieces, NCERT / Azim Premji University, Hargreaves on distributed leadership.
+
 ## 2026-05-19 — Sahil (maintainer) — project-page-architecture
 
 - **Asked:** Sahil + Sonal — stand up project-page workspaces so Sonal's brainstorms enrich a live artefact in place instead of producing one-shot drafts she has to copy out of chat. Four projects: Nagaland coffee book, captions, blogs, portraits. Confirm new Drive/web sources alongside.
