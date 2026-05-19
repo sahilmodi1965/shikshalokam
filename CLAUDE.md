@@ -91,6 +91,19 @@ That's it. No additional commentary. The wrap is the contract.
 
 After the wrap, the `SessionEnd` hook auto-commits + pushes; Pages rebuilds.
 
+### 5. End — self-portrait refresh (binding)
+
+`docs/index.html` is the brain's public face. **Every session that changes `wiki/**`, `routes/**`, or appends to `LEDGER.md` must also add a timeline entry to `docs/index.html` reflecting what landed this session.** Same shape as existing entries:
+
+- One `<article class="tl-entry today">` per session, inserted at the top of `<div class="timeline">`.
+- Drop the `today` class from the previous most-recent entry and strip its "Today · " prefix.
+- Update the eyebrow date (`A self-portrait — last updated …`) and the footer "Last refresh: …" to today.
+- Voice: first-person, present-tense — *"I learned … I met … I now hold …"* Match the entries above.
+
+The SessionEnd hook prints a `WARN` if the brain changed without the page changing. The warning does not block commit, but the failure is visible in the user's terminal.
+
+If nothing material landed (pure Q&A session, brain unchanged), no page update is needed — the existing wrap fallback ("answered from what I already know; brain unchanged today") covers it.
+
 ---
 
 ## The `_status:` contract (the bridge between paradigms)
