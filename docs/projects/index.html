@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ShikshaLokam — Project workspaces</title>
+<meta name="description" content="The four live content project workspaces inside the ShikshaLokam brain — Nagaland coffee book, captions, blogs, portraits." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar-inner">
+    <div class="mark">
+      <span class="brand">ShikshaLokam</span>
+      <span class="sep">/</span>
+      <span class="project">project workspaces</span>
+    </div>
+    <a class="bar-back" href="../index.html">← the brain</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Project workspaces — last refreshed 19 May 2026</div>
+    <h1>The four live projects<br/>this brain enriches.</h1>
+    <p class="lede">
+      Each page below is a <strong>live, persistent workspace</strong> for one ShikshaLokam content stream.
+      Sonal brainstorms with the brain in chat; this page is what fills up. Drafts no longer get copy-pasted
+      out of the chat — they accrue here. The page is the artefact; the chat is the means.
+    </p>
+    <div class="pill-row">
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill">Daily user · <strong style="margin-left:6px;">Sonal Bhasin</strong></span>
+      <span class="pill">Per-session loop · brainstorm → page → push → review</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">The four projects</div>
+    <h2>Click into any workspace.</h2>
+    <p class="lede-2">
+      Each tile carries the workspace's current state. Pages refresh ~60 seconds after a session ends and Sonal
+      confirms push.
+    </p>
+
+    <div class="projects-grid">
+
+      <a href="nagaland-coffee-book.html" class="project-tile">
+        <h3>Nagaland Coffee Book</h3>
+        <p>A story pool for ShikshaLokam's Nagaland coffee-table volume — visual + story-led vignettes,
+        teachers and ed-leaders foregrounded.</p>
+        <div class="tile-meta">
+          <span class="pill research">research-seeded</span>
+          &nbsp;&nbsp;<strong>0</strong> stories &middot; <strong>1</strong> anchor outcome (DEP)
+        </div>
+      </a>
+
+      <a href="captions.html" class="project-tile">
+        <h3>Captions</h3>
+        <p>Rolling option pool grouped by the weekday rhythm — Mon feedback, Tue research, Wed studio,
+        Thu portrait, Fri InvokED.</p>
+        <div class="tile-meta">
+          <span class="pill research">research-seeded</span>
+          &nbsp;&nbsp;<strong>0</strong> candidates &middot; 5 rhythm slots open
+        </div>
+      </a>
+
+      <a href="blogs.html" class="project-tile">
+        <h3>Blogs</h3>
+        <p>Idea queue + WIP drafts for the long-form SLC blogs cycle. Voice anchor: first-person
+        field reportage (Vimal Jharkhand pattern).</p>
+        <div class="tile-meta">
+          <span class="pill research">research-seeded</span>
+          &nbsp;&nbsp;<strong>0</strong> ideas &middot; <strong>0</strong> drafts in progress
+        </div>
+      </a>
+
+      <a href="portraits.html" class="project-tile">
+        <h3>Portraits</h3>
+        <p>One section per education leader — short-form, third-person, leader-foregrounded.
+        Pairs with Thursday's portrait slot on captions.</p>
+        <div class="tile-meta">
+          <span class="pill research">research-seeded</span>
+          &nbsp;&nbsp;<strong>0</strong> portraits &middot; live gallery at shikshalokam.org pending scrape
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">How a session lands here</div>
+    <h2>Brainstorm → page → push → review.</h2>
+    <div class="howto">
+      <h4>The per-session loop</h4>
+      <ol>
+        <li><strong>Sonal opens Claude Code</strong> with a project in mind (named or implied).</li>
+        <li><strong>Claude routes</strong> to the matching workspace and reads the current page state.</li>
+        <li><strong>Claude enriches</strong> the page in place — adds a section, refines a story, drafts a caption, advances a status.</li>
+        <li><strong>Claude reports</strong> back: section title + one line on what changed + <em>"push?"</em></li>
+        <li><strong>Sonal confirms</strong> → SessionEnd hook commits + pushes → this site rebuilds in ~60 seconds.</li>
+        <li><strong>Sonal reviews</strong> the live URL. She can copy any section title back into chat as <em>"use this"</em> or <em>"not my voice"</em> feedback — the brain learns from both.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <p style="color:var(--paper);font-weight:500;">Project workspaces inside the ShikshaLokam content brain.</p>
+      <p class="footer-meta">Each page on this site is generated from a corresponding <code>projects/&lt;slug&gt;/page.md</code> file
+      in the brain's repo. Source of truth: the markdown. This site: the mirror. Last refresh: <strong>19 May 2026</strong>.</p>
+    </div>
+    <div>
+      <p class="footer-meta">
+        <a href="../index.html">↩ the brain self-portrait</a><br/>
+        <a href="https://github.com/sahilmodi1965/shikshalokam">repo on github</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -90,6 +90,7 @@ Not in [[drive-communications]]. Pull on demand when state-specific story drafts
 [Blogs subfolder](https://drive.google.com/drive/folders/17FQEee8hW2R3vmlALCJH6_cvv_e6M0GN):
 - [Co-Authored 3-Part Blog Series: Mitra](https://drive.google.com/file/d/1NSVb3Calvx0O7hVW0WzHX0ZCulaQ02xc/view) — shortcut
 - [SLC | Blogs 2025](https://docs.google.com/document/d/1ucPbxDxAPEjodc0LLkgkYx5MNtfmcWzX-CrMd3H7phQ/edit) — contains the FINAL of Vimal P. Thomas's "A Quiet Revolution in Jharkhand's Schools" (with Ankit Aman of Prajayatna). High-value voice exemplar — first-person field reportage. Flagged for next voice-enrichment pass.
+- **[SLC | Blogs 2026 (WIP)](https://docs.google.com/document/d/1pLXmcCcMD2-v_eThOZT2ioRunchx4DFoTe_tpet0EqM/edit)** — the **current-cycle working blogs doc** Sonal shared 2026-05-19. Live, in-progress. The Drive surface that pairs with the [[blogs]] project workspace in this brain. Re-pull during monthly maintainer enrichment to harvest new ideas + voice samples as drafts land.
 
 ### Older handouts / archive
 - [ELEVATE Handout.pdf](https://drive.google.com/file/d/1AfIYL6QWbhUdpIo9TK39zCuMLRjYia9L/view) (Sep 2023)

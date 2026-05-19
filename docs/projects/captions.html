@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Captions — ShikshaLokam</title>
+<meta name="description" content="Rolling caption option pool for ShikshaLokam's social rhythm — Mon feedback, Tue research, Wed studio, Thu portrait, Fri InvokED." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar-inner">
+    <div class="mark">
+      <a href="../index.html" style="text-decoration:none;color:inherit;"><span class="brand">ShikshaLokam</span></a>
+      <span class="sep">/</span>
+      <a href="index.html" style="text-decoration:none;color:inherit;"><span>projects</span></a>
+      <span class="sep">/</span>
+      <span class="project">captions</span>
+    </div>
+    <a class="bar-back" href="index.html">← all projects</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Project workspace — last updated 19 May 2026</div>
+    <h1>Captions —<br/>rolling option pool.</h1>
+    <p class="lede">
+      Caption candidates grouped by the weekday rhythm Sonal authored. Each rhythm slot can carry 2–3 variants;
+      Sonal copies the title she wants back into chat to advance it from <em>draft</em> → <em>approved</em>.
+      Approved or posted variants archive weekly.
+    </p>
+    <div class="pill-row">
+      <span class="pill research">research-seeded</span>
+      <span class="pill">Voice exemplar · SM Captions 2026-27 (live doc)</span>
+      <span class="pill">Page budget · 8,000 tokens</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">The weekday rhythm</div>
+    <h2>Five slots. One option pool per day.</h2>
+    <p class="lede-2">
+      Canonical scheduling cadence — same as <code>routes/captions.md</code> and the live SM Captions 2026-27 doc.
+    </p>
+    <div class="rhythm">
+      <div class="rhythm-day">Day</div>
+      <div>Post type</div>
+      <div class="rhythm-day">Monday</div>
+      <div>Feedback video</div>
+      <div class="rhythm-day">Tuesday</div>
+      <div>Tech (Hackathon, Mitra) <em>|</em> Research Insight</div>
+      <div class="rhythm-day">Wednesday</div>
+      <div>InvokED Studio teaser</div>
+      <div class="rhythm-day">Thursday</div>
+      <div>Buffer <em>|</em> Ed-Leader Portrait</div>
+      <div class="rhythm-day">Friday</div>
+      <div>InvokED Session Post (Teaser <em>|</em> Carousel <em>|</em> Quote)</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">How this page works</div>
+    <h2>Brainstorm → variants → approve.</h2>
+    <div class="howto">
+      <h4>Per session</h4>
+      <ol>
+        <li>Sonal: <em>"draft Tuesday's research insight post about [topic]"</em></li>
+        <li>Claude drops 2–3 variants under <strong>Tuesday — Tech / Research Insight</strong>, each with platform tag (LinkedIn / X) and <code>status: draft</code>.</li>
+        <li>Sonal copies the title of her preferred variant back into chat → <code>status: approved</code>.</li>
+        <li>Once posted, Sonal flags <em>"posted"</em> → <code>status: posted</code>, archives at end of week to <code>projects/captions/posted/</code>.</li>
+        <li>Pushback on a variant → 2–3 fresh variants next turn; structural correction routes to <code>learnings/</code>.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">Monday — Feedback video</div>
+    <h2>The pool — empty for now.</h2>
+    <div class="empty">No candidates yet. <em>"draft Monday's feedback video caption about [topic]"</em> will land 2–3 variants here.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">Tuesday — Tech / Research Insight</div>
+    <h2>The pool — empty for now.</h2>
+    <div class="empty">No candidates yet.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">Wednesday — InvokED Studio teaser</div>
+    <h2>The pool — empty for now.</h2>
+    <div class="empty">No candidates yet.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">Thursday — Buffer / Ed-Leader Portrait</div>
+    <h2>The pool — empty for now.</h2>
+    <div class="empty">No candidates yet. <em>Thursday's portrait slot pairs naturally with the <a href="portraits.html">portraits project</a> — a portrait section there can seed a Thursday caption here.</em></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">Friday — InvokED Session Post</div>
+    <h2>The pool — empty for now.</h2>
+    <div class="empty">No candidates yet.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">Voice anchor</div>
+    <h2>What every variant checks itself against.</h2>
+    <div class="card">
+      <div class="label">Caption voice — canonical rules</div>
+      <div class="card-body">
+        <ul>
+          <li><strong>Opener</strong>: rhetorical question · one-line aphorism · pulled quote (attributed)</li>
+          <li><strong>Cadence</strong>: stacked short lines + comma-dense context blocks</li>
+          <li><strong>Pronoun register</strong>: on-the-team <em>"we"</em></li>
+          <li><strong>Emoji scaffolding</strong>: ▶️ YouTube link · 📍 context · 🔴 live · 👇 swipe/scroll</li>
+          <li><strong>Hashtag stack</strong>: <code>#InvokED2026 #MissionToMovement #CollectiveAction</code></li>
+          <li><strong>Partner tagging</strong>: @Org with handle</li>
+          <li><strong>Recurring vocabulary</strong>: <em>collective action · mission to movement · har kadam shiksha ki oar..!</em></li>
+          <li><strong>CTA closer</strong>: <em>"Share your thoughts in the comments below 👇"</em></li>
+        </ul>
+      </div>
+      <div class="card-meta"><span>Source:</span> <strong>wiki/voice/exemplars/sm-captions-2026-rhythm.md</strong> &middot; pulled live each session</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <p style="color:var(--paper);font-weight:500;">Captions — live workspace.</p>
+      <p class="footer-meta">Source of truth: <code>projects/captions/page.md</code>. This page mirrors it.
+      Last refresh: <strong>19 May 2026</strong>.</p>
+    </div>
+    <div>
+      <p class="footer-meta">
+        <a href="index.html">↩ all projects</a><br/>
+        <a href="../index.html">↩ the brain self-portrait</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Blogs — ShikshaLokam</title>
+<meta name="description" content="Idea queue + WIP drafts for ShikshaLokam's long-form blogs cycle. Voice anchor: first-person field reportage." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar-inner">
+    <div class="mark">
+      <a href="../index.html" style="text-decoration:none;color:inherit;"><span class="brand">ShikshaLokam</span></a>
+      <span class="sep">/</span>
+      <a href="index.html" style="text-decoration:none;color:inherit;"><span>projects</span></a>
+      <span class="sep">/</span>
+      <span class="project">blogs</span>
+    </div>
+    <a class="bar-back" href="index.html">← all projects</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Project workspace — last updated 19 May 2026</div>
+    <h1>Blogs —<br/>idea queue and WIP drafts.</h1>
+    <p class="lede">
+      Two layers: an <strong>idea queue</strong> for angles Sonal wants to develop, and <strong>WIP drafts</strong>
+      once an idea reaches outline+. Drafts overflow to <code>projects/blogs/drafts/&lt;slug&gt;.md</code>;
+      this page keeps a synopsis card with the link.
+    </p>
+    <div class="pill-row">
+      <span class="pill research">research-seeded</span>
+      <span class="pill">Voice anchor · Vimal Jharkhand pattern</span>
+      <span class="pill">Page budget · 8,000 tokens</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">How this page works</div>
+    <h2>Idea → brief → outline → draft → published.</h2>
+    <div class="howto">
+      <h4>Status lifecycle</h4>
+      <ol>
+        <li><strong>seed</strong> — Sonal raised the angle; framing + open questions captured.</li>
+        <li><strong>brief</strong> — hook, audience, voice anchor, sources to pull all decided.</li>
+        <li><strong>outline</strong> — section-by-section structure drafted (still on this page).</li>
+        <li><strong>drafting</strong> — full prose moves to <code>projects/blogs/drafts/&lt;slug&gt;.md</code>; section here keeps synopsis.</li>
+        <li><strong>published</strong> — flips to a one-line entry under <em>Published reference</em> with the live URL.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">Idea queue</div>
+    <h2>Angles Sonal wants to develop.</h2>
+    <div class="empty">
+      Empty for now. <em>"new blog idea — [topic]"</em> in chat lands an idea card here with
+      <code>status: seed</code>, framing, voice anchor, and open questions.
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">WIP drafts</div>
+    <h2>Drafts that have moved out of the queue.</h2>
+    <div class="empty">No drafts in progress yet.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">Voice anchor</div>
+    <h2>Long-form first-person field reportage.</h2>
+    <div class="card">
+      <div class="label">The Vimal Jharkhand pattern</div>
+      <div class="card-title">"A Quiet Revolution in Jharkhand's Schools" — Vimal P. Thomas (SLC Blogs 2025)</div>
+      <div class="card-body">
+        The brain's current long-form voice anchor. Pattern: <em>arrive-on-foot opening · embedded sensory detail
+        · named protagonists · partner credits in body not bottom · close on a specific gesture, not a tagline</em>.
+        Full ingest deferred to next maintainer pass per CLAUDE.md voice rule (voice work needs a <code>learnings/</code> slug).
+        Until then, the brain points at the doc and reads the styleguide section.
+      </div>
+      <div class="card-meta"><span>Source:</span> <strong>routes/drive-sl-communications.md § Blogs</strong></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">Published reference</div>
+    <h2>Source-of-truth for already-published blogs.</h2>
+    <div class="card">
+      <div class="label">Live archive</div>
+      <div class="card-title">shikshalokam.org/blogs/</div>
+      <div class="card-body">
+        Public archive of every SLC blog. Pending maintainer scrape (see
+        <code>routes/web-shikshalokam-org.md</code>) — once scraped, the brain will hold the full corpus as a
+        first-class wiki source.
+      </div>
+      <div class="card-meta"><a href="https://shikshalokam.org/blogs/" target="_blank" rel="noopener">visit →</a></div>
+    </div>
+    <div class="card">
+      <div class="label">Working docs (Drive)</div>
+      <div class="card-title">SLC Blogs 2025 · SLC Blogs 2026 WIP</div>
+      <div class="card-body">
+        Two Drive-side working docs. 2025 carries last cycle's blogs (Vimal Jharkhand FINAL); 2026 WIP is the
+        current cycle. These and this brain's <code>projects/blogs/page.md</code> are two sides of the same
+        coin — drafts here land in the Drive doc for the wider team; team edits there flow back via
+        the maintainer monthly pass.
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <p style="color:var(--paper);font-weight:500;">Blogs — live workspace.</p>
+      <p class="footer-meta">Source of truth: <code>projects/blogs/page.md</code>. This page mirrors it.
+      Last refresh: <strong>19 May 2026</strong>.</p>
+    </div>
+    <div>
+      <p class="footer-meta">
+        <a href="index.html">↩ all projects</a><br/>
+        <a href="../index.html">↩ the brain self-portrait</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

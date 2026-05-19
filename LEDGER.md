@@ -56,6 +56,21 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 
 <!-- Entries appended below this line. Newest immediately below. -->
 
+## 2026-05-19 — Sahil (maintainer) — project-page-architecture
+
+- **Asked:** Sahil + Sonal — stand up project-page workspaces so Sonal's brainstorms enrich a live artefact in place instead of producing one-shot drafts she has to copy out of chat. Four projects: Nagaland coffee book, captions, blogs, portraits. Confirm new Drive/web sources alongside.
+- **Produced:**
+  - **New artefact class** at `projects/<slug>/` — four workspaces scaffolded (`page.md` + `chatlog.md` each), plus `projects/README.md` carrying the binding per-session contract for project pages. Each `page.md` has structured frontmatter (`_status:`, `page_budget_tokens:`, `voice:` wikilink, `sources:` wikilinks, `shareable_url:`) and the right body shape per project: story pool for Nagaland; rhythm-grouped option pool for captions; idea-queue + WIP-draft layer for blogs; one-section-per-leader template for portraits.
+  - **Styled HTML mirrors** at `docs/projects/` — shared `style.css` matching the self-portrait's visual language, a projects landing `index.html`, and four project HTML pages. Live at https://sahilmodi1965.github.io/shikshalokam/projects/{index,nagaland-coffee-book,captions,blogs,portraits}.html — refresh ~60s after push.
+  - **`docs/index.html` refreshed** — new top-of-timeline entry (project workspaces), prior 19 May entry demoted; new `<section id="projects">` listing the four workspaces with live links.
+  - **`raw/2026-05-19-project-pages-brief.md`** — Sahil's brief captured verbatim with intent + the architectural decision Sahil/Claude locked this session (styled HTML pages, dual-write page.md + HTML until a build script lands).
+  - **New route `routes/web-shikshalokam-org.md`** — the two public web surfaces Sonal flagged (https://shikshalokam.org/blogs/ and https://shikshalokam.org/education-leaders-portraits/), both pending maintainer scrape and flagged as voice + format anchors for the [[blogs]] and [[portraits]] workspaces.
+  - **`routes/drive-sl-communications.md` § Blogs** — appended SLC Blogs 2026 WIP doc (`1pLXmcCcMD2-v_eThOZT2ioRunchx4DFoTe_tpet0EqM`), the only Drive link in Sahil's drop that wasn't already routed; the rest (SL 2-Pager, both coffee-table files, Blogs 2025, both captions docs) are already mapped in existing routes.
+- **Learned:** structural — the chat→output→manual-copy flow was bleeding context; the brain held more than Sonal could carry between sessions. Project pages move the artefact to disk + HTML so the brain compounds on the brainstorm itself, not just the outputs. → `learnings/2026-05-19-project-page-architecture.md` → CLAUDE.md per-session contract + new artefact-class row.
+- **Status changes:** none on existing files. New `projects/**/page.md` files at `_status: research-seeded` — will flip to `user-validated` once Sonal opens a session with any one of them and the page accrues real content. `routes/web-shikshalokam-org.md` at `_status` implicit-research-seeded (route — same convention as other route files in the brain).
+- **Sources touched:** [[drive-sl-communications]] [[captions]] [[shikshalokam-brazil-stories-may2026]] [[shikshagraha-brief-collaterals-feb2026]] [[styleguide]]
+- **Note:** CLAUDE.md amendment (new artefact row in the four-becomes-five table, new clause in per-session contract for project routing, new binding rule #11 on project pages as persistent not output) handed back to Sahil in the learnings file — CLAUDE.md is in the maintainer-only deny list and cannot be edited mid-session. Next Sonal session will be the first real test of the loop (brainstorm → page → push → review); the LEDGER entry from that session is the proof point. Deferred to next maintainer pass: scrape https://shikshalokam.org/blogs/ + /education-leaders-portraits/ into wiki/sources/; build a `tools/build_project_pages.py` if dual-write becomes painful.
+
 ## 2026-05-19 — Sahil (maintainer) — sl-communications-folder-ingest
 
 - **Asked:** Sahil — ingest the SL Communications Drive folder Sonal shared today (id `1P-6AHbwLkkGqPOxydhwTyZKUM8U6LP66`) and update the brain artefact.
