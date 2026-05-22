@@ -56,6 +56,16 @@ Sonal shared the SL-org-specific [SL Communications Drive folder](https://drive.
 
 **Flagged for next monthly enrichment pass:** ShikshaLokam Overview 2025 (v2) shortcut to resolve; SL Brand Guidelines vs movement Brand Guidelines comparison; Vimal Jharkhand blog FINAL as voice exemplar (requires `learnings/` slug per CLAUDE.md voice rule); partner-state asset folders (Nagaland / TG / Meghalaya / Assam / AP / STEM Report).
 
+## 2026-05-21 added by Sahil — research-evidence library (first `shikshalokam-research` pass)
+
+First run of the new `shikshalokam-research` skill — external studies that strengthen
+SL-aligned messaging, each verified against the trust tier and filed as a
+`research-*` source so later drafts cite from the brain, not a fresh search.
+
+- [How Leadership Influences Student Learning — Leithwood et al. (2004)](https://wallacefoundation.org/report/how-leadership-influences-student-learning) — Wallace Foundation review of research. Canonical finding: leadership is second only to classroom instruction among school-related factors in student learning. Tier 1. Ingested into [[research-leithwood-leadership-2004]]. *Verified 2026-05-21 via WebSearch.*
+- [Annual Status of Education Report (ASER) 2024](https://asercentre.org/) — Pratham, released 28 Jan 2025. Class 3 government-school reading 16.3% (2022) → 23.4% (2024), highest since 2005; government schools led the recovery. Tier 1. Ingested into [[research-aser-2024]]. *Verified 2026-05-21 via WebSearch.*
+- [The Future is Collective (2025)](https://www.weforum.org/stories/2025/04/collective-social-innovation/) — Schwab Foundation for Social Entrepreneurship / World Economic Forum. Names Shikshagraha as a collective social innovation system; carries the Punjab 13 → 1 story. Tier 1. Ingested into [[research-wef-future-is-collective-2025]]. *Verified 2026-05-21 via WebSearch.*
+
 ## How this file evolves
 
 Append new sources with a `## YYYY-MM-DD added by …` heading. Keep old entries even when superseded — provenance matters. When a source is fetched again, update its `*Fetched …*` line in place.

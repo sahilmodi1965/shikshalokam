@@ -30,6 +30,12 @@ Auto-injected at every session start. Budget ≤ 1,500 tokens (per `TOKEN_BUDGET
 - [[sources/shikshalokam-2-strategy-note-jul2025]] — *research-seeded.* SL-org positioning document. SL 1.0 → 2.0 evolution: platform → network → movement builder. SFPI/NILE origin, ELEVATE, ecosystem roles map (Co-Builders / Strategic Partners / Anchor / Collaborators / Momentum / Ambassadors / Advisors / Mentors), 10 verbs of the movement, I HAVE / I CAN / I WISH agency progression.
 - [[sources/shikshalokam-brazil-stories-may2026]] — *research-seeded.* Four canonical collective-action case studies prepared for Lemann Foundation Summit (Brazil): Nagaland PBL, Punjab PEC (Schwab-recognised), Chhattisgarh ECE/Anganwadi, Bihar Shiksha Chaupals. Template + numbers for multi-partner stories.
 
+### Research-evidence library (external studies — `shikshalokam-research` pass)
+
+- [[sources/research-leithwood-leadership-2004]] — *research-seeded.* Wallace Foundation review (Leithwood et al., 2004). Leadership is second only to classroom instruction among school-related factors in student learning. Evidence anchor for the leadership / agency message.
+- [[sources/research-aser-2024]] — *research-seeded.* ASER 2024 (Pratham). Class 3 government-school reading 16.3%→23.4%, highest since 2005; government schools led the recovery. Evidence anchor for the education-equity message.
+- [[sources/research-wef-future-is-collective-2025]] — *research-seeded.* Schwab Foundation / WEF, *The Future is Collective* (2025). Names Shikshagraha as a collective social innovation system. Evidence anchor for the collective-action message.
+
 ## Routes (where content lives outside this repo)
 
 - [[../routes/drive-communications]] — Movement-level Comms folder map (Newsletters, Stories of Impact, Comms Strategy stub, Brand Guidelines, decks, events)

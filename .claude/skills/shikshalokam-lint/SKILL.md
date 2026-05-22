@@ -39,7 +39,7 @@ description: Enforce the brain's invariants — frontmatter contracts, _status f
 ### TOKEN_BUDGET caps (per `TOKEN_BUDGET.md`)
 - `wiki/index.md` ≤ 1,500 tokens.
 - `wiki/_index/topic-summaries.md` ≤ 1,500 tokens.
-- Combined skill metadata across all 6 SKILL.md ≤ 1,000 tokens.
+- Combined skill metadata across all 7 SKILL.md ≤ 1,000 tokens. (7th skill `shikshalokam-research` added 2026-05-21; combined metadata measured ~700 tokens — within cap.)
 
 ### Voice + structural file protection
 - Compile-step commits (`tools/compile.py` author, or commits authored by the compile agent) must not touch `wiki/voice/**`, `INTENT.md`, `CLAUDE.md`, `ARCHITECTURE.md`, `AGENTS.md`, `TOKEN_BUDGET.md`, `brain.yml`, `LEDGER.md` (except via the append protocol).

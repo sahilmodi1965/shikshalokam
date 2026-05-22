@@ -33,6 +33,20 @@ Caption candidates grouped by the weekday rhythm Sonal authored in `routes/capti
 
 ---
 
+## Content log
+
+Every session that adds or changes a draft appends one dated row here — newest at
+top. This is the date-wise record of how content is accruing, so progress is
+visible day by day, not only at the weekly review. (Convention: `projects/README.md`.)
+
+| Date | Slot | What landed | Status |
+|---|---|---|---|
+| 2026-05-21 | Tuesday — Research Insight | **Variant 4** drafted — *"The recovery no one's talking about."* — ASER 2024 equity data. **Variant 2 citation verified & corrected** — now anchored on Leithwood et al. (2004), Wallace Foundation, replacing the unconfirmed OECD placeholder. | draft |
+| 2026-05-21 | — (brain build) | Research pipeline live — `shikshalokam-research` skill added; three studies verified and filed as `wiki/sources/research-*.md`; `shikshalokam-write` now researches + cites by default. | — |
+| 2026-05-19 | Tuesday — Research Insight | **Variants 1–3** drafted — collective action (V1) + agency for education leaders (V2, V3). First test of the project-page architecture. | draft |
+
+---
+
 ## Monday — Feedback video
 
 _(no candidates yet — populate as Sonal brings a feedback-video angle)_
@@ -50,7 +64,7 @@ _(no candidates yet — populate as Sonal brings a feedback-video angle)_
 - **Platform:** LinkedIn
 - **Status:** `draft`
 - **Theme:** collective action by the numbers
-- **Sources cited:** [[shikshalokam-brazil-stories-may2026]] § Bihar Shiksha Chaupals · WEF *The Future is Collective* (2025), in [[drive-sl-communications]] § 2025-26
+- **Sources cited:** [[shikshalokam-brazil-stories-may2026]] § Bihar Shiksha Chaupals · [[research-wef-future-is-collective-2025]] — Schwab Foundation / World Economic Forum, *The Future is Collective* (2025). **Citation verified 2026-05-21** via `shikshalokam-research`.
 - **Voice anchor:** rhetorical-question opener → comma-dense stat block → external authority anchor → "har kadam" sign-off
 - **Length:** ~95 words
 
@@ -75,13 +89,14 @@ _(no candidates yet — populate as Sonal brings a feedback-video angle)_
 
 - **Platform:** LinkedIn
 - **Status:** `draft`
-- **Theme:** agency for education leaders, anchored on OECD research consensus
-- **Sources cited:** OECD *Improving School Leadership* programme (Pont, Nusche & Moorman, 2008) and the broader body of OECD work — **paraphrased, not quoted** (Sonal to confirm exact citation before posting)
+- **Theme:** agency for education leaders, anchored on the landmark Wallace Foundation review of research
+- **Sources cited:** [[research-leithwood-leadership-2004]] — Leithwood, Louis, Anderson & Wahlstrom (2004), *How Leadership Influences Student Learning*, The Wallace Foundation. **Citation verified 2026-05-21** via `shikshalokam-research` — this replaces the earlier unconfirmed OECD placeholder; the precise "second only to teaching" finding originates in this review.
 - **Voice anchor:** pulled-finding opener → short-line cadence → on-team "we" → I HAVE / I CAN / I WISH framework from [[shikshalokam-2-strategy-note-jul2025]]
 - **Length:** ~95 words
 
-> Across two decades of OECD research, one finding has held:
-> the school leader is second only to the teacher in shaping student outcomes.
+> One finding has anchored two decades of education research:
+> the school leader is second only to the teacher
+> in shaping how much children learn.
 >
 > Yet most reform begins with the curriculum.
 >
@@ -104,7 +119,7 @@ _(no candidates yet — populate as Sonal brings a feedback-video angle)_
 - **Platform:** X (Twitter)
 - **Status:** `draft`
 - **Theme:** agency for education leaders, anchored on Pratham's ASER as a body of work
-- **Sources cited:** Pratham's ASER (Annual Status of Education Report) — referenced as a longitudinal body of work, not a single year's finding (safe attribution for the byte format)
+- **Sources cited:** [[research-aser-2024]] — Pratham's ASER. V3 references ASER as a longitudinal body of work (twenty years), not a single year's finding — safe attribution for the byte format. The verified 2024 specifics live in the filed source.
 - **Voice anchor:** compressed cadence, stacked one-line moves, no closer (X format)
 - **Length:** 245 characters
 
@@ -121,11 +136,42 @@ _(no candidates yet — populate as Sonal brings a feedback-video angle)_
 
 ---
 
+### Variant 4 — "The recovery no one's talking about."
+
+- **Platform:** LinkedIn
+- **Status:** `draft`
+- **Theme:** education equity — the foundational-learning recovery, government schools leading
+- **Sources cited:** [[research-aser-2024]] — ASER 2024, Pratham Education Foundation (released 28 Jan 2025). **Citation verified 2026-05-21** via `shikshalokam-research` — numbers quoted exactly.
+- **Voice anchor:** aphoristic setup opener → comma-dense stat block → 📍 scaffolding → gain-and-gap honesty (voice rule: hopeful but honest) → "har kadam" sign-off → CTA closer → hashtag stack
+- **Length:** ~95 words
+- **Pipeline note:** first caption drafted end-to-end through the new flow — research verified → filed as a wiki source → cited from the brain → logged dated above.
+
+> For two decades, one number barely moved.
+>
+> Then it did.
+>
+> 📍 In 2024, the share of Class 3 children in government schools who can read a Class 2-level text rose to 23.4% — up from 16.3% two years earlier. The highest since measurement began in 2005.
+>
+> And this time, government schools led the recovery — outpacing private schools.
+>
+> 76.6% still can't. The gap is wide.
+> But the direction has changed.
+>
+> This is what happens when a system decides to improve — together.
+>
+> har kadam shiksha ki oar..!
+>
+> Share your thoughts in the comments below 👇
+>
+> #InvokED2026 #MissionToMovement #CollectiveAction
+
+---
+
 ### Notes for next iteration
 
 - All three variants pair with a Tuesday slot, but **Variant 1 also reads cleanly as a Wednesday InvokED Studio teaser** if the Bihar Chaupal angle gets a studio episode. Worth flagging cross-rhythm.
 - Variants 2 and 3 share an agency thesis but at different platforms — natural pair if Sonal wants to ladder a LinkedIn long-form into an X short-form.
-- If Sonal wants **more research anchors** beyond what's currently in the brain (WEF, OECD, ASER as a body), the next session should name specific studies — candidates worth pulling: Karthik Muralidharan's J-PAL South Asia work on Indian education governance · IDR (India Development Review) sector pieces · NCERT / Azim Premji University research · Hargreaves on distributed leadership. None of these are yet ingested as wiki sources; flag a maintainer enrichment pass.
+- **Research anchors are now a filed library, not a gap.** Three studies are verified and filed: [[research-leithwood-leadership-2004]], [[research-aser-2024]], [[research-wef-future-is-collective-2025]]. Any future research-insight caption pulls these from the brain; for a new angle, the `shikshalokam-research` skill verifies and files a fresh study before drafting (citing is now default-on). Still-unpulled candidates worth a future pass: Karthik Muralidharan / J-PAL South Asia on Indian education governance · IDR sector pieces · NCERT / Azim Premji University research · Hargreaves on distributed leadership.
 
 
 

@@ -56,6 +56,31 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 
 <!-- Entries appended below this line. Newest immediately below. -->
 
+## 2026-05-21 — Sahil (maintainer, Sonal on call) — research-pipeline-build
+
+- **Asked:** Sahil, with Sonal on the call — "fix all the feedbacks and share a new post / variation after all structural changes are made." Same-session promotion of the feedback captured in the entry below.
+- **Produced:**
+  - **New skill `shikshalokam-research`** (`.claude/skills/shikshalokam-research/SKILL.md`) — verifies external studies against a 3-tier trust scale, files them, returns the wikilink to cite. Runs standalone or as a step inside `shikshalokam-write`.
+  - **`shikshalokam-write` updated** — research + auto-cite is now a default step (step 2) for evidence-anchored content; read order pulls `wiki/sources/research-*.md`.
+  - **Three studies verified (live WebSearch) and filed** as `wiki/sources/research-*.md`: [[research-leithwood-leadership-2004]] (Wallace Foundation review — leadership second only to teaching), [[research-aser-2024]] (Pratham — government-school foundational-learning recovery), [[research-wef-future-is-collective-2025]] (Schwab Foundation / WEF — names Shikshagraha). Registered in `wiki/index.md`, `wiki/sources/SOURCES.md`, `wiki/log.md`.
+  - **Date-wise content log** — `## Content log` section added to `projects/captions/page.md` + mirrored to `docs/projects/captions.html` (new `.logtable` style in `docs/projects/style.css`); `projects/README.md` per-session contract now requires it on every project page.
+  - **New post:** captions **Variant 4** — *"The recovery no one's talking about."* (LinkedIn, ~95 words, ASER 2024 equity) — first caption drafted end-to-end through the new pipeline. **Variant 2 citation corrected** — unconfirmed OECD placeholder → verified Leithwood et al. (2004), Wallace Foundation. V1 + V3 source lines tightened to the filed sources.
+  - `docs/index.html` self-portrait timeline entry rewritten (research capability built, not just captured); captions tile counts updated to 4 across `docs/index.html`, `docs/projects/index.html`, `docs/projects/captions.html`.
+- **Learned:** structural learning `learnings/2026-05-21-research-citation-and-datewise-log.md` **promoted** (`promoted: true`) — same-session maintainer build, not deferred to weekly review. CLAUDE.md amendment (new behavior rule 12 — "Evidence is researched, not improvised") recorded in the learning for Sahil to paste by hand (`CLAUDE.md` is Write/Edit deny-listed).
+- **Status changes:** three new `wiki/sources/research-*.md` created at `_status: research-seeded` — weekly review to flip to `user-validated` once Sonal has used them. No existing-file `_status:` transitions.
+- **Sources touched:** [[research-leithwood-leadership-2004]] [[research-aser-2024]] [[research-wef-future-is-collective-2025]] [[shikshalokam-brazil-stories-may2026]] [[shikshalokam-2-strategy-note-jul2025]]
+- **Voice notes:** Variant 4 — aphoristic setup opener, comma-dense stat block, gain-and-gap honesty (voice rule: hopeful but honest — never a gain without the matching gap), "har kadam shiksha ki oar..!" sign-off, CTA closer, hashtag stack.
+- **Note:** Two LEDGER entries for 2026-05-21 — this build entry and the feedback-capture entry below — one continuous session, split because a maintainer (Sahil) joined to authorise the build. Precedent: 2026-05-19 also carried two entries.
+
+## 2026-05-21 — Sonal Bhasin — research-citation-and-datewise-log
+
+- **Asked:** Sonal — reviewing the three Tuesday research-insight caption variants, she gave process feedback (explicitly tagged "take this as a brain feedback"): she wants a standing capability that researches external studies, trustable surveys, and reliable sources strengthening SL messaging (education leadership · collective action · education equity); future prompts should auto-cite that research without being asked; the research should compound into the brain; and the project pages should show every draft on a dated basis, not just a weekly roll-up.
+- **Produced:** No draft — feedback-capture session. Wrote `learnings/2026-05-21-research-citation-and-datewise-log.md` capturing all four parts, classified structural, with a four-step promotion path routed to Sahil's monthly maintainer pass (the parts are capability builds, not weekly-review wiki edits).
+- **Learned:** structural — research-as-a-capability + auto-cite + compound-to-`wiki/sources/` + date-wise project-page log → learnings/2026-05-21-research-citation-and-datewise-log.md → target: shikshalokam-write skill, a new research capability, docs/projects/*.html, projects/README.md, CLAUDE.md.
+- **Status changes:** none. No `wiki/**` touched; the three 19 May caption variants stay `_status: research-seeded` (Sonal has not approved any — she redirected to process).
+- **Sources touched:** []
+- **Note:** The three Tuesday variants are still awaiting Sonal's pick — copying a title back still flips it to approved. Interim behaviour until the capability is built: sessions keep citing real studies by hand with a verifiability flag, as the 19 May captions did. Building the research agent mid-session was deliberately not done (CLAUDE.md rule 5 — no ghost features; rule 10 — stop before new conventions).
+
 ## 2026-05-19 — Sahil (on Sonal's behalf) — first-captions-demo + nav-fix
 
 - **Asked:** Sahil — (1) the main brain page is missing navigation to the new project workspaces; add it. (2) First captions demo: byte-sized informative posts anchored on research studies / surveys / reports that strengthen SL-aligned messaging — collective action + agency for education leaders.

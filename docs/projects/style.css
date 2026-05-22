@@ -181,6 +181,29 @@ section { padding: 48px 0; border-top: 1px solid var(--rule); }
 .rhythm > div:nth-last-child(-n+2) { border-bottom: none; }
 .rhythm-day { font-weight: 600; color: var(--indigo); }
 
+/* Content log — dated draft activity, on every project page */
+.logtable {
+  width: 100%; border-collapse: collapse; margin-top: 14px;
+  background: #fff; border: 1px solid var(--rule);
+  border-radius: 12px; overflow: hidden;
+}
+.logtable th, .logtable td {
+  padding: 11px 16px; text-align: left;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.9rem; vertical-align: top;
+}
+.logtable th {
+  background: var(--mist); font-size: 0.72rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--sl); font-weight: 700;
+}
+.logtable tr:last-child td { border-bottom: none; }
+.logtable td.log-date { font-weight: 600; color: var(--indigo); white-space: nowrap; }
+.logtable td.log-slot { color: var(--muted); white-space: nowrap; }
+@media (max-width: 640px) {
+  .logtable th, .logtable td { padding: 9px 10px; font-size: 0.82rem; }
+  .logtable td.log-date, .logtable td.log-slot { white-space: normal; }
+}
+
 /* Footer */
 footer { padding: 50px 0 40px; background: var(--ink); color: var(--paper); }
 footer .wrap { display: grid; grid-template-columns: 2fr 1fr; gap: 28px; }

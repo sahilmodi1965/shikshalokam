@@ -66,7 +66,8 @@ When Sonal opens Claude Code with a project in mind (named explicitly or implied
 1. **Route** — Claude identifies which project the chat is about. If ambiguous, asks one short question.
 2. **Load** — Reads `projects/<slug>/page.md` (always cheap — under page-budget cap). If voice work is in play, reads the matching `wiki/voice/exemplars/` via the brain-write skill's voice-layer budget.
 3. **Enrich** — Edits `page.md` in place: adds new sections, refines existing ones, advances `status:` fields. The page is the artefact; chat is the means.
-4. **Mirror** — Regenerates `docs/projects/<slug>.html` to reflect the new `page.md`. Until a build script exists (deferred), Claude dual-writes.
+3b. **Log** — If the session added or changed a draft, append one dated row to the page's `## Content log` section (newest at top): `date · slot · what landed · status`. This is the date-wise record Sonal asked for — every draft visible day by day, not only at the weekly review. A page that has no `## Content log` section yet gets one added at the top, below "How this page works".
+4. **Mirror** — Regenerates `docs/projects/<slug>.html` to reflect the new `page.md` — **including the Content log section.** Until a build script exists (deferred), Claude dual-writes.
 5. **Append** — Adds one entry to `projects/<slug>/chatlog.md` summarising this session's thread (so the brain compounds from the brainstorm, not just the outputs).
 6. **Report** — Surfaces a tight summary to Sonal: section title + one-line on what changed + "push?"
 7. **Confirm** — Sonal: yes → SessionEnd hook commits + pushes → Pages rebuilds in ~60s. Sonal can review the URL `https://sahilmodi1965.github.io/shikshalokam/projects/<slug>.html`.
@@ -106,6 +107,8 @@ The maintainer's monthly pass runs `wc -w projects/*/page.md` and triggers overf
 3. **Voice corrections route to `learnings/`, not directly into `page.md`.** CLAUDE.md rule 8 (voice is hand-curated) still binds. The exemplar lives in `wiki/voice/**`; this project page only **applies** voice.
 4. **No silent restructuring of `page.md` sections.** If the page shape needs to change (e.g. add a new rhythm slot), surface the proposal in chat first.
 5. **The HTML mirror keeps Sonal's copy-back loop alive.** Section titles must be plain text she can highlight and paste. No markdown leakage. No HTML entities in titles.
+6. **Every project page carries a dated `## Content log`.** Drafts are visible date by date, not only at the weekly review (added 2026-05-21, per `learnings/2026-05-21-research-citation-and-datewise-log.md`). The log is part of `page.md` and is mirrored to the HTML.
+7. **Evidence-anchored drafts cite verified research.** A research-insight or thought-leadership draft runs through `shikshalokam-research` (or pulls an existing `wiki/sources/research-*.md`) and carries a real citation. Citing is default-on — Sonal does not have to ask for sources.
 
 ---
 

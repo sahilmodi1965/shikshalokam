@@ -13,3 +13,11 @@ Append-only record of compile-step runs. **Distinct from LEDGER.md** — `log.md
 - Added `wiki/sources/shikshalokam-brazil-stories-may2026.md` (_status: research-seeded) — four Lemann-summit collective-action case studies.
 - Updated `wiki/index.md`, `wiki/sources/SOURCES.md`, `routes/drive-communications.md` cross-link.
 - No `_status:` transitions on existing files. No `wiki/voice/**` edits (Vimal Jharkhand blog deferred — requires `learnings/` slug).
+
+## 2026-05-21T00:00:00Z — Sahil maintainer build — research-evidence library
+- Promoted `learnings/2026-05-21-research-citation-and-datewise-log.md` (Sonal's brain feedback) in a same-session maintainer build.
+- New skill `.claude/skills/shikshalokam-research/` — verifies external studies against a trust tier, files them, returns the wikilink to cite.
+- `.claude/skills/shikshalokam-write/SKILL.md` updated — research + auto-cite is now a default step for evidence-anchored content.
+- Added three `wiki/sources/research-*.md` (all _status: research-seeded), first run of the research skill: `research-leithwood-leadership-2004`, `research-aser-2024`, `research-wef-future-is-collective-2025`.
+- Updated `wiki/index.md` (new Research-evidence library sub-section), `wiki/sources/SOURCES.md`.
+- No `_status:` transitions on existing files. No `wiki/voice/**` edits.
