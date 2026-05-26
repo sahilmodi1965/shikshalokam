@@ -56,6 +56,15 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 
 <!-- Entries appended below this line. Newest immediately below. -->
 
+## 2026-05-26 — Sahil (post-call) — demo-tour-page-for-team
+
+- **Asked:** Sahil — *"tomorrow we have a demo with the team, can we also create a one off page to explain how the brain works and will evolve over time too? it needs to be very simple and illustrative page and data flow and architecture shown in a fun way for the non technical team to understand."*
+- **Produced:** **`docs/demo.html`** — one-page team tour, ~5 min read, from the brain's first-person POV. Eight sections: (1) hero + intro pill row, (2) one-liner blockquote in a gold-on-indigo gradient card, (3) **four-rooms grid** with tinted cards + emoji icons explaining State / Session / Learning / Routes in plain English, (4) **six-step flow diagram** with numbered cards + emoji + arrows (Brief → Ingest → Draft → Push → Review → Compound), (5) **two-ways panel** explaining brainstorm-led (Sonal-driven) vs directed run (Sahil-routed), (6) **how-I-learn example** showing the actual *movement-as-frame* correction Sonal made this week — Before / Feedback / After / Saved-as-rule in coloured cards, (7) **live numbers dashboard** (17 LEDGER entries · 11 sources · 5 concepts · 7 learnings · 4 workspaces · 6 routes · 3 drafts this week · 1 voice rule learned), (8) **May→September roadmap** with the May card highlighted as Now. Closes with a gradient promise band and three CTAs (back to brain / log / projects). Bar nav of `docs/index.html` adds *Tour* link between Projects and Log. Fully responsive, matches existing visual language (Fraunces serif + Inter + cascara/gold/indigo palette + soft-rose/mint/sky/sand tints).
+- **Learned:** none new — this is a one-shot communication artefact, not a structural shift. Page is designed to be regenerable / refreshable as the brain compounds (numbers section will need a refresh after each weekly review).
+- **Status changes:** none on `wiki/**`.
+- **Sources touched:** []
+- **Note:** **Sixth LEDGER entry today.** Built specifically for the 27 May team demo. Lives at https://sahilmodi1965.github.io/shikshalokam/demo.html — refresh ~60s after push. The page is for the team to understand the brain in plain English before the demo, and can be reused for board / funder briefings going forward.
+
 ## 2026-05-26 — Sahil (same call) — sessionstart-hook-hardened
 
 - **Asked:** Sahil — *"qq when anyone logs in to claude code will they access the latest brain?"* → confirmed the existing SessionStart hook had three silent-fail bugs (used `git pull --rebase`, bailed quietly on dirty tree, `|| true` swallowed errors). Sahil: *"yes we need this please do it now."*
