@@ -4,13 +4,24 @@ title: "The Future is Collective (2025) — Schwab Foundation / World Economic F
 kind: report
 origin: https://www.weforum.org/stories/2025/04/collective-social-innovation/
 verified: 2026-05-21
+verify_before_publish: true
+verify_what: "Confirm the report names 'Shikshagraha' specifically (exact phrase) before publishing any caption / post that cites it. WebSearch evidence has the report mentioning grassroots education movements + SFPI 'weaving Shikshagraha' — but the exact in-report attribution of the name 'Shikshagraha' needs eyes-on-the-PDF before print. Flag surfaced from Sonal's Variant 1 session, 2026-05-26."
 tags: [research, collective-action, evidence, schwab, wef, shikshagraha, tier-1]
 sources: []
-corrected_by: []
+corrected_by: ["2026-05-26-movement-frame-people-actors"]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-05-26
 _status: research-seeded
 ---
+
+> ⚠ **Verify before publish.** The claim that this report names *Shikshagraha* specifically must be
+> confirmed against the actual report PDF before any caption / post that cites it goes live.
+> See `verify_what:` in frontmatter. Flag surfaced from Sonal's Variant 1 session, 2026-05-26 —
+> caption is approved on voice and structure, but the source citation needs eyes-on-the-PDF
+> before print. Next-pass-to-action: download the PDF from
+> https://www.weforum.org/stories/2025/04/collective-social-innovation/ (or the companion piece),
+> find the exact passage that names Shikshagraha, quote it verbatim into the section below, then
+> remove this banner and set `verify_before_publish: false`.
 
 # The Future is Collective (2025)
 
