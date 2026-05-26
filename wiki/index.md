@@ -2,7 +2,7 @@
 type: index
 tags: [master-index, auto-loaded]
 created: 2026-05-14
-updated: 2026-05-19
+updated: 2026-05-26
 ---
 
 # ShikshaLokam brain — master index
@@ -35,6 +35,11 @@ Auto-injected at every session start. Budget ≤ 1,500 tokens (per `TOKEN_BUDGET
 - [[sources/research-leithwood-leadership-2004]] — *research-seeded.* Wallace Foundation review (Leithwood et al., 2004). Leadership is second only to classroom instruction among school-related factors in student learning. Evidence anchor for the leadership / agency message.
 - [[sources/research-aser-2024]] — *research-seeded.* ASER 2024 (Pratham). Class 3 government-school reading 16.3%→23.4%, highest since 2005; government schools led the recovery. Evidence anchor for the education-equity message.
 - [[sources/research-wef-future-is-collective-2025]] — *research-seeded.* Schwab Foundation / WEF, *The Future is Collective* (2025). Names Shikshagraha as a collective social innovation system. Evidence anchor for the collective-action message.
+
+### Field sources (interview transcripts + winning-school responses)
+
+- [[sources/interview-masthanaiah-2026-04-20]] — *research-seeded.* Aquib Rizwan's 1h 04m interview with Shri Vempuluru Nagoor Masthanaiah (retired Director CSE, AP) — 40-year arc from fifth-class dropout to commissioner; counselling-based transfer system (1996); PM SHRI (935 schools, 2nd in India); SLDP (250 HMs to IIM-A). Source of [[../projects/portraits/page]] § Masthanaiah portrait.
+- [[sources/nlnf3-gms-jalukie-sectorb-response-2026-05-07]] — *research-seeded.* Google Form response from one of 15 NLNF 3.0 winning schools — GMS Jalukie Sector-B, Peren district, Nagaland (Head Teacher Kuzie Kulim). First story in [[../projects/nagaland-coffee-book/page]].
 
 ## Routes (where content lives outside this repo)
 

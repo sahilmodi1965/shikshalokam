@@ -21,3 +21,15 @@ Append-only record of compile-step runs. **Distinct from LEDGER.md** — `log.md
 - Added three `wiki/sources/research-*.md` (all _status: research-seeded), first run of the research skill: `research-leithwood-leadership-2004`, `research-aser-2024`, `research-wef-future-is-collective-2025`.
 - Updated `wiki/index.md` (new Research-evidence library sub-section), `wiki/sources/SOURCES.md`.
 - No `_status:` transitions on existing files. No `wiki/voice/**` edits.
+
+## 2026-05-26T00:00:00Z — Sahil maintainer pass — first content-from-brain run for Sonal
+- Routed Sonal's email ("Content Creation with Brain") end-to-end: source ingest → concept enrichment → project-page draft → HTML mirror → review URL.
+- Added `raw/2026-05-26.md` capturing the brief verbatim + provenance for both source drops.
+- Added two `wiki/sources/*.md` (_status: research-seeded): `interview-masthanaiah-2026-04-20`, `nlnf3-gms-jalukie-sectorb-response-2026-05-07`.
+- Updated `wiki/concepts/programs.md` § Active — added **Nagaland Literacy & Numeracy Fest (NLNF) 3.0 / NIPUN Nagaland** as a named program (was previously only present as the DEP / PBL macro story in Brazil-stories).
+- Updated `wiki/index.md` (new sources registered) and `wiki/sources/SOURCES.md` (2026-05-26 section).
+- Enriched two project workspaces in place:
+  - `projects/portraits/page.md` — first real portrait card (Vempuluru Nagoor Masthanaiah), `status: review-ready`.
+  - `projects/nagaland-coffee-book/page.md` — first real story card (GMS Jalukie Sector-B, Peren), `status: review-ready`; project intent re-anchored on NLNF 3.0 / NIPUN Nagaland as the canonical container.
+- HTML mirrors at `docs/projects/{portraits,nagaland-coffee-book,index}.html` updated. `docs/index.html` self-portrait timeline updated.
+- No `_status:` transitions on existing files. No `wiki/voice/**` edits.

@@ -66,6 +66,31 @@ SL-aligned messaging, each verified against the trust tier and filed as a
 - [Annual Status of Education Report (ASER) 2024](https://asercentre.org/) — Pratham, released 28 Jan 2025. Class 3 government-school reading 16.3% (2022) → 23.4% (2024), highest since 2005; government schools led the recovery. Tier 1. Ingested into [[research-aser-2024]]. *Verified 2026-05-21 via WebSearch.*
 - [The Future is Collective (2025)](https://www.weforum.org/stories/2025/04/collective-social-innovation/) — Schwab Foundation for Social Entrepreneurship / World Economic Forum. Names Shikshagraha as a collective social innovation system; carries the Punjab 13 → 1 story. Tier 1. Ingested into [[research-wef-future-is-collective-2025]]. *Verified 2026-05-21 via WebSearch.*
 
+## 2026-05-26 added by Sahil — content drop from Sonal (Masthanaiah + Nagaland NLNF 3.0)
+
+First end-to-end **content-from-brain** run for Sonal — Sahil routed her email request
+("Content Creation with Brain") through the brain end-to-end: ingest → project-page enrichment →
+HTML mirror → review URL. Two raw sources Sonal supplied:
+
+- [Interview — Shri Vempuluru Nagoor Masthanaiah, retired Director CSE Andhra Pradesh (20 Apr 2026)](https://docs.google.com/document/d/1kKXPDjLW3iuG7eewpPCHyO_76oX9JItrpJj2pjY1_rU/edit) —
+  Gemini auto-transcript (~78K chars) of 1h 04m video call; interviewer Aquib Rizwan. Ingested into
+  [[interview-masthanaiah-2026-04-20]]. Source of the first portrait card on
+  [[../../projects/portraits/page]]. *Fetched 2026-05-26 via Drive MCP.*
+- [NLNF 3.0 winning-school responses — sheet](https://docs.google.com/spreadsheets/d/1saHzQ6ivREyZaM9dJWYOw8SiTFC-i_owe5eeAPs-ZL4/edit) —
+  Google Form responses from the 15 winning schools of the Nagaland Literacy & Numeracy Fest 3.0,
+  collected for the NLNF 3.0 coffee table book (DoSE + Samagra Shiksha Nagaland + SCERT + ShikshaLokam).
+  First row ingested into [[nlnf3-gms-jalukie-sectorb-response-2026-05-07]] (GMS Jalukie Sector-B,
+  Peren district, Head Teacher Kuzie Kulim). The other 14 responses sit on the sheet pending future
+  per-story ingest. *Fetched 2026-05-26 via Drive MCP.*
+
+Voice/format anchor (read in-session, ingest deferred): https://shikshalokam.org/education-leaders-portraits/ —
+already routed in [[../../routes/web-shikshalokam-org]].
+
+**Flagged for next monthly enrichment pass:** ingest the remaining 14 NLNF 3.0 responses; scrape the live
+portraits gallery into a `wiki/sources/portraits-shikshalokam-org-<date>.md` so the portrait voice has a
+first-class wiki anchor; build out `wiki/concepts/foundational-learning.md` if NIPUN-related stories
+become a recurring stream.
+
 ## How this file evolves
 
 Append new sources with a `## YYYY-MM-DD added by …` heading. Keep old entries even when superseded — provenance matters. When a source is fetched again, update its `*Fetched …*` line in place.
