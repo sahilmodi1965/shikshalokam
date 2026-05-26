@@ -2,7 +2,7 @@
 project: captions
 title: "Captions — rolling option pool"
 _status: research-seeded
-last_updated: 2026-05-19
+last_updated: 2026-05-26
 maintainer: Sahil Modi
 daily_user: Sonal Bhasin
 page_budget_tokens: 8000
@@ -41,6 +41,7 @@ visible day by day, not only at the weekly review. (Convention: `projects/README
 
 | Date | Slot | What landed | Status |
 |---|---|---|---|
+| 2026-05-26 | Tuesday — Research Insight | **Variant 1 revised & approved** — *"What if collective action could be measured?"* — Shiksha Chaupals explained, SL/SG relation clarified, real actors (women from SHGs, didis, parents, named partners Jyoti Mahila Samakhya, Srishti Mahila Samakhya, other SHGs & CSOs) centred under the movement. #InvokED2026 removed. | approved |
 | 2026-05-21 | Tuesday — Research Insight | **Variant 4** drafted — *"The recovery no one's talking about."* — ASER 2024 equity data. **Variant 2 citation verified & corrected** — now anchored on Leithwood et al. (2004), Wallace Foundation, replacing the unconfirmed OECD placeholder. | draft |
 | 2026-05-21 | — (brain build) | Research pipeline live — `shikshalokam-research` skill added; three studies verified and filed as `wiki/sources/research-*.md`; `shikshalokam-write` now researches + cites by default. | — |
 | 2026-05-19 | Tuesday — Research Insight | **Variants 1–3** drafted — collective action (V1) + agency for education leaders (V2, V3). First test of the project-page architecture. | draft |
@@ -62,18 +63,21 @@ _(no candidates yet — populate as Sonal brings a feedback-video angle)_
 ### Variant 1 — "What if collective action could be measured?"
 
 - **Platform:** LinkedIn
-- **Status:** `draft`
+- **Status:** `approved`
 - **Theme:** collective action by the numbers
 - **Sources cited:** [[shikshalokam-brazil-stories-may2026]] § Bihar Shiksha Chaupals · [[research-wef-future-is-collective-2025]] — Schwab Foundation / World Economic Forum, *The Future is Collective* (2025). **Citation verified 2026-05-21** via `shikshalokam-research`.
-- **Voice anchor:** rhetorical-question opener → comma-dense stat block → external authority anchor → "har kadam" sign-off
-- **Length:** ~95 words
+- **Voice anchor:** rhetorical-question opener → comma-dense stat block → movement-first / people-within framing → external authority anchor → "har kadam" sign-off
+- **Length:** ~130 words
+- **Approved:** 2026-05-26 by Sonal Bhasin
 
 > What if collective action could be measured?
 >
 > 📍 Bihar. 2,450 Shiksha Chaupals. 55,000 women. 28,000 schools.
 > Two years of learning, in one.
 >
-> The 2025 World Economic Forum report *The Future is Collective* called this pattern the operating logic for India's hardest social problems — and named Shikshagraha among the systems building it.
+> Shiksha Chaupals are community gatherings at the heart of the Shikshagraha movement — where women from self-help groups, didis who take the lead, parents, and partners like Jyoti Mahila Samakhya, Srishti Mahila Samakhya, and other SHGs and CSOs come together to sense what their nearest public schools need and act on it. ShikshaLokam catalyses Shikshagraha by building the tools, structures, and leadership capacity that make this kind of ground-up action visible and sustainable.
+>
+> The 2025 World Economic Forum report *The Future is Collective* called this pattern — communities owning the improvement of their schools — the operating logic for India's hardest social problems, and named Shikshagraha among the systems building it.
 >
 > This is what the movement looks like when it works.
 >
@@ -81,7 +85,7 @@ _(no candidates yet — populate as Sonal brings a feedback-video angle)_
 >
 > Share your thoughts in the comments below 👇
 >
-> #InvokED2026 #MissionToMovement #CollectiveAction
+> #ShikshaLokam #Shikshagraha #CollectiveAction #MissionToMovement
 
 ---
 

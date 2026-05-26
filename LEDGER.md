@@ -56,6 +56,15 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 
 <!-- Entries appended below this line. Newest immediately below. -->
 
+## 2026-05-26 — Sonal Bhasin — variant-1-revision-and-approval
+
+- **Asked:** Sonal — shared structured feedback on Variant 1 *"What if collective action could be measured?"*: (1) SL↔SG relation missing; (2) #InvokED2026 irrelevant to a timeless collective-action post; (3) Shiksha Chaupal unexplained / ShikshaLokam's role unnamed. Reviewed two revised iterations and approved the final copy.
+- **Produced:** Variant 1 revised — Shiksha Chaupals defined as community gatherings at the heart of the Shikshagraha movement; real actors named within that frame (women from SHGs, didis, parents, Jyoti Mahila Samakhya, Srishti Mahila Samakhya, other SHGs & CSOs); ShikshaLokam's catalysing role made explicit; #InvokED2026 replaced with #ShikshaLokam. Status flipped `draft → approved`. `projects/captions/page.md` and `docs/projects/captions.html` updated and pushed. Live at https://sahilmodi1965.github.io/shikshalokam/projects/captions.html
+- **Learned:** structural — "movement as frame, people as actors" — Shikshagraha leads any mention of ground-level action, but the real actors (SHG women, didis, parents, named partner CSOs) must be named within that frame. Naming partners by name is part of the voice, not a detail. → `learnings/2026-05-26-movement-frame-people-actors.md`
+- **Status changes:** `projects/captions/page.md` Variant 1 `draft → approved`.
+- **Sources touched:** [[shikshalokam-brazil-stories-may2026]] [[research-wef-future-is-collective-2025]]
+- **Voice notes:** Movement named first as container; people fill it — "gatherings at the heart of the Shikshagraha movement — where [named actors] come together." Not "Shikshagraha brought this to life." #InvokED2026 is event-specific; removed from timeless collective-action posts.
+
 ## 2026-05-26 — Sahil (maintainer, routing Sonal email) — content-from-brain-first-run
 
 - **Asked:** Sahil — routed Sonal's email *"Content Creation with Brain"* end-to-end: produce (1) an Ed-Leader Portrait of **Shri Vempuluru Nagoor Masthanaiah** from Aquib Rizwan's 20 Apr 2026 interview transcript, and (2) a coffee-table-book story celebrating **collective action + micro-improvement** from one of the 15 winning schools of **Nagaland Literacy & Numeracy Fest 3.0** (NIPUN Nagaland), pulled from the Google Form responses sheet Sonal shared. Sahil's overlay: *"go full force … at the end of the run I want links that Sonal can review overall."*
