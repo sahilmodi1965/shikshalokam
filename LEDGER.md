@@ -56,6 +56,22 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 
 <!-- Entries appended below this line. Newest immediately below. -->
 
+## 2026-05-26 — Sahil + Sonal (joint video call) — five-decisions-binding-and-log-page-build
+
+- **Asked:** Sahil — *"yesss"* to all five workflow decisions surfaced in the prior turn: (1) auto-push + auto-pull rules binding; (2) build the log page this session; (3) Sahil-routes-source-attached-briefs as the default; (4) Friday 29 May 4pm IST as the standing weekly-review slot; (5) Sahil hand-pastes the three queued items (voice styleguide + CLAUDE.md ×2) after the call.
+- **Produced:**
+  - **`docs/log.html`** — new public page at `/log/`, the **single review surface** for every artefact the brain has ever pushed. Newest first, grouped by date; each row shows author, slug, the one-line ask, and direct links to the live artefacts. Linked from the self-portrait bar nav (between *Projects →* and *Why*). Auto-generated from LEDGER.
+  - **`tools/build_log.py`** — first stub generator. Parses `LEDGER.md` (split on the `<!-- Entries appended below -->` marker — robust against template-heading collisions), extracts the one-line Asked field + every URL in each entry body, filters to artefact URLs (anything on `sahilmodi1965.github.io/shikshalokam`), renders to styled HTML. 14 entries · 4 artefact links on first run.
+  - **`learnings/2026-05-26-five-decisions-binding.md`** — captures all five decisions; carries paste-ready CLAUDE.md amendments for Rules A + B (auto-publish + auto-pull preflight); paste-ready `brain.yml` `weekly_review_slot` field; a combined commit-message stub for Sahil's post-call paste batch. The brain treats the rules as binding from this commit even though three of them live in files the brain can't edit itself — sessions read `learnings/` at start; the learnings *are* the contract until CLAUDE.md catches up.
+  - **`projects/README.md` § Two valid session shapes** — new section adding the *"directed run"* shape (Sahil-routed) alongside the existing *"brainstorm-led"* shape (Sonal-driven), with the default rule (directed run for source-attached briefs).
+  - **`docs/index.html`** — bar nav adds *Log* link; today's timeline entry replaced with the new five-decisions card; the prior workflow-tidy entry demoted (still on the page, no longer marked today).
+  - **Pushed to remote** at the new always-on default — no opt-out invoked this session.
+- **Learned:** structural — three of the five decisions land as `learnings/` entries the brain reads at session start, two of them land as live code (the log page + the build script + the README + the timeline). The four pending paste items (CLAUDE.md ×2 + voice styleguide + brain.yml) carry full paste-ready snippets in the corresponding learning files; Sahil's post-call paste closes the loop. `learnings/2026-05-26-five-decisions-binding.md` is the index for the paste queue.
+- **Status changes:** none on existing wiki/** files. New project-page convention shape lands in `projects/README.md` (was `_status: research-seeded`, stays there — Sonal hasn't used the directed-run pattern from her own session yet, only Sahil-on-her-behalf).
+- **Sources touched:** []
+- **Voice notes:** none — this is a structural build session, not a content draft session.
+- **Note:** **Fourth LEDGER entry today** — four times the brain compounded in one day (first content-from-brain run · push-mid-session structural fix · joint-call workflow tidy · five-decisions-binding build). Same-day multi-entry days are legitimate when the maintainer joins to authorise structural builds (precedent: 2026-05-21 had two). Today's four entries together form the operational backbone of the next CLAUDE.md per-session-contract revision.
+
 ## 2026-05-26 — Sahil + Sonal (joint video call) — workflow-tidy-and-drift-fix
 
 - **Asked:** Sahil + Sonal — on a screen-shared video call, asked the brain to (a) execute the three maintenance items Sonal's earlier session left as a WhatsApp prompt (delete stale `sessions/2026-05-26-bihar-chaupal-post.md`, promote the *movement-as-frame, people-as-actors* learning into `wiki/voice/styleguide.md`, add `verify_before_publish: true` to the WEF source), and (b) lay out two structural improvements they want binding from now on — *every chat must produce a pushed, reviewable artefact link* AND *no silent fail if push is forgotten* — plus a 5-year-old-style walk-through of where else the workflow might fail.

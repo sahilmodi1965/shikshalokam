@@ -59,6 +59,22 @@ docs/projects/
 
 ---
 
+## Two valid session shapes
+
+Both yield the same artefact: a pushed, reviewable URL. They differ only in who drives the session.
+
+| Shape | Driven by | When to use | Plan cost |
+|---|---|---|---|
+| **Brainstorm-led** | Sonal, in her own Claude Code | She's thinking out loud, iterating a caption, asking the brain a question, applying a small edit, copying back a feedback signal | $20 |
+| **Directed run** | Sahil, routing Sonal's emailed brief through his Claude Code | A brief arrives **with source material attached** — transcript, PDF, Drive share, Google Sheet — anything that requires heavy ingest. Sahil ingests and drafts in one maintainer-account session; Sonal reviews the URL | $200 |
+
+**Default for emailed briefs with sources attached: directed run** (Sahil routes). Validated 2026-05-26
+with the Masthanaiah portrait + Nagaland NLNF story; see
+[[../learnings/2026-05-26-five-decisions-binding]] § Decision 3.
+
+Either shape produces one LEDGER entry, one row in `docs/log.html`, and one reviewable URL — and
+follows the per-session contract below.
+
 ## Per-session contract
 
 When Sonal opens Claude Code with a project in mind (named explicitly or implied), every session follows this shape:

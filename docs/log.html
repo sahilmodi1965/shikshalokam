@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Production log — ShikshaLokam brain</title>
+<meta name="description" content="Every artefact the ShikshaLokam brain has pushed, newest first. Source of truth for review." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold:#D4A24C; --cascara:#C26A4A; --indigo:#2A2D5A; --ink:#1A1B2E;
+  --paper:#FAF6EE; --mist:#EDEAF5; --rule:#D9D5E0; --muted:#6E6A78; --sl:#2A2D5A;
+}
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; }
+body { font-family: 'Inter', -apple-system, system-ui, sans-serif; background: var(--paper); color: var(--ink); line-height: 1.55; }
+h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; line-height: 1.18; margin: 0; }
+h1 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; letter-spacing: -0.02em; }
+h2 { font-size: 1.3rem; margin: 0 0 8px; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.bar { position: sticky; top:0; z-index:50; background: rgba(250,246,238,0.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); }
+.bar-inner { display:flex; align-items:center; justify-content:space-between; padding: 14px 0; }
+.mark { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.05rem; }
+.mark .brand { color: var(--sl); }
+.mark .sep { color: var(--rule); margin: 0 4px; }
+.mark .project { color: var(--cascara); font-style: italic; }
+.bar-back { font-size: 0.85rem; color: var(--muted); text-decoration: none; }
+.hero { padding: 56px 0 32px; }
+.hero .eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cascara); margin-bottom: 0.9rem; }
+.hero .lede { font-size: 1.05rem; color: var(--muted); max-width: 720px; margin-top: 1rem; }
+section { padding: 36px 0; border-top: 1px solid var(--rule); }
+.day { margin-bottom: 28px; }
+.day-head { font-family: 'Fraunces', serif; font-weight: 600; color: var(--indigo); font-size: 1.4rem; margin: 0 0 14px; }
+.entry { background:#fff; border:1px solid var(--rule); border-radius:14px; padding:18px 22px; margin-bottom: 12px; }
+.entry .head { display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; font-size:0.85rem; color:var(--muted); }
+.entry .head .who { color: var(--indigo); font-weight:600; }
+.entry .head .slug { background: var(--mist); color: var(--ink); padding: 2px 9px; border-radius: 999px; font-size:0.74rem; letter-spacing:0.04em; font-family:'Inter'; }
+.entry h2 { margin-top: 8px; }
+.entry .ask { font-style: italic; color: var(--ink); margin: 6px 0 10px; }
+.entry .links { font-size:0.88rem; }
+.entry .links a { display:inline-block; margin-right: 12px; color: var(--sl); text-decoration: none; border-bottom: 1px dashed var(--cascara); padding-bottom: 1px; }
+.entry .links a:hover { color: var(--cascara); }
+footer { padding: 36px 0; color: var(--muted); font-size: 0.84rem; border-top: 1px solid var(--rule); }
+footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar-inner">
+    <div class="mark">
+      <a href="index.html" style="text-decoration:none;color:inherit;"><span class="brand">ShikshaLokam</span></a>
+      <span class="sep">/</span>
+      <span class="project">log</span>
+    </div>
+    <a class="bar-back" href="index.html">← the brain</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Production log — regenerated 2026-05-26</div>
+    <h1>Every artefact, by the day it landed.</h1>
+    <p class="lede">
+      The single source of truth for what the ShikshaLokam brain has produced. Each row is one
+      session bundle — what was asked, what landed, where it lives on the site. Newest first.
+      Generated from <code>LEDGER.md</code> by <code>tools/build_log.py</code>.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="day"><div class="day-head">26 May 2026</div>
+      <div class="entry">
+        <div class="head">
+          <span class="who">Sahil + Sonal (joint video call)</span>
+          <span class="slug">five-decisions-binding-and-log-page-build</span>
+        </div>
+        <p class="ask">** Sahil — *"yesss"* to all five workflow decisions surfaced in the prior turn: (1) auto-push + auto-pull rules binding; (2) build the log page this session; (3) Sahil-routes-source-attached-briefs as the default; (4) Friday 29 May 4pm IST as the standing weekly-review slot; (5) Sahil hand-pastes the three queued items (voice styleguide + CLAUDE.md ×2) after the call.</p>
+        
+      </div>
+      <div class="entry">
+        <div class="head">
+          <span class="who">Sahil + Sonal (joint video call)</span>
+          <span class="slug">workflow-tidy-and-drift-fix</span>
+        </div>
+        <p class="ask">** Sahil + Sonal — on a screen-shared video call, asked the brain to (a) execute the three maintenance items Sonal's earlier session left as a WhatsApp prompt (delete stale `sessions/2026-05-26-bihar-chaupal-post.md`, promote the *movement-as-frame, people-as-actors* learning into `wiki/voice/styleguide.md`, add `verify_before_publish: true` to the WEF source), and (b) lay out two structural improvements they want binding from now on — *every chat must produce a pushed, reviewable artefact link* AND *no silent fail if push is forgotten* — plus a 5-year-old-style walk-through of where else the workflow might fail.</p>
+        
+      </div>
+      <div class="entry">
+        <div class="head">
+          <span class="who">Sonal Bhasin</span>
+          <span class="slug">variant-1-revision-and-approval</span>
+        </div>
+        <p class="ask">** Sonal — shared structured feedback on Variant 1 *"What if collective action could be measured?"*: (1) SL↔SG relation missing; (2) #InvokED2026 irrelevant to a timeless collective-action post; (3) Shiksha Chaupal unexplained / ShikshaLokam's role unnamed. Reviewed two revised iterations and approved the final copy.</p>
+        <div class="links"><a href="https://sahilmodi1965.github.io/shikshalokam/projects/captions.html" target="_blank" rel="noopener">projects/captions</a></div>
+      </div>
+      <div class="entry">
+        <div class="head">
+          <span class="who">Sahil (maintainer, routing Sonal email)</span>
+          <span class="slug">content-from-brain-first-run</span>
+        </div>
+        <p class="ask">** Sahil — routed Sonal's email *"Content Creation with Brain"* end-to-end: produce (1) an Ed-Leader Portrait of **Shri Vempuluru Nagoor Masthanaiah** from Aquib Rizwan's 20 Apr 2026 interview transcript, and (2) a coffee-table-book story celebrating **collective action + micro-improvement** from one of the 15 winning schools of **Nagaland Literacy & Numeracy Fest 3.0** (NIPUN Nagaland), pulled from the Google Form responses sheet Sonal shared. Sahil's overlay: *"go full force … at the end of the run I want links that Sonal can review overall."</p>
+        <div class="links"><a href="https://sahilmodi1965.github.io/shikshalokam/projects/portraits.html" target="_blank" rel="noopener">projects/portraits</a><a href="https://sahilmodi1965.github.io/shikshalokam/projects/nagaland-coffee-book.html" target="_blank" rel="noopener">projects/nagaland-coffee-book</a></div>
+      </div>
+    </div>
+    <div class="day"><div class="day-head">21 May 2026</div>
+      <div class="entry">
+        <div class="head">
+          <span class="who">Sahil (maintainer, Sonal on call)</span>
+          <span class="slug">research-pipeline-build</span>
+        </div>
+        <p class="ask">** Sahil, with Sonal on the call — "fix all the feedbacks and share a new post / variation after all structural changes are made." Same-session promotion of the feedback captured in the entry below.</p>
+        
+      </div>
+      <div class="entry">
+        <div class="head">
+          <span class="who">Sonal Bhasin</span>
+          <span class="slug">research-citation-and-datewise-log</span>
+        </div>
+        <p class="ask">** Sonal — reviewing the three Tuesday research-insight caption variants, she gave process feedback (explicitly tagged "take this as a brain feedback"): she wants a standing capability that researches external studies, trustable surveys, and reliable sources strengthening SL messaging (education leadership · collective action · education equity); future prompts should auto-cite that research without being asked; the research should compound into the brain; and the project pages should show every draft on a dated basis, not just a weekly roll-up.</p>
+        
+      </div>
+    </div>
+    <div class="day"><div class="day-head">19 May 2026</div>
+      <div class="entry">
+        <div class="head">
+          <span class="who">Sahil (on Sonal's behalf)</span>
+          <span class="slug">first-captions-demo + nav-fix</span>
+        </div>
+        <p class="ask">** Sahil — (1) the main brain page is missing navigation to the new project workspaces; add it. (2) First captions demo: byte-sized informative posts anchored on research studies / surveys / reports that strengthen SL-aligned messaging — collective action + agency for education leaders.</p>
+        
+      </div>
+      <div class="entry">
+        <div class="head">
+          <span class="who">Sahil (maintainer)</span>
+          <span class="slug">project-page-architecture</span>
+        </div>
+        <p class="ask">** Sahil + Sonal — stand up project-page workspaces so Sonal's brainstorms enrich a live artefact in place instead of producing one-shot drafts she has to copy out of chat. Four projects: Nagaland coffee book, captions, blogs, portraits. Confirm new Drive/web sources alongside.</p>
+        <div class="links"><a href="https://sahilmodi1965.github.io/shikshalokam/projects/{index,nagaland-coffee-book,captions,blogs,portraits}.html" target="_blank" rel="noopener">projects/{index,nagaland-coffee-book,captions,blogs,portraits}</a></div>
+      </div>
+      <div class="entry">
+        <div class="head">
+          <span class="who">Sahil (maintainer)</span>
+          <span class="slug">sl-communications-folder-ingest</span>
+        </div>
+        <p class="ask">** Sahil — ingest the SL Communications Drive folder Sonal shared today (id `1P-6AHbwLkkGqPOxydhwTyZKUM8U6LP66`) and update the brain artefact.</p>
+        
+      </div>
+    </div>
+    <div class="day"><div class="day-head">14 May 2026</div>
+      <div class="entry">
+        <div class="head">
+          <span class="who">migration</span>
+          <span class="slug">content-brain-overlay-applied</span>
+        </div>
+        <p class="ask">** Sahil (maintainer) — apply the unified content-brain overlay to ShikshaLokam.</p>
+        
+      </div>
+      <div class="entry">
+        <div class="head">
+          <span class="who">Sahil (maintainer)</span>
+          <span class="slug">first-enrichment-pass</span>
+        </div>
+        <p class="ask">** Sahil — pull movement-level content from the Shikshagraha Drive into ShikshaLokam brain so the May 30 demo lands with a real, populated brain.</p>
+        
+      </div>
+      <div class="entry">
+        <div class="head">
+          <span class="who">Sahil (maintainer)</span>
+          <span class="slug">captions-2026-27-ingested</span>
+        </div>
+        <p class="ask">** Sahil — pull the live SM Captions 2026-27 doc that's always being worked on, add as ongoing reference.</p>
+        
+      </div>
+      <div class="entry">
+        <div class="head">
+          <span class="who">Sahil (maintainer)</span>
+          <span class="slug">awards-2027-campaign-ingest</span>
+        </div>
+        <p class="ask">** Sahil — ingest the live Shikshagraha Awards 2027 nominations LinkedIn post (posted by Shikshagraha team, reposted by ShikshaLokam).</p>
+        
+      </div>
+      <div class="entry">
+        <div class="head">
+          <span class="who">Sahil (maintainer)</span>
+          <span class="slug">vibe-prospecting-team-discovery</span>
+        </div>
+        <p class="ask">** Sahil — use Vibe Prospecting MCP to enrich team members in both brains, no email enrichment (free preview discovery only).</p>
+        
+      </div>
+      <div class="entry">
+        <div class="head">
+          <span class="who">Sahil (maintainer)</span>
+          <span class="slug">vibe-team-export</span>
+        </div>
+        <p class="ask">** Sahil — pull all 50 SL team members from Vibe Prospecting (cost 50 credits, no email enrichment).</p>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Generated from <a href="https://github.com/sahilmodi1965/shikshalokam/blob/main/LEDGER.md">LEDGER.md</a> by <code>tools/build_log.py</code>.
+    Source of truth: the LEDGER. This page: the public mirror. <a href="index.html">↩ the brain self-portrait</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
