@@ -56,6 +56,15 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 
 <!-- Entries appended below this line. Newest immediately below. -->
 
+## 2026-05-26 — Sahil (same call) — sessionstart-hook-hardened
+
+- **Asked:** Sahil — *"qq when anyone logs in to claude code will they access the latest brain?"* → confirmed the existing SessionStart hook had three silent-fail bugs (used `git pull --rebase`, bailed quietly on dirty tree, `|| true` swallowed errors). Sahil: *"yes we need this please do it now."*
+- **Produced:** **Rule B promoted from contract to harness.** New `tools/session_start.sh` — loud-by-design auto-pull preflight: fast-forward only, prints state on every session open, visibly warns on dirty / diverged trees, returns 0 so Claude Code starts cleanly even on failure. `.claude/settings.json` SessionStart hook now invokes the script (timeout 30s). Permissions allowlist extended for `tools/**` writes and the new bash + python script invocations. JSON validated. Dry-run on this machine confirmed the hook reports correctly. Every Claude Code session in this repo, on any machine (Sonal's, Sahil's, Sahid's, a future contributor's), now auto-pulls before reading or writing anything.
+- **Learned:** none new — this is execution of [[2026-05-26-five-decisions-binding]] § Decision 1 § Rule B. Learning updated with the `landed_so_far:` entry + a new sub-section noting harness enforcement.
+- **Status changes:** none on `wiki/**`.
+- **Sources touched:** []
+- **Note:** **Fifth LEDGER entry today** — five distinct beats in one shared call (content-from-brain run · push-mid-session fix · workflow tidy · five-decisions-binding · hook hardening). The auto-pull rule went from idea → contract → harness in a single day. Each beat made the prior one harder to undo.
+
 ## 2026-05-26 — Sahil + Sonal (joint video call) — five-decisions-binding-and-log-page-build
 
 - **Asked:** Sahil — *"yesss"* to all five workflow decisions surfaced in the prior turn: (1) auto-push + auto-pull rules binding; (2) build the log page this session; (3) Sahil-routes-source-attached-briefs as the default; (4) Friday 29 May 4pm IST as the standing weekly-review slot; (5) Sahil hand-pastes the three queued items (voice styleguide + CLAUDE.md ×2) after the call.

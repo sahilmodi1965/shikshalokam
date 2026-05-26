@@ -12,6 +12,7 @@ landed_so_far:
   - "docs/index.html — nav link to /log/ added; today's timeline entry replaced"
   - "projects/README.md § Per-session contract — source-attached-briefs default added"
   - "LEDGER.md — fourth entry of the day for this build"
+  - "tools/session_start.sh + .claude/settings.json — Rule B promoted from contract to harness: SessionStart hook now invokes a loud-by-design auto-pull-preflight script (fast-forward only, prints state to every session open, never silently swallows errors). Replaces the prior hook which used --rebase + 2>/dev/null + || true (the exact silent-fail mode that put local 2 commits behind Sonal's session this afternoon)."
 pending_maintainer_paste:
   - "CLAUDE.md § 4 End — Rule A (always-push) + Rule B (auto-pull preflight) + production-log mention"
   - "wiki/voice/styleguide.md — § Shikshagraha mentions snippet from [[2026-05-26-movement-frame-people-actors]]"
@@ -52,6 +53,15 @@ Today's call caught both failure modes live: (a) the morning's content-from-brai
 back URLs that weren't pushed, so Sonal saw stale HTML; (b) this afternoon's session opened with
 local 2 commits behind Sonal's morning session — without auto-pull, edits would have silently
 overwritten her voice rule.
+
+### Rule B is now harness-enforced (2026-05-26, same call)
+
+The existing SessionStart hook in `.claude/settings.json` was buggy in exactly the way that put
+local 2 commits behind this afternoon — it used `git pull --rebase`, bailed silently on a dirty
+tree, and `|| true`'d any error. Replaced with `tools/session_start.sh` which is loud-by-design:
+prints state on every session open, uses `--ff-only` (never rewrites history), warns visibly when
+the tree is dirty or diverged, returns 0 so Claude Code starts cleanly. Every Claude Code session
+in this repo on any machine now auto-pulls before reading or writing anything. Contract → code.
 
 ### Paste-ready CLAUDE.md amendment (Sahil hand-edits CLAUDE.md after the call)
 
