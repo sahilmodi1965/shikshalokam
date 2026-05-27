@@ -18,6 +18,15 @@ Format:
 
 Workspace scaffolded as part of the project-page architecture roll-out. Source: `raw/2026-05-19-project-pages-brief.md`. No story brainstorm yet — first Sonal session will seed the pool.
 
+## 2026-05-27 — Sahil (maintainer, recompile after Sonal email feedback) — nlnf-gms-jalukie-story-v2
+
+- thread: Sonal sent specific structural feedback on v1 — *"'This is the school that, in 2026, won its way into the fifteen.' This needs more context." / "The fest asked them — sounds more demanding, make it the fest encouraged instead." / "The challenges paragraph need more empathy & context to hook readers." / "Overall, the story currently has too many breaks with en dashes and commas and does not read like a story but like reporting. It has to sound human, evoke emotions, enhance relatability."*
+- detail captured (v2 changes): full body rewrite as a small arc — the place &amp; the parents → the Fest's invitation → the borrowed-television moment as the emotional centre → the small steps in each classroom → the parents turning around → the school's own line about what is possible. Empathy + context up front: opening now sits with Peren's hilly roads, dropped networks, first-generation learners, daily-wage parents, rainy-season attendance loss before naming the Fest. "Encouraged" replaces "asked" throughout. The borrowed-television moment gets three paragraphs of weight (the moment itself + Kuzie Kulim's reason in her own words + one paragraph of pure reflection on what that decision means). Em-dash count reduced from 14 to ~4.
+- detail captured (gaps section): new **Gaps that would lift this story** section added with 8 askable questions for Aquib / NagaED / the school — specific numbers, one named child, the television story in more detail, the first parent at the PTM, what "winning" looked like concretely, block/circle within Peren, name pronunciation confirms, one question across all 15 winning schools.
+- detail still missing: same as v1 (lead image, proper-noun spellings, theme sub-taxonomy). Plus everything in the new gaps section.
+- voice / status notes: this is the first recompile under the new **"story over report"** voice rule ([[../../learnings/2026-05-27-story-over-report]]).
+- correction routed to learnings: **[[../../learnings/2026-05-27-story-over-report]]** (structural) — same rule + same recompile applies to the Masthanaiah portrait in the [[../portraits/chatlog]].
+
 ## 2026-05-26 — Sahil (maintainer, routing Sonal email) — nlnf-gms-jalukie-story
 
 - thread: Sonal sent the NLNF 3.0 winning-schools sheet — *"create a story that brings out this collective effort and the idea of micro-improvement."* First row ingested today: **GMS Jalukie Sector-B, Peren** (Head Teacher Kuzie Kulim).

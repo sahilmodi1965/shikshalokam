@@ -20,6 +20,17 @@ Format:
 
 Workspace scaffolded as part of the project-page architecture roll-out. Source: `raw/2026-05-19-project-pages-brief.md`. No portrait drafted yet.
 
+## 2026-05-27 — Sahil (maintainer, recompile after Sonal email feedback) — masthanaiah-portrait-v2
+
+- portrait: **Shri Vempuluru Nagoor Masthanaiah** (v2 — recompile)
+- status moved: **v1 superseded** by v2; v2 status `review-ready`
+- detail captured (Sonal's feedback, verbatim): *"This line doesn't make sense — 'Forty years in Andhra Pradesh's school education system followed.'" / "'On the basis of strength enrollment of the students, the other facilities will come.' Doesn't sound right. Rephrase." / "'he reformed the morning-afternoon shift system' doesn't sound right. Didn't understand what is meant by this." / "Simplify — 'of pull-driven postings'." / "Overall — The story is not impactful; his achievements are clubbed and listed altogether. It doesn't read like a story but reporting. The story needs to have a flow from his being a dropout to a Director, CSE Andhra Pradesh. The story should celebrate his commitment, challenges and how things changed for him. He should emerge as a champion/ an inspiring leader." / "Let's ask the AI to highlight gaps that would help create this portrait."*
+- detail captured (v2 changes): full body rewrite as a beat-by-beat narrative arc (dropout → village school → first dropout → second dropout → first 10th pass → first teaching posting → enrolment theory → Hyderabad shift reform → 1996 counselling system → Medak refusal-to-suspend → Director CSE final chapter → close). All four specific phrasing flags fixed inline (forty-years line removed; enrolment quote rephrased as his school-grow theory; shift system unpacked in plain English; pull-driven postings simplified). Em-dashes reduced from dense run to one-per-paragraph max. Cost made visible — Medak stand has its own beat. Human texture restored — bottle lamp, two-km Sankara Raju walk, mid-walk MSc decision each get their own sentences. Companion Thursday caption also rewritten in the same arc.
+- detail captured (gaps section): new **Gaps that would lift this story** section added with 9 askable questions for Aquib to take to Masthanaiah Sir — one named student, the doubt moment, a returning teacher thanks, the Medak principals' names, the IIM-A residential image, family voices, photos, what he reads now, message to a new teacher.
+- detail still missing: same as v1 — lead image (photos pending); proper-noun confirmations.
+- attribution check: still verbal; written consent for print still pending.
+- correction routed to learnings: **[[../../learnings/2026-05-27-story-over-report]]** (structural) — promoted same-session to v2 of the portrait; pending Sahil's hand-paste of the snippet into `wiki/voice/styleguide.md`.
+
 ## 2026-05-26 — Sahil (maintainer, routing Sonal email) — masthanaiah-portrait
 
 - portrait: **Shri Vempuluru Nagoor Masthanaiah** (retired Director CSE, Andhra Pradesh)
