@@ -45,8 +45,8 @@ then, templates carry `{{PLACEHOLDERS}}`.
 |---|---|---|
 | `{{EDITION}}` | fifth | **sixth** (assumed — confirm) |
 | `{{TAGLINE}}` | "Mission to Movement" | **needed** |
-| `{{DATES}}` | February 6 and 7, 2026 | **needed** |
-| `{{VENUE}}` | Prestige Centre for Performing Arts (PCPA), Bengaluru | **needed (same?)** |
+| `{{DATES}}` | February 6 and 7, 2026 | **26 & 27 February 2027** ✓ (locked in approved invites) |
+| `{{VENUE}}` | Prestige Centre for Performing Arts (PCPA), Bengaluru | **PCPA, Bengaluru** ✓ (locked in approved invites) |
 | `{{YEARS}}` | "marks five years" | **six years** (if sixth edition) |
 | `{{REGISTER_LINK}}` | a Google Form | **needed (new form)** |
 | `{{DINNER_DATE}}` | February 5, 2026 | **needed** |

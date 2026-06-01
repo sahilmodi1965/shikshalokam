@@ -56,6 +56,19 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 
 <!-- Entries appended below this line. Newest immediately below. -->
 
+## 2026-06-01 — Sahil (directed run, surfacing Sonal feedback) — invoked-6-html-mirror-approved-invites
+
+- **Asked:** Sahil — *"update yourself fully and show me the updated …/projects/invoked-6.html link from Sonal's feedback that she gave earlier."* Pulled latest (4 commits via SessionStart hook), then found the gap: the prior session wrote Sonal's two approved VIP invites into `projects/invoked-6/page.md` but never regenerated the public HTML mirror — the live page still showed only the seeded scaffold (0 mentions of Peggy/Marc/approved).
+- **Produced:**
+  - **`docs/projects/invoked-6.html` rebuilt** to mirror the approved state: new **"Approved by Sonal"** section at the top rendering both invites in full (Peggy Dulany + Marc/Salesforce) with relationship context and the VIP-pattern summary; hero pills updated (2 approved VIP invites · dates locked); gap-list table flips **Dates → 26–27 Feb 2027 ✓** and **Venue → PCPA Bengaluru ✓** (now locked by the approved invites); content log extended to four rows (seed → draft → Peggy approved → Marc approved); refresh stamps bumped.
+  - **`projects/invoked-6/page.md`** gap-list updated to mark `{{DATES}}` and `{{VENUE}}` as locked (was "needed") — faithful to what the approved invites establish, not invented.
+  - **`docs/index.html`** self-portrait — new today entry ("two VIP invites approved + page now shows them"); prior Peggy-invite entry demoted; eyebrow → third session.
+  - **Pushed mid-session** per the binding auto-publish rule, so the review URL is live when the wrap surfaces it.
+- **Learned:** nothing structural — this is a mirror-sync + surfacing session. The VIP voice pattern itself was already captured in [[2026-06-01-vip-invite-voice]]; this session only propagates it to the public page. Process note worth holding: an approval recorded in `page.md` is not "shown" until the HTML mirror is regenerated in the same session.
+- **Status changes:** none flipped in `wiki/**`. `projects/invoked-6/page.md` gap-list values updated (dates/venue locked); both invites remain `approved`.
+- **Sources touched:** [[invoked-5-concept-note-2026]] [[invoked-5-email-invites-2026]] (via the workspace page) · learning [[2026-06-01-vip-invite-voice]]
+- **Note:** Closes the loop on Sonal's earlier feedback — she scrolls the same invoked-6.html link and now sees both approved invites instead of the scaffold.
+
 ## 2026-06-01 — Sonal — invoked-6-peggy-dulany-invite
 
 - **Asked:** (1) Draft InvokED 6.0 invite for Peggy Dulany (Synergos) — 26–27 Feb 2027, PCPA; 2-year engagement, One Billion Futures hook. (2) Sonal shared her edited Peggy version — "use as reference for future emails." (3) Sonal shared approved Marc/Salesforce invite — "feed into the brain."
