@@ -56,6 +56,14 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 
 <!-- Entries appended below this line. Newest immediately below. -->
 
+## 2026-06-01 — Sonal — invoked-6-peggy-dulany-invite
+
+- **Asked:** (1) Draft InvokED 6.0 invite for Peggy Dulany (Synergos) — 26–27 Feb 2027, PCPA; 2-year engagement, One Billion Futures hook. (2) Sonal shared her edited Peggy version — "use as reference for future emails." (3) Sonal shared approved Marc/Salesforce invite — "feed into the brain."
+- **Produced:** Two approved VIP invites in `projects/invoked-6/page.md`. Learning updated at `learnings/2026-06-01-vip-invite-voice.md` — full VIP pattern now confirmed across two examples: subject form, shared-belief connector (new from Marc), drop verbatim quotes, org-philosophy framing, "speaker and thought partner" ask, specific questions from invitee's world, first name once in body, co-design CTA, "possibility of" close, SD Shibulal signatory form.
+- **Learned:** structural — VIP invite pattern built from two approved examples → `learnings/2026-06-01-vip-invite-voice.md` → flagged for Friday review.
+- **Status changes:** both invites `approved` in `projects/invoked-6/page.md`.
+- **Sources touched:** [[invoked-5-email-invites-2026]] [[invoked-5-proceedings-2026]] [[invoked-5-concept-note-2026]]
+
 ## 2026-06-01 — Sahil (directed run, routing Sonal email) — invoked-6-workspace-seeded
 
 - **Asked:** Sonal emailed four InvokED 5.0 documents — concept note, session transcripts, summary, email-invitation library — and: *"We are starting to roll out invitations for InvokED 6.0, and I wanted to create this using Claude code… prepare a project specifically for this as well after absorbing the data."* Directed run (emailed brief + sources → Sahil's $200 account).

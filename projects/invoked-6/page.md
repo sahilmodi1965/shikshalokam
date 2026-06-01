@@ -273,8 +273,79 @@ Use these to show what last year's convening produced (gives 6.0 invites pull). 
 
 ## Drafted 6.0 invites
 
-*(none yet — first one lands when Sonal names a recipient or segment in chat, and the 6.0 specifics
-above are filled.)*
+### Invite — Peggy Dulany (Synergos) · status `approved`
+
+**Segment:** VIP / Global Funder-Leader (Template A/B hybrid)
+**Signatory:** S.D. Shibulal
+**Relationship context:** 2-year Synergos × ShikshaLokam engagement; One Billion Futures initiative; Camille Massey (Synergos) spoke at InvokED 5.0.
+**Approved by Sonal:** 2026-06-01 — use as the reference template for future VIP speaker invites.
+
+---
+
+> **Subject:** Invitation to Join Us at InvokED 6.0 | 26–27 February 2027, Bengaluru
+>
+> Dear Peggy,
+>
+> I hope this message finds you well.
+>
+> Over the past two years, our teams have built a relationship that I deeply value — from the many conversations around One Billion Futures, to having Camille with us at InvokED 5.0 in Bengaluru earlier this year. The way Synergos thinks about bridging leadership, trust, and collective action across the Global South is precisely the spirit InvokED — our global dialogue on education leadership — was built to amplify.
+>
+> It is with great pleasure that I personally invite you to join us as a speaker and thought partner for **InvokED 6.0**, scheduled for **26 and 27 February 2027** at the Prestige Centre for Performing Arts (PCPA), Bengaluru.
+>
+> Over five years, InvokED has grown from a dialogue into a movement-building space — one that unites leaders from across sectors and spheres of lives around the shared urgency of education equity. This feels like a natural moment for you to be in the room where we explore questions around how global movements take root locally, how trust enables capital to flow toward shared outcomes, and what it truly takes to build collective leadership — questions Synergos has been discovering. Your founding vision and experience would add immense meaning to these conversations.
+>
+> We would be honoured to have you join us. My team would be happy to connect at your convenience to discuss how we can best design your participation.
+>
+> Please do save the dates. I look forward to the possibility of welcoming you to InvokED 6.0.
+>
+> Warm regards,
+> SD Shibulal
+> Founder, ShikshaLokam
+> Co-founder, Infosys
+
+---
+
+*Drafted: 2026-06-01 · Approved: 2026-06-01 · CC: Neeraj, Khushboo, Santosh*
+*Learning filed: [[../../learnings/2026-06-01-vip-invite-voice]]*
+
+---
+
+### Invite — Marc / Salesforce · status `approved`
+
+**Segment:** VIP / Corporate Leader — technology + purpose alignment
+**Signatory:** S.D. Shibulal
+**Relationship context:** Salesforce is a knowledge & advisory partner to ShikshaLokam; ongoing team engagement; shared belief in technology rooted in purpose and equity.
+**Approved by Sonal:** 2026-06-01 — second reference for VIP speaker invites; introduces the shared-belief connector move.
+
+---
+
+> **Subject:** Invitation to Join Us at InvokED 6.0 | 26–27 February 2027, Bengaluru
+>
+> Dear Marc,
+>
+> I hope this message finds you well.
+>
+> Salesforce has been a valued knowledge & advisory partner in our journey, and it has been deeply meaningful to engage with your team. The belief that technology, when rooted in purpose and equity, can unlock transformation at scale is one that ShikshaLokam and Salesforce share — and it is a belief that sits at the heart of everything InvokED — our global dialogue on education leadership — is built around.
+>
+> It gives me great pleasure to personally invite you to join us as a speaker and thought partner for **InvokED 6.0**, scheduled for **26 and 27 February 2027** at the Prestige Centre for Performing Arts (PCPA), Bengaluru.
+>
+> Over five years, InvokED has grown from a dialogue into a movement-building space — one that unites leaders from across sectors and spheres of life around the shared urgency of education equity. InvokED 6.0 will push that conversation further, exploring how markets, technology, and collective leadership can together create the conditions for every child across India and across the Global South to learn, thrive, and dream freely.
+>
+> This feels like a natural moment for you to be in the room, Marc. The questions we will wrestle with — how business can move from CSR to genuine co-ownership of social outcomes, how technology platforms can serve the most marginalised rather than deepen divides, and what it takes to build movements that last — are questions you have engaged with throughout your leadership of Salesforce. Your voice would bring a perspective that few others can offer: that of a builder who has seen, at the very largest scale, what it means to align purpose with power.
+>
+> We would be honoured to have you join us. My team would be happy to connect at your convenience to discuss how we can best design your participation.
+>
+> Please do save the dates. I look forward to the possibility of welcoming you to InvokED 6.0.
+>
+> Warm regards,
+> SD Shibulal
+> Founder, ShikshaLokam
+> Co-founder, Infosys
+
+---
+
+*Approved: 2026-06-01 · CC: Neeraj, Khushboo, Santosh*
+*Learning filed: [[../../learnings/2026-06-01-vip-invite-voice]]*
 
 ---
 
@@ -283,3 +354,6 @@ above are filled.)*
 | Date | What landed | Status |
 |---|---|---|
 | 1 Jun 2026 | Workspace seeded: 4 InvokED 5.0 docs ingested (concept note, proceedings, email-invite library, summary); 12 templates made 6.0-ready with placeholders; audience→signatory map, momentum bank, standing-phrase bank loaded; 6.0-specifics gap-list surfaced. | `template` (awaiting 6.0 dates / venue / tagline / speakers) |
+| 1 Jun 2026 | First draft: Peggy Dulany (Synergos) VIP invite — Feb 26–27 2027, PCPA; personalised around Camille Massey 5.0 presence + One Billion Futures. | `draft` → |
+| 1 Jun 2026 | Sonal approved Peggy Dulany invite with edits; approved version is now the reference template for all VIP speaker invites. Learning filed: learnings/2026-06-01-vip-invite-voice.md | `approved` |
+| 1 Jun 2026 | Marc / Salesforce VIP invite ingested as second approved reference. Adds the shared-belief connector move to the pattern. Learning updated. | `approved` |
