@@ -41,6 +41,12 @@ Auto-injected at every session start. Budget ≤ 1,500 tokens (per `TOKEN_BUDGET
 - [[sources/interview-masthanaiah-2026-04-20]] — *research-seeded.* Aquib Rizwan's 1h 04m interview with Shri Vempuluru Nagoor Masthanaiah (retired Director CSE, AP) — 40-year arc from fifth-class dropout to commissioner; counselling-based transfer system (1996); PM SHRI (935 schools, 2nd in India); SLDP (250 HMs to IIM-A). Source of [[../projects/portraits/page]] § Masthanaiah portrait.
 - [[sources/nlnf3-gms-jalukie-sectorb-response-2026-05-07]] — *research-seeded.* Google Form response from one of 15 NLNF 3.0 winning schools — GMS Jalukie Sector-B, Peren district, Nagaland (Head Teacher Kuzie Kulim). First story in [[../projects/nagaland-coffee-book/page]].
 
+### Event sources (InvokED — convening corpus, seeds the InvokED 6.0 invite drive)
+
+- [[sources/invoked-5-concept-note-2026]] — *research-seeded.* InvokED 5.0 "Mission to Movement" concept note. The canonical what/why/who/"what you gain" (6–7 Feb 2026, PCPA Bengaluru, 1,000+ audience, Samaaj/Sarkaar/Bazaar/Sanchar, 250 Districts Mission, one billion futures).
+- [[sources/invoked-5-proceedings-2026]] — *research-seeded.* InvokED 5.0 proceedings digest (summary + transcripts): session map, ~25 verbatim quotes, outcomes (1.2M micro-improvements; Shikshagraha Commons + STEM Collective launches), bright-spot numbers, named grassroots stories. The proof-and-momentum bank.
+- [[sources/invoked-5-email-invites-2026]] — *research-seeded.* InvokED 5.0 invitation library: skeleton, ~17 audience archetypes, standing phrases, signatories, logistics, verbatim canonical templates. The direct model for [[../projects/invoked-6/page]].
+
 ## Routes (where content lives outside this repo)
 
 - [[../routes/drive-communications]] — Movement-level Comms folder map (Newsletters, Stories of Impact, Comms Strategy stub, Brand Guidelines, decks, events)
