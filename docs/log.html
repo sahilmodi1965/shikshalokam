@@ -63,7 +63,7 @@ footer a { color: var(--muted); }
 
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow">Production log — regenerated 2026-06-01</div>
+    <div class="eyebrow">Production log — regenerated 2026-06-02</div>
     <h1>Every artefact, by the day it landed.</h1>
     <p class="lede">
       The single source of truth for what the ShikshaLokam brain has produced. Each row is one
@@ -75,7 +75,33 @@ footer a { color: var(--muted); }
 
 <section>
   <div class="wrap">
+    <div class="day"><div class="day-head">2 June 2026</div>
+      <div class="entry">
+        <div class="head">
+          <span class="who">Sahil (maintainer infra)</span>
+          <span class="slug">harden-sessionend-push-and-mirror-guards</span>
+        </div>
+        <p class="ask">** Sahil — Sonal's Claude Code **web** session drafted the Wendy Kopp invite but it never reached GitHub; her wrap said *"session auth is blocking the remote push."* *"Fix it all step by step and verify… so we can all start."* Root cause found in `.claude/settings.json`: the SessionEnd hook ended with `git push origin main 2>&1 || true` — **the `|| true` silently swallowed every push failure**, so a web session with no GitHub write access committed locally and reported nothing. Plus a second recurring gap: project `page.md` edits landing without the `docs/projects/<slug>.html` mirror being regenerated (live page stale).</p>
+        
+      </div>
+    </div>
     <div class="day"><div class="day-head">1 June 2026</div>
+      <div class="entry">
+        <div class="head">
+          <span class="who">Sahil (directed run, surfacing Sonal feedback)</span>
+          <span class="slug">invoked-6-html-mirror-approved-invites</span>
+        </div>
+        <p class="ask">** Sahil — *"update yourself fully and show me the updated …/projects/invoked-6.html link from Sonal's feedback that she gave earlier."* Pulled latest (4 commits via SessionStart hook), then found the gap: the prior session wrote Sonal's two approved VIP invites into `projects/invoked-6/page.md` but never regenerated the public HTML mirror — the live page still showed only the seeded scaffold (0 mentions of Peggy/Marc/approved).</p>
+        
+      </div>
+      <div class="entry">
+        <div class="head">
+          <span class="who">Sonal</span>
+          <span class="slug">invoked-6-peggy-dulany-invite</span>
+        </div>
+        <p class="ask">** (1) Draft InvokED 6.0 invite for Peggy Dulany (Synergos) — 26–27 Feb 2027, PCPA; 2-year engagement, One Billion Futures hook. (2) Sonal shared her edited Peggy version — "use as reference for future emails." (3) Sonal shared approved Marc/Salesforce invite — "feed into the brain."</p>
+        
+      </div>
       <div class="entry">
         <div class="head">
           <span class="who">Sahil (directed run, routing Sonal email)</span>

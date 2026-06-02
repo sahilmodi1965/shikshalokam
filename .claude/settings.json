@@ -133,7 +133,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd \"$CLAUDE_PROJECT_DIR\" 2>/dev/null && TODAY=$(date -u +%Y-%m-%d) && DIRTY=\"$(git status --porcelain 2>/dev/null)\" && if [ -n \"$DIRTY\" ]; then if ! grep -q \"^## ${TODAY}\" LEDGER.md 2>/dev/null; then echo 'WARN: SessionEnd — no LEDGER.md entry for today. INTENT principle 2 may have been violated. Commit will proceed but brain-lint will flag.'; fi; if echo \"$DIRTY\" | grep -qE \"(wiki/|routes/|LEDGER.md)\" && ! echo \"$DIRTY\" | grep -q \"docs/index.html\"; then echo 'WARN: SessionEnd — brain content changed but docs/index.html was not updated. The self-portrait will go stale. Per CLAUDE.md per-session contract.'; fi; git add -A && git commit -m \"session: $(date -u +%Y-%m-%dT%H:%M:%SZ)\" -q && git push origin main 2>&1 || true; fi",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/tools/session_end.sh\"",
             "timeout": 60
           }
         ]

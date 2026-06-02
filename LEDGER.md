@@ -56,6 +56,18 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 
 <!-- Entries appended below this line. Newest immediately below. -->
 
+## 2026-06-02 — Sahil (maintainer infra) — harden-sessionend-push-and-mirror-guards
+
+- **Asked:** Sahil — Sonal's Claude Code **web** session drafted the Wendy Kopp invite but it never reached GitHub; her wrap said *"session auth is blocking the remote push."* *"Fix it all step by step and verify… so we can all start."* Root cause found in `.claude/settings.json`: the SessionEnd hook ended with `git push origin main 2>&1 || true` — **the `|| true` silently swallowed every push failure**, so a web session with no GitHub write access committed locally and reported nothing. Plus a second recurring gap: project `page.md` edits landing without the `docs/projects/<slug>.html` mirror being regenerated (live page stale).
+- **Produced:**
+  - **`tools/session_end.sh`** (new) — replaces the inline one-liner. Commit + push with a **loud, unmissable failure block** when the remote rejects (auth / offline / non-FF): *"Your work is committed LOCALLY but is NOT on GitHub."* Keeps the LEDGER + self-portrait guards; **adds a mirror-drift guard** — warns when any `projects/<slug>/page.md` changed without its `docs/projects/<slug>.html`. Always exits 0 (never blocks session close).
+  - **`.claude/settings.json`** — SessionEnd hook now calls `bash tools/session_end.sh`; the silent `|| true` is gone (verified 0 matches). JSON validated; script `bash -n` clean; mirror guard dry-run fires correctly.
+  - **The actual auth fix is Sahil's browser action** (grant GitHub write to the web session) — surfaced to him with exact steps + a verification test; not a repo-side change.
+- **Learned:** nothing structural (infra hardening, not a voice/state change). Process note: push failures must be loud, not swallowed — a quiet `|| true` cost a full draft.
+- **Status changes:** none. No `wiki/**` touched.
+- **Sources touched:** []
+- **Note:** Closes the two gaps Sahil flagged ("there are gaps"): (1) push failures are now visible everywhere, including Sonal's web sessions once they pull this; (2) mirror drift now warns at session close. Pairs with the still-pending auth grant (Step 2, Sahil) and getting today's Wendy invite live (needs the draft text).
+
 ## 2026-06-01 — Sahil (directed run, surfacing Sonal feedback) — invoked-6-html-mirror-approved-invites
 
 - **Asked:** Sahil — *"update yourself fully and show me the updated …/projects/invoked-6.html link from Sonal's feedback that she gave earlier."* Pulled latest (4 commits via SessionStart hook), then found the gap: the prior session wrote Sonal's two approved VIP invites into `projects/invoked-6/page.md` but never regenerated the public HTML mirror — the live page still showed only the seeded scaffold (0 mentions of Peggy/Marc/approved).
