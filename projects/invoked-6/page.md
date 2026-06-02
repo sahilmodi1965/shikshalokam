@@ -273,12 +273,12 @@ Use these to show what last year's convening produced (gives 6.0 invites pull). 
 
 ## Drafted 6.0 invites
 
-### Invite — Peggy Dulany (Synergos) · status `approved`
+### Invite — Peggy Dulany (Synergos) · status `revised`
 
 **Segment:** VIP / Global Funder-Leader (Template A/B hybrid)
 **Signatory:** S.D. Shibulal
-**Relationship context:** 2-year Synergos × ShikshaLokam engagement; One Billion Futures initiative; Camille Massey (Synergos) spoke at InvokED 5.0.
-**Approved by Sonal:** 2026-06-01 — use as the reference template for future VIP speaker invites.
+**Relationship context:** 2-year Synergos × ShikshaLokam engagement; Camille Massey (Synergos) spoke at InvokED 5.0; Peggy missed 5.0; partnership centred on collective action and leadership.
+**Revised by Sonal:** 2026-06-01 — remove One Billion Futures; make personal (missed you at 5.0); centre collective action + partnership value; warm opener; shorter.
 
 ---
 
@@ -286,26 +286,26 @@ Use these to show what last year's convening produced (gives 6.0 invites pull). 
 >
 > Dear Peggy,
 >
-> I hope this message finds you well.
+> I trust this message finds you in good health.
 >
-> Over the past two years, our teams have built a relationship that I deeply value — from the many conversations around One Billion Futures, to having Camille with us at InvokED 5.0 in Bengaluru earlier this year. The way Synergos thinks about bridging leadership, trust, and collective action across the Global South is precisely the spirit InvokED — our global dialogue on education leadership — was built to amplify.
+> I'm writing to personally invite you as a distinguished speaker to [InvokED](https://shikshalokam.org/invoked/) 6.0 — our annual global dialogue on education leadership — scheduled for **26 and 27 February 2027** at the Prestige Centre for Performing Arts (PCPA), Bengaluru.
 >
-> It is with great pleasure that I personally invite you to join us as a speaker and thought partner for **InvokED 6.0**, scheduled for **26 and 27 February 2027** at the Prestige Centre for Performing Arts (PCPA), Bengaluru.
+> I founded [ShikshaLokam](https://shikshalokam.org/) to enable and amplify leadership development opportunities for individuals and institutions engaged in K-12 education — co-creating solutions with government functionaries, civil society organisations, and academic bodies. At its heart, it has always been about building collective leadership: the conviction that when people lead together, systems change.
 >
-> Over five years, InvokED has grown from a dialogue into a movement-building space — one that unites leaders from across sectors and spheres of lives around the shared urgency of education equity. This feels like a natural moment for you to be in the room where we explore questions around how global movements take root locally, how trust enables capital to flow toward shared outcomes, and what it truly takes to build collective leadership — questions Synergos has been discovering. Your founding vision and experience would add immense meaning to these conversations.
+> At InvokED 5.0 in Bengaluru earlier this year, Camille Massey brought exactly that spirit into the room — and her presence enriched our conversations in a way we are still reflecting on. We deeply missed having you with us then, and it is with that feeling that I reach out now.
 >
-> We would be honoured to have you join us. My team would be happy to connect at your convenience to discuss how we can best design your participation.
+> The partnership between Synergos and ShikshaLokam has meant a great deal to me personally. The way your work holds space for trust, relationships, and collective action across the Global South is precisely what InvokED is built to amplify — and I can think of few voices more resonant for the conversations we are gathering to explore.
 >
-> Please do save the dates. I look forward to the possibility of welcoming you to InvokED 6.0.
+> It would be a privilege to welcome you. My team would love to connect at your convenience.
 >
-> Warm regards,
+> With warm regards,
 > SD Shibulal
 > Founder, ShikshaLokam
 > Co-founder, Infosys
 
 ---
 
-*Drafted: 2026-06-01 · Approved: 2026-06-01 · CC: Neeraj, Khushboo, Santosh*
+*Drafted: 2026-06-01 · Revised: 2026-06-01 · CC: Neeraj, Khushboo, Santosh*
 *Learning filed: [[../../learnings/2026-06-01-vip-invite-voice]]*
 
 ---
@@ -356,4 +356,5 @@ Use these to show what last year's convening produced (gives 6.0 invites pull). 
 | 1 Jun 2026 | Workspace seeded: 4 InvokED 5.0 docs ingested (concept note, proceedings, email-invite library, summary); 12 templates made 6.0-ready with placeholders; audience→signatory map, momentum bank, standing-phrase bank loaded; 6.0-specifics gap-list surfaced. | `template` (awaiting 6.0 dates / venue / tagline / speakers) |
 | 1 Jun 2026 | First draft: Peggy Dulany (Synergos) VIP invite — Feb 26–27 2027, PCPA; personalised around Camille Massey 5.0 presence + One Billion Futures. | `draft` → |
 | 1 Jun 2026 | Sonal approved Peggy Dulany invite with edits; approved version is now the reference template for all VIP speaker invites. Learning filed: learnings/2026-06-01-vip-invite-voice.md | `approved` |
+| 1 Jun 2026 | Peggy Dulany invite revised per Sonal's feedback: removed One Billion Futures; recentred on collective action + Synergos partnership value; warm opener ("I trust this message finds you in good health"); added "missed you at 5.0" personal beat; shorter. | `revised` |
 | 1 Jun 2026 | Marc / Salesforce VIP invite ingested as second approved reference. Adds the shared-belief connector move to the pattern. Learning updated. | `approved` |

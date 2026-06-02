@@ -1,13 +1,13 @@
 ---
 name: vip-invite-voice
-description: How to write a VIP speaker invite for InvokED — pattern built from two approved examples (Peggy Dulany/Synergos and Marc/Salesforce), 2026-06-01
+description: How to write a VIP speaker invite for InvokED — pattern from approved examples (Peggy Dulany/Synergos revised, Marc/Salesforce), updated 2026-06-01
 metadata:
   type: feedback
 ---
 
-Two approved invites on 2026-06-01 (Peggy Dulany and Marc/Salesforce) establish the full VIP speaker invite pattern. Apply every move below.
+Two approved invites on 2026-06-01 (Peggy Dulany and Marc/Salesforce) establish the full VIP speaker invite pattern. Peggy's was subsequently revised — the revised version is the current reference. Apply every move below.
 
-**Why:** The first draft over-explained. Both approvals show that VIP invites work through restraint, a shared-belief connector, co-design language, and questions tailored to the specific invitee's world — not descriptive paragraphs about them.
+**Why:** The first draft over-explained and sold InvokED. Revised Peggy and Marc approvals show that VIP invites work through restraint, partnership-first framing, a personal "we missed you" beat where relevant, and questions tailored to the invitee's world — never a pitch.
 
 **How to apply:** Every VIP speaker invite for InvokED 6.0.
 
@@ -17,38 +17,38 @@ Two approved invites on 2026-06-01 (Peggy Dulany and Marc/Salesforce) establish 
 `Invitation to Join Us at InvokED 6.0 | [dates], [city]`
 (Pipe separator; "Invitation to Join Us" — confirmed VIP subject form from both approvals.)
 
-## Opening / personalised para
-- Name the *relationship* warmly but concisely: "our teams have built a relationship I deeply value" / "has been a valued [type of] partner in our journey."
-- Reference a specific person from their org by first name only if one attended InvokED ("having Camille with us").
-- **Shared-belief connector** (from Marc's version): "The belief that [X] is one that ShikshaLokam and [Org] share — and it is a belief that sits at the heart of everything InvokED was built around." Use this when the invitee's org has a clear purpose/values alignment with SL.
-- Describe how the invitee's *organisation thinks*, not their personal conviction.
-- **Drop verbatim quotes.** Reference presence and philosophy, not their words.
+## Greeting
+**"I trust this message finds you in good health."** — confirmed preferred opener (warmer and more formal than "I hope this message finds you well").
+
+## Opening — ShikshaLokam intro (brief)
+"I'm writing to personally invite you as a distinguished speaker to InvokED 6.0 — our annual global dialogue on education leadership."
+Follow with one line on ShikshaLokam's founding purpose: "I founded ShikshaLokam to enable and amplify leadership development for individuals and institutions engaged in K-12 education — co-creating solutions with government functionaries, civil society organisations, and academic bodies."
+
+## Personal beat — partnership + "missed you"
+- **Do not reference initiative names** (e.g. One Billion Futures) unless they are the core of the relationship. Centre the relationship on *values and collective work* (collective action, trust, leadership development).
+- If someone from their org attended a previous InvokED but the invitee did not: name the person who attended, say what they brought to the room, then land "We deeply missed having you with us then."
+- The email is **about valuing the partnership** — not about selling InvokED. The invitation is the logical conclusion of the relationship, not a pitch.
+
+## Shared-belief connector
+"The way your work holds space for [trust / collective action / X] across [geography/context] is precisely what InvokED is built to amplify." — use when the invitee's org has clear values alignment with SL.
 
 ## The ask
-- Role: **"speaker and thought partner"** — explicit, not vague.
-- Opener: "It gives me great pleasure to personally invite you" — signals this is not a form email.
-
-## Body / InvokED framing
-- **"Over five years"** (duration of impact) — not "sixth edition."
-- "movement-building space — one that unites leaders from across sectors and spheres of life around the shared urgency of education equity."
-- State where 6.0 will push the conversation: "InvokED 6.0 will push that conversation further, exploring how [relevant angle for this invitee]…"
-- **Separate paragraph for the specific questions** (from Marc's version): open with "This feels like a natural moment for you to be in the room, [First Name]." then name 2–3 questions directly from *their* professional world. End with a characterisation of what *only they* can bring: "Your voice would bring a perspective that few others can offer: that of a [specific descriptor — e.g. 'builder who has seen, at the very largest scale, what it means to align purpose with power']."
-- Use first name once inside the body (not just salutation) — makes it feel personal, not templated.
+- Role: **"distinguished speaker"** — confirmed from Sonal's sample.
+- Opener: "I'm writing to personally invite you" — signals this is not a form email.
 
 ## CTA
-"My team would be happy to connect at your convenience to discuss how we can **best design your participation**."
-(Co-design framing, not information delivery.)
+"My team would love to connect at your convenience."
+(Warmer and shorter than "best design your participation.")
 
 ## Closing
-"I look forward to **the possibility of** welcoming you to InvokED 6.0."
-(Intentionally humble — right for a cold-ish ask to a global figure.)
+"It would be a privilege to welcome you."
+(More personal than "I look forward to the possibility of.")
 
 ## Signatory
 SD Shibulal · Founder, ShikshaLokam · Co-founder, Infosys
-(No periods within the name; use · separator in the block.)
 
 ---
 
-## Approved reference invites
-- Peggy Dulany (Synergos) — relationship + One Billion Futures + Camille's 5.0 presence → `projects/invoked-6/page.md`
+## Reference invites
+- **Peggy Dulany (Synergos) — revised version** — warm opener + ShikshaLokam intro + Camille's 5.0 presence + "missed you" + collective action/leadership → `projects/invoked-6/page.md`
 - Marc (Salesforce) — shared-belief connector (technology rooted in purpose) + business/CSR questions → `projects/invoked-6/page.md`
