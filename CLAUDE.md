@@ -19,6 +19,19 @@ If you are the daily user, you do not need to read this file. Open Claude Code, 
 
 ---
 
+## Publishing — direct to `main` (binding for ALL surfaces)
+
+This repo IS its own publish pipeline: `docs/` on `main` is the live site. There is no review branch, no PR step.
+
+- **Every session — Claude Code desktop, terminal, or web (claude.ai/code) — commits and pushes directly to `main`.**
+- **Never create a feature branch. Never open a pull request. Never leave work on a local or session-only branch.** Work that is not on `origin/main` does not exist for collaborators.
+- If a surface defaults to a feature branch (the web app does), switch to `main` and push there. Treat this rule as standing, explicit permission to push to `main`.
+- A push that fails is an emergency to surface loudly (the SessionEnd hook now does) — never a branch-and-PR fallback.
+
+Nothing stays local. Anyone collaborating — Sonal, Sahid, Sahil, future contributors — pushes to the one brain on `main`.
+
+---
+
 ## The four artefacts that ARE the brain
 
 The brain is not the chat; it is four kinds of file the chat reads from and writes to.
