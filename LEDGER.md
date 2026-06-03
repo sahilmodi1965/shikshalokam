@@ -56,6 +56,15 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 
 <!-- Entries appended below this line. Newest immediately below. -->
 
+## 2026-06-03 — Sonal — invoked-6-vip-invites-approved
+
+- **Asked:** Draft and refine InvokED 6.0 VIP invites for Marc Benioff (Salesforce), Camille Massey (Synergos), and Peggy Dulany (Synergos). Multiple rounds of feedback per email. Also drafted an advisors-group invite (not speaker, join as participant).
+- **Produced:** Three approved invite drafts (Marc, Camille, Peggy). Advisors-group template drafted (pending approval). All pushed to live brain page.
+- **Learned:** structural — six new patterns confirmed → `learnings/2026-06-01-vip-invite-voice.md`: no movement language for global partners; returning-speaker recall structure; meeting attribution ("me and the team"); "valuable" vs "extraordinary"; advisors = join not speak; merged CTA/save-the-dates.
+- **Status changes:** none flipped.
+- **Sources touched:** [[invoked-5-email-invites-2026]] [[invoked-5-proceedings-2026]]
+- **Voice notes:** "unique kind of leadership" approved over "different kind"; "valuable technology partner" approved over "extraordinary"; movement stats removed from global-partner invites.
+
 ## 2026-06-02 — Sahil (maintainer amendment) — publish-direct-to-main-binding
 
 - **Asked:** Sahil — after fixing the 403 (Sonal accepted the write-collaborator invite as `sonalb03`), close the gap once and for all: *"I want her to be able to use Claude Code web session or terminal or anything and always push to the brain — nothing should be local for anyone collaborating."* Verified state first via git: only `main` exists on origin, it is directly pushable (no branch protection), her lost work never reached origin (stuck on a web-session feature branch).

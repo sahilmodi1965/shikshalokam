@@ -5,7 +5,7 @@ metadata:
   type: feedback
 ---
 
-Two approved invites on 2026-06-01 (Peggy Dulany and Marc/Salesforce) establish the full VIP speaker invite pattern. Peggy's was subsequently revised — the revised version is the current reference. Apply every move below.
+Five approved invites across two sessions (2026-06-01 and 2026-06-03) establish the full VIP speaker invite pattern. Camille Massey and Marc Benioff were approved on 2026-06-03; Peggy Dulany on 2026-06-01. Apply every move below.
 
 **Why:** The first draft over-explained and sold InvokED. Revised Peggy and Marc approvals show that VIP invites work through restraint, partnership-first framing, a personal "we missed you" beat where relevant, and questions tailored to the invitee's world — never a pitch.
 
@@ -49,6 +49,16 @@ SD Shibulal · Founder, ShikshaLokam · Co-founder, Infosys
 
 ---
 
+## Additional patterns (confirmed 2026-06-03)
+
+- **No movement language for global partners.** Stats like "1.2M micro-improvements" or Shikshagraha framing are not common to them. Drop entirely — let the InvokED context paragraph carry the weight instead.
+- **Returning speakers:** open with the recall moment (session + verbatim quote), then Synergos/org philosophy → "built to amplify" connector → invite → InvokED growth line → merged CTA/save-the-dates.
+- **Meeting reference:** if Shibulal Sir was in the meeting, say "me and the team" — not "my team."
+- **Relationship calibration:** "valuable" not "extraordinary" for corporate partners (Salesforce approved word). "Cherished" works for long-standing civil society partners.
+- **Advisors group:** not invited as speakers — invited to join. Open with acknowledgment of their counsel → founding belief → InvokED growth → specific questions → honour line.
+- **CTA + save-the-dates:** merge into one closing line (confirmed across Marc and Camille). Do not separate.
+
 ## Reference invites
-- **Peggy Dulany (Synergos) — revised version** — warm opener + ShikshaLokam intro + Camille's 5.0 presence + "missed you" + collective action/leadership → `projects/invoked-6/page.md`
-- Marc (Salesforce) — shared-belief connector (technology rooted in purpose) + business/CSR questions → `projects/invoked-6/page.md`
+- **Peggy Dulany (Synergos) — revised version** — warm opener + ShikshaLokam intro + Camille's 5.0 presence + "missed you" + collective action/leadership
+- **Marc Benioff (Salesforce) — approved 2026-06-03** — meeting-first, "valuable partner", InvokED context standalone para, championing unique leadership (refuse to separate business/social responsibility)
+- **Camille Massey (Synergos) — approved 2026-06-03** — returning speaker, panel recall + verbatim quote, Synergos philosophy connector, no movement language
