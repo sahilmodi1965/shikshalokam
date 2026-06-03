@@ -49,6 +49,22 @@ SD Shibulal · Founder, ShikshaLokam · Co-founder, Infosys
 
 ---
 
+## Advisors-group invite pattern (approved 2026-06-03)
+
+Subject: `Save the Dates for InvokED 6.0 | [dates], [city]` — different from VIP speaker subject ("Save the Dates" not "Invitation to Join Us").
+
+Structure:
+1. "As we begin thinking about InvokED 6.0, I keep reflecting on what it has taken to build this space over five years and how much of what InvokED has become is owed to the counsel, commitment, and belief of people like you." — opens with reflection, not pleasantry-then-ask.
+2. One founding-conviction paragraph — "cannot happen through isolated effort… build the kind of trust that turns dialogue into collective action."
+3. One InvokED-growth paragraph — "grown from a convening into a space where real commitments are made… grassroots leaders celebrated alongside policymakers."
+4. Invite paragraph — "greater ambition and sharper focus on what endures" → invite → "your presence, your perspective and your willingness to push our thinking would mean a great deal."
+5. Merged save-the-dates + close. No "We would be honoured" line (that's VIP speaker language). No "my team would be happy to connect" — advisors get a softer close.
+6. Signed SD Shibulal.
+
+Key distinction from VIP speaker invite: no "speaker and thought partner" ask, no personalised recall paragraph, no questions from invitee's world. This is a come-and-be-present invite, not a come-and-speak ask.
+
+---
+
 ## Additional patterns (confirmed 2026-06-03)
 
 - **No movement language for global partners.** Stats like "1.2M micro-improvements" or Shikshagraha framing are not common to them. Drop entirely — let the InvokED context paragraph carry the weight instead.
