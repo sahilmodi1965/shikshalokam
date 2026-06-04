@@ -15,6 +15,25 @@ cd "$CLAUDE_PROJECT_DIR" 2>/dev/null || {
   exit 0
 }
 
+verify_and_heal() {
+  # Self-heal drift on EVERY clean session open — including resumed / web / compacted sessions.
+  # Rebuild all generated docs/ from source; if anything changed, the published site had drifted
+  # and is now corrected in the working tree (committed at session end). Start NEVER pushes — it
+  # only heals locally. The invariant lives here, in the harness, not in model memory.
+  if ! python3 "$CLAUDE_PROJECT_DIR/tools/build_site.py" >/dev/null 2>&1; then
+    echo "⚠ SessionStart — tools/build_site.py errored; cannot confirm the site is in sync."
+    echo "  Self-heal by hand: python3 tools/build_site.py"
+    return
+  fi
+  if git diff --quiet -- docs/ 2>/dev/null; then
+    echo "✓ Published site in sync with sources (no drift)."
+  else
+    echo "⚠ SessionStart — drift self-healed: docs/ was out of sync and has been rebuilt from source:"
+    git diff --name-only -- docs/ 2>/dev/null | sed 's/^/    /'
+    echo "  (these rebuilt pages commit automatically at session end.)"
+  fi
+}
+
 echo "── SessionStart: auto-pull preflight ──"
 
 # 1) Fetch — be loud if we can't reach the remote
@@ -33,6 +52,7 @@ fi
 
 if [ "$LOCAL" = "$REMOTE" ]; then
   echo "✓ Brain up to date with origin/main ($(git rev-parse --short HEAD))"
+  verify_and_heal
   exit 0
 fi
 
@@ -62,6 +82,7 @@ if git pull --ff-only --quiet origin main 2>&1; then
   echo "✓ Auto-pulled $BEHIND commit(s) from origin/main — now at $NEW"
   echo "  Recent:"
   git log --oneline -"${BEHIND}" 2>/dev/null | sed 's/^/    /'
+  verify_and_heal
 else
   echo "⚠ git pull --ff-only failed unexpectedly (was clean + FF-able). Investigate manually:"
   echo "    cd \$CLAUDE_PROJECT_DIR && git pull --ff-only origin main"

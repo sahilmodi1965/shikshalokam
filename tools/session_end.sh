@@ -36,26 +36,19 @@ if echo "$DIRTY" | grep -qE "(wiki/|routes/|LEDGER\.md)" && ! echo "$DIRTY" | gr
   echo "WARN: SessionEnd — brain content changed but docs/index.html (self-portrait) was not updated. It will go stale (per CLAUDE.md per-session contract)."
 fi
 
-# 3) Auto-regenerate the public page for any changed projects/<slug>/page.md.
-#    page.md is the SINGLE SOURCE OF TRUTH; docs/projects/<slug>.html is GENERATED from it,
-#    never hand-mirrored. This permanently closes the drift gap that froze the InvokED 6.0
-#    page at "two VIP invites approved" while Sonal kept approving more (see
-#    learnings/2026-06-04-publish-confirmation-rca.md). No human copy-paste step to forget.
-PUBLISHED_PAGES=""
-CHANGED_SLUGS="$(echo "$DIRTY" | grep -oE "projects/[^/]+/page\.md" | sed -E 's#projects/([^/]+)/page\.md#\1#' | sort -u)"
-for slug in $CHANGED_SLUGS; do
-  if python3 "$CLAUDE_PROJECT_DIR/tools/build_project_page.py" "$slug" >/dev/null 2>&1; then
-    echo "✓ SessionEnd — regenerated docs/projects/${slug}.html from projects/${slug}/page.md (single source of truth)."
-    PUBLISHED_PAGES="${PUBLISHED_PAGES} ${slug}"
-  else
-    echo "════════════════════════════════════════════════════════════════════"
-    echo "✗ SessionEnd — FAILED to regenerate docs/projects/${slug}.html."
-    echo "  projects/${slug}/page.md changed but the generator errored, so the LIVE"
-    echo "  page will be STALE — it will NOT show this session's changes."
-    echo "  Fix: python3 tools/build_project_page.py ${slug}   (read the error, then re-end)"
-    echo "════════════════════════════════════════════════════════════════════"
-  fi
-done
+# 3) Rebuild the whole generated site from source, so docs/ can never be committed out of
+#    sync with the brain's real content. build_site.py is deterministic + idempotent and only
+#    rewrites GENERATED surfaces (project pages in Phase 1 — it does NOT touch index.html or
+#    log.html yet). page.md is the single source of truth; there is no hand-copied mirror to
+#    forget (see learnings/2026-06-04-publish-confirmation-rca.md).
+if ! python3 "$CLAUDE_PROJECT_DIR/tools/build_site.py" >/dev/null 2>&1; then
+  echo "════════════════════════════════════════════════════════════════════"
+  echo "✗ SessionEnd — tools/build_site.py errored; the published site may be STALE."
+  echo "  Fix: python3 tools/build_site.py   (read the error, then re-end)"
+  echo "════════════════════════════════════════════════════════════════════"
+fi
+# What actually changed on the live site this session — drives the honest publish claim below.
+PUBLISHED_PAGES="$(git status --porcelain -- docs/projects 2>/dev/null | grep -oE 'docs/projects/[^ ]+\.html' | sed -E 's#docs/projects/(.+)\.html#\1#' | sort -u)"
 
 # 4) Commit.
 git add -A
@@ -84,6 +77,13 @@ else
   echo "$PUSH_OUT" | sed 's/^/    /'
   echo "  Fix: connect the repo with WRITE access, then run:  git push origin main"
   echo "════════════════════════════════════════════════════════════════════"
+fi
+
+# 6) Drift tripwire — the committed tree MUST equal what the sources generate. A fresh build
+#    should change nothing; if it does, generation is non-deterministic and must be fixed.
+if ! bash "$CLAUDE_PROJECT_DIR/tools/verify_no_drift.sh" >/dev/null 2>&1; then
+  echo "WARN: SessionEnd — post-commit drift tripwire FAILED: committed docs/ do not match a fresh build."
+  echo "  Generation may be non-deterministic. Inspect: bash tools/verify_no_drift.sh"
 fi
 
 exit 0
