@@ -36,6 +36,17 @@ verify_and_heal() {
 
 echo "── SessionStart: auto-pull preflight ──"
 
+# Identity — every save must attribute to a teammate in brain.yml. Equal access, correct credit.
+GIT_EMAIL="$(git config user.email 2>/dev/null)"
+GIT_NAME="$(git config user.name 2>/dev/null)"
+if [ -n "$GIT_EMAIL" ] && grep -qF "${GIT_EMAIL}" brain.yml 2>/dev/null; then
+  echo "✓ Signed in as ${GIT_NAME} <${GIT_EMAIL}> — in the team roster."
+else
+  echo "⚠ git identity '${GIT_NAME} <${GIT_EMAIL}>' is NOT in the brain.yml team roster — commits will be mis-attributed."
+  echo "  Add this person under 'team:' in brain.yml, or set the identity on this machine:"
+  echo "    git config user.name \"Your Name\" && git config user.email \"you@your-org\""
+fi
+
 # 1) Fetch — be loud if we can't reach the remote
 if ! git fetch origin main --quiet 2>&1; then
   echo "⚠ git fetch failed (offline? auth?). Continuing with local state — verify before editing."

@@ -1,30 +1,43 @@
 ---
 name: shikshalokam-ingest
-description: Capture content the daily user drops into the brain — pasted text, PDFs, URLs, voice notes — into raw/<date>.md. Triggers when the user attaches a file, pastes substantial prose, shares a URL, or says "here's stuff I found" / "remember this" / "add to brain". Always followed by a LEDGER entry. Never compiles to wiki/ directly (that's the compile-step's job, deferred or active per brain.yml).
+description: Absorb content someone drops into the brain — pasted text, PDFs, URLs, voice notes — so it makes the brain smarter right away. Triggers when someone attaches a file, pastes substantial prose, shares a URL, or says "here's stuff I found" / "remember this" / "add to brain". Captures it raw AND files it into typed, sourced wiki/ memory in the same session (no approval queue).
 ---
 
 # shikshalokam-ingest
 
+Good content should make the brain smarter immediately — not sit in a queue waiting for a weekly
+pass. When someone drops something worth keeping, capture it faithfully and integrate it into the
+brain's structured memory in the same session.
+
 ## When this fires
-- User pastes ≥200 chars of prose, OR attaches a file, OR shares a URL, OR says explicit ingestion words ("here's stuff," "remember this," "add this," "found this for the brain").
-- Does NOT fire on short conversational messages or on draft-feedback (those route to `shikshalokam-write` or `shikshalokam-feedback`).
+- Someone pastes ≥200 chars of prose, attaches a file, shares a URL, or says "here's stuff," "remember
+  this," "add this," "found this for the brain."
+- Not for draft-feedback ("this isn't my voice" → `shikshalokam-feedback`) or content requests
+  ("draft me…" → `shikshalokam-write`).
 
 ## What it does
-1. **Append-only write to `raw/<YYYY-MM-DD>.md`.** Today's daily log file. Create if absent. Append with a `## <ISO timestamp> — <one-line label>` block followed by the captured content. Never edit prior entries in the file.
-2. **Briefly acknowledge in chat.** If `brain.yml: chat_shield: true`, say something like *"Got it — added to today's notes. I'll work it in when you ask."* No file paths, no "I wrote to raw/." If `chat_shield: false`, you can mention: *"Added to today's raw log. Will fold into the wiki on the next pass."*
-3. **Note for the LEDGER entry** at session end: the ingest counts toward today's LEDGER `Asked` summary OR is its own one-line entry if no other ask happened.
-
-## What it reads
-- The user's message and any attached content.
-- `raw/<YYYY-MM-DD>.md` (only if it exists, only to find append point).
-- Nothing from `wiki/`. Ingestion is fast and unidirectional.
+1. **Capture faithfully.** Append the raw drop to `raw/<YYYY-MM-DD>.md` under a
+   `## <timestamp> — <label>` block (append-only; never edit prior entries). This is the unaltered
+   record of what came in.
+2. **Absorb into typed memory, this session** (when `brain.yml: absorb_content: in-session`, the
+   default). Reconcile the drop into the right `wiki/` layer — `sources/` (a faithful extract of an
+   external thing), `entities/` (a person/program/partner), `concepts/` (an idea), `synthesis/`
+   (a cross-cutting angle). Each new/updated file:
+   - carries the full frontmatter contract (`type`, `title|name`, `sources`, `created`, `updated`,
+     and a valid `_status`),
+   - cites where it came from (the raw drop and/or the URL) — never an unsourced claim,
+   - **integrates, doesn't overwrite**: add to what's there; if it contradicts an existing
+     user-validated fact, note both and flag the conflict rather than silently replacing it.
+   Set `_status: user-validated` when a teammate is vouching for the content; `research-seeded` when
+   it's reference material pulled in for later confirmation.
+3. **Reply like a colleague.** Plain language: "Got it — I've added Khushboo's note on X to what we
+   know about leadership, and kept the original. Ask me to use it anytime." Mention the file only if
+   they'd find it useful; never make them think about paths.
+4. The session digest (`sessions/<date>-<person>.md`) records what was absorbed.
 
 ## What it must not do
-- Do not write to `wiki/**.md`. Compile-step does that.
-- Do not summarise or re-format the dropped content. Capture faithfully.
-- Do not read other `raw/` files (only today's, only for append).
-- Do not exceed 8,000 tokens of total prompt assembly (per `TOKEN_BUDGET.md`).
-
-## Output format
-- If `chat_shield: true`: natural human reply, no technical language.
-- If `chat_shield: false`: short reply naming the file appended to (one line) and any heads-up on what compile-step will do with it.
+- Don't silently overwrite or corrupt existing knowledge. Integrate; flag contradictions.
+- Don't file an unsourced or untyped entry — structure is always enforced (lint checks frontmatter +
+  `_status` + wikilinks), so "absorb freely" never becomes "corrupt freely."
+- Don't pull from sibling brains (`cross_brain_wall: true`).
+- Don't ration or truncate to save tokens — capture and absorb fully.
