@@ -1,83 +1,32 @@
-# TOKEN_BUDGET — ShikshaLokam brain
+# Staying lean — by structure, never by withholding
 
-Hard caps that protect `$20`-plan economics for the daily user. `brain-lint` reads this file and fails commits / skill invocations when any budget is exceeded.
+This brain does **not** cap, gate, or ration context to save money. Quality is the point: a content
+task loads the full voice styleguide, every matching exemplar, and every relevant source — generously.
+A thinner draft to save tokens is the only real failure. Cost is optimized later, and only ever by
+making the brain's content *leaner to begin with* — never by hiding it from a draft.
 
-All numbers in tokens, counted with the `cl100k_base` tokenizer.
+There are no token budgets, no per-plan profiles, and no "daily user vs maintainer" economics. Those
+were retired when the brain became a hive mind with one equal-contributor model.
 
----
+## The only efficiency we practice: keep the content naturally lean
 
-## Session-level
+The brain stays fast and cheap to read because its **content is well-structured**, not because we
+withhold it:
 
-| Surface | Budget | Source |
-|---|---:|---|
-| **SessionStart auto-injection** | **≤ 3,000** | `wiki/index.md` + `wiki/_index/topic-summaries.md` |
-| `wiki/index.md` | ≤ 1,500 | — |
-| `wiki/_index/topic-summaries.md` | ≤ 1,500 | — |
+- **Typed.** Every fact lives in the right place — `wiki/sources` (faithful extracts), `wiki/entities`
+  (people/programs/partners), `wiki/concepts` (ideas), `wiki/synthesis` (cross-cutting angles),
+  `wiki/voice` (how we sound).
+- **Indexed.** `wiki/index.md` + `wiki/_index/` give a scannable map, so a session pulls exactly the
+  files a task needs and reads them in full — not the whole brain, and not a rationed slice either.
+- **Deduped.** One canonical home per fact. Restating the same thing five ways is what actually wastes
+  tokens; saying it once, well, is the fix.
+- **Scannable.** Short, well-headed files read faster than long ones for the same information.
 
-Nothing else loads at session start. No `CLAUDE.md` expansions, no voice layer, no individual articles. `INTENT.md` and `ARCHITECTURE.md` are read once per session by Claude (not auto-injected as system context).
+If a session ever feels like it's "running out of room," the answer is to **tidy and dedupe the
+source**, never to load less of it.
 
----
+## What's still enforced (structure, not scarcity)
+- Every `wiki/**` file is sourced and carries a valid `_status`. Lint checks this on every commit.
+- The published site is generated from sources and verified drift-free (see `CLAUDE.md`).
 
-## Skill metadata
-
-| Surface | Budget | Notes |
-|---|---:|---|
-| **Skill metadata (all 6 skills combined)** | **≤ 1,000** | Frontmatter `description` only — what Claude's skill matcher sees on every turn. |
-| **SKILL.md body on trigger** | **≤ 3,000 each** | Full body loads when a skill fires. Per-skill cap. |
-
-The 6 skills are: `shikshalokam-ingest`, `-query`, `-write`, `-feedback`, `-lint`, `-weekly-review`.
-
----
-
-## Voice-layer
-
-Loaded **only** by `shikshalokam-write`. No other skill touches it.
-
-| Surface | Budget |
-|---|---:|
-| **Voice layer total (on write only)** | **≤ 2,000** |
-| `wiki/voice/styleguide.md` | ≤ 1,000 |
-| 2 best-matched exemplars from `wiki/voice/exemplars/` | ≤ 1,000 combined |
-
-Exemplar selection is LLM-picked via a cheap prior call against exemplar headers only (~500 tokens), not via embeddings.
-
----
-
-## Prompt assembly ceilings
-
-| Skill | Max assembled prompt |
-|---|---:|
-| **`shikshalokam-write`** | **≤ 12,000 tokens** |
-| `shikshalokam-query` | ≤ 6,000 tokens |
-| `shikshalokam-ingest` | ≤ 8,000 tokens (excluding raw payload) |
-| `shikshalokam-feedback` | ≤ 4,000 tokens |
-| `shikshalokam-lint` | ≤ 3,000 tokens |
-| `shikshalokam-weekly-review` | ≤ 16,000 tokens (maintainer-driven, runs on $200) |
-
-`write`'s 12K cap = `CLAUDE.md` rules + SessionStart injection + SKILL.md body + voice layer + up to 6 wiki articles drilled via wikilink + the prompt brief.
-
----
-
-## Hard rules the lint skill enforces
-
-1. **No skill may `Glob wiki/**/*.md` at prompt time.** Retrieval is strictly index-first, drill-down on wikilink match.
-2. **No skill may read `wiki/voice/**`** unless it is `shikshalokam-write`.
-3. **No skill may read the full `raw/` directory.** Only the specific daily-log file being processed.
-4. **Per-file ceilings for index files are load-bearing.** If the compile-step would push `wiki/index.md` above 1,500 tokens, it must collapse older entries into `topic-summaries.md` instead.
-5. **Skill metadata total across all 6 skills ≤ 1,000 tokens.** Every word in a skill's `description` frontmatter is paid for on every user turn.
-6. **LEDGER.md is never read on SessionStart.** It is appended at session end. Reading it costs tokens; growing it is the point.
-
----
-
-## Why these numbers
-
-- `3,000` for SessionStart is the inflection point below which conversation latency stays imperceptible on Sonnet-class models.
-- `1,000` for skill metadata is Anthropic's recommended ceiling.
-- `12,000` for full `write` assembly is well below the effective-context sweet spot, leaving headroom for long raw briefs without replanning.
-- Heavier `weekly-review` budget reflects that it runs on the $200 maintainer plan, not the daily user's $20 plan.
-
----
-
-## Updating this file
-
-Only maintainer commits edit `TOKEN_BUDGET.md`. Every edit references a `learnings/` slug or a stakeholder ask in the commit message. The lint skill reads this file on every commit and every skill invocation.
+That's it. Load fully; stay lean by being well-organised.

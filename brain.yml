@@ -1,42 +1,35 @@
-schema_version: 1
+schema_version: 2
 
 brand:
   name: "ShikshaLokam"
   slug: "shikshalokam"
   movement: "Shikshagraha"   # null for standalone brains
 
-users:
-  daily:
-    - name: "Sonal Bhasin"
-      email: "sonal@shikshalokam.org"
-      plan: "$20"
-  maintainers:
-    - name: "Sahil Modi"
-      email: "modi.sahil.im@gmail.com"
-      plan: "$200"
-    - name: "Sahid Modi"
-      plan: "$20"
+# One hive mind, equal contributors. Add a teammate here and the brain onboards them with full,
+# identical access — no tiers, no owners, no one to wait on. The session hooks validate the local
+# git identity against this roster so every save is correctly attributed (name + email). To add a
+# person or a whole new team, append to this list.
+team:
+  - name: "Sonal Bhasin"
+    email: "sonal@shikshalokam.org"
+  - name: "Sahil Modi"
+    email: "modi.sahil.im@gmail.com"
+  - name: "Sahid Modi"
+    email: ""   # TODO add Sahid's git email so his commits attribute correctly (only human follow-up here)
 
 config:
-  # When true, apply CLAUDE.md chat-shield rules — no paths, no flags, no technical terms surface to the daily user. Use for non-technical users (Mehr). When false, the user can read state files directly (Pratik, Sonal Bhasin).
-  chat_shield: false
-
-  # Where produced drafts land. "none" = drafts only in chat (no archive).
-  # "github-pages" = output/ + Pages workflow stub (requires repo admin to flip toggles).
-  # "drive" = drafts written via MCP to the user's Drive folder (requires MCP connection).
+  # Where produced drafts land. "none" = drafts live in the chat reply. "github-pages" = output/
+  # archive. "drive" = drafts written to Drive via MCP (a future "act for the team" seam).
   output_channel: "none"   # github-pages | drive | none
 
-  # Compile-step state. "deferred" = schema enforced, no subprocess runs. "active" = tools/compile.py runs on raw/ changes.
-  compile_step: "deferred"       # deferred | active
+  # How good content enters the brain. "in-session" = absorb immediately — sourced + typed into
+  # wiki/ with a valid _status, no approval queue (structure still enforced by lint, so absorb
+  # freely never means corrupt freely). "deferred" = only fold in when asked.
+  absorb_content: "in-session"   # in-session | deferred
 
-  # Day of week for the Friday review ritual.
-  weekly_review_day: "friday"  # monday..sunday
-
-  # INTENT principle 7 enforcement. When true, lint blocks reads of sibling brain repos.
+  # Never read sibling brain repos. Lint + permissions enforce. (Retained from the original intent.)
   cross_brain_wall: true
 
-  # The single growing artefact at root. Always on; flag exists for future opt-out only.
-  ledger: true
-
-  # Token budget profile. "tight" = $20-plan defaults (TOKEN_BUDGET.md). "loose" = maintainer-only sessions.
-  budget_profile: "tight"
+  # The published site is generated from sources and verified drift-free at every entry point
+  # (session start, session end, and CI on every push). Always on.
+  generated_site: true
