@@ -70,8 +70,9 @@ MONTHS = ["January", "February", "March", "April", "May", "June", "July",
 def inline(text: str) -> str:
     """Render inline markdown on a single (HTML-escaped) string."""
     s = html.escape(text, quote=False)
-    # links [label](url) — do before bold/italic so the url isn't mangled
-    s = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)",
+    # links [label](url) — do before bold/italic so the url isn't mangled. Accept absolute
+    # (https://…) and relative (projects/x.html) targets alike.
+    s = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)",
                lambda m: f'<a href="{html.escape(m.group(2), quote=True)}">{m.group(1)}</a>', s)
     # wikilinks [[target]] — internal pointers, not public URLs. Render as muted italic,
     # showing only the basename (strip any ../../path so the public page never shows a file path).

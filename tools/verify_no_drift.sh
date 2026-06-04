@@ -24,15 +24,15 @@ if ! python3 tools/build_site.py >/dev/null 2>"$ERR"; then
 fi
 rm -f "$ERR"
 
-if git diff --quiet -- docs/; then
-  echo "✓ verify_no_drift: docs/ matches sources — no drift."
+if git diff --quiet -- docs/ LEDGER.md; then
+  echo "✓ verify_no_drift: docs/ + LEDGER.md match sources — no drift."
   exit 0
 fi
 
 echo "════════════════════════════════════════════════════════════════════"
-echo "✗ verify_no_drift: DRIFT DETECTED — docs/ differed from what the sources generate."
-echo "  These published files were out of sync with the brain's real content:"
-git diff --name-only -- docs/ | sed 's/^/    /'
+echo "✗ verify_no_drift: DRIFT DETECTED — generated files differ from what the sources generate."
+echo "  These published/generated files were out of sync with the brain's real content:"
+git diff --name-only -- docs/ LEDGER.md | sed 's/^/    /'
 echo "  The working tree has now been rebuilt to the correct (source-derived) state."
 echo "  Commit the rebuilt docs/ to publish the truth.  (self-heal: python3 tools/build_site.py)"
 echo "════════════════════════════════════════════════════════════════════"
