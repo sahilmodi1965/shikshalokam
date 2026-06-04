@@ -25,13 +25,58 @@ verify_and_heal() {
     echo "  Self-heal by hand: python3 tools/build_site.py"
     return
   fi
-  if git diff --quiet -- docs/ 2>/dev/null; then
+  if git diff --quiet -- docs/ LEDGER.md 2>/dev/null; then
     echo "✓ Published site in sync with sources (no drift)."
   else
-    echo "⚠ SessionStart — drift self-healed: docs/ was out of sync and has been rebuilt from source:"
-    git diff --name-only -- docs/ 2>/dev/null | sed 's/^/    /'
-    echo "  (these rebuilt pages commit automatically at session end.)"
+    echo "⚠ SessionStart — drift self-healed: generated files were out of sync and rebuilt from source:"
+    git diff --name-only -- docs/ LEDGER.md 2>/dev/null | sed 's/^/    /'
+    echo "  (these rebuilt files commit automatically at session end.)"
   fi
+}
+
+auto_rebase() {
+  # Diverged + clean tree: replay local commits onto origin/main automatically — a content person
+  # never resolves anything by hand. Generated files (docs/, LEDGER.md) can't truly conflict — they
+  # are rebuilt from source — so any conflict there is resolved by picking a side then rebuilding.
+  # Only a GENUINE source-file conflict stops the rebase; we abort cleanly (main untouched), log it,
+  # and let the session continue. We never force-push and never rewrite pushed history.
+  echo "⚠ DIVERGED — local $AHEAD ahead, $BEHIND behind. Auto-rebasing local commits onto origin/main…"
+  if git rebase origin/main >/dev/null 2>&1; then
+    echo "✓ Rebased cleanly onto origin/main."
+    return 0
+  fi
+  local gitdir guard unmerged nongen f
+  gitdir="$(git rev-parse --git-dir 2>/dev/null)"
+  guard=0
+  while [ -d "$gitdir/rebase-merge" ] || [ -d "$gitdir/rebase-apply" ]; do
+    guard=$((guard + 1))
+    if [ "$guard" -gt 50 ]; then
+      git rebase --abort 2>/dev/null
+      echo "⚠ Rebase did not converge — aborted, main untouched. Session continues; sync later."
+      return 1
+    fi
+    unmerged="$(git diff --name-only --diff-filter=U 2>/dev/null)"
+    if [ -z "$unmerged" ]; then
+      git rebase --continue >/dev/null 2>&1 || break
+      continue
+    fi
+    nongen="$(echo "$unmerged" | grep -vE '^(docs/|LEDGER\.md$)')"
+    if [ -n "$nongen" ]; then
+      git rebase --abort 2>/dev/null
+      echo "⚠ Genuine source-file conflict (needs a human) — left main as-is, did NOT rebase:"
+      echo "$nongen" | sed 's/^/    /'
+      echo "  Your session continues normally; reconcile these files when convenient."
+      return 1
+    fi
+    # generated-only conflict: unblock by taking either side; build_site rebuilds the truth after.
+    for f in $unmerged; do
+      git checkout --theirs -- "$f" 2>/dev/null || git checkout --ours -- "$f" 2>/dev/null
+      git add -- "$f" 2>/dev/null
+    done
+    git rebase --continue >/dev/null 2>&1 || true
+  done
+  echo "✓ Rebased; generated-file conflicts resolved by rebuilding from source."
+  return 0
 }
 
 echo "── SessionStart: auto-pull preflight ──"
@@ -71,19 +116,18 @@ BEHIND=$(git rev-list --count HEAD..origin/main 2>/dev/null || echo "?")
 AHEAD=$(git rev-list --count origin/main..HEAD 2>/dev/null || echo "?")
 DIRTY="$(git status --porcelain)"
 
-if [ "$AHEAD" != "0" ] && [ "$BEHIND" != "0" ]; then
-  echo "⚠ DIVERGED — local is $AHEAD ahead, $BEHIND behind origin/main."
-  echo "  Auto-pull skipped (not fast-forward). Resolve before editing:"
-  echo "    git log --oneline HEAD..origin/main   # see what's on remote"
-  echo "    git log --oneline origin/main..HEAD   # see what's local"
+if [ -n "$DIRTY" ]; then
+  # Uncommitted work present — don't pull/rebase under it. Source edits are untouched; just
+  # self-heal generated files. (Rare at session start, since session end commits everything.)
+  echo "⚠ Uncommitted changes present — skipping sync so nothing of yours is disturbed:"
+  echo "$DIRTY" | sed 's/^/    /'
+  verify_and_heal
   exit 0
 fi
 
-if [ -n "$DIRTY" ]; then
-  echo "⚠ Local is $BEHIND commit(s) behind origin/main AND has uncommitted changes."
-  echo "  Auto-pull skipped — uncommitted files would conflict on pull:"
-  echo "$DIRTY" | sed 's/^/    /'
-  echo "  Action: commit or stash, then run: git pull --ff-only origin main"
+if [ "$AHEAD" != "0" ] && [ "$BEHIND" != "0" ]; then
+  auto_rebase
+  verify_and_heal
   exit 0
 fi
 
