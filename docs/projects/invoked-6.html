@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>InvokED 6.0 — ShikshaLokam</title>
-<meta name="description" content="Invitation workspace for InvokED 6.0 — the InvokED 5.0 template library, audience-to-signatory map, momentum bank, and the 6.0 specifics still to confirm. Live workspace." />
+<title>InvokED 6.0 — invitation workspace — ShikshaLokam</title>
+<meta name="description" content="The live workspace for InvokED 6.0 invitations. Everything ShikshaLokam learned writing the InvokED 5.0 (&quot;Mission to Movement&quot;, 6–7 Feb 2026) invites is pre-loaded here — the templ" />
+<meta name="generator" content="tools/build_project_page.py — generated from projects/invoked-6/page.md; do not hand-edit" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -19,7 +20,7 @@
       <span class="sep">/</span>
       <a href="index.html" style="text-decoration:none;color:inherit;"><span>projects</span></a>
       <span class="sep">/</span>
-      <span class="project">invoked 6.0</span>
+      <span class="project">invoked-6</span>
     </div>
     <a class="bar-back" href="index.html">← all projects</a>
   </div>
@@ -29,107 +30,377 @@
 
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow">Project workspace — last updated 1 June 2026 · two VIP invites approved</div>
+    <div class="eyebrow">Project workspace — last updated 1 June 2026 · 1 approved · 1 revised</div>
     <h1>InvokED 6.0 —<br/>invitation workspace.</h1>
-    <p class="lede">
-      Everything ShikshaLokam learned writing the InvokED 5.0 invitations is pre-loaded here — the
-      template skeleton, the audience-to-signatory map, the standing phrases, and a momentum bank of
-      verified 5.0 outcomes to weave in. Open Claude Code, name a recipient or a segment, and the
-      brain already holds the form.
-    </p>
+    <p class="lede">The live workspace for <strong>InvokED 6.0</strong> invitations. Everything ShikshaLokam learned writing the InvokED 5.0 ("Mission to Movement", 6–7 Feb 2026) invites is pre-loaded here — the template skeleton, the audience→signatory map, the standing phrases, and a momentum bank of verified 5.0 outcomes to weave in. When Sonal opens Claude Code and says <em>"draft the speaker invite for [Name]"</em> or <em>"the government-official invite,"</em> the brain already holds the form.</p>
     <div class="pill-row">
-      <span class="pill">2 VIP invites · approved by Sonal</span>
-      <span class="pill">12 templates · 6.0-ready</span>
-      <span class="pill">Dates locked · 26–27 Feb 2027, PCPA Bengaluru</span>
-      <span class="pill">Awaiting · tagline, register link, speakers</span>
+      <span class="pill status-approved">1 approved</span>
+      <span class="pill status-outline">1 revised</span>
+      <span class="pill">7 templates</span>
+      <span class="pill">updated 1 June 2026</span>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <div class="section-eyebrow">Before invites go out</div>
-    <h2>What we still need for 6.0.</h2>
-    <p class="lede-2">
-      These are the only things that change from 5.0 to 6.0 — and the brain does <strong>not</strong>
-      invent them. Fill each in (one chat line) and every template resolves. Until then, templates
-      carry <code>{{PLACEHOLDERS}}</code>.
-    </p>
-    <div class="card" style="background:var(--mist);">
-      <div class="label">⚠ 6.0 specifics to confirm</div>
-      <div class="card-body">
-        <table class="logtable">
-          <thead><tr><th>What</th><th>5.0 value (reference)</th><th>6.0</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Edition</strong></td><td>fifth</td><td>sixth <em>(assumed — confirm)</em></td></tr>
-            <tr><td><strong>Tagline</strong></td><td>"Mission to Movement"</td><td>needed</td></tr>
-            <tr><td><strong>Dates</strong></td><td>February 6 &amp; 7, 2026</td><td><strong>26 &amp; 27 February 2027</strong> ✓ locked</td></tr>
-            <tr><td><strong>Venue</strong></td><td>Prestige Centre for Performing Arts (PCPA), Bengaluru</td><td><strong>PCPA, Bengaluru</strong> ✓ locked</td></tr>
-            <tr><td><strong>Register link</strong></td><td>Google Form</td><td>needed (new form)</td></tr>
-            <tr><td><strong>Welcome dinner</strong></td><td>February 5, 2026</td><td>needed</td></tr>
-            <tr><td><strong>Confirmed speakers</strong></td><td>5.0 list on file</td><td>needed as they confirm</td></tr>
-          </tbody>
-        </table>
-        <p style="margin-top:14px;color:var(--muted);font-size:0.92rem;">
-          Two decisions worth making early: does 6.0 keep the <strong>Samaaj / Sarkaar / Bazaar /
-          Sanchar</strong> frame and the <strong>250 Districts Mission</strong> anchor (5.0 did), and
-          does it re-run the <strong>Learning Journey, Welcome Dinner, Strategic Partners Roundtable,
-          and Tech Track</strong>? Each has its own template ready.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+<section><div class="wrap">
+<h2>How this page works</h2>
+<ul><li>Sonal in chat: <em>"InvokED 6.0 — draft the [segment] invite for [Name]"</em> → Claude pulls the matching template below, fills the 6.0 specifics, adds a personalised recall paragraph if it's a VIP, and adds a <code>### Invite — &lt;segment / name&gt;</code> section with <code>status: draft</code>.</li><li>Sonal pushes detail / says "use this" → <code>status: approved</code>. Once sent → <code>status: sent</code>, logged.</li><li>Corrections to wording route to a learning, never a silent rewrite (CLAUDE.md rule 8).</li></ul>
+<p>Statuses: <code>template</code> (skeleton, awaiting 6.0 specifics) → <code>draft</code> (a specific invite written) → <code>approved</code> → <code>sent</code>.</p>
+</div></section>
+<section><div class="wrap">
+<h2>⚠ InvokED 6.0 — what we need before invites go out</h2>
+<p>These are the only things that change from 5.0 → 6.0, and the brain does <strong>not</strong> know them yet — it will not invent them. Fill these in (one chat line each) and every template below resolves. Until then, templates carry <code>{{PLACEHOLDERS}}</code>.</p>
+<table class="logtable">
+<thead><tr>
+<th>Placeholder</th>
+<th>5.0 value (for reference)</th>
+<th>6.0 value</th>
+</tr></thead><tbody>
+<tr>
+<td class="log-date"><code>{{EDITION}}</code></td>
+<td>fifth</td>
+<td><strong>sixth</strong> (assumed — confirm)</td>
+</tr>
+<tr>
+<td class="log-date"><code>{{TAGLINE}}</code></td>
+<td>"Mission to Movement"</td>
+<td><strong>needed</strong></td>
+</tr>
+<tr>
+<td class="log-date"><code>{{DATES}}</code></td>
+<td>February 6 and 7, 2026</td>
+<td><strong>26 &amp; 27 February 2027</strong> ✓ (locked in approved invites)</td>
+</tr>
+<tr>
+<td class="log-date"><code>{{VENUE}}</code></td>
+<td>Prestige Centre for Performing Arts (PCPA), Bengaluru</td>
+<td><strong>PCPA, Bengaluru</strong> ✓ (locked in approved invites)</td>
+</tr>
+<tr>
+<td class="log-date"><code>{{YEARS}}</code></td>
+<td>"marks five years"</td>
+<td><strong>six years</strong> (if sixth edition)</td>
+</tr>
+<tr>
+<td class="log-date"><code>{{REGISTER_LINK}}</code></td>
+<td>a Google Form</td>
+<td><strong>needed (new form)</strong></td>
+</tr>
+<tr>
+<td class="log-date"><code>{{DINNER_DATE}}</code></td>
+<td>February 5, 2026</td>
+<td><strong>needed</strong></td>
+</tr>
+<tr>
+<td class="log-date"><code>{{ROUNDTABLE_SLOT}}</code></td>
+<td>7 Feb, 12:00–1:30 PM</td>
+<td><strong>needed</strong></td>
+</tr>
+<tr>
+<td class="log-date"><code>{{CONTACT}}</code></td>
+<td>Shwetha Kamath, shwetha@shikshalokam.org</td>
+<td><strong>confirm</strong></td>
+</tr>
+<tr>
+<td class="log-date">Confirmed 6.0 speakers</td>
+<td>(5.0 list in <em class="wikilink">invoked-5-concept-note-2026</em>)</td>
+<td><strong>needed as they confirm</strong></td>
+</tr>
+</tbody></table>
+<p>Two more worth a decision: <strong>does 6.0 keep the four-pillar Samaaj/Sarkaar/Bazaar/Sanchar frame and the 250 Districts Mission anchor?</strong> (5.0 did.) And <strong>does 6.0 run the Learning Journey + Welcome Dinner + Strategic Partners Roundtable + Tech Track again?</strong> Each has its own template below.</p>
+</div></section>
+<section><div class="wrap">
+<h2>Audience → signatory → template map</h2>
+<table class="logtable">
+<thead><tr>
+<th>Segment</th>
+<th>Template</th>
+<th>Signs (5.0 default)</th>
+</tr></thead><tbody>
+<tr>
+<td class="log-date">Speaker (VIP, personalised)</td>
+<td>A</td>
+<td>S.D. Shibulal</td>
+</tr>
+<tr>
+<td class="log-date">Advisor / Mentor / Funder</td>
+<td>B</td>
+<td>S.D. Shibulal</td>
+</tr>
+<tr>
+<td class="log-date">General ecosystem (broad)</td>
+<td>C</td>
+<td>Khushboo Awasthi</td>
+</tr>
+<tr>
+<td class="log-date">General tech</td>
+<td>C-tech</td>
+<td>Vijayashree Urs / Khushboo Awasthi</td>
+</tr>
+<tr>
+<td class="log-date">Government official</td>
+<td>D</td>
+<td>S.D. Shibulal</td>
+</tr>
+<tr>
+<td class="log-date">Strategic Partners Roundtable</td>
+<td>E</td>
+<td>S.D. Shibulal</td>
+</tr>
+<tr>
+<td class="log-date">Principals</td>
+<td>F</td>
+<td>Neeraj Doddamane</td>
+</tr>
+<tr>
+<td class="log-date">Jury (Shikshagraha Awards)</td>
+<td>G</td>
+<td>S.D. Shibulal</td>
+</tr>
+<tr>
+<td class="log-date">Anchor partner (host a Brain Date)</td>
+<td>H</td>
+<td>Khushboo Awasthi</td>
+</tr>
+<tr>
+<td class="log-date">Welcome dinner</td>
+<td>I</td>
+<td>Neeraj Doddamane</td>
+</tr>
+<tr>
+<td class="log-date">Learning Journey (Global South)</td>
+<td>J</td>
+<td>Khushboo Awasthi</td>
+</tr>
+<tr>
+<td class="log-date">SFPI / family circle</td>
+<td>K</td>
+<td>S.D. Shibulal / Shruti Shibulal</td>
+</tr>
+</tbody></table>
+<p>Full 5.0 verbatim wording for every template: <em class="wikilink">invoked-5-email-invites-2026</em>. Below are the <strong>6.0-ready</strong> skeletons — same bones, placeholders swapped in.</p>
+</div></section>
+<section><div class="wrap">
+<h2>Templates (6.0-ready)</h2>
+<div class="card">
+<div class="label">Template A — Speaker (VIP, personalised) <span class="pill status-brief">template</span></div>
+<div class="card-body">
+<div class="quote-box" style="white-space:pre-line;font-size:0.94rem;border-left:3px solid var(--gold);padding-left:16px;margin:4px 0;">
+<strong>Subject:</strong> Invitation to Join Us at InvokED 6.0{{: TAGLINE}}
 
-<section>
-  <div class="wrap">
-    <div class="section-eyebrow">Approved by Sonal · 1 June 2026</div>
-    <h2>Two VIP invites, signed off.</h2>
-    <p class="lede-2">
-      These two are <strong>approved</strong> — Sonal edited the Peggy Dulany draft and confirmed it as
-      the reference for every future VIP speaker invite; the Marc / Salesforce invite came in as a
-      second approved reference and added the <em>shared-belief connector</em> move. Both now anchor the
-      VIP voice pattern the brain applies going forward.
-    </p>
+Dear <code>&lt;&lt;Salutation + Name&gt;&gt;</code>,
 
-    <div class="card" style="background:var(--mist);">
-      <div class="label">✓ Invite — Peggy Dulany (Synergos) · approved</div>
-      <div class="card-body">
-        <p style="margin:0 0 12px;color:var(--muted);font-size:0.9rem;">
-          VIP / global funder-leader · signs <strong>S.D. Shibulal</strong> · 2-year Synergos engagement,
-          One Billion Futures, Camille Massey at InvokED 5.0.
-        </p>
-        <div style="white-space:pre-line;font-size:0.94rem;border-left:3px solid var(--gold);padding-left:16px;">
+I hope this message finds you well.
+
+It gives me great pleasure to reach out as we prepare for the {{EDITION}} edition of <strong>InvokED</strong>,
+our annual global dialogue on education leadership. Over the years, InvokED has become a space
+where leaders, changemakers, and innovators come together to reimagine how collective action can
+shape the future of public education.
+
+`&lt;&lt;PERSONALISED PARAGRAPH — one specific memory: where you met / their work / their InvokED 5.0
+contribution. This is the signature move; never skip it for a VIP.&gt;&gt;`
+
+I would like to invite you to join us as a speaker for <strong>InvokED 6.0{{: TAGLINE}},</strong> scheduled for
+<strong>{{DATES}}</strong> at {{VENUE}}. This edition will bring together leaders, policymakers, educators,
+technologists, and changemakers from across India and the world to share insights, celebrate
+progress, and strengthen the growing movement for education equity.
+
+Your presence would lend immense strength and direction to these dialogues. Please do save the
+dates, and my team would be happy to connect to share more details.
+
+I look forward to welcoming you to InvokED 6.0.
+
+Warm regards,
+S. D. Shibulal · Founder, ShikshaLokam · Co-founder, Infosys
+</div>
+</div></div>
+<div class="card">
+<div class="label">Template B — Advisor / Mentor / Funder <span class="pill status-brief">template</span></div>
+<div class="card-body">
+<div class="quote-box" style="white-space:pre-line;font-size:0.94rem;border-left:3px solid var(--gold);padding-left:16px;margin:4px 0;">
+<strong>Subject:</strong> Mark your calendar: InvokED 6.0 is happening on {{DATES}}
+
+Dear <code>&lt;&lt;First Name&gt;&gt;</code>,
+
+I hope this message finds you well. As we begin planning for <strong>InvokED 6.0</strong>, I keep reflecting on
+your steadfast commitment to transforming public education in India. Your support has been pivotal
+in enabling us to create platforms for systemic dialogue.
+
+It gives me great pleasure to invite you to <strong>InvokED 6.0{{: TAGLINE}}</strong>, scheduled for
+<strong>{{DATES}}</strong> at {{VENUE}}. This edition marks {{YEARS}} of InvokED as a platform uniting Samaaj,
+Sarkaar, Bazaar, and Sanchaar to drive systemic transformation in public education — both
+reflective and catalytic, connecting macro perspectives on system transformation with micro-stories
+of leadership and agency.
+
+Your presence, insights, and ability to encourage all of us to think deeper, act bolder, and stay
+rooted in purpose would lend immense strength and direction to these dialogues. Please do save the
+dates, and my team would be happy to connect to share more details.
+
+Warm regards,
+<code>&lt;&lt;Name&gt;&gt;</code>
+</div>
+</div></div>
+<div class="card">
+<div class="label">Template C — General Ecosystem (broad, with register link) <span class="pill status-brief">template</span></div>
+<div class="card-body">
+<div class="quote-box" style="white-space:pre-line;font-size:0.94rem;border-left:3px solid var(--gold);padding-left:16px;margin:4px 0;">
+<strong>Subject:</strong> Join Us at InvokED 6.0 on {{DATES_SHORT}}
+
+Dear <code>&lt;&lt;First Name&gt;&gt;</code>,
+
+At <strong>ShikshaLokam</strong>, we have always believed that transforming education systems begins with
+leadership — and that meaningful change happens when people come together with shared purpose. We
+keep asking: *What would it take to achieve education equity? How can Samaaj (communities &amp; civil
+society), Sarkaar (government), Bazaar (market), and Sanchaar (media) share ownership of every
+child's learning journey?*
+
+<strong>InvokED</strong> was born from these very questions. We are excited to invite you to <strong>InvokED 6.0.</strong>
+
+<strong>Date</strong>: {{DATES}}  ·  <strong>Time</strong>: 9 AM onwards  ·  <strong>Venue</strong>: {{VENUE}}
+
+The space is designed to facilitate impactful partnerships and an experience that will prompt you to:
+- Engage in deep, interactive discussion at the <strong>Brain Dates</strong>
+- Immerse in partner ecosystems' work at the <strong>Experience Zones</strong>
+- Connect 1-on-1 with experts and leaders at the <strong>Dialogue Corner</strong>
+- Celebrate leaders championing equity across India at the <strong>Shikshagraha Awards</strong>
+
+…and much more. Join us as we reimagine what's possible for every child, every classroom, and
+every community. <strong>Save the dates, and register here: {{REGISTER_LINK}}.</strong>
+
+Warm regards,
+Khushboo Awasthi · Co-founder &amp; COO, ShikshaLokam
+</div>
+<p><em>(Tech variant: change the question to "what does co-creation <strong>of solutions at scale</strong> truly look like?" and add a bullet — "Explore open-source solutions powered by AI &amp; other technology, solving daunting societal challenges.")</em></p>
+</div></div>
+<div class="card">
+<div class="label">Template D — Government official <span class="pill status-brief">template</span></div>
+<div class="card-body">
+<div class="quote-box" style="white-space:pre-line;font-size:0.94rem;border-left:3px solid var(--gold);padding-left:16px;margin:4px 0;">
+<strong>Subject:</strong> Invitation to Join Us at InvokED 6.0{{: TAGLINE}}
+
+Dear <code>&lt;&lt;First Name&gt;&gt;</code> Ji,
+
+I hope this message finds you well and in great spirits.
+
+It is our distinct privilege and pleasure to invite you to <strong>InvokED 6.0</strong>, ShikshaLokam's annual
+global conclave on education leadership. InvokED brings together leaders from Sarkaar, Samaaj,
+Bazaar and Sanchaar to reflect, reimagine, and renew our shared commitment to strengthening public
+education — spotlighting courageous leadership, celebrating everyday changemakers through the
+<strong>Shikshagraha Leadership Awards</strong>, and creating space for conversations &amp; partnerships that move
+systems forward through open technology, collective action, and new-age leadership.
+
+<strong>Date</strong>: {{DATES}}  ·  <strong>Venue</strong>: {{VENUE}}
+
+Your participation will add depth, direction, and inspiration to a forum dedicated to building a
+more equitable learning future for every child. I look forward to welcoming you.
+
+Warm regards,
+SD Shibulal · Founder, ShikshaLokam · Co-founder, Infosys
+</div>
+</div></div>
+<div class="card">
+<div class="label">Template E — Strategic Partners Roundtable (closed-door, funders) <span class="pill status-brief">template</span></div>
+<div class="card-body">
+<div class="quote-box" style="white-space:pre-line;font-size:0.94rem;border-left:3px solid var(--gold);padding-left:16px;margin:4px 0;">
+<strong>Subject:</strong> Invitation to an Exclusive Closed-Door Strategic Partners Roundtable at InvokED 6.0
+
+Dear <code>&lt;&lt;First Name&gt;&gt;</code>,
+
+Across the country, millions of children depend on the choices we make today — about how we invest,
+collaborate, and strengthen our education systems. Your leadership makes you an essential voice in
+shaping the pathways that ensure every child learns, thrives, and dreams freely.
+
+As part of <strong>InvokED 6.0</strong> ({{DATES}}, {{VENUE}}), we are convening a **Strategic Partners
+Roundtable on {{ROUNDTABLE_SLOT}}** — an exclusive gathering of funders and movement-builders. It
+will focus on three questions:
+- How can funding shift from isolated projects to strengthening leadership, coherence, and long-term institutional capacity?
+- What role can funders play in building bridges across Sarkaar, Samaaj, Bazaar, and Sanchar to spark movements rather than programmes?
+- What does it take to create the conditions for a national movement like Shikshagraha to thrive?
+
+I look forward to welcoming you to InvokED and to this roundtable.
+
+Warm regards,
+S. D. Shibulal · Founder, ShikshaLokam · Co-founder, Infosys
+</div>
+</div></div>
+<div class="card">
+<div class="label">Template F — Principals <span class="pill status-brief">template</span></div>
+<div class="card-body">
+<div class="quote-box" style="white-space:pre-line;font-size:0.94rem;border-left:3px solid var(--gold);padding-left:16px;margin:4px 0;">
+<strong>Subject:</strong> Invitation to Join Us at InvokED 6.0{{: TAGLINE}}
+
+Dear <code>&lt;&lt;First Name&gt;&gt;</code> <code>&lt;&lt;Salutation&gt;&gt;</code>,
+
+Across schools of different traditions, philosophies, and pedagogies, one belief quietly unites us:
+the pursuit of better learning never ends. Your commitment to improvement mirrors the very spirit
+with which <strong>InvokED</strong> was created by ShikshaLokam &amp; the Shibulal Family Philanthropic Initiatives.
+
+It is with great pleasure that I invite you to <strong>InvokED 6.0</strong>, scheduled for <strong>{{DATES}}</strong> at
+{{VENUE}}. As a school leader, this is an opportunity to:
+- Engage with national and global education leaders on new-age school leadership
+- Explore AI in classrooms, 21st-century skills, innovative pedagogy, and community-led school improvement
+- Share your own insights, challenges, and promising practices with the movement
+- Take back actionable frameworks and reflective tools for your school's improvement journey
+
+Thank you for the work you do every day — often quietly, often tirelessly — to shape the next
+generation. I look forward to welcoming you at InvokED 6.0.
+
+Warm regards,
+Neeraj Doddamane · Chief Strategy Officer, ShikshaLokam
+</div>
+</div></div>
+<div class="card">
+<div class="label">Templates G–K — pointers</div>
+<div class="card-body">
+<p>Jury (G), Anchor Partner / host-a-Brain-Date (H), Welcome Dinner (I), Learning Journey (J), SFPI (K): the 6.0 versions follow their 5.0 wording in <em class="wikilink">invoked-5-email-invites-2026</em> §G–K verbatim — swap <code>5.0 → 6.0</code>, <code>February 6 and 7, 2026 → {{DATES}}</code>, dinner <code>Feb 5 → {{DINNER_DATE}}</code>, Learning Journey <code>3–5 Feb → {{LJ_DATES}}</code>. Ask in chat and Claude will fill any of these as a full draft.</p>
+</div></div>
+</div></section>
+<section><div class="wrap">
+<h2>Momentum bank — verified 5.0 lines to weave in</h2>
+<p>Use these to show what last year's convening produced (gives 6.0 invites pull). All cited to <em class="wikilink">invoked-5-proceedings-2026</em>.</p>
+<ul><li><strong>Scale of the room:</strong> 5.0 drew an audience of 1,000+ changemakers across Samaaj, Sarkaar, Bazaar and Sanchar.</li><li><strong>The movement, by the numbers (event morning):</strong> ~1.2 million micro-improvements; ~343,000 leaders.</li><li><strong>Launched at 5.0:</strong> the Shikshagraha Commons (open, multilingual practice repository) and the Shikshagraha STEM Collective; the Shikshagraha Awards 2026 + the coffee-table book <em>"Small Steps to Build Great Schools."</em></li><li><strong>Bright spots:</strong> Tamil Nadu's House System now in 37,500 schools; Tirunelveli enrolment 75% → 95.8%; Nagaland NLNF 3.0 = 22,000 micro-improvement programs.</li><li><strong>Quote bank (verbatim):</strong> Wendy Kopp — <em>"Leadership in the new age… is about listening deeply, sharing responsibility, and enabling collective wisdom."</em> · Sanjay Purohit — <em>"Do one small thing… then you're already a part of Shikshagraha."</em> · Cynthia McCaffrey (UNICEF) — <em>"We don't want charity, we want a chance."</em> · Dr Rangan — <em>"Leaders make decisions, but ownership is about choices."</em></li></ul>
+<div class="quote-box" style="white-space:pre-line;font-size:0.94rem;border-left:3px solid var(--gold);padding-left:16px;margin:4px 0;">
+Standing phrases (verbatim-reusable): "our annual global dialogue on education leadership" · "both
+reflective and catalytic—connecting macro perspectives on system transformation with micro-stories
+of leadership and agency" · "Your presence would lend immense strength and direction to these
+dialogues." · "I look forward to welcoming you to InvokED 6.0."
+</div>
+</div></section>
+<section><div class="wrap">
+<h2>Drafted 6.0 invites</h2>
+<div class="card">
+<div class="label">Invite — Peggy Dulany (Synergos) <span class="pill status-outline">revised</span></div>
+<div class="card-body">
+<p class="card-meta-lines" style="color:var(--muted);font-size:0.9rem;margin:0 0 12px;"><strong>Segment:</strong> VIP / Global Funder-Leader (Template A/B hybrid)<br/><strong>Signatory:</strong> S.D. Shibulal<br/><strong>Relationship context:</strong> 2-year Synergos × ShikshaLokam engagement; Camille Massey (Synergos) spoke at InvokED 5.0; Peggy missed 5.0; partnership centred on collective action and leadership.<br/><strong>Revised by Sonal:</strong> 2026-06-01 — remove One Billion Futures; make personal (missed you at 5.0); centre collective action + partnership value; warm opener; shorter.</p>
+<div class="quote-box" style="white-space:pre-line;font-size:0.94rem;border-left:3px solid var(--gold);padding-left:16px;margin:4px 0;">
 <strong>Subject:</strong> Invitation to Join Us at InvokED 6.0 | 26–27 February 2027, Bengaluru
 
 Dear Peggy,
 
-I hope this message finds you well.
+I trust this message finds you in good health.
 
-Over the past two years, our teams have built a relationship that I deeply value — from the many conversations around One Billion Futures, to having Camille with us at InvokED 5.0 in Bengaluru earlier this year. The way Synergos thinks about bridging leadership, trust, and collective action across the Global South is precisely the spirit InvokED — our global dialogue on education leadership — was built to amplify.
+I'm writing to personally invite you as a distinguished speaker to <a href="https://shikshalokam.org/invoked/">InvokED</a> 6.0 — our annual global dialogue on education leadership — scheduled for <strong>26 and 27 February 2027</strong> at the Prestige Centre for Performing Arts (PCPA), Bengaluru.
 
-It is with great pleasure that I personally invite you to join us as a speaker and thought partner for <strong>InvokED 6.0</strong>, scheduled for <strong>26 and 27 February 2027</strong> at the Prestige Centre for Performing Arts (PCPA), Bengaluru.
+I founded <a href="https://shikshalokam.org/">ShikshaLokam</a> to enable and amplify leadership development opportunities for individuals and institutions engaged in K-12 education — co-creating solutions with government functionaries, civil society organisations, and academic bodies. At its heart, it has always been about building collective leadership: the conviction that when people lead together, systems change.
 
-Over five years, InvokED has grown from a dialogue into a movement-building space — one that unites leaders from across sectors and spheres of lives around the shared urgency of education equity. This feels like a natural moment for you to be in the room where we explore questions around how global movements take root locally, how trust enables capital to flow toward shared outcomes, and what it truly takes to build collective leadership — questions Synergos has been discovering. Your founding vision and experience would add immense meaning to these conversations.
+At InvokED 5.0 in Bengaluru earlier this year, Camille Massey brought exactly that spirit into the room — and her presence enriched our conversations in a way we are still reflecting on. We deeply missed having you with us then, and it is with that feeling that I reach out now.
 
-We would be honoured to have you join us. My team would be happy to connect at your convenience to discuss how we can best design your participation.
+The partnership between Synergos and ShikshaLokam has meant a great deal to me personally. The way your work holds space for trust, relationships, and collective action across the Global South is precisely what InvokED is built to amplify — and I can think of few voices more resonant for the conversations we are gathering to explore.
 
-Please do save the dates. I look forward to the possibility of welcoming you to InvokED 6.0.
+It would be a privilege to welcome you. My team would love to connect at your convenience.
 
-Warm regards,
-SD Shibulal · Founder, ShikshaLokam · Co-founder, Infosys
-        </div>
-      </div>
-    </div>
-
-    <div class="card" style="background:var(--mist);">
-      <div class="label">✓ Invite — Marc / Salesforce · approved</div>
-      <div class="card-body">
-        <p style="margin:0 0 12px;color:var(--muted);font-size:0.9rem;">
-          VIP / corporate leader · signs <strong>S.D. Shibulal</strong> · technology-rooted-in-purpose
-          alignment; introduces the <em>shared-belief connector</em>.
-        </p>
-        <div style="white-space:pre-line;font-size:0.94rem;border-left:3px solid var(--gold);padding-left:16px;">
+With warm regards,
+SD Shibulal
+Founder, ShikshaLokam
+Co-founder, Infosys
+</div>
+<p><em>Drafted: 2026-06-01 · Revised: 2026-06-01 · CC: Neeraj, Khushboo, Santosh</em> <em>Learning filed: <em class="wikilink">2026-06-01-vip-invite-voice</em></em></p>
+</div></div>
+<div class="card">
+<div class="label">Invite — Marc / Salesforce <span class="pill status-approved">approved</span></div>
+<div class="card-body">
+<p class="card-meta-lines" style="color:var(--muted);font-size:0.9rem;margin:0 0 12px;"><strong>Segment:</strong> VIP / Corporate Leader — technology + purpose alignment<br/><strong>Signatory:</strong> S.D. Shibulal<br/><strong>Relationship context:</strong> Salesforce is a knowledge &amp; advisory partner to ShikshaLokam; ongoing team engagement; shared belief in technology rooted in purpose and equity.<br/><strong>Approved by Sonal:</strong> 2026-06-01 — second reference for VIP speaker invites; introduces the shared-belief connector move.</p>
+<div class="quote-box" style="white-space:pre-line;font-size:0.94rem;border-left:3px solid var(--gold);padding-left:16px;margin:4px 0;">
 <strong>Subject:</strong> Invitation to Join Us at InvokED 6.0 | 26–27 February 2027, Bengaluru
 
 Dear Marc,
@@ -149,199 +420,57 @@ We would be honoured to have you join us. My team would be happy to connect at y
 Please do save the dates. I look forward to the possibility of welcoming you to InvokED 6.0.
 
 Warm regards,
-SD Shibulal · Founder, ShikshaLokam · Co-founder, Infosys
-        </div>
-      </div>
-    </div>
-
-    <p style="color:var(--muted);font-size:0.9rem;">
-      What the brain now holds from these two: subject form (<em>Invitation to Join Us … | dates, city</em>),
-      the shared-belief connector, dropping verbatim quotes, the "speaker and thought partner" ask,
-      questions drawn from the invitee's own world, first name once inside the body, a co-design CTA, and
-      the humble "possibility of" close. The pattern applies to every VIP invite from here.
-    </p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-eyebrow">Who gets which invite</div>
-    <h2>Audience → signatory → template.</h2>
-    <div class="card">
-      <div class="label">Twelve segments, mapped from 5.0</div>
-      <div class="card-body">
-        <table class="logtable">
-          <thead><tr><th>Segment</th><th>Template</th><th>Signs (5.0 default)</th></tr></thead>
-          <tbody>
-            <tr><td>Speaker (VIP, personalised)</td><td>A</td><td>S.D. Shibulal</td></tr>
-            <tr><td>Advisor / Mentor / Funder</td><td>B</td><td>S.D. Shibulal</td></tr>
-            <tr><td>General ecosystem (broad)</td><td>C</td><td>Khushboo Awasthi</td></tr>
-            <tr><td>General tech</td><td>C-tech</td><td>Vijayashree Urs / Khushboo Awasthi</td></tr>
-            <tr><td>Government official</td><td>D</td><td>S.D. Shibulal</td></tr>
-            <tr><td>Strategic Partners Roundtable</td><td>E</td><td>S.D. Shibulal</td></tr>
-            <tr><td>Principals</td><td>F</td><td>Neeraj Doddamane</td></tr>
-            <tr><td>Jury (Shikshagraha Awards)</td><td>G</td><td>S.D. Shibulal</td></tr>
-            <tr><td>Anchor partner (host a Brain Date)</td><td>H</td><td>Khushboo Awasthi</td></tr>
-            <tr><td>Welcome dinner</td><td>I</td><td>Neeraj Doddamane</td></tr>
-            <tr><td>Learning Journey (Global South)</td><td>J</td><td>Khushboo Awasthi</td></tr>
-            <tr><td>SFPI / family circle</td><td>K</td><td>S.D. Shibulal / Shruti Shibulal</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-eyebrow">Templates — 6.0-ready</div>
-    <h2>The bones, with placeholders swapped in.</h2>
-    <p class="lede-2">Same wording the team trusted for 5.0; the handful of things that change year
-      to year are marked <code>{{LIKE_THIS}}</code>. Three shown here; the full set of twelve lives in
-      the workspace.</p>
-
-    <div class="card">
-      <div class="label">Template A · Speaker (VIP, personalised)</div>
-      <div class="card-body" style="white-space:pre-line;font-size:0.94rem;">
-<strong>Subject:</strong> Invitation to Join Us at InvokED 6.0{{: TAGLINE}}
-
-Dear <em>&lt;&lt;Salutation + Name&gt;&gt;</em>,
-
-I hope this message finds you well.
-
-It gives me great pleasure to reach out as we prepare for the {{EDITION}} edition of <strong>InvokED</strong>, our annual global dialogue on education leadership. Over the years, InvokED has become a space where leaders, changemakers, and innovators come together to reimagine how collective action can shape the future of public education.
-
-<em>&lt;&lt;PERSONALISED PARAGRAPH — one specific memory: where you met / their work / their InvokED 5.0 contribution. The signature move; never skip it for a VIP.&gt;&gt;</em>
-
-I would like to invite you to join us as a speaker for <strong>InvokED 6.0{{: TAGLINE}},</strong> scheduled for <strong>{{DATES}}</strong> at {{VENUE}}. This edition will bring together leaders, policymakers, educators, technologists, and changemakers from across India and the world to share insights, celebrate progress, and strengthen the growing movement for education equity.
-
-Your presence would lend immense strength and direction to these dialogues. Please do save the dates, and my team would be happy to connect to share more details.
-
-I look forward to welcoming you to InvokED 6.0.
-
-Warm regards,
-S. D. Shibulal · Founder, ShikshaLokam · Co-founder, Infosys
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="label">Template D · Government official</div>
-      <div class="card-body" style="white-space:pre-line;font-size:0.94rem;">
-<strong>Subject:</strong> Invitation to Join Us at InvokED 6.0{{: TAGLINE}}
-
-Dear <em>&lt;&lt;First Name&gt;&gt;</em> Ji,
-
-I hope this message finds you well and in great spirits.
-
-It is our distinct privilege and pleasure to invite you to <strong>InvokED 6.0</strong>, ShikshaLokam's annual global conclave on education leadership. InvokED brings together leaders from Sarkaar, Samaaj, Bazaar and Sanchaar to reflect, reimagine, and renew our shared commitment to strengthening public education — spotlighting courageous leadership, celebrating everyday changemakers through the <strong>Shikshagraha Leadership Awards</strong>, and creating space for conversations &amp; partnerships that move systems forward through open technology, collective action, and new-age leadership.
-
-<strong>Date</strong>: {{DATES}}  ·  <strong>Venue</strong>: {{VENUE}}
-
-Your participation will add depth, direction, and inspiration to a forum dedicated to building a more equitable learning future for every child. I look forward to welcoming you.
-
-Warm regards,
-SD Shibulal · Founder, ShikshaLokam · Co-founder, Infosys
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="label">Template C · General ecosystem (broad, with register link)</div>
-      <div class="card-body" style="white-space:pre-line;font-size:0.94rem;">
-<strong>Subject:</strong> Join Us at InvokED 6.0 on {{DATES_SHORT}}
-
-Dear <em>&lt;&lt;First Name&gt;&gt;</em>,
-
-At <strong>ShikshaLokam</strong>, we have always believed that transforming education systems begins with leadership — and that meaningful change happens when people come together with shared purpose. We keep asking: <em>What would it take to achieve education equity? How can Samaaj (communities &amp; civil society), Sarkaar (government), Bazaar (market), and Sanchaar (media) share ownership of every child's learning journey?</em>
-
-<strong>InvokED</strong> was born from these very questions. We are excited to invite you to <strong>InvokED 6.0.</strong>
-
-<strong>Date</strong>: {{DATES}}  ·  <strong>Time</strong>: 9 AM onwards  ·  <strong>Venue</strong>: {{VENUE}}
-
-The space is designed to facilitate impactful partnerships and an experience that will prompt you to:
- • Engage in deep, interactive discussion at the <strong>Brain Dates</strong>
- • Immerse in partner ecosystems' work at the <strong>Experience Zones</strong>
- • Connect 1-on-1 with experts and leaders at the <strong>Dialogue Corner</strong>
- • Celebrate leaders championing equity across India at the <strong>Shikshagraha Awards</strong>
-
-…and much more. Save the dates, and register here: {{REGISTER_LINK}}.
-
-Warm regards,
-Khushboo Awasthi · Co-founder &amp; COO, ShikshaLokam
-      </div>
-    </div>
-
-    <p style="color:var(--muted);font-size:0.9rem;">
-      Templates B (Advisor/Funder), E (Strategic Partners Roundtable), F (Principals), and the
-      pointers for G–K (Jury, Anchor Partner, Dinner, Learning Journey, SFPI) are in the workspace —
-      each fills as a full draft the moment Sonal names a recipient in chat.
-    </p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-eyebrow">Momentum bank</div>
-    <h2>Verified 5.0 lines to weave in.</h2>
-    <div class="card">
-      <div class="label">What last year's convening produced — gives 6.0 invites pull</div>
-      <div class="card-body">
-        <ul>
-          <li><strong>Scale of the room:</strong> 5.0 drew 1,000+ changemakers across Samaaj, Sarkaar, Bazaar and Sanchar.</li>
-          <li><strong>The movement, by the numbers:</strong> ~1.2 million micro-improvements; ~343,000 leaders driving improvement.</li>
-          <li><strong>Launched at 5.0:</strong> the Shikshagraha Commons; the Shikshagraha STEM Collective; the Shikshagraha Awards 2026 + coffee-table book <em>"Small Steps to Build Great Schools."</em></li>
-          <li><strong>Bright spots:</strong> Tamil Nadu's House System now in 37,500 schools; Tirunelveli enrolment 75% → 95.8%; Nagaland NLNF 3.0 = 22,000 micro-improvement programs.</li>
-        </ul>
-        <p style="margin-top:10px;"><strong>Quote bank.</strong>
-          <em>"Leadership in the new age… is about listening deeply, sharing responsibility, and enabling collective wisdom."</em> — Wendy Kopp ·
-          <em>"Do one small thing… then you're already a part of Shikshagraha."</em> — Sanjay Purohit ·
-          <em>"We don't want charity, we want a chance."</em> — Cynthia McCaffrey, UNICEF ·
-          <em>"Leaders make decisions, but ownership is about choices."</em> — Dr Subramanian Rangan.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-eyebrow">Content log</div>
-    <h2>What landed, by the day.</h2>
-    <table class="logtable">
-      <thead><tr><th>Date</th><th>What landed</th><th>Status</th></tr></thead>
-      <tbody>
-        <tr>
-          <td class="log-date">1 Jun 2026</td>
-          <td>Marc / Salesforce VIP invite ingested as a second approved reference — adds the shared-belief connector move to the pattern.</td>
-          <td><span class="pill">approved</span></td>
-        </tr>
-        <tr>
-          <td class="log-date">1 Jun 2026</td>
-          <td>Sonal approved the Peggy Dulany (Synergos) invite with edits; the approved version is now the reference template for all VIP speaker invites. Dates &amp; venue locked: 26–27 Feb 2027, PCPA Bengaluru.</td>
-          <td><span class="pill">approved</span></td>
-        </tr>
-        <tr>
-          <td class="log-date">1 Jun 2026</td>
-          <td>First draft: Peggy Dulany (Synergos) VIP invite — personalised around Camille Massey's 5.0 presence + One Billion Futures.</td>
-          <td>draft →</td>
-        </tr>
-        <tr>
-          <td class="log-date">1 Jun 2026</td>
-          <td>Workspace seeded: four InvokED 5.0 docs ingested (concept note, proceedings, email-invite library, summary); 12 templates made 6.0-ready with placeholders; audience→signatory map, momentum bank, and standing-phrase bank loaded; 6.0-specifics gap-list surfaced.</td>
-          <td><span class="pill research">awaiting 6.0 specifics</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+SD Shibulal
+Founder, ShikshaLokam
+Co-founder, Infosys
+</div>
+<p><em>Approved: 2026-06-01 · CC: Neeraj, Khushboo, Santosh</em> <em>Learning filed: <em class="wikilink">2026-06-01-vip-invite-voice</em></em></p>
+</div></div>
+</div></section>
+<section><div class="wrap">
+<h2>Content log</h2>
+<table class="logtable">
+<thead><tr>
+<th>Date</th>
+<th>What landed</th>
+<th>Status</th>
+</tr></thead><tbody>
+<tr>
+<td class="log-date">1 Jun 2026</td>
+<td>Workspace seeded: 4 InvokED 5.0 docs ingested (concept note, proceedings, email-invite library, summary); 12 templates made 6.0-ready with placeholders; audience→signatory map, momentum bank, standing-phrase bank loaded; 6.0-specifics gap-list surfaced.</td>
+<td><span class="pill status-brief">template</span> (awaiting 6.0 dates / venue / tagline / speakers)</td>
+</tr>
+<tr>
+<td class="log-date">1 Jun 2026</td>
+<td>First draft: Peggy Dulany (Synergos) VIP invite — Feb 26–27 2027, PCPA; personalised around Camille Massey 5.0 presence + One Billion Futures.</td>
+<td><span class="pill status-draft">draft</span> →</td>
+</tr>
+<tr>
+<td class="log-date">1 Jun 2026</td>
+<td>Sonal approved Peggy Dulany invite with edits; approved version is now the reference template for all VIP speaker invites. Learning filed: learnings/2026-06-01-vip-invite-voice.md</td>
+<td><span class="pill status-approved">approved</span></td>
+</tr>
+<tr>
+<td class="log-date">1 Jun 2026</td>
+<td>Peggy Dulany invite revised per Sonal's feedback: removed One Billion Futures; recentred on collective action + Synergos partnership value; warm opener ("I trust this message finds you in good health"); added "missed you at 5.0" personal beat; shorter.</td>
+<td><span class="pill status-outline">revised</span></td>
+</tr>
+<tr>
+<td class="log-date">1 Jun 2026</td>
+<td>Marc / Salesforce VIP invite ingested as second approved reference. Adds the shared-belief connector move to the pattern. Learning updated.</td>
+<td><span class="pill status-approved">approved</span></td>
+</tr>
+</tbody></table>
+</div></section>
 
 </main>
 
 <footer>
   <div class="wrap">
     <div>
-      <p style="color:var(--paper);font-weight:500;">InvokED 6.0 — live workspace.</p>
-      <p class="footer-meta">Source of truth: <code>projects/invoked-6/page.md</code>. This page mirrors it.
-      Last refresh: <strong>1 June 2026</strong>.</p>
+      <p style="color:var(--paper);font-weight:500;">InvokED 6.0 — invitation workspace</p>
+      <p class="footer-meta">Generated from <code>projects/invoked-6/page.md</code> — the single source of truth.
+      This page is built automatically; do not hand-edit. Last build: <strong>4 June 2026, 11:15 UTC</strong>.</p>
     </div>
     <div>
       <p class="footer-meta">

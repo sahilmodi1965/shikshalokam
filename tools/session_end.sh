@@ -36,12 +36,24 @@ if echo "$DIRTY" | grep -qE "(wiki/|routes/|LEDGER\.md)" && ! echo "$DIRTY" | gr
   echo "WARN: SessionEnd — brain content changed but docs/index.html (self-portrait) was not updated. It will go stale (per CLAUDE.md per-session contract)."
 fi
 
-# 3) Mirror-drift guard — a changed projects/<slug>/page.md needs its docs/projects/<slug>.html.
-#    This is the gap where a draft is saved to the workspace but the LIVE page never shows it.
-for pg in $(echo "$DIRTY" | grep -oE "projects/[^/]+/page\.md" | sort -u); do
-  slug=$(echo "$pg" | sed -E 's#projects/([^/]+)/page\.md#\1#')
-  if ! echo "$DIRTY" | grep -q "docs/projects/${slug}\.html"; then
-    echo "WARN: SessionEnd — ${pg} changed but docs/projects/${slug}.html was NOT regenerated. The live page will be STALE — regenerate the HTML mirror, then end again."
+# 3) Auto-regenerate the public page for any changed projects/<slug>/page.md.
+#    page.md is the SINGLE SOURCE OF TRUTH; docs/projects/<slug>.html is GENERATED from it,
+#    never hand-mirrored. This permanently closes the drift gap that froze the InvokED 6.0
+#    page at "two VIP invites approved" while Sonal kept approving more (see
+#    learnings/2026-06-04-publish-confirmation-rca.md). No human copy-paste step to forget.
+PUBLISHED_PAGES=""
+CHANGED_SLUGS="$(echo "$DIRTY" | grep -oE "projects/[^/]+/page\.md" | sed -E 's#projects/([^/]+)/page\.md#\1#' | sort -u)"
+for slug in $CHANGED_SLUGS; do
+  if python3 "$CLAUDE_PROJECT_DIR/tools/build_project_page.py" "$slug" >/dev/null 2>&1; then
+    echo "✓ SessionEnd — regenerated docs/projects/${slug}.html from projects/${slug}/page.md (single source of truth)."
+    PUBLISHED_PAGES="${PUBLISHED_PAGES} ${slug}"
+  else
+    echo "════════════════════════════════════════════════════════════════════"
+    echo "✗ SessionEnd — FAILED to regenerate docs/projects/${slug}.html."
+    echo "  projects/${slug}/page.md changed but the generator errored, so the LIVE"
+    echo "  page will be STALE — it will NOT show this session's changes."
+    echo "  Fix: python3 tools/build_project_page.py ${slug}   (read the error, then re-end)"
+    echo "════════════════════════════════════════════════════════════════════"
   fi
 done
 
@@ -56,6 +68,11 @@ PUSH_OUT="$(git push origin main 2>&1)"
 PUSH_RC=$?
 if [ "$PUSH_RC" -eq 0 ]; then
   echo "✓ SessionEnd — pushed to origin/main ($(git rev-parse --short HEAD)). Live site refreshes in ~60s."
+  # Authoritative record of what actually reached the public site this session. The wrap's
+  # "it's live" claim must match THIS — never promise a page updated unless it appears here.
+  for slug in $PUBLISHED_PAGES; do
+    echo "   → live: https://sahilmodi1965.github.io/shikshalokam/projects/${slug}.html"
+  done
 else
   echo "════════════════════════════════════════════════════════════════════"
   echo "✗ SessionEnd — PUSH FAILED (exit ${PUSH_RC})."

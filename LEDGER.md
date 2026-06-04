@@ -56,6 +56,15 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 
 <!-- Entries appended below this line. Newest immediately below. -->
 
+## 2026-06-04 — Sahil (maintainer infra) — project-pages-generated-not-mirrored
+
+- **Asked:** "Sonal's activity is not writing into the main webpage after her message — a big failure, fix it today." Plus an RCA on why the brain told Sonal her work was published in ~60s when the live page never updated.
+- **Produced:** `tools/build_project_page.py` — generates `docs/projects/<slug>.html` from `projects/<slug>/page.md` (single source of truth; HTML never hand-mirrored again). Rewired `tools/session_end.sh` to auto-regenerate any changed project page before commit and to print the authoritative list of pages that actually went live. Re-rendered `docs/projects/invoked-6.html` from `page.md` — the live page now shows the *revised* Peggy Dulany and approved Marc/Salesforce invites with status pills (it had been frozen at "1 June · two invites" and was showing a superseded Peggy draft). Self-portrait timeline updated.
+- **Learned:** structural — full RCA in `learnings/2026-06-04-publish-confirmation-rca.md`. Two distinct faults: (1) the 2 Jun silent-push fix did NOT cover this — on 3 Jun the push succeeded but approvals were written only to the front-page timeline + learnings, never to `page.md`, and the public page was a hand-copied mirror that drifted; (2) the wrap's "live in ~60s" is hard-coded, decoupled from whether the artifact actually reached the page. Root cause: hand-mirrored HTML + publish-claim decoupled from reality + artifact never written to the source of record.
+- **Status changes:** none flipped. (`projects/invoked-6/page.md` content unchanged; only its public render was regenerated.)
+- **Sources touched:** [[invoked-5-email-invites-2026]] (via the invoked-6 workspace it renders).
+- **Maintainer follow-ups (cannot self-apply):** amend CLAUDE.md §4 so the wrap may claim a page is live only when its `page.md` changed + regenerated this session; treat `page.md` as the system of record (timeline is derived); give Sonal's web session a publish signal she can see; recover the 3 Jun Camille Massey + advisors-group approved copy from Sonal's next fresh session; clean the legacy project pages' `page.md` (raw paths / maintainer TODOs) before they're regenerated.
+
 ## 2026-06-03 — Sonal — invoked-6-vip-invites-approved
 
 - **Asked:** Draft and refine InvokED 6.0 VIP invites for Marc Benioff (Salesforce), Camille Massey (Synergos), and Peggy Dulany (Synergos). Multiple rounds of feedback per email. Also drafted an advisors-group invite (not speaker, join as participant).
