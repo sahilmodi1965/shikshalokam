@@ -56,6 +56,16 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 
 <!-- Entries appended below this line. Newest immediately below. -->
 
+## 2026-06-05 — Sahil — brain-v2-drift-proof-spine-and-hive-mind
+
+- **Asked:** Rebuild the brain to v2 — a hive mind for content: drift-free across any session, quality uncapped (beats a blank chat), equal access for all, zero-ops, honest publish. Then: "become fully autonomous for all users."
+- **Produced (Phase 1 — drift-proof spine, all proven):** `tools/build_site.py` (single generator entrypoint, project pages), deterministic generators (dropped `datetime.now()` stamps), `tools/verify_no_drift.sh`; wired into `session_start.sh` (self-heal on resume) + `session_end.sh` (build→commit→push→tripwire) + `.github/workflows/build-site.yml` (CI fails on drift). Idempotency proven (two-run `git diff --exit-code docs/` clean); CI green.
+- **Produced (Phase 2 — quality + hive-mind):** rewrote `shikshalokam-write` to load full voice + all exemplars + all sources, uncapped, as a creative partner; before/after vs blank chat captured. Collapsed the constitution into one short warm `CLAUDE.md` operating note (RE-READ ON RESUME banner, equal access, honest-publish rule); archived INTENT.md + ARCHITECTURE.md (SUPERSEDED); rewrote TOKEN_BUDGET.md to a structural-leanness note (no caps); flattened `brain.yml` to one equal `team:` roster; modernized ingest/feedback/lint skills (absorb-in-session, structure-only lint); identity validation in `session_start.sh`; relaxed permissions for autonomy while locking `docs/**` generate-only and keeping all safety rails; flipped `wiki/voice/styleguide.md` to user-validated.
+- **Status changes:** `wiki/voice/styleguide.md` research-seeded → user-validated.
+- **Sources touched:** [[invoked-5-email-invites-2026]] (write before/after sample).
+- **Still to build (next autonomous chunk):** Phase 3 — generated `index.html` timeline + `log.html` from `sessions/<date>-<person>.md` (on a branch, the public-face cutover); Phase 4 — session-file schema + `LEDGER.md` generated from them + auto-rebase; onboarding rewrite + query/weekly-review skill polish.
+- **Human follow-ups:** the team drops 6–10 best pieces into `wiki/voice/exemplars/` (the #1 quality lever); add Sahid's git email to `brain.yml`; fix the one machine signing commits as "Mantra For change".
+
 ## 2026-06-04 — Sahil (maintainer infra) — project-pages-generated-not-mirrored
 
 - **Asked:** "Sonal's activity is not writing into the main webpage after her message — a big failure, fix it today." Plus an RCA on why the brain told Sonal her work was published in ~60s when the live page never updated.
