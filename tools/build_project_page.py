@@ -39,7 +39,6 @@ from __future__ import annotations
 import html
 import re
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -276,7 +275,7 @@ def parse_invite_heading(text: str):
 # ---------------------------------------------------------------------------
 # Whole-page renderer
 
-def render_page(slug: str, md_text: str, build_dt: datetime) -> str:
+def render_page(slug: str, md_text: str) -> str:
     meta, body = parse_frontmatter(md_text)
     title = meta.get("title", slug)
     last_updated = meta.get("last_updated", "")
@@ -451,7 +450,6 @@ def render_page(slug: str, md_text: str, build_dt: datetime) -> str:
     close_section()
     sections_html = "\n".join(out)
 
-    built = build_dt.strftime("%-d %B %Y, %H:%M UTC")
     pills_html = "\n      ".join(pills)
     lede_block = f'<p class="lede">{hero_lede}</p>' if hero_lede else ""
 
@@ -505,7 +503,7 @@ def render_page(slug: str, md_text: str, build_dt: datetime) -> str:
     <div>
       <p style="color:var(--paper);font-weight:500;">{html.escape(title)}</p>
       <p class="footer-meta">Generated from <code>projects/{slug}/page.md</code> — the single source of truth.
-      This page is built automatically; do not hand-edit. Last build: <strong>{built}</strong>.</p>
+      This page is built automatically by <code>tools/build_site.py</code>; do not hand-edit.</p>
     </div>
     <div>
       <p class="footer-meta">
@@ -528,17 +526,16 @@ def slugs_with_page():
     return sorted(p.parent.name for p in PROJECTS.glob("*/page.md"))
 
 
-def build(slug: str, build_dt: datetime) -> str:
+def build(slug: str) -> str:
     src = PROJECTS / slug / "page.md"
     if not src.exists():
         raise FileNotFoundError(f"no page.md for project '{slug}' ({src})")
-    return render_page(slug, src.read_text(encoding="utf-8"), build_dt)
+    return render_page(slug, src.read_text(encoding="utf-8"))
 
 
 def main(argv):
     args = [a for a in argv[1:] if not a.startswith("--")]
     flags = {a for a in argv[1:] if a.startswith("--")}
-    build_dt = datetime.now(timezone.utc)
 
     targets = args if args else slugs_with_page()
     if not targets:
@@ -549,12 +546,11 @@ def main(argv):
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     for slug in targets:
         out_path = OUT_DIR / f"{slug}.html"
-        new_html = build(slug, build_dt)
+        new_html = build(slug)
         if "--check" in flags:
             old = out_path.read_text(encoding="utf-8") if out_path.exists() else ""
-            # ignore the build-timestamp line when diffing
-            norm = lambda s: re.sub(r"Last build: <strong>.*?</strong>", "", s)
-            if norm(old) != norm(new_html):
+            # Output is fully deterministic — a byte difference IS staleness.
+            if old != new_html:
                 stale.append(slug)
                 print(f"STALE: docs/projects/{slug}.html differs from page.md")
             else:
