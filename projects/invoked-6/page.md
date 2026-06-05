@@ -450,6 +450,7 @@ Use these to show what last year's convening produced (gives 6.0 invites pull). 
 
 | Date | What landed | Status |
 |---|---|---|
+| 5 Jun 2026 | End-to-end publish verified: source → rebuild → push → live URL confirmed. | `approved` |
 | 5 Jun 2026 | All four invites updated to Sonal's approved final versions: Peggy Dulany (two variants), Marc Benioff, Camille Massey, Advisors group. | `approved` |
 | 5 Jun 2026 | Camille Massey and Advisors-group invites rendered to live page — approved 3 Jun, missed from prior commit. | `approved` |
 | 3 Jun 2026 | Advisors-group invite approved (come-and-be-present structure, "Save the Dates" subject). Pattern locked in learnings. | `approved` |
