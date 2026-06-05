@@ -56,6 +56,14 @@ The LEDGER is the brain's autobiography. It does not replace `wiki/` (the state)
 
 <!-- Entries appended below this line. Newest immediately below. -->
 
+## 2026-06-05 — Sonal — invoked-6-camille-advisors-live
+
+- **Asked:** Push the Camille Massey and Advisors-group invites live — they were approved on 3 June but never rendered to the page.
+- **Produced:** Both invites added to `projects/invoked-6/page.md` and `docs/projects/invoked-6.html`. Hero pill updated to "4 VIP invites approved by Sonal". Content log extended with 3 Jun and 5 Jun rows. Self-portrait timeline entry added for today; 3 Jun entry demoted. Footer/eyebrow dates updated to 5 June.
+- **Learned:** nothing new — this is a surfacing session. The pattern was already in the learnings; the gap was a missed render.
+- **Status changes:** none.
+- **Sources touched:** [[invoked-5-proceedings-2026]] (Camille verbatim quote) · [[2026-06-01-vip-invite-voice]]
+
 ## 2026-06-03 — Sonal — invoked-6-vip-invites-approved
 
 - **Asked:** Draft and refine InvokED 6.0 VIP invites for Marc Benioff (Salesforce), Camille Massey (Synergos), and Peggy Dulany (Synergos). Multiple rounds of feedback per email. Also drafted an advisors-group invite (not speaker, join as participant).

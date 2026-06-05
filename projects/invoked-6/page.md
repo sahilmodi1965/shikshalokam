@@ -349,10 +349,85 @@ Use these to show what last year's convening produced (gives 6.0 invites pull). 
 
 ---
 
+### Invite — Camille Massey (Synergos) · status `approved`
+
+**Segment:** VIP / Returning speaker (Template A adapted)
+**Signatory:** S.D. Shibulal
+**Relationship context:** Camille moderated the *Painting a Vision for a Billion Futures* panel at InvokED 5.0; Synergos partnership built on collective action + trust across the Global South.
+**Approved by Sonal:** 2026-06-03
+
+---
+
+> **Subject:** Invitation to Join Us at InvokED 6.0 | 26–27 February 2027, Bengaluru
+>
+> Dear Camille,
+>
+> I trust this message finds you in good health.
+>
+> I am writing with a vivid memory of the conversation you anchored at InvokED 5.0 — *Painting a Vision for a Billion Futures* — and particularly the moment when you said: *"When people interact directly and build relationships over time, the power dynamics begin to shift."* It stayed with us long after the room cleared.
+>
+> The way Synergos holds space for trust, relationships, and collective action across the Global South is precisely the spirit InvokED — our annual global dialogue on education leadership — was built to amplify. Having you in that room was not a coincidence; it was coherence.
+>
+> It is with that feeling that I write to personally invite you to join us as a speaker and thought partner for **InvokED 6.0**, scheduled for **26 and 27 February 2027** at the Prestige Centre for Performing Arts (PCPA), Bengaluru.
+>
+> Over five years, InvokED has grown from a convening into a space where real commitments are made, systems are interrogated, and grassroots leaders are celebrated alongside policymakers and global voices. InvokED 6.0 carries greater ambition — and your voice, rooted in the work Synergos does every day, would bring precisely the grounding those conversations need.
+>
+> Please do save the dates — my team would love to connect at your convenience to design your participation.
+>
+> With warm regards,
+> SD Shibulal
+> Founder, ShikshaLokam · Co-founder, Infosys
+
+---
+
+*Approved: 2026-06-03 · CC: Neeraj, Khushboo, Santosh*
+*Learning filed: [[../../learnings/2026-06-01-vip-invite-voice]]*
+
+---
+
+### Invite — Advisors group · status `approved`
+
+**Segment:** Advisor / Mentor / Funder (Template B adapted — come-and-be-present, not speaker)
+**Signatory:** S.D. Shibulal
+**Relationship context:** Advisors who have shaped InvokED over the years; invited to attend and be present, not to speak.
+**Approved by Sonal:** 2026-06-03
+
+---
+
+> **Subject:** Save the Dates for InvokED 6.0 | 26–27 February 2027, Bengaluru
+>
+> Dear [First Name],
+>
+> I trust this message finds you in good health.
+>
+> As we begin thinking about InvokED 6.0, I keep reflecting on what it has taken to build this space over five years — and how much of what InvokED has become is owed to the counsel, commitment, and belief of people like you.
+>
+> The conviction that has always anchored ShikshaLokam — that systemic change in education cannot happen through isolated effort, that it requires leaders who can build the kind of trust that turns dialogue into collective action — is a conviction you have held with us from the beginning. That shared belief is what has made your guidance so valuable.
+>
+> InvokED has grown from a convening into a space where real commitments are made, grassroots leaders are celebrated alongside policymakers, and the questions we ask of each other get sharper year after year. InvokED 6.0 carries greater ambition and a sharper focus on what endures — on the kind of leadership that outlasts any single programme or initiative.
+>
+> I would love to have you with us. Your presence, your perspective, and your willingness to push our thinking would mean a great deal — not as a speaker making a case, but as someone whose counsel has shaped this space from within.
+>
+> Please do save the dates: **26 and 27 February 2027, PCPA, Bengaluru.** I look forward to seeing you there.
+>
+> Warm regards,
+> SD Shibulal
+> Founder, ShikshaLokam · Co-founder, Infosys
+
+---
+
+*Approved: 2026-06-03 · CC: Neeraj, Khushboo, Santosh*
+*Learning filed: [[../../learnings/2026-06-01-vip-invite-voice]]*
+
+---
+
 ## Content log
 
 | Date | What landed | Status |
 |---|---|---|
+| 5 Jun 2026 | Camille Massey (Synergos) and Advisors-group invites rendered to live page — approved 3 Jun, missed from prior commit. | `approved` |
+| 3 Jun 2026 | Advisors-group invite approved (come-and-be-present structure, "Save the Dates" subject). Pattern locked in learnings. | `approved` |
+| 3 Jun 2026 | Camille Massey (Synergos) invite approved — returning-speaker recall structure, verbatim quote anchor, Synergos philosophy connector. | `approved` |
 | 1 Jun 2026 | Workspace seeded: 4 InvokED 5.0 docs ingested (concept note, proceedings, email-invite library, summary); 12 templates made 6.0-ready with placeholders; audience→signatory map, momentum bank, standing-phrase bank loaded; 6.0-specifics gap-list surfaced. | `template` (awaiting 6.0 dates / venue / tagline / speakers) |
 | 1 Jun 2026 | First draft: Peggy Dulany (Synergos) VIP invite — Feb 26–27 2027, PCPA; personalised around Camille Massey 5.0 presence + One Billion Futures. | `draft` → |
 | 1 Jun 2026 | Sonal approved Peggy Dulany invite with edits; approved version is now the reference template for all VIP speaker invites. Learning filed: learnings/2026-06-01-vip-invite-voice.md | `approved` |
