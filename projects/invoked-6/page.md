@@ -273,65 +273,28 @@ Use these to show what last year's convening produced (gives 6.0 invites pull). 
 
 ## Drafted 6.0 invites
 
-### Invite — Peggy Dulany (Synergos) · status `revised`
+### Invite — Peggy Dulany (Synergos) · status `approved`
 
 **Segment:** VIP / Global Funder-Leader (Template A/B hybrid)
 **Signatory:** S.D. Shibulal
-**Relationship context:** 2-year Synergos × ShikshaLokam engagement; Camille Massey (Synergos) spoke at InvokED 5.0; Peggy missed 5.0; partnership centred on collective action and leadership.
-**Revised by Sonal:** 2026-06-01 — remove One Billion Futures; make personal (missed you at 5.0); centre collective action + partnership value; warm opener; shorter.
+**Relationship context:** 2-year Synergos × ShikshaLokam engagement; Camille Massey (Synergos) spoke at InvokED 5.0; Peggy missed 5.0; Shruti attended a recent Synergos gathering in New York.
+**Approved by Sonal:** 2026-06-05 — two approved variants below.
 
 ---
+
+**Variant A**
 
 > **Subject:** Invitation to Join Us at InvokED 6.0 | 26–27 February 2027, Bengaluru
 >
 > Dear Peggy,
 >
-> I trust this message finds you in good health.
->
-> I'm writing to personally invite you as a distinguished speaker to [InvokED](https://shikshalokam.org/invoked/) 6.0 — our annual global dialogue on education leadership — scheduled for **26 and 27 February 2027** at the Prestige Centre for Performing Arts (PCPA), Bengaluru.
->
-> I founded [ShikshaLokam](https://shikshalokam.org/) to enable and amplify leadership development opportunities for individuals and institutions engaged in K-12 education — co-creating solutions with government functionaries, civil society organisations, and academic bodies. At its heart, it has always been about building collective leadership: the conviction that when people lead together, systems change.
->
-> At InvokED 5.0 in Bengaluru earlier this year, Camille Massey brought exactly that spirit into the room — and her presence enriched our conversations in a way we are still reflecting on. We deeply missed having you with us then, and it is with that feeling that I reach out now.
->
-> The partnership between Synergos and ShikshaLokam has meant a great deal to me personally. The way your work holds space for trust, relationships, and collective action across the Global South is precisely what InvokED is built to amplify — and I can think of few voices more resonant for the conversations we are gathering to explore.
->
-> It would be a privilege to welcome you. My team would love to connect at your convenience.
->
-> With warm regards,
-> SD Shibulal
-> Founder, ShikshaLokam
-> Co-founder, Infosys
-
----
-
-*Drafted: 2026-06-01 · Revised: 2026-06-01 · CC: Neeraj, Khushboo, Santosh*
-*Learning filed: [[../../learnings/2026-06-01-vip-invite-voice]]*
-
----
-
-### Invite — Marc / Salesforce · status `approved`
-
-**Segment:** VIP / Corporate Leader — technology + purpose alignment
-**Signatory:** S.D. Shibulal
-**Relationship context:** Salesforce is a knowledge & advisory partner to ShikshaLokam; ongoing team engagement; shared belief in technology rooted in purpose and equity.
-**Approved by Sonal:** 2026-06-01 — second reference for VIP speaker invites; introduces the shared-belief connector move.
-
----
-
-> **Subject:** Invitation to Join Us at InvokED 6.0 | 26–27 February 2027, Bengaluru
->
-> Dear Marc,
->
 > I hope this message finds you well.
 >
-> Salesforce has been a valued knowledge & advisory partner in our journey, and it has been deeply meaningful to engage with your team. The belief that technology, when rooted in purpose and equity, can unlock transformation at scale is one that ShikshaLokam and Salesforce share — and it is a belief that sits at the heart of everything InvokED — our global dialogue on education leadership — is built around.
+> Over the past two years, our teams have built a relationship that I deeply value — from co-creating meaningful shared meaning making spaces to having Camille with us at InvokED 5.0 in Bengaluru earlier this year. The way Synergos thinks about bridging leadership, trust, and collective action across the Global South is precisely the spirit InvokED — our global dialogue on education leadership — was built to amplify.
 >
-> It gives me great pleasure to personally invite you to join us as a speaker and thought partner for **InvokED 6.0**, scheduled for **26 and 27 February 2027** at the Prestige Centre for Performing Arts (PCPA), Bengaluru.
+> It is with great pleasure that I personally invite you to join us as a speaker and thought partner for **InvokED 6.0**, scheduled for **26 and 27 February 2027** at the Prestige Centre for Performing Arts (PCPA), Bengaluru.
 >
-> Over five years, InvokED has grown from a dialogue into a movement-building space — one that unites leaders from across sectors and spheres of life around the shared urgency of education equity. InvokED 6.0 will push that conversation further, exploring how markets, technology, and collective leadership can together create the conditions for every child across India and across the Global South to learn, thrive, and dream freely.
->
-> This feels like a natural moment for you to be in the room, Marc. The questions we will wrestle with — how business can move from CSR to genuine co-ownership of social outcomes, how technology platforms can serve the most marginalised rather than deepen divides, and what it takes to build movements that last — are questions you have engaged with throughout your leadership of Salesforce. Your voice would bring a perspective that few others can offer: that of a builder who has seen, at the very largest scale, what it means to align purpose with power.
+> Over five years, InvokED has grown from a dialogue into a movement-building space — one that unites leaders from across sectors and spheres of lives around the shared urgency of education equity. This feels like a natural moment for you to be in the room where we explore questions around how global movements take root locally, how trust enables capital to flow toward shared outcomes, and what it truly takes to build collective leadership — questions Synergos has been discovering. Your founding vision and experience would add immense meaning to these conversations.
 >
 > We would be honoured to have you join us. My team would be happy to connect at your convenience to discuss how we can best design your participation.
 >
@@ -344,7 +307,69 @@ Use these to show what last year's convening produced (gives 6.0 invites pull). 
 
 ---
 
-*Approved: 2026-06-01 · CC: Neeraj, Khushboo, Santosh*
+**Variant B**
+
+> **Subject:** Invitation to Join Us at InvokED 6.0 | 26–27 February 2027, Bengaluru
+>
+> Dear Peggy,
+>
+> I trust this message finds you well.
+>
+> I founded ShikshaLokam on a simple but deep conviction that transforming public education requires collective action and shared leadership across government, civil society, and communities. All that I have heard from my team over the past two years, the partnership with Synergos has been a meaningful amplifier of this belief. Watching both our organisations build trust across divides and turn relationships into momentum for education equity gives me confidence that this kind of collective effort is exactly what the moment demands. Shruti also talked highly of her time at the Synergos gathering that concluded recently in New York.
+>
+> It is this shared spirit that breathes life into InvokED, our annual global dialogue on education leadership. We missed you at InvokED 5.0 this year in Bengaluru, though Camille carried that spirit into the room beautifully. Her reflections on bridging leadership and collective action stayed with us and reminded us, again, how much more we can do together than apart.
+>
+> In the same spirit, it gives me great pleasure to invite you to join us as a speaker for **InvokED 6.0**, scheduled for **26 and 27 February 2027** at the Prestige Centre for Performing Arts, Bengaluru. Your founding vision and experience would add immense meaning to the dialogue.
+>
+> My team would be happy to connect at your convenience to discuss how we can best design your participation.
+>
+> Please do save the dates. I look forward to the possibility of welcoming you to InvokED 6.0.
+>
+> Warm regards,
+> SD Shibulal
+> Founder, ShikshaLokam
+> Co-founder, Infosys
+
+---
+
+*Approved: 2026-06-05 · CC: Neeraj, Khushboo, Santosh*
+*Learning filed: [[../../learnings/2026-06-01-vip-invite-voice]]*
+
+---
+
+### Invite — Marc / Salesforce · status `approved`
+
+**Segment:** VIP / Corporate Leader — technology + purpose alignment
+**Signatory:** S.D. Shibulal
+**Relationship context:** Salesforce is a valuable technology partner and advisor; Shibulal Sir visited the SF office and met Hydra; shared conviction that purpose-driven business and social responsibility are inseparable.
+**Approved by Sonal:** 2026-06-05
+
+---
+
+> **Subject:** Invitation to Join Us at InvokED 6.0 | 26–27 February 2027, Bengaluru
+>
+> Dear Marc,
+>
+> I hope this message finds you in great spirits.
+>
+> It was incredible to visit your San Francisco office. The conversation with your teammate Hydra was one of those rare exchanges that left me and the team genuinely energised. It reaffirmed something I have long believed — that the most powerful partnerships are the ones where purpose is shared, not just stated. I founded ShikshaLokam on a simple conviction that transforming public education in India takes collective action across government, civil society, markets, and technology. Salesforce has been a valuable technology partner and advisor in that work, and I wanted to reach out personally to carry that spirit forward.
+>
+> It gives me great pleasure to personally invite you to join us as a speaker and thought partner for **InvokED 6.0**, scheduled for **26 and 27 February 2027** at the Prestige Centre for Performing Arts (PCPA), Bengaluru.
+>
+> Over five years, InvokED has grown from a dialogue into a space where leaders from across sectors gather around the shared urgency of education equity — asking how collective action translates into lasting change, how technology can be a genuine enabler rather than a layer of complexity, and what it means to build institutions and movements that outlast any one leader.
+>
+> You have spent decades championing a unique kind of leadership — one that refuses to separate business success from social responsibility, and that has used its platform to speak up, act boldly, and inspire others to do the same. That conviction, and your experience of living it at the very largest scale, is precisely the perspective we want in that room.
+>
+> My team would be happy to connect at your convenience to discuss how we can best design your participation. Please do save the dates. I look forward to the possibility of welcoming you to InvokED 6.0.
+>
+> Warm regards,
+> SD Shibulal
+> Founder, ShikshaLokam
+> Co-founder, Infosys
+
+---
+
+*Approved: 2026-06-05 · CC: Neeraj, Khushboo, Santosh*
 *Learning filed: [[../../learnings/2026-06-01-vip-invite-voice]]*
 
 ---
@@ -353,8 +378,8 @@ Use these to show what last year's convening produced (gives 6.0 invites pull). 
 
 **Segment:** VIP / Returning speaker (Template A adapted)
 **Signatory:** S.D. Shibulal
-**Relationship context:** Camille moderated the *Painting a Vision for a Billion Futures* panel at InvokED 5.0; Synergos partnership built on collective action + trust across the Global South.
-**Approved by Sonal:** 2026-06-03
+**Relationship context:** Camille moderated the *Painting a Vision for a Billion Futures* panel at InvokED 5.0; verbatim quote on power dynamics anchors the recall; Synergos partnership built on collective action + trust across the Global South.
+**Approved by Sonal:** 2026-06-05
 
 ---
 
@@ -362,25 +387,24 @@ Use these to show what last year's convening produced (gives 6.0 invites pull). 
 >
 > Dear Camille,
 >
-> I trust this message finds you in good health.
+> I hope this message finds you well.
 >
-> I am writing with a vivid memory of the conversation you anchored at InvokED 5.0 — *Painting a Vision for a Billion Futures* — and particularly the moment when you said: *"When people interact directly and build relationships over time, the power dynamics begin to shift."* It stayed with us long after the room cleared.
+> Having you at InvokED 5.0 in Bengaluru earlier this year meant a great deal to us. Your session on the *Painting a Vision for a Billion Futures* panel and reflection that when people interact directly and build relationships over time, the power dynamics begin to shift, stayed with us long after the event. The way Synergos thinks about bridging leadership, trust, and collective action across the Global South is precisely the spirit InvokED — our global dialogue on education leadership — was built to amplify.
 >
-> The way Synergos holds space for trust, relationships, and collective action across the Global South is precisely the spirit InvokED — our annual global dialogue on education leadership — was built to amplify. Having you in that room was not a coincidence; it was coherence.
+> It is with great pleasure that I personally invite you to join us once again for **InvokED 6.0**, scheduled for **26 and 27 February 2027** at the Prestige Centre for Performing Arts (PCPA), Bengaluru.
 >
-> It is with that feeling that I write to personally invite you to join us as a speaker and thought partner for **InvokED 6.0**, scheduled for **26 and 27 February 2027** at the Prestige Centre for Performing Arts (PCPA), Bengaluru.
+> Over five years, InvokED has grown from a dialogue into a space where leaders from across sectors gather around the shared urgency of education equity. My team would be happy to connect at your convenience to discuss how we can best design your participation.
 >
-> Over five years, InvokED has grown from a convening into a space where real commitments are made, systems are interrogated, and grassroots leaders are celebrated alongside policymakers and global voices. InvokED 6.0 carries greater ambition — and your voice, rooted in the work Synergos does every day, would bring precisely the grounding those conversations need.
+> Please do save the dates. I look forward to the possibility of welcoming you back to InvokED 6.0.
 >
-> Please do save the dates — my team would love to connect at your convenience to design your participation.
->
-> With warm regards,
+> Warm regards,
 > SD Shibulal
-> Founder, ShikshaLokam · Co-founder, Infosys
+> Founder, ShikshaLokam
+> Co-founder, Infosys
 
 ---
 
-*Approved: 2026-06-03 · CC: Neeraj, Khushboo, Santosh*
+*Approved: 2026-06-05 · CC: Neeraj, Khushboo, Santosh*
 *Learning filed: [[../../learnings/2026-06-01-vip-invite-voice]]*
 
 ---
@@ -390,33 +414,34 @@ Use these to show what last year's convening produced (gives 6.0 invites pull). 
 **Segment:** Advisor / Mentor / Funder (Template B adapted — come-and-be-present, not speaker)
 **Signatory:** S.D. Shibulal
 **Relationship context:** Advisors who have shaped InvokED over the years; invited to attend and be present, not to speak.
-**Approved by Sonal:** 2026-06-03
+**Approved by Sonal:** 2026-06-05
 
 ---
 
 > **Subject:** Save the Dates for InvokED 6.0 | 26–27 February 2027, Bengaluru
 >
-> Dear [First Name],
+> Dear <<First Name>>,
 >
-> I trust this message finds you in good health.
+> I hope this message finds you in great spirits.
 >
-> As we begin thinking about InvokED 6.0, I keep reflecting on what it has taken to build this space over five years — and how much of what InvokED has become is owed to the counsel, commitment, and belief of people like you.
+> As we begin thinking about InvokED 6.0, I keep reflecting on what it has taken to build this space over five years and how much of what InvokED has become is owed to the counsel, commitment, and belief of people like you.
 >
-> The conviction that has always anchored ShikshaLokam — that systemic change in education cannot happen through isolated effort, that it requires leaders who can build the kind of trust that turns dialogue into collective action — is a conviction you have held with us from the beginning. That shared belief is what has made your guidance so valuable.
+> InvokED was built from a simple conviction that transforming public education in India cannot happen through isolated effort. It requires leaders from across government, civil society, philanthropy, technology, and media to come together, not just to share ideas, but to build the kind of trust that turns dialogue into collective action.
 >
-> InvokED has grown from a convening into a space where real commitments are made, grassroots leaders are celebrated alongside policymakers, and the questions we ask of each other get sharper year after year. InvokED 6.0 carries greater ambition and a sharper focus on what endures — on the kind of leadership that outlasts any single programme or initiative.
+> Over five editions, that vision has deepened. InvokED has grown from a convening into a space where real commitments are made, where grassroots leaders are celebrated alongside policymakers, and where the question of what it takes to ensure every child in a public school learns is held with the urgency it deserves.
 >
-> I would love to have you with us. Your presence, your perspective, and your willingness to push our thinking would mean a great deal — not as a speaker making a case, but as someone whose counsel has shaped this space from within.
+> The sixth edition carries that forward with greater ambition and a sharper focus on what endures. It gives me great pleasure to personally invite you to **InvokED 6.0**, scheduled for **26 and 27 February 2027** at the Prestige Centre for Performing Arts (PCPA), Bengaluru. Your presence, your perspective and your willingness to push our thinking would mean a great deal to everyone in that room.
 >
-> Please do save the dates: **26 and 27 February 2027, PCPA, Bengaluru.** I look forward to seeing you there.
+> Please do save the dates. I look forward to welcoming you to InvokED 6.0.
 >
 > Warm regards,
 > SD Shibulal
-> Founder, ShikshaLokam · Co-founder, Infosys
+> Founder, ShikshaLokam
+> Co-founder, Infosys
 
 ---
 
-*Approved: 2026-06-03 · CC: Neeraj, Khushboo, Santosh*
+*Approved: 2026-06-05 · CC: Neeraj, Khushboo, Santosh*
 *Learning filed: [[../../learnings/2026-06-01-vip-invite-voice]]*
 
 ---
@@ -425,11 +450,11 @@ Use these to show what last year's convening produced (gives 6.0 invites pull). 
 
 | Date | What landed | Status |
 |---|---|---|
-| 5 Jun 2026 | Camille Massey (Synergos) and Advisors-group invites rendered to live page — approved 3 Jun, missed from prior commit. | `approved` |
+| 5 Jun 2026 | All four invites updated to Sonal's approved final versions: Peggy Dulany (two variants), Marc Benioff, Camille Massey, Advisors group. | `approved` |
+| 5 Jun 2026 | Camille Massey and Advisors-group invites rendered to live page — approved 3 Jun, missed from prior commit. | `approved` |
 | 3 Jun 2026 | Advisors-group invite approved (come-and-be-present structure, "Save the Dates" subject). Pattern locked in learnings. | `approved` |
 | 3 Jun 2026 | Camille Massey (Synergos) invite approved — returning-speaker recall structure, verbatim quote anchor, Synergos philosophy connector. | `approved` |
 | 1 Jun 2026 | Workspace seeded: 4 InvokED 5.0 docs ingested (concept note, proceedings, email-invite library, summary); 12 templates made 6.0-ready with placeholders; audience→signatory map, momentum bank, standing-phrase bank loaded; 6.0-specifics gap-list surfaced. | `template` (awaiting 6.0 dates / venue / tagline / speakers) |
 | 1 Jun 2026 | First draft: Peggy Dulany (Synergos) VIP invite — Feb 26–27 2027, PCPA; personalised around Camille Massey 5.0 presence + One Billion Futures. | `draft` → |
 | 1 Jun 2026 | Sonal approved Peggy Dulany invite with edits; approved version is now the reference template for all VIP speaker invites. Learning filed: learnings/2026-06-01-vip-invite-voice.md | `approved` |
-| 1 Jun 2026 | Peggy Dulany invite revised per Sonal's feedback: removed One Billion Futures; recentred on collective action + Synergos partnership value; warm opener ("I trust this message finds you in good health"); added "missed you at 5.0" personal beat; shorter. | `revised` |
 | 1 Jun 2026 | Marc / Salesforce VIP invite ingested as second approved reference. Adds the shared-belief connector move to the pattern. Learning updated. | `approved` |
