@@ -1,3 +1,7 @@
+> **SUPERSEDED — historical only (archived 2026-06-05).** This file no longer governs the brain
+> and is never auto-loaded. Sessions, state, learnings, and the generated site work as described in
+> the root operating note `CLAUDE.md`; the plan-tiered cadence below is retired. Kept for provenance.
+
 # ARCHITECTURE — ShikshaLokam brain
 
 This brain organises four things: **state**, **session**, **learning**, **route** — plus the **LEDGER** as the single growing chronological surface.

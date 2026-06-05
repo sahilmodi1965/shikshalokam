@@ -4,13 +4,20 @@ title: "Voice"
 sources: ["[[SOURCES]]"]
 corrected_by: []
 created: 2026-05-14
-updated: 2026-05-13
-_status: research-seeded
+updated: 2026-06-05
+_status: user-validated
 ---
 
 # Voice
 
-How ShikshaLokam sounds in its own materials. Pulled from the homepage, welcomeaboard subdomain, and a long-form blog post by Khushboo Awasthi (Co-Founder & COO).
+How ShikshaLokam sounds in its own materials. Pulled from the homepage, welcomeaboard subdomain, a
+long-form blog post by Khushboo Awasthi (Co-Founder & COO), and a year of Sonal's LinkedIn captions.
+
+> **TEAM — this is the #1 thing that makes drafts great. Drop your 6–10 best real pieces into
+> `wiki/voice/exemplars/`** (the posts, emails, blogs you're proudest of — the ones that sound
+> exactly like us). The write path reads the full styleguide + every matching exemplar, so the more
+> real samples live here, the closer every draft lands to paste-ready. Add a file per piece, with a
+> one-line note on why it's a good example. Only you can choose these — no one else knows your best work.
 
 ## Distinctive register
 

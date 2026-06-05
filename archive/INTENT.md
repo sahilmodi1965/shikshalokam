@@ -1,3 +1,8 @@
+> **SUPERSEDED — historical only (archived 2026-06-05).** This file no longer governs the brain
+> and is never auto-loaded. The brain is now a hive mind for content with one equal-contributor
+> model; the role tiers, plan-protection, and maintainer-queue described below are retired. See the
+> root operating note `CLAUDE.md` for how the brain works today. Kept for provenance.
+
 # INTENT — ShikshaLokam brain
 
 This repository is the **ShikshaLokam content brain** for the Shikshagraha movement.

@@ -1,75 +1,63 @@
 ---
 name: shikshalokam-lint
-description: Enforce the brain's invariants — frontmatter contracts, _status field + transitions, LEDGER append-only, wikilink integrity, no orphans, no glob, TOKEN_BUDGET caps, voice-untouched-by-compile. Triggers pre-commit AND on every brain-write/brain-feedback invocation. Fails commits that violate. The parser-checkable backbone — without this skill, discipline degrades to vibes.
+description: Enforce the brain's STRUCTURE so "absorb freely" never becomes "corrupt freely" — frontmatter contract, valid _status, wikilink integrity, no orphans, no glob. Runs on demand ("lint the brain") and as a quick self-check during write/ingest/feedback. Structure only; it never rations content and has no token caps.
 ---
 
 # shikshalokam-lint
 
+The backbone that lets the brain absorb content freely without corrupting itself. It checks that
+every piece of knowledge is **well-formed and sourced** — never that there's "too much" of it. There
+are no token budgets here; quality and fullness are the point.
+
 ## When this fires
-- Pre-commit (every commit must pass).
-- On every `shikshalokam-write` and `shikshalokam-feedback` invocation (catches issues before they hit a commit).
-- Manually: user can ask "lint the brain" or "check the brain" and this fires.
+- On demand: "lint the brain" / "check the brain."
+- As a fast self-check while writing, ingesting, or applying feedback — so a malformed entry is
+  caught before it's committed.
 
-## What it checks
+## What it checks (structure, not scarcity)
 
-### Frontmatter contract (per `AGENTS.md §2`)
-- Every `wiki/**.md` carries: `type`, `title|name`, `sources`, `corrected_by`, `created`, `updated`, `_status:`.
-- `type` matches the directory (`sources/` → `type: source`, etc.).
-- `wiki/sources/*.md` has `sources: []` (sources cite nothing further).
-- Other files have at least one `[[source-slug]]` in `sources:`.
+### Frontmatter contract
+- Every `wiki/**.md` carries: `type`, `title|name`, `sources`, `corrected_by`, `created`, `updated`,
+  `_status`.
+- `type` matches the directory (`sources/` → `source`, `entities/` → `entity`, etc.).
+- `wiki/sources/*.md` has `sources: []` (a source cites nothing further); every other file cites at
+  least one `[[slug]]` — nothing enters the brain unsourced.
 
-### `_status:` rules (per `AGENTS.md §4`)
-- `_status:` present and one of `research-seeded | user-validated | stale`.
-- Monotonic transitions only. Lint checks `git log -p` on the file for the previous `_status:` and rejects illegal moves:
-  - `user-validated → research-seeded` FAIL
-  - `stale → research-seeded` FAIL
-  - `stale → user-validated` requires a `learnings/` slug in the commit message
-  - `research-seeded → user-validated` requires either a `learnings/` slug OR a `LEDGER.md` reference in the same commit
-
-### `LEDGER.md` append-only + presence
-- Diff against `LEDGER.md`: only additions allowed, no edits to existing entries, no deletions, no re-ordering of older entries.
-- New session commits MUST include a new top-section entry dated today (UTC). If missing, fail.
-- Format: `## YYYY-MM-DD HH:MM UTC — <user> — <slug>` + the 5–8 line body per `LEDGER.md` itself.
+### `_status` validity
+- Present and one of `research-seeded | user-validated | stale`.
+- Forward moves are free (the brain absorbs in-session): `research-seeded → user-validated` whenever a
+  teammate vouches for it. The only guarded move is a **downgrade** — `user-validated → research-seeded`
+  or silently dropping `stale` — which must carry a `learnings/<slug>` in `corrected_by` explaining why.
 
 ### Wikilink integrity
-- Every `[[slug]]` resolves to an existing `wiki/**.md` file.
-- No file links to itself.
-- Every non-`sources/` file is reachable from `wiki/index.md` via at least one wikilink chain (no orphans).
-
-### TOKEN_BUDGET caps (per `TOKEN_BUDGET.md`)
-- `wiki/index.md` ≤ 1,500 tokens.
-- `wiki/_index/topic-summaries.md` ≤ 1,500 tokens.
-- Combined skill metadata across all 7 SKILL.md ≤ 1,000 tokens. (7th skill `shikshalokam-research` added 2026-05-21; combined metadata measured ~700 tokens — within cap.)
-
-### Voice + structural file protection
-- Compile-step commits (`tools/compile.py` author, or commits authored by the compile agent) must not touch `wiki/voice/**`, `INTENT.md`, `CLAUDE.md`, `ARCHITECTURE.md`, `AGENTS.md`, `TOKEN_BUDGET.md`, `brain.yml`, `LEDGER.md` (except via the append protocol).
-- `wiki/voice/**` commits must cite a `learnings/<slug>` in the commit message.
+- Every `[[slug]]` resolves to an existing `wiki/**.md` file. No file links to itself.
+- Every non-`sources/` file is reachable from `wiki/index.md` (no orphans).
 
 ### Cross-brain wall (`brain.yml: cross_brain_wall: true`)
-- No Read targets outside `$CLAUDE_PROJECT_DIR`. (Caught at permission layer too, but lint flags any attempt logged in session traces.)
+- No reads outside `$CLAUDE_PROJECT_DIR`. (Also enforced at the permission layer.)
 
-### No-glob rule
-- Static check: no SKILL.md may contain `Glob(wiki/**/*.md)` patterns.
+### No-glob
+- No SKILL.md globs `wiki/**/*.md` at prompt time — retrieval is index-first, drill-down on match.
 
-## What it does on failure
-- Pre-commit: exits non-zero with a numbered list of violations + the file:line for each. Commit blocked.
-- Mid-session (during write/feedback): surfaces violations inline so Claude can fix before continuing.
-- For `chat_shield: true` brains: lint failures surface to the user as *"Hmm, something's off with how I'm organising today's notes — I'll flag it so it gets fixed."* The detailed report still lands in the commit-block.
+### Session record present
+- A session that changed the brain leaves a `sessions/<date>-<person>.md` digest (the public
+  timeline + log generate from these). A change with no digest is flagged.
+
+## On failure
+- Surface a numbered list with `file:line` for each violation so it can be fixed before commit.
+- Plain-language summary for the person; the detail is for whoever's fixing it.
 
 ## What it must not do
-- Do not write outside `learnings/<>.md` (and only when surfacing its own gaps for review).
-- Do not exceed 3,000 tokens total prompt assembly.
-- Do not modify the files it lints.
+- Don't enforce token caps, plan tiers, or chat-shield behaviour — all retired.
+- Don't modify the files it lints (it may write a `learnings/` note flagging its own gaps).
+- Don't block on "too much content." Fullness is good; only malformed/unsourced/orphaned is a fault.
 
 ## Output format
 ```
-LINT — ShikshaLokam brain — YYYY-MM-DD HH:MM UTC
-  ✓ frontmatter contract — 47 files checked, 47 pass
-  ✓ _status transitions — 3 transitions in commit, all legal
-  ✗ LEDGER.md — no entry dated 2026-05-14 (today) found in head
-  ✓ wikilink integrity — 152 links checked
-  ✓ token budgets — all within caps
-  ✗ orphans — wiki/concepts/example.md unreachable from index
-
-2 violations. Commit blocked.
+LINT — ShikshaLokam brain
+  ✓ frontmatter contract — 25 files checked, 25 pass
+  ✓ _status — all valid; 2 forward promotions, 0 unexplained downgrades
+  ✓ wikilink integrity — 60 links, 0 broken, 0 orphans
+  ✗ session record — brain changed but no sessions/2026-06-05-*.md digest found
+  1 issue. Fix before publishing.
 ```

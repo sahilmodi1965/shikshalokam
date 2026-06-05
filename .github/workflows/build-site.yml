@@ -1,0 +1,40 @@
+name: build-site (drift backstop)
+
+# Server-side guarantee that the published site never ships drift. On every push to main,
+# rebuild all generated docs/ from source and fail if the committed docs/ differ from what the
+# sources generate. A missed local build (a web session that skipped the hooks, a crash before
+# session end) is caught here before anyone sees a stale page.
+#
+# This job VERIFIES; it does not commit. A red check means: someone pushed docs/ that don't match
+# their sources — rebuild locally (python3 tools/build_site.py) and push the corrected docs/.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  verify-no-drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild generated site from source
+        run: python3 tools/build_site.py
+
+      - name: Fail if docs/ drifted from sources
+        run: |
+          if ! git diff --quiet -- docs/; then
+            echo "::error::Published docs/ is out of sync with its sources. Rebuild locally with 'python3 tools/build_site.py' and push the regenerated docs/."
+            git diff --name-only -- docs/ | sed 's/^/  drifted: /'
+            git --no-pager diff -- docs/
+            exit 1
+          fi
+          echo "docs/ matches sources — no drift."
