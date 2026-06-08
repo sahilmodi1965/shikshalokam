@@ -20,6 +20,16 @@ Format:
 
 Workspace scaffolded as part of the project-page architecture roll-out. Source: `raw/2026-05-19-project-pages-brief.md`. No portrait drafted yet.
 
+## 2026-06-08 — Sahil (maintainer, recompile after Aquib feedback via Sonal) — masthanaiah-portrait-v3
+
+- portrait: **Shri Vempuluru Nagoor Masthanaiah** (v3 — recompile)
+- status moved: **v2 superseded** by v3; v3 status `review-ready`
+- detail captured (Aquib Rizwan's feedback, verbatim, via Sonal's 8 Jun email): *"The tone should be diplomatic. The narrative of education leadership and how it works to change the system should be brought in. (Currently, it seems fragmented)" / "Mistakes like a room with a room and quoting the instance as a depiction which did not happen in real life (The room watched)" / "Cross verification of instance and lines (He turned around and never paid those fees)" / "Currently, I feel instances, etc., are just quotes or said without proper connectors in between." / "The shift from one paragraph to another should be smooth, which carries on the overall narrative of the story forward." / "The hook para is missing."*
+- detail captured (v3 changes): hook paragraph added (thesis → *"Not from the teacher"* → why the correction is the argument); single system-change through-line threaded across every beat with escalation connectors; hard `---` chapter rules removed for smooth prose transitions; every quote now introduced/landed inside prose; tone softened to diplomatic (*"he heard them out"*, *"he stood by them"*); **invented depiction "The room watched the room." deleted** (not in transcript); **conflated line "He turned around and never paid those fees" corrected** — transcript has two events (mid-walk = MSc→B.Ed switch; teacher selection = March 1986, during MSc 1st year); two further unverified flourishes cut (*"DEO Masthan"* nickname; the claim he suspended the third Medak head — source supports neither).
+- detail still missing: same as v2 — lead image (photos pending); proper-noun confirmations; the 9 enrichment gaps still open for Aquib's follow-up call.
+- attribution check: still verbal; written consent for print still pending.
+- correction routed to learnings: **[[../../learnings/2026-06-08-portrait-diplomatic-system-thread]]** (structural) — promoted same-session to v3 + styleguide long-form portrait register section.
+
 ## 2026-05-27 — Sahil (maintainer, recompile after Sonal email feedback) — masthanaiah-portrait-v2
 
 - portrait: **Shri Vempuluru Nagoor Masthanaiah** (v2 — recompile)

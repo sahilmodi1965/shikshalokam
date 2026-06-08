@@ -2,9 +2,10 @@
 type: voice
 title: "Voice"
 sources: ["[[SOURCES]]"]
-corrected_by: []
+corrected_by:
+  - "[[../../learnings/2026-06-08-portrait-diplomatic-system-thread]] — Aquib Rizwan's portrait feedback → § Long-form Ed-Leader Portrait register"
 created: 2026-05-14
-updated: 2026-06-05
+updated: 2026-06-08
 _status: user-validated
 ---
 
@@ -59,6 +60,30 @@ long-form blog post by Khushboo Awasthi (Co-Founder & COO), and a year of Sonal'
 - Top-down language ("mandate," "rollout," "deliver to")
 - Hero narratives (one teacher / one school as exception)
 - Technocratic platform-talk — ELEVATE/DIKSHA are framed by what leaders do with them, not the tech itself
+
+## Long-form Ed-Leader Portrait register
+
+The long-form portrait — the ~600–800-word leader profile, companion to the blog and distinct from
+the caption — has its own rules, set with the team while building the Masthanaiah portrait (Sonal's
+[[../../learnings/2026-05-27-story-over-report]], then Aquib Rizwan's
+[[../../learnings/2026-06-08-portrait-diplomatic-system-thread]]):
+
+1. **Open on a hook paragraph** that states who the person is and why they matter — ideally landing
+   their own defining line — *before* any chronology. Don't open on the mechanics of the interview.
+2. **Thread one through-line:** how this leader changed the system. Every beat advances the same
+   argument; transitions name the escalation so the story moves forward and never restarts. A portrait
+   reads as a story, not a list of clubbed-together achievements.
+3. **Diplomatic tone:** conviction without villains. Show the leader holding the line *and* hearing
+   people out; let the integrity of the decision carry the weight, not the framing of opponents.
+4. **No invented scenes.** If a depiction isn't in the source, it doesn't go in the portrait
+   (the cut line "the room watched the room" is the cautionary example).
+5. **Cross-verify every instance** against the transcript; never fuse two true events into one
+   dramatized false one, and cut any vivid detail that can't be pinned to the source.
+6. **Connect the instances:** introduce and land each quote inside the prose, and smooth paragraph
+   seams with transitions rather than hard section breaks.
+
+Still true here: third-person, leader-foregrounded, location-rooted opening, named role + organisation,
+and a forward-looking close in the leader's own words.
 
 ## Caption form (social, primarily LinkedIn)
 

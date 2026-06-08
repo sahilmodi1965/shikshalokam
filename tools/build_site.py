@@ -10,7 +10,7 @@ every date is derived from the sources (session files / page frontmatter). Proof
 
 Sources -> outputs:
   sessions/<date>-<slug>.md        ->  docs/index.html (timeline) + docs/log.html + LEDGER.md
-  projects/<slug>/page.md          ->  docs/projects/<slug>.html   (slugs in GENERATED_PROJECTS)
+  projects/<slug>/page.md          ->  docs/projects/<slug>.html   (every project with a page.md)
   tools/templates/index.shell.html ->  the static frame around the generated timeline
 
 Self-heal (any session, fresh or resumed): python3 tools/build_site.py
@@ -32,7 +32,12 @@ DOCS = REPO / "docs"
 SHELL = REPO / "tools" / "templates" / "index.shell.html"
 LEDGER = REPO / "LEDGER.md"
 
-GENERATED_PROJECTS = ["invoked-6"]
+# Every project that has a page.md is generated — page.md is the single source of truth and the
+# public HTML is a pure function of it (see tools/build_project_page.py). Deriving this list from
+# the filesystem (rather than hard-coding one slug) is what keeps the no-drift guarantee honest:
+# any project whose page.md changes is regenerated and drift-checked, with nothing frozen behind.
+def _generated_projects() -> list[str]:
+    return bpp.slugs_with_page()
 
 
 # ---------------------------------------------------------------------------
@@ -269,7 +274,7 @@ def build_project_pages() -> list[str]:
     out_dir = DOCS / "projects"
     out_dir.mkdir(parents=True, exist_ok=True)
     written = []
-    for slug in GENERATED_PROJECTS:
+    for slug in _generated_projects():
         (out_dir / f"{slug}.html").write_text(bpp.build(slug), encoding="utf-8")
         written.append(f"docs/projects/{slug}.html")
     return written
