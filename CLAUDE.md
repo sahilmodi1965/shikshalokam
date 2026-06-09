@@ -12,6 +12,11 @@ Everyone on the team is an **equal contributor** — same access, same trust. An
 write, drop something good into it, or make it smarter. No tiers, no owners, no one to wait on. Add
 a teammate by putting them in `brain.yml` → `team:`; the brain onboards them with full access.
 
+## Working together (the one rule so it never jams)
+**One page, one person at a time.** Open → work → let it publish (wait for "LIVE") before you stop.
+Different pages in parallel is always fine. Only two people editing the *same* page at the same
+time can jam — so if you both need it, go one after the other.
+
 ## Just talk to it
 - Ask for what you want — "draft a LinkedIn post about X", "write the invite for Y", "what do we
   know about Z". It loads the **full** voice + every relevant example + every relevant source and
