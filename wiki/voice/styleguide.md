@@ -4,8 +4,9 @@ title: "Voice"
 sources: ["[[SOURCES]]"]
 corrected_by:
   - "[[../../learnings/2026-06-08-portrait-diplomatic-system-thread]] — Aquib Rizwan's portrait feedback → § Long-form Ed-Leader Portrait register"
+  - "[[../../learnings/2026-06-09-portrait-struggle-first-and-mentors]] — Aquib's second review → refined register rules 1 + 1a"
 created: 2026-05-14
-updated: 2026-06-08
+updated: 2026-06-09
 _status: user-validated
 ---
 
@@ -66,10 +67,16 @@ long-form blog post by Khushboo Awasthi (Co-Founder & COO), and a year of Sonal'
 The long-form portrait — the ~600–800-word leader profile, companion to the blog and distinct from
 the caption — has its own rules, set with the team while building the Masthanaiah portrait (Sonal's
 [[../../learnings/2026-05-27-story-over-report]], then Aquib Rizwan's
-[[../../learnings/2026-06-08-portrait-diplomatic-system-thread]]):
+[[../../learnings/2026-06-08-portrait-diplomatic-system-thread]] and
+[[../../learnings/2026-06-09-portrait-struggle-first-and-mentors]]):
 
-1. **Open on a hook paragraph** that states who the person is and why they matter — ideally landing
-   their own defining line — *before* any chronology. Don't open on the mechanics of the interview.
+1. **Open on the human scene, not the thesis.** Lead with the lived struggle — the conditions, the
+   odds, the refusal to give up — and let the argument emerge from it, ideally landing the subject's
+   own defining line before any chronology. Don't open on an abstract claim (even a true one), and
+   don't open on the mechanics of the interview.
+1a. **Foreground the people who shaped the leader.** Show who caught them — a teacher, a mentor, a
+   relative — and tie it to the subject's own words about those people; it deepens the subject rather
+   than diminishing them. Don't let a vivid prop or object take centre stage over the person.
 2. **Thread one through-line:** how this leader changed the system. Every beat advances the same
    argument; transitions name the escalation so the story moves forward and never restarts. A portrait
    reads as a story, not a list of clubbed-together achievements.
