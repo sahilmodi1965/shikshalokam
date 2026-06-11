@@ -1,0 +1,36 @@
+name: ci-failure-to-issue (autonomous flagging)
+# When the site build/deploy fails, the system files its OWN issue — nobody has to notice or
+# flag it on WhatsApp. The brain picks it up and fixes it. This is the architecture lane working.
+
+on:
+  workflow_run:
+    workflows: ["deploy-pages (build + publish the brain site)"]
+    types: [completed]
+
+permissions:
+  issues: write
+
+jobs:
+  file-issue:
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const run = context.payload.workflow_run;
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `CI failed: ${run.name} — run #${run.run_number}`,
+              labels: ['ci', 'bug'],
+              body: [
+                'The site build/deploy failed — filed automatically so the brain fixes it.',
+                '',
+                `- Run: ${run.html_url}`,
+                `- Commit: ${run.head_sha}`,
+                `- Branch: ${run.head_branch}`,
+                '',
+                'Next session: triage with `tools/ops.sh backlog`, reproduce with `python3 tools/build_site.py`, fix, and open an auto-merging PR.'
+              ].join('\n')
+            });

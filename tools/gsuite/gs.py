@@ -46,6 +46,7 @@ SCOPES = [
     "https://www.googleapis.com/auth/gmail.compose",     # create drafts AND send them
     "https://www.googleapis.com/auth/drive",             # folders, uploads, organize
     "https://www.googleapis.com/auth/documents",         # Google Docs
+    "https://www.googleapis.com/auth/spreadsheets",      # Google Sheets (read + update cells)
     "https://www.googleapis.com/auth/calendar.events",   # invites
 ]
 
@@ -297,6 +298,28 @@ def cmd_cal_invite(a):
     print(f"Event created ({note}): {ev.get('htmlLink')}")
 
 
+def cmd_sheet_read(a):
+    res = svc("sheets", "v4").spreadsheets().values().get(
+        spreadsheetId=a.id, range=a.range
+    ).execute()
+    rows = res.get("values", [])
+    if not rows:
+        print("(empty range)")
+        return
+    for r in rows:
+        print("\t".join(str(c) for c in r))
+
+
+def cmd_sheet_update(a):
+    # --values is row(s): cells separated by "|", rows separated by ";;"
+    rows = [[c for c in row.split("|")] for row in a.values.split(";;")]
+    res = svc("sheets", "v4").spreadsheets().values().update(
+        spreadsheetId=a.id, range=a.range, valueInputOption="USER_ENTERED",
+        body={"values": rows},
+    ).execute()
+    print(f"Updated {res.get('updatedCells', 0)} cell(s) in {a.range}.")
+
+
 # ---- cli -------------------------------------------------------------------
 def main():
     p = argparse.ArgumentParser(prog="gs.py", description="ShikshaLokam G-Suite engine")
@@ -340,6 +363,18 @@ def main():
     ci.add_argument("--description")
     ci.add_argument("--notify", action="store_true", help="email attendees (the 'send')")
     ci.set_defaults(fn=cmd_cal_invite)
+
+    sr = sub.add_parser("sheet-read", help="read a range from a Google Sheet")
+    sr.add_argument("--id", required=True, help="spreadsheet id")
+    sr.add_argument("--range", required=True, help="e.g. 'Sheet1!A1:C10'")
+    sr.set_defaults(fn=cmd_sheet_read)
+
+    su = sub.add_parser("sheet-update", help="update cells in a Google Sheet")
+    su.add_argument("--id", required=True, help="spreadsheet id")
+    su.add_argument("--range", required=True, help="e.g. 'Sheet1!A1'")
+    su.add_argument("--values", required=True,
+                    help="cells split by '|', rows split by ';;'  (e.g. \"a|b||c;;d|e|f\")")
+    su.set_defaults(fn=cmd_sheet_update)
 
     args = p.parse_args()
     args.fn(args)

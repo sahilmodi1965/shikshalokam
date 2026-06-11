@@ -56,6 +56,14 @@ This is how content moves. It is not optional.
   **Google Drive** (a Doc in the shared Brain Output folder). Nothing is written to Drive before that.
 - Flow: *anyone drafts → brain (versioned, on the dashboard) → Sonal approves → brain writes it to Drive.*
 
+**Two lanes — never confuse them:**
+- **Content lane** — what the team makes. Publishes **every session, seamlessly**; same-page edits
+  auto-merge and nothing is lost (`tools/publish.sh`). It never waits behind review.
+- **Architecture lane** — how the brain itself evolves (bugs, frictions, ideas, CI failures). These
+  become **GitHub Issues the system files and fixes itself**, via auto-merging PRs — nobody flags
+  anything on WhatsApp. Skill: `shikshalokam-ops` · tools: `tools/ops.sh`. And **every session must
+  compound** — if no digest is written, `tools/ensure_digest.py` records one so nothing is invisible.
+
 ## How it stays honest (the machinery — you can ignore this)
 - The published site is **100% generated** from the brain's real content (`sessions/` + project
   pages). `docs/` is **not committed to the repo** — it's a build artifact that **GitHub Actions

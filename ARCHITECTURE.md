@@ -108,7 +108,16 @@ for a 3-person cadence. No Vercel, no database, no server.
 ```
 
 ## Roadmap to freeze
-**Build now (this upgrade):** branch+PR+merge-queue+auto-merge · mandatory-digest enforcement ·
-autonomous Issue filing + triage · Sheets in the GSuite engine · CI-failure→Issue.
-**Then freeze.** All further change flows through **GitHub Issues the system files and fixes itself**,
-with auto-merging PRs. Progress is documented here and in `sessions/` — automatically.
+**✅ Built (2026-06-11):**
+- **Seamless content publishing** — `tools/publish.sh` rebases + retries so same-page edits auto-merge;
+  a rare same-line clash is parked on a branch/PR (never lost).
+- **Compounding floor** — `tools/ensure_digest.py` records every changing session (via `session_end.sh`).
+- **Autonomous Issues lane** — `tools/ops.sh` (file / backlog / fixed) + skill `shikshalokam-ops`;
+  CI failures self-file via `.github/workflows/ci-failure-to-issue.yml`.
+- **Sheets** in the GSuite engine (`gs.py sheet-read` / `sheet-update`).
+
+**One-time settings (Sahil):** repo → Settings → General → enable **Allow auto-merge**; teammates
+install + auth **`gh`** once (so the issues lane can file/fix from their sessions). Pages = GitHub Actions ✓.
+
+**Now frozen.** Further change flows through **GitHub Issues the system files and fixes itself**, with
+auto-merging PRs. Progress is documented here and in `sessions/` — automatically.

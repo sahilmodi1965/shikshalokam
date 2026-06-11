@@ -14,13 +14,17 @@ cd "$CLAUDE_PROJECT_DIR" 2>/dev/null || {
 
 DIRTY="$(git status --porcelain 2>/dev/null)"
 TODAY="$(date -u +%Y-%m-%d)"
+PY="$(command -v python3 || command -v python || command -v py || true)"
 
-# Session-record guard — the timeline, log, and LEDGER all generate from sessions/<date>-<who>.md.
-# If the brain changed but no session digest was written, warn (don't block): the session would
-# otherwise be invisible in the brain's own story.
+# Compounding guard (non-negotiable: every session makes the brain better). If the brain changed
+# source but no sessions/<date>-*.md digest was written, write a minimal one so the session is
+# recorded in the timeline/log/LEDGER. The brain should write a richer one; this is the floor.
 if [ -n "$DIRTY" ] && ! ls sessions/${TODAY}-*.md >/dev/null 2>&1; then
-  echo "WARN: SessionEnd — the brain changed but no sessions/${TODAY}-*.md digest was written."
-  echo "  The public timeline/log/LEDGER build from session files — add one so this session is recorded."
+  if [ -n "$PY" ]; then
+    "$PY" "$CLAUDE_PROJECT_DIR/tools/ensure_digest.py" 2>/dev/null
+  else
+    echo "WARN: SessionEnd — the brain changed but no sessions/${TODAY}-*.md digest was written (no Python to auto-record)."
+  fi
 fi
 
 # Publish: rebuild -> verify -> commit -> push -> honest, chat-ready report.
