@@ -1,10 +1,10 @@
 .claude/settings.local.json
 __pycache__/
 
-# G-Suite engine — never commit personal logins or shared app secrets.
-# Tokens live in ~/.shikshalokam/ (outside the repo). The shared oauth_client.json
-# is distributed via the private Brain Output Drive folder, never via git.
+# G-Suite engine — never commit PERSONAL logins (tokens). These live in
+# ~/.shikshalokam/, outside the repo. The shared oauth_client.json IS committed:
+# it's a Desktop OAuth key, which Google treats as non-confidential, so the whole
+# team gets it on pull and onboarding is just `gs.py login`.
 **/token*.json
 .shikshalokam/
 tools/gsuite/*.local.json
-tools/gsuite/oauth_client.json
