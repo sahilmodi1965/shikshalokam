@@ -113,13 +113,48 @@ def load_map():
 
 
 # ---- commands --------------------------------------------------------------
+def _find_downloaded_client():
+    """Newest Google client JSON sitting in Downloads/Desktop (or cwd)."""
+    import glob
+    hits = []
+    for d in (Path.home() / "Downloads", Path.home() / "Desktop", Path.cwd()):
+        hits += glob.glob(str(d / "client_secret_*.json"))
+        hits += glob.glob(str(d / "oauth_client*.json"))
+    hits = [h for h in hits if Path(h).resolve() != CLIENT_PATH.resolve()]
+    hits.sort(key=lambda p: Path(p).stat().st_mtime, reverse=True)
+    return hits[0] if hits else None
+
+
+def _ensure_client():
+    """The shared Desktop key is distributed via the private Brain Output Drive
+    folder, NEVER via git. If it's not in place yet, adopt it from Downloads so the
+    teammate never has to wrangle file paths."""
+    if CLIENT_PATH.exists():
+        return
+    import shutil
+    found = _find_downloaded_client()
+    if found:
+        try:
+            if "installed" not in json.load(open(found)):
+                found = None
+        except (ValueError, OSError):
+            found = None
+    if found:
+        shutil.copy(found, CLIENT_PATH)
+        print(f"Found the Google key in {Path(found).parent.name}/ — placed it. ✓")
+        return
+    sys.exit(
+        "I need the shared Google key once (it's never stored in git):\n"
+        "  1. Open the 'ShikshaLokam — Brain Output' Drive folder (you're shared on it).\n"
+        "  2. Download 'oauth_client.json' (one click).\n"
+        "  3. Run this again — I'll find it in your Downloads and place it automatically.\n"
+        "(Maintainer hasn't set it up? see onboarding/gsuite-setup.md Part A.)"
+    )
+
+
 def cmd_login(_):
     _, _, InstalledAppFlow, _, _ = _google()
-    if not CLIENT_PATH.exists():
-        sys.exit(
-            "The shared Google app isn't set up yet.\n"
-            "Maintainer one-time step: see onboarding/gsuite-setup.md → Part A."
-        )
+    _ensure_client()
     HOME.mkdir(parents=True, exist_ok=True)
     flow = InstalledAppFlow.from_client_secrets_file(str(CLIENT_PATH), SCOPES)
     creds = flow.run_local_server(port=0, prompt="consent")

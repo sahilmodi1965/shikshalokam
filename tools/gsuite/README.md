@@ -10,9 +10,10 @@ gave us cleanly. The brain calls `gs.py`; humans only ever click "Allow" once.
 
 ## How auth works
 - **One shared Desktop OAuth app** (Sahil sets it up once — see
-  `../../onboarding/gsuite-setup.md` Part A). Its `oauth_client.json` is **committed**
-  — a Desktop OAuth key is non-confidential by Google's design, so the whole team gets
-  it on pull and onboarding is just `gs.py login`. (Personal tokens are NOT committed.)
+  `../../onboarding/gsuite-setup.md` Part A). Its `oauth_client.json` is **gitignored and
+  distributed via the private Brain Output Drive folder** — NO secret ever enters git.
+  `gs.py login` auto-places it from the teammate's Downloads, so onboarding stays a single
+  move. (Personal tokens also stay out of git, in `~/.shikshalokam/`.)
 - **Each person logs in once** (`gs.py login`) → browser consent → their token is
   written to `~/.shikshalokam/token.json`, **outside the repo, never committed**.
 - One machine = one person = honest attribution. Matches "one page, one person."
@@ -38,8 +39,8 @@ python3 tools/gsuite/gs.py cal-invite --summary "..." --start ... --end ... [--n
 ## Files
 - `gs.py` — the engine.
 - `requirements.txt` — `pip3 install -r` once per machine.
-- `oauth_client.json` — shared Desktop app config; committed so the team gets it on
-  pull (non-confidential desktop key). Personal tokens stay out of git.
+- `oauth_client.json` — shared Desktop app config; **gitignored**, distributed via the
+  private Drive folder, auto-placed by `gs.py login` from Downloads. Never committed.
 - `drive_map.json` — committed folder-ID map written by `drive-init`; lets the
   whole team write into the same shared folders.
 - `~/.shikshalokam/token.json` — personal, local, gitignored. Never commit.

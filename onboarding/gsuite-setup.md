@@ -42,13 +42,12 @@ You're creating **one shared Google app** the whole team logs into. Do this once
 ☐ **5. Make the credential.** *APIs & Services → Credentials → Create Credentials
    → OAuth client ID → Application type: **Desktop app*** → Create → **Download JSON**.
 
-☐ **6. Drop it in + commit.** Save that file as
-   `tools/gsuite/oauth_client.json`, then tell the brain *"the Google app is set up"*.
-   It commits the file so the **whole team gets it automatically on pull** — that's
-   what makes onboarding a single command. A Desktop OAuth key is **non-confidential
-   by Google's design**, so committing it to a private repo is fine. The first push
-   asks you to confirm GitHub's one-time secret warning — click **Allow**; after that
-   it's seamless for everyone.
+☐ **6. Drop it in (never committed) → the brain shares it via Drive.** Save the file
+   as `tools/gsuite/oauth_client.json` — it is **gitignored on purpose; no secret ever
+   touches git**. Tell the brain *"the Google app is set up"* and it uploads the key
+   once to the **private** Brain Output Drive folder. Teammates download it from there
+   and `gs.py login` places it for them automatically (Part B). Keeps the repo clean
+   and security scanners quiet.
 
 ☐ **7. Build the shared folder (once).**
    ```
@@ -66,17 +65,20 @@ Done. The team can now do Part B.
 
 ## Part B — each teammate (60 seconds)
 
-You don't need any of Part A. The shared key already came with the brain when you
-pulled it — so it's just two lines. Or simply tell the brain *"set me up for Google"*.
+You don't need any of Part A. Easiest: just tell the brain *"set me up for Google"* and
+it walks you through it. By hand it's three small steps:
 
-☐ **1.** In Terminal, inside the brain:
+☐ **1.** Open the **"ShikshaLokam — Brain Output"** Drive folder (you're shared on it)
+   and **download `oauth_client.json`** — one click. (Leave it in Downloads.)
+☐ **2.** In Terminal, inside the brain:
    ```
    pip3 install -r tools/gsuite/requirements.txt
    python3 tools/gsuite/gs.py login
    ```
-   (On Windows use `pip` / `python` if `pip3`/`python3` aren't found.)
-☐ **2.** A browser opens → pick your **@shikshalokam.org** account → **Allow**. Back
-   in Terminal you'll see `Logged in as you@shikshalokam.org`. That's it.
+   (On Windows use `pip` / `python` if `pip3`/`python3` aren't found.) It finds the key
+   in your Downloads and places it automatically — no file-wrangling.
+☐ **3.** A browser opens → pick your **@shikshalokam.org** account → **Allow**. You'll
+   see `Logged in as you@shikshalokam.org`. Done — and you never repeat this.
 
 Your login is saved on **your** computer only (`~/.shikshalokam/`, never shared).
 
