@@ -81,7 +81,8 @@ single source of truth · `sessions/` per-session digests (timeline + log build 
 `docs/` the generated public site (never hand-edited) · `tools/` the build + safety scripts.
 
 `tools/gsuite/` the Google Workspace engine (acts for the team in Gmail/Drive/Docs/Calendar) ·
-`onboarding/` how a new teammate joins (incl. `gsuite-setup.md`).
+`onboarding/` how a new teammate joins (incl. `gsuite-setup.md`) · `CHEATSHEET.md` the team's
+copy-paste prompt list (point new teammates here once they're in).
 
 Built to grow: the brain already acts for the team in Google (above); the same clean seams let it
 serve new teams without re-architecting. Background, superseded: `archive/INTENT.md`,
