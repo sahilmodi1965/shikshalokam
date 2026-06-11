@@ -89,6 +89,20 @@ auto_rebase() {
 
 echo "── SessionStart: auto-pull preflight ──"
 
+# 0) Recover from an interrupted rebase/merge left by a crashed prior session. Without this the
+#    brain stays WEDGED across sessions and a non-technical teammate is fully stuck — and the
+#    self-heal below can't run because the conflicted files (incl. tools/build_site.py) won't parse.
+#    Aborting restores every file to its last clean committed state, so everything works again.
+GITDIR="$(git rev-parse --git-dir 2>/dev/null)"
+if [ -n "$GITDIR" ] && { [ -d "$GITDIR/rebase-merge" ] || [ -d "$GITDIR/rebase-apply" ]; }; then
+  echo "⚠ A previous session was interrupted mid-rebase — auto-recovering (files restored to last saved state)…"
+  git rebase --abort 2>/dev/null && echo "✓ Recovered: rebase aborted, working tree is clean again."
+fi
+if [ -n "$GITDIR" ] && [ -f "$GITDIR/MERGE_HEAD" ]; then
+  echo "⚠ A previous session was interrupted mid-merge — auto-recovering…"
+  git merge --abort 2>/dev/null && echo "✓ Recovered: merge aborted, working tree is clean again."
+fi
+
 # Identity — every save must attribute to a teammate in brain.yml. Equal access, correct credit.
 GIT_EMAIL="$(git config user.email 2>/dev/null)"
 GIT_NAME="$(git config user.name 2>/dev/null)"

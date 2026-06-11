@@ -68,6 +68,14 @@ Sign in in the browser tab with their Anthropic account, then `/exit`.
 
 Confirm with `ls shikshalokam` (they'll see `CLAUDE.md`, `wiki`, `projects`, `sessions`, `docs`).
 
+### Step 5b — Tell git who you are (so your work is credited to you)
+One time, with their own name + the email in `brain.yml`:
+
+    cd ~/shikshalokam && git config user.name "Their Name" && git config user.email "them@shikshalokam.org"
+
+The brain also offers to set this on first open if it's missing — but doing it now avoids any
+mis-attributed saves. (They never touch git again after this.)
+
 ### Step 6 — Meet your brain
 
     cd ~/shikshalokam && claude
