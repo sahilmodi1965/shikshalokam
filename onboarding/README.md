@@ -23,9 +23,12 @@ Two things make it safe and easy:
 
 No maintainer needs to approve it; there is no dependency on any one person.
 
-## The two docs here
+## The docs here
 - **`first-session.md`** — a friendly, one-time setup so a new teammate can open the brain and just
   start working. After that, every session is zero-ops.
+- **`gsuite-setup.md`** — switch on Google for the brain (Gmail/Drive/Docs/Calendar). Part A is a
+  one-time team setup (Sahil); Part B is each teammate's 60-second login. Optional — do it when you
+  want the brain to draft emails and generate approved Docs into the shared folder.
 - **`README.md`** (this file) — the model + how to add someone.
 
 Historical onboarding (the earlier tiered, `state/`-based model) is preserved under `archive/` —

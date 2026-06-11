@@ -1,1 +1,9 @@
 .claude/settings.local.json
+
+# G-Suite engine — never commit personal logins or shared app secrets.
+# Tokens live in ~/.shikshalokam/ (outside the repo). The shared oauth_client.json
+# is distributed via the private Brain Output Drive folder, never via git.
+**/token*.json
+.shikshalokam/
+tools/gsuite/*.local.json
+tools/gsuite/oauth_client.json

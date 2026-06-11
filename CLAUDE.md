@@ -25,6 +25,25 @@ time can jam — so if you both need it, go one after the other.
   piece better, and riffs — then gives you something you can paste as-is.
 - You never touch git, files, or commands. Saving and publishing happen for you, invisibly.
 
+## How the brain speaks (non-negotiable)
+This is now a **hive mind for several people**. Every reply must be short, humanized, and managed
+upwards — the reader should grasp it in one glance.
+- **Few words.** Cut everything that isn't load-bearing. No preamble, no throat-clearing, no
+  restating the question. A long answer is a failure even when it's correct.
+- **Structured + indented.** Lead with the headline, then tight nested bullets — most important on
+  top. Scannable, never a wall of prose.
+- **Managed upwards.** Say what happened / what you need / what's next — like briefing a busy
+  colleague. End with the one decision or yes you need, if any.
+- This holds for *every* surface — chat, drafts' framing, session digests. (The *content* of a
+  drafted piece still gets full voice + length; this rule governs how the brain *talks about* it.)
+
+## Acting in Google Workspace (Gmail · Drive · Docs · Calendar)
+The brain can act for the team in Google — draft emails, generate approved content as Google Docs
+into one shared folder, make calendar invites — all **as the logged-in person**, via the engine in
+`tools/gsuite/` (skill: `shikshalokam-gsuite`). Two gates are absolute: **email send** and
+**calendar notify** happen only on an explicit human yes; nothing outward-facing fires on its own.
+A teammate gets set up in 60 seconds (`onboarding/gsuite-setup.md` Part B) and then just talks.
+
 ## How it stays honest (the machinery — you can ignore this)
 - The published site (`docs/`) is **100% generated** from the brain's real content. No one ever
   hand-edits a published page, so it can't drift from the truth.
@@ -49,6 +68,9 @@ time can jam — so if you both need it, go one after the other.
 single source of truth · `sessions/` per-session digests (timeline + log build from these) ·
 `docs/` the generated public site (never hand-edited) · `tools/` the build + safety scripts.
 
-Built to grow: clean seams exist for the brain to later act for the team (draft emails, create docs,
-serve new teams) without re-architecting. Background, superseded: `archive/INTENT.md`,
+`tools/gsuite/` the Google Workspace engine (acts for the team in Gmail/Drive/Docs/Calendar) ·
+`onboarding/` how a new teammate joins (incl. `gsuite-setup.md`).
+
+Built to grow: the brain already acts for the team in Google (above); the same clean seams let it
+serve new teams without re-architecting. Background, superseded: `archive/INTENT.md`,
 `archive/ARCHITECTURE.md`.

@@ -14,6 +14,10 @@ team:
     email: "sonal@shikshalokam.org"
   - name: "Sahil Modi"
     email: "modi.sahil.im@gmail.com"
+  - name: "Ayush Tank"
+    email: "ayushtank@shikshalokam.org"   # github: ayushtank2001 — joined 2026-06-11
+  - name: "Aquib Rizwan"
+    email: "aquib@shikshalokam.org"        # github: aquibrizwan16 — joined 2026-06-11
   - name: "Sahid Modi"
     email: ""   # TODO add Sahid's git email so his commits attribute correctly (only human follow-up here)
 
@@ -33,3 +37,20 @@ config:
   # The published site is generated from sources and verified drift-free at every entry point
   # (session start, session end, and CI on every push). Always on.
   generated_site: true
+
+# Google Workspace engine (tools/gsuite/). One shared Desktop OAuth app; each teammate logs in
+# once (browser consent) and their token lives in ~/.shikshalokam/, outside the repo. The brain
+# drives gs.py for them — they just talk. Setup + onboarding: onboarding/gsuite-setup.md.
+gsuite:
+  enabled: true
+  # Outward-facing actions are always gated by an explicit human yes.
+  send_policy: "approval-gated"     # email-send and calendar --notify require a clear yes
+  token_dir: "~/.shikshalokam"      # personal tokens, never committed
+  output_root: "ShikshaLokam — Brain Output"   # one tidy shared folder; never raw dumps
+  # The brain generates approved content into these subfolders (drive-init builds them).
+  output_taxonomy:
+    - "Emails"
+    - "Docs"
+    - "Decks"
+    - "Social"
+    - "Newsletters"
