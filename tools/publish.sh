@@ -12,8 +12,16 @@ cd "${CLAUDE_PROJECT_DIR:-}" 2>/dev/null || cd "$(dirname "$0")/.." || { echo "N
 
 BASE="https://sahilmodi1965.github.io/shikshalokam"
 
+# Portable Python — Windows usually exposes `python` or the `py` launcher, not `python3`.
+PY="$(command -v python3 || command -v python || command -v py || true)"
+if [ -z "$PY" ]; then
+  echo "❌ NOT PUBLISHED — Python isn't installed on this computer, so the site can't be rebuilt."
+  echo "   Install Python (see onboarding/first-session.md), then: bash tools/publish.sh"
+  exit 1
+fi
+
 # 1) Rebuild everything generated, from source.
-if ! python3 tools/build_site.py >/dev/null 2>build_err.log; then
+if ! "$PY" tools/build_site.py >/dev/null 2>build_err.log; then
   echo "❌ NOT PUBLISHED — the site failed to build from source, so nothing was pushed. It is NOT live."
   sed 's/^/    /' build_err.log; rm -f build_err.log
   exit 1

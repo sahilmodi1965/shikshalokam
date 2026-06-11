@@ -37,12 +37,18 @@ co-pilot. They have Claude.ai open in one window and Terminal in another.
 ### Step 1 — Check the basics
 Warm 2-line greeting + checklist. Ask them to paste this and send everything it prints:
 
-    uname && pwd && which node && which git && which claude
+    uname && pwd && which node && which git && which claude && (python3 --version || python --version)
 
 ("Darwin" = Mac, "Linux" = Linux, error on uname = Windows.) Also have them open the repo invite and say "in."
 
 ### Step 2 — Install Node (skip if present)
 nodejs.org → LTS installer (just clicks) → reopen Terminal → `node --version` (want v18+). Don't suggest Homebrew/sudo.
+
+### Step 2b — Install Python (skip if present)
+The brain uses Python to keep the published site honest (it rebuilds + checks it for you). Have them run
+`python3 --version || python --version`. If neither prints a version: python.org → latest installer →
+**on Windows, tick "Add Python to PATH"** during install → reopen Terminal and re-check. (Macs usually
+have it already.) They never run Python themselves — the brain does; it just needs to be present.
 
 ### Step 3 — Install Claude Code
 

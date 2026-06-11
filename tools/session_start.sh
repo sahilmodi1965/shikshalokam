@@ -15,14 +15,22 @@ cd "$CLAUDE_PROJECT_DIR" 2>/dev/null || {
   exit 0
 }
 
+# Portable Python — Windows usually exposes `python` or the `py` launcher, not `python3`.
+PY="$(command -v python3 || command -v python || command -v py || true)"
+
 verify_and_heal() {
+  if [ -z "$PY" ]; then
+    echo "ℹ Site-sync self-check skipped — no Python on this computer. That's fine: the site is"
+    echo "  rebuilt + verified when content is published (and by the server check on every push)."
+    return
+  fi
   # Self-heal drift on EVERY clean session open — including resumed / web / compacted sessions.
   # Rebuild all generated docs/ from source; if anything changed, the published site had drifted
   # and is now corrected in the working tree (committed at session end). Start NEVER pushes — it
   # only heals locally. The invariant lives here, in the harness, not in model memory.
-  if ! python3 "$CLAUDE_PROJECT_DIR/tools/build_site.py" >/dev/null 2>&1; then
+  if ! "$PY" "$CLAUDE_PROJECT_DIR/tools/build_site.py" >/dev/null 2>&1; then
     echo "⚠ SessionStart — tools/build_site.py errored; cannot confirm the site is in sync."
-    echo "  Self-heal by hand: python3 tools/build_site.py"
+    echo "  Self-heal by hand: $PY tools/build_site.py"
     return
   fi
   if git diff --quiet -- docs/ LEDGER.md 2>/dev/null; then

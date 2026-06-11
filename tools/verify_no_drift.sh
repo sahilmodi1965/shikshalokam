@@ -15,8 +15,16 @@ set -u
 
 cd "${CLAUDE_PROJECT_DIR:-}" 2>/dev/null || cd "$(dirname "$0")/.." || exit 2
 
+# Portable Python — Windows usually exposes `python` or the `py` launcher, not `python3`.
+PY="$(command -v python3 || command -v python || command -v py || true)"
+if [ -z "$PY" ]; then
+  echo "ℹ verify_no_drift: no Python on this computer — skipping the local drift check."
+  echo "  This is fine: the server check on every push (CI) rebuilds + verifies with Python."
+  exit 0
+fi
+
 ERR="$(mktemp)"
-if ! python3 tools/build_site.py >/dev/null 2>"$ERR"; then
+if ! "$PY" tools/build_site.py >/dev/null 2>"$ERR"; then
   echo "✗ verify_no_drift: tools/build_site.py FAILED — cannot determine drift:"
   sed 's/^/    /' "$ERR"
   rm -f "$ERR"
