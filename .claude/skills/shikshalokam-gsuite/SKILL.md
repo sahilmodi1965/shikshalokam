@@ -29,9 +29,15 @@ about auth.
 4. Only when they explicitly say send: `gs.py email-send <draft_id>`. Confirm the
    messageId back. Never infer approval from "looks good" — get an actual yes.
 
-**Doc / Drive (generate approved content):**
-- `gs.py doc-create --title … --body-file <approved.md>` → lands in the shared
-  **Docs** folder (from `drive_map.json`) and returns a link. Surface the link.
+**Doc / Drive (publish ONLY on Sonal's explicit approval):**
+- The brain repo is the source of truth. Anyone can draft; content lives in the
+  brain (versioned, visible) until **Sonal approves it explicitly**. Writing to
+  Drive *is* the publish event — so `doc-create` runs **only after Sonal's clear
+  yes**, not on any teammate's request. If someone else asks to "put it in Drive,"
+  hold it in the brain and note it's pending Sonal's approval.
+- On Sonal's approval: `gs.py doc-create --title … --body-file <approved.md>` →
+  lands in the shared **Docs** folder (from `drive_map.json`) and returns a link.
+  Surface the link.
 - New project folder? `gs.py drive-folder --name … --parent <id>`. Keep the shared
   tree tidy — generated/approved content only, never raw dumps. The taxonomy lives
   in `brain.yml → gsuite.output_taxonomy`.
@@ -44,8 +50,10 @@ about auth.
   flag as a send and get an explicit yes first.
 
 ## Non-negotiables
-- **Two gates, always.** Email send and calendar `--notify` are outward-facing and
-  irreversible — never fire either without a clear, specific human yes.
+- **Three gates, always.** (1) Email send and (2) calendar `--notify` need a clear
+  yes from the person at the keyboard. (3) Drive publish (`doc-create` / writing
+  approved content) needs **Sonal's explicit approval** — she is the approver; the
+  repo is the source of truth until then.
 - **Act as the logged-in person.** Run `gs.py whoami` if unsure who's driving;
   attribution must stay honest. Don't act as someone who isn't at the keyboard.
 - **One tidy shared folder.** Approved content is generated into "ShikshaLokam —

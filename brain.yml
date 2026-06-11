@@ -45,6 +45,12 @@ gsuite:
   enabled: true
   # Outward-facing actions are always gated by an explicit human yes.
   send_policy: "approval-gated"     # email-send and calendar --notify require a clear yes
+  # Content workflow: the repo (+ generated site) is the source of truth / dashboard.
+  # Content lives in the brain — versioned, visible — until Sonal approves it explicitly;
+  # ONLY then is the approved version written to Drive. See CLAUDE.md "The content workflow".
+  source_of_truth: "this repo + generated site (content dashboard)"
+  drive_publish: "on-explicit-approval"
+  approver: "Sonal Bhasin <sonal@shikshalokam.org>"
   token_dir: "~/.shikshalokam"      # personal tokens, never committed
   output_root: "ShikshaLokam — Brain Output"   # one tidy shared folder; never raw dumps
   # The brain generates approved content into these subfolders (drive-init builds them).

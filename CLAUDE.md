@@ -44,6 +44,18 @@ into one shared folder, make calendar invites — all **as the logged-in person*
 **calendar notify** happen only on an explicit human yes; nothing outward-facing fires on its own.
 A teammate gets set up in 60 seconds (`onboarding/gsuite-setup.md` Part B) and then just talks.
 
+## The content workflow (source of truth → approval → Drive)
+This is how content moves. It is not optional.
+- **Everyone chats.** Each teammate works with the brain in Claude Code; nobody hand-edits files or git.
+- **This brain repo — and its generated site — is the single source of truth.** It's the content
+  dashboard: anyone can see what exists, what version a piece is on, and whether it's approved. Trust
+  lives here, not in scattered docs.
+- **Sonal is the approver.** Content stays *in the brain* (versioned, visible) until **Sonal approves
+  it explicitly**. Her yes is the publish event.
+- **Approval → Drive.** Only on Sonal's explicit approval does the brain write the approved version to
+  **Google Drive** (a Doc in the shared Brain Output folder). Nothing is written to Drive before that.
+- Flow: *anyone drafts → brain (versioned, on the dashboard) → Sonal approves → brain writes it to Drive.*
+
 ## How it stays honest (the machinery — you can ignore this)
 - The published site (`docs/`) is **100% generated** from the brain's real content. No one ever
   hand-edits a published page, so it can't drift from the truth.
