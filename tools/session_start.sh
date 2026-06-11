@@ -18,27 +18,14 @@ cd "$CLAUDE_PROJECT_DIR" 2>/dev/null || {
 # Portable Python — Windows usually exposes `python` or the `py` launcher, not `python3`.
 PY="$(command -v python3 || command -v python || command -v py || true)"
 
-verify_and_heal() {
-  if [ -z "$PY" ]; then
-    echo "ℹ Site-sync self-check skipped — no Python on this computer. That's fine: the site is"
-    echo "  rebuilt + verified when content is published (and by the server check on every push)."
-    return
-  fi
-  # Self-heal drift on EVERY clean session open — including resumed / web / compacted sessions.
-  # Rebuild all generated docs/ from source; if anything changed, the published site had drifted
-  # and is now corrected in the working tree (committed at session end). Start NEVER pushes — it
-  # only heals locally. The invariant lives here, in the harness, not in model memory.
+build_check() {
+  # docs/ + LEDGER.md are CI build artifacts now (gitignored) — GitHub Actions rebuilds + deploys
+  # the site on every push, so there is no committed output to drift or self-heal. We just do a
+  # quick local build so a malformed page/template is caught early. Never blocks; never pushes.
+  [ -z "$PY" ] && return
   if ! "$PY" "$CLAUDE_PROJECT_DIR/tools/build_site.py" >/dev/null 2>&1; then
-    echo "⚠ SessionStart — tools/build_site.py errored; cannot confirm the site is in sync."
-    echo "  Self-heal by hand: $PY tools/build_site.py"
-    return
-  fi
-  if git diff --quiet -- docs/ LEDGER.md 2>/dev/null; then
-    echo "✓ Published site in sync with sources (no drift)."
-  else
-    echo "⚠ SessionStart — drift self-healed: generated files were out of sync and rebuilt from source:"
-    git diff --name-only -- docs/ LEDGER.md 2>/dev/null | sed 's/^/    /'
-    echo "  (these rebuilt files commit automatically at session end.)"
+    echo "⚠ Heads-up: the site doesn't build cleanly from source — a page or template may be malformed."
+    echo "  See the error: $PY tools/build_site.py"
   fi
 }
 
@@ -130,7 +117,7 @@ fi
 
 if [ "$LOCAL" = "$REMOTE" ]; then
   echo "✓ Brain up to date with origin/main ($(git rev-parse --short HEAD))"
-  verify_and_heal
+  build_check
   exit 0
 fi
 
@@ -143,13 +130,13 @@ if [ -n "$DIRTY" ]; then
   # self-heal generated files. (Rare at session start, since session end commits everything.)
   echo "⚠ Uncommitted changes present — skipping sync so nothing of yours is disturbed:"
   echo "$DIRTY" | sed 's/^/    /'
-  verify_and_heal
+  build_check
   exit 0
 fi
 
 if [ "$AHEAD" != "0" ] && [ "$BEHIND" != "0" ]; then
   auto_rebase
-  verify_and_heal
+  build_check
   exit 0
 fi
 
@@ -159,7 +146,7 @@ if git pull --ff-only --quiet origin main 2>&1; then
   echo "✓ Auto-pulled $BEHIND commit(s) from origin/main — now at $NEW"
   echo "  Recent:"
   git log --oneline -"${BEHIND}" 2>/dev/null | sed 's/^/    /'
-  verify_and_heal
+  build_check
 else
   echo "⚠ git pull --ff-only failed unexpectedly (was clean + FF-able). Investigate manually:"
   echo "    cd \$CLAUDE_PROJECT_DIR && git pull --ff-only origin main"
