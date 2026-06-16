@@ -3,16 +3,15 @@ date: 2026-05-27
 slug: 2026-05-27-story-over-report
 source_session: Sonal Bhasin — email feedback on the Masthanaiah portrait + Nagaland NLNF story (forwarded by Sahil)
 classification: structural
-promoted: pending-maintainer-hand-edit  # wiki/voice/** is Write/Edit deny-listed per CLAUDE.md rule 8
-promoted_at_proposed: 2026-05-27
-promoted_by_proposed: Sahil (post-feedback rewrite, same-session promotion)
+promoted: landed  # corrected 2026-06-08: wiki/voice/** carries NO Write/Edit deny rule (only docs/** does — verified against .claude/settings.json); the "deny-listed" note above was wrong and the paste sat un-actioned for 12 days
+promoted_at: 2026-06-08
+promoted_by: Claude (same-session paste, prompted by Sonal's second feedback round — see [[2026-06-08-narrative-throughline-and-fact-grounding]] § Correction to a prior learning)
 landed_so_far:
   - "projects/portraits/page.md § Masthanaiah portrait — full body rewrite (narrative arc) + gaps-to-fill section"
   - "projects/nagaland-coffee-book/page.md § GMS Jalukie story — full body rewrite (empathy + flow) + gaps-to-fill section"
   - "docs/projects/portraits.html + docs/projects/nagaland-coffee-book.html — HTML mirrors regenerated"
   - "projects/portraits/chatlog.md + projects/nagaland-coffee-book/chatlog.md — feedback session appended"
-pending_maintainer_paste:
-  - "wiki/voice/styleguide.md — § Story over report (new section) — see § Paste-ready snippet below"
+  - "wiki/voice/styleguide.md § Story over report — pasted in 2026-06-08, twelve days late, alongside the four-move extension from [[2026-06-08-narrative-throughline-and-fact-grounding]]"
 related:
   - "[[2026-05-26-movement-frame-people-actors]] (companion voice rule)"
   - "[[2026-05-26-content-from-brain-directed-run]] (the session whose drafts this feedback corrects)"

@@ -8,6 +8,21 @@ generated one is preserved at `archive/LEDGER-handwritten-through-2026-06-05.md`
 ---
 
 
+## 2026-06-09 — Sonal — portrait-v3-throughline-and-drift-fix
+
+**the Masthanaiah portrait got its third rewrite, the brain got a structural rule to match, and a silent pipeline gap finally surfaced**
+
+Sonal came back with six pieces of feedback on the v2 portrait of Shri Vempuluru Nagoor Masthanaiah. Every one of them pointed at the same root: the v2 draft had well-told individual beats but no stated idea connecting them, so the piece read as a list of chapters rather than a story. She also flagged two lines where the draft had invented or misread the source material — a dramatized image that didn't come from the interview transcript ("The room watched the room"), and a causal beat that dramatized a moment the transcript records quite differently ("He turned around and never paid those fees"). And she said the hook paragraph was missing.
+
+The v3 rewrite addresses all of it. The body now opens with a framing paragraph that states the throughline in the brain's own voice — a system that nearly let go of a child, changed from inside by the man it almost lost — before the backstory begins. Every chapter transition was rewritten to carry that idea forward rather than simply marking a new phase of a career ("That same instinct... travelled with him"; "Three years later, he took on something larger still"; "Not every test of that conviction came with recognition attached"). The invented lines are gone, replaced by what the source actually supports. The combative connective phrasing ("held the line," "the press came for him," "muttering his surname like a warning") was replaced with measured, motive-explaining language that keeps the cost visible without staging a fight. The closing paragraph now answers the hook — so the piece reads as one argument.
+
+The brain update went into the voice styleguide immediately. "Story over report" (the rule from May 27 that had been sitting unactioned in a learning because of a mistaken belief that wiki/voice was deny-listed) is now in the styleguide, with four additional moves appended beneath it from today's feedback: name the throughline before drafting; write every paragraph break to carry it forward; use diplomatic connective language when narrating institutional friction; cross-check every vivid beat against the source before it ships.
+
+The session also surfaced a real structural gap in the publish pipeline. `build_site.py` had `GENERATED_PROJECTS = ["invoked-6"]` hardcoded — meaning the auto-rebuild-and-push cycle that runs at every session end was only regenerating one of the five project pages. The other four (`portraits`, `nagaland-coffee-book`, `blogs`, `captions`) had been relying on someone manually running `build_project_page.py` each time — exactly the kind of invisible human dependency that had caused the publish-confirmation failures in June. The list is now derived dynamically from `projects/*/page.md` existence, so any new project page is auto-rebuilt from the moment it exists. The pre-existing drift in those four pages is resolved in this same commit.
+
+Live: https://sahilmodi1965.github.io/shikshalokam/projects/portraits.html
+
+
 ## 2026-06-08 — Sahil — masthanaiah-portrait-v3-aquib-feedback
 
 ****
