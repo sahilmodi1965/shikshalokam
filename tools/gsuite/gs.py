@@ -38,6 +38,13 @@ BRAIN_YML = REPO / "brain.yml"
 HOME = Path.home() / ".shikshalokam"                            # OUTSIDE the repo
 TOKEN_PATH = HOME / "token.json"                                # personal, never committed
 
+# Gmail's API does NOT auto-append the account signature to API-created drafts
+# (that only happens in the web compose UI), so we attach it ourselves. This is
+# the same rich signature the team uses; images are embedded inline via cid:.
+SIG_HTML = REPO / ".claude" / "gmail-signature.html"
+SIG_ASSETS = REPO / ".claude" / "signature-assets"
+SIG_IMAGES = ["logo.png", "ln.png", "tt.png", "sp.png", "yt.png"]
+
 # Least surprise, broad enough for the stated capabilities. Keep in sync with
 # the consent screen in onboarding/gsuite-setup.md.
 SCOPES = [
@@ -169,13 +176,55 @@ def cmd_whoami(_):
     print(f"Logged in as {info.get('email')}")
 
 
+def _sig_text_to_html(body):
+    """Plain-text body -> simple HTML: blank lines split paragraphs, single
+    newlines become <br> (mirrors the old MCP signature hook)."""
+    from html import escape
+    out = []
+    for p in body.replace("\r\n", "\n").split("\n\n"):
+        if p.strip() == "":
+            continue
+        out.append("<div>" + escape(p).replace("\n", "<br>") + "</div>")
+    return "<br>".join(out)
+
+
+def _build_message(to, subject, body, cc=None, with_signature=True):
+    """Build a MIME message. With the signature on (default), produce a
+    multipart/related: text+html alternatives plus the signature's inline
+    images, so the rich signature renders even when remote images are blocked."""
+    sig_html = SIG_HTML.read_text().strip() if (with_signature and SIG_HTML.exists()) else ""
+    if not sig_html:
+        msg = MIMEText(body)
+    else:
+        from email.mime.multipart import MIMEMultipart
+        from email.mime.image import MIMEImage
+        body_html = _sig_text_to_html(body)
+        full_html = (body_html + "<br><br>" + sig_html) if body_html else sig_html
+        related = MIMEMultipart("related")
+        alt = MIMEMultipart("alternative")
+        alt.attach(MIMEText(body, "plain"))
+        alt.attach(MIMEText(full_html, "html"))
+        related.attach(alt)
+        for name in SIG_IMAGES:
+            p = SIG_ASSETS / name
+            if not p.exists():
+                continue
+            img = MIMEImage(p.read_bytes())
+            img.add_header("Content-ID", f"<{name}>")
+            img.add_header("Content-Disposition", "inline", filename=name)
+            related.attach(img)
+        msg = related
+    msg["to"] = to
+    if cc:
+        msg["cc"] = cc
+    msg["subject"] = subject
+    return msg
+
+
 def cmd_email_draft(a):
     body = Path(a.body_file).read_text() if a.body_file else a.body
-    msg = MIMEText(body)
-    msg["to"] = a.to
-    if a.cc:
-        msg["cc"] = a.cc
-    msg["subject"] = a.subject
+    msg = _build_message(a.to, a.subject, body, cc=a.cc,
+                         with_signature=not getattr(a, "no_signature", False))
     raw = base64.urlsafe_b64encode(msg.as_bytes()).decode()
     draft = svc("gmail", "v1").users().drafts().create(
         userId="me", body={"message": {"raw": raw}}
@@ -334,6 +383,8 @@ def main():
     d.add_argument("--cc")
     d.add_argument("--body")
     d.add_argument("--body-file")
+    d.add_argument("--no-signature", action="store_true",
+                   help="skip the team signature (attached by default)")
     d.set_defaults(fn=cmd_email_draft)
 
     s = sub.add_parser("email-send", help="send a draft (ONLY after approval)")
