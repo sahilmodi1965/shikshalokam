@@ -18,6 +18,10 @@ Capabilities (all gated the way brain.yml says):
   drive-folder              — make a folder
   drive-init                — build the shared "Brain Output" tree + share it
   cal-invite                — create a calendar event (notify only with --notify)
+  search                    — find threads by Gmail query (threadId + subject)
+  label-list/create         — list user labels / make a new one
+  label-apply/remove        — add or remove a label on thread(s)
+  filter-create             — auto-label future mail matching a query
 
 Setup + onboarding: onboarding/gsuite-setup.md
 """
@@ -39,11 +43,12 @@ HOME = Path.home() / ".shikshalokam"                            # OUTSIDE the re
 TOKEN_PATH = HOME / "token.json"                                # personal, never committed
 
 # Gmail's API does NOT auto-append the account signature to API-created drafts
-# (that only happens in the web compose UI), so we attach it ourselves. This is
-# the same rich signature the team uses; images are embedded inline via cid:.
+# (that only happens in the web compose UI), so we attach it ourselves. The
+# signature's images are referenced by public https URL (the same hosted URLs
+# Gmail uses for the native signature), NOT cid: inline parts — Gmail's web
+# composer collapses cid: inline images into one attachment when a draft is
+# edited and sent from there, which silently breaks the signature.
 SIG_HTML = REPO / ".claude" / "gmail-signature.html"
-SIG_ASSETS = REPO / ".claude" / "signature-assets"
-SIG_IMAGES = ["logo.png", "ln.png", "tt.png", "sp.png", "yt.png"]
 
 # Least surprise, broad enough for the stated capabilities. Keep in sync with
 # the consent screen in onboarding/gsuite-setup.md.
@@ -51,6 +56,8 @@ SCOPES = [
     "openid",
     "https://www.googleapis.com/auth/userinfo.email",
     "https://www.googleapis.com/auth/gmail.compose",     # create drafts AND send them
+    "https://www.googleapis.com/auth/gmail.modify",      # search + labels (CRUD + apply/remove)
+    "https://www.googleapis.com/auth/gmail.settings.basic",  # auto-label filters
     "https://www.googleapis.com/auth/drive",             # folders, uploads, organize
     "https://www.googleapis.com/auth/documents",         # Google Docs
     "https://www.googleapis.com/auth/spreadsheets",      # Google Sheets (read + update cells)
@@ -190,30 +197,20 @@ def _sig_text_to_html(body):
 
 def _build_message(to, subject, body, cc=None, with_signature=True):
     """Build a MIME message. With the signature on (default), produce a
-    multipart/related: text+html alternatives plus the signature's inline
-    images, so the rich signature renders even when remote images are blocked."""
+    multipart/alternative (text + html). The signature references its images by
+    public https URL (not cid: inline parts) — see SIG_HTML — so it survives
+    being edited and re-sent through Gmail's web composer, which silently
+    collapses cid: inline images into a single attachment on edit+send."""
     sig_html = SIG_HTML.read_text().strip() if (with_signature and SIG_HTML.exists()) else ""
     if not sig_html:
         msg = MIMEText(body)
     else:
         from email.mime.multipart import MIMEMultipart
-        from email.mime.image import MIMEImage
         body_html = _sig_text_to_html(body)
         full_html = (body_html + "<br><br>" + sig_html) if body_html else sig_html
-        related = MIMEMultipart("related")
-        alt = MIMEMultipart("alternative")
-        alt.attach(MIMEText(body, "plain"))
-        alt.attach(MIMEText(full_html, "html"))
-        related.attach(alt)
-        for name in SIG_IMAGES:
-            p = SIG_ASSETS / name
-            if not p.exists():
-                continue
-            img = MIMEImage(p.read_bytes())
-            img.add_header("Content-ID", f"<{name}>")
-            img.add_header("Content-Disposition", "inline", filename=name)
-            related.attach(img)
-        msg = related
+        msg = MIMEMultipart("alternative")
+        msg.attach(MIMEText(body, "plain"))
+        msg.attach(MIMEText(full_html, "html"))
     msg["to"] = to
     if cc:
         msg["cc"] = cc
@@ -369,6 +366,98 @@ def cmd_sheet_update(a):
     print(f"Updated {res.get('updatedCells', 0)} cell(s) in {a.range}.")
 
 
+# ---- gmail: search + labels + filters --------------------------------------
+def _resolve_label(g, name_or_id):
+    """Return a label id for a display name or id (system or user). None if
+    no user/system label matches."""
+    labels = g.users().labels().list(userId="me").execute().get("labels", [])
+    for l in labels:
+        if name_or_id in (l["id"], l["name"]):
+            return l["id"]
+    return None
+
+
+def _subject(g, thread_id):
+    meta = g.users().threads().get(
+        userId="me", id=thread_id, format="metadata", metadataHeaders=["Subject"]
+    ).execute()
+    msgs = meta.get("messages", [])
+    if msgs:
+        for h in msgs[0].get("payload", {}).get("headers", []):
+            if h["name"] == "Subject":
+                return h["value"]
+    return "(no subject)"
+
+
+def cmd_search(a):
+    g = svc("gmail", "v1")
+    res = g.users().threads().list(userId="me", q=a.query, maxResults=a.max).execute()
+    threads = res.get("threads", [])
+    if not threads:
+        print("(no matches)")
+        return
+    for t in threads:
+        print(f'{t["id"]}\t{_subject(g, t["id"])}')
+
+
+def cmd_label_list(a):
+    g = svc("gmail", "v1")
+    labels = g.users().labels().list(userId="me").execute().get("labels", [])
+    user = [l for l in labels if l.get("type") == "user"]
+    for l in sorted(user, key=lambda x: x["name"].lower()):
+        print(f'{l["id"]}\t{l["name"]}')
+
+
+def cmd_label_create(a):
+    g = svc("gmail", "v1")
+    if _resolve_label(g, a.name):
+        print(f'Label already exists: {a.name}')
+        return
+    body = {"name": a.name,
+            "labelListVisibility": "labelShow",
+            "messageListVisibility": "show"}
+    if a.bg or a.text:
+        body["color"] = {"backgroundColor": a.bg or "#cccccc",
+                         "textColor": a.text or "#000000"}
+    l = g.users().labels().create(userId="me", body=body).execute()
+    print(f'Created label {l["name"]}  id={l["id"]}')
+
+
+def _modify_threads(a, add):
+    g = svc("gmail", "v1")
+    lid = _resolve_label(g, a.label)
+    if not lid:
+        sys.exit(f'Label not found: {a.label}  '
+                 f'(create it:  gs.py label-create --name "{a.label}")')
+    key = "addLabelIds" if add else "removeLabelIds"
+    ids = [t.strip() for t in a.thread.split(",") if t.strip()]
+    for tid in ids:
+        g.users().threads().modify(userId="me", id=tid, body={key: [lid]}).execute()
+    print(f'{"Labelled" if add else "Unlabelled"} {len(ids)} thread(s) with {a.label}.')
+
+
+def cmd_label_apply(a):
+    _modify_threads(a, add=True)
+
+
+def cmd_label_remove(a):
+    _modify_threads(a, add=False)
+
+
+def cmd_filter_create(a):
+    g = svc("gmail", "v1")
+    lid = _resolve_label(g, a.label)
+    if not lid:
+        sys.exit(f'Label not found: {a.label}  '
+                 f'(create it:  gs.py label-create --name "{a.label}")')
+    action = {"addLabelIds": [lid]}
+    if a.archive:                      # skip the inbox, file straight under the label
+        action["removeLabelIds"] = ["INBOX"]
+    body = {"criteria": {"query": a.query}, "action": action}
+    f = g.users().settings().filters().create(userId="me", body=body).execute()
+    print(f'Filter created id={f.get("id")} — applies "{a.label}" to: {a.query}')
+
+
 # ---- cli -------------------------------------------------------------------
 def main():
     p = argparse.ArgumentParser(prog="gs.py", description="ShikshaLokam G-Suite engine")
@@ -426,6 +515,36 @@ def main():
     su.add_argument("--values", required=True,
                     help="cells split by '|', rows split by ';;'  (e.g. \"a|b||c;;d|e|f\")")
     su.set_defaults(fn=cmd_sheet_update)
+
+    se = sub.add_parser("search", help="search threads (prints 'threadId<TAB>subject')")
+    se.add_argument("--query", required=True, help="Gmail search syntax")
+    se.add_argument("--max", type=int, default=30)
+    se.set_defaults(fn=cmd_search)
+
+    ll = sub.add_parser("label-list", help="list user labels (id<TAB>name)")
+    ll.set_defaults(fn=cmd_label_list)
+
+    lc = sub.add_parser("label-create", help="create a label")
+    lc.add_argument("--name", required=True)
+    lc.add_argument("--bg", help="background hex, e.g. #16a766")
+    lc.add_argument("--text", help="text hex, e.g. #ffffff")
+    lc.set_defaults(fn=cmd_label_create)
+
+    la = sub.add_parser("label-apply", help="add a label to thread(s)")
+    la.add_argument("--thread", required=True, help="comma-separated thread ids")
+    la.add_argument("--label", required=True, help="label name or id")
+    la.set_defaults(fn=cmd_label_apply)
+
+    lr = sub.add_parser("label-remove", help="remove a label from thread(s)")
+    lr.add_argument("--thread", required=True, help="comma-separated thread ids")
+    lr.add_argument("--label", required=True, help="label name or id")
+    lr.set_defaults(fn=cmd_label_remove)
+
+    fc = sub.add_parser("filter-create", help="auto-label future mail matching a query")
+    fc.add_argument("--label", required=True, help="label name or id to apply")
+    fc.add_argument("--query", required=True, help="Gmail search syntax to match on")
+    fc.add_argument("--archive", action="store_true", help="also skip the inbox")
+    fc.set_defaults(fn=cmd_filter_create)
 
     args = p.parse_args()
     args.fn(args)

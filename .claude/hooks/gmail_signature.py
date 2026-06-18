@@ -15,7 +15,6 @@ HTML signature is attached:
 It returns the modified input via hookSpecificOutput.updatedInput so the draft
 is corrected automatically, no model action required.
 """
-import base64
 import json
 import os
 import sys
@@ -23,10 +22,11 @@ from html import escape
 
 SIG_MARKER = "gmail_signature"
 
-# Inline images referenced by the signature via cid:<filename>. They are
-# embedded as inline attachments so the signature renders even when a mail
-# client blocks remote images (Gmail does, in drafts/previews).
-SIG_IMAGES = ["logo.png", "ln.png", "tt.png", "sp.png", "yt.png"]
+# The signature references its images by public https URL (the same hosted URLs
+# Gmail uses for the native signature), NOT cid: inline attachments. Gmail's web
+# composer collapses cid: inline images into a single attachment when a draft is
+# edited and sent from there, silently breaking the signature — hosted URLs do
+# not have that failure mode.
 
 
 def project_dir() -> str:
@@ -43,28 +43,6 @@ def load_signature() -> str:
             return fh.read().strip()
     except OSError:
         return ""
-
-
-def load_inline_attachments() -> list:
-    """Read each signature image and return an inline-attachment object whose
-    Content-ID is derived from the filename (matching the cid: refs in the
-    signature HTML)."""
-    base = os.path.join(project_dir(), ".claude", "signature-assets")
-    out = []
-    for name in SIG_IMAGES:
-        path = os.path.join(base, name)
-        try:
-            with open(path, "rb") as fh:
-                content = base64.b64encode(fh.read()).decode("ascii")
-        except OSError:
-            continue
-        out.append({
-            "filename": name,
-            "mimeType": "image/png",
-            "inline": True,
-            "content": content,
-        })
-    return out
 
 
 def text_to_html(body: str) -> str:
@@ -102,15 +80,6 @@ def main() -> int:
 
     new_input = dict(tool_input)
     new_input["htmlBody"] = new_html
-
-    # Attach the signature images inline, without dropping any the caller set.
-    existing = list(tool_input.get("attachments") or [])
-    have = {a.get("filename") for a in existing if isinstance(a, dict)}
-    for att in load_inline_attachments():
-        if att["filename"] not in have:
-            existing.append(att)
-    if existing:
-        new_input["attachments"] = existing
 
     print(json.dumps({
         "hookSpecificOutput": {

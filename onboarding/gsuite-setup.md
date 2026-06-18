@@ -34,13 +34,16 @@ You're creating **one shared Google app** the whole team logs into. Do this once
    openid
    https://www.googleapis.com/auth/userinfo.email
    https://www.googleapis.com/auth/gmail.compose
+   https://www.googleapis.com/auth/gmail.modify
+   https://www.googleapis.com/auth/gmail.settings.basic
    https://www.googleapis.com/auth/drive
    https://www.googleapis.com/auth/documents
    https://www.googleapis.com/auth/spreadsheets
    https://www.googleapis.com/auth/calendar.events
    ```
-   (If you added Sheets to an app that was already set up, each teammate re-runs
-   `gs.py login` once to grant the new permission.)
+   (If you added scopes to an app that was already set up — e.g. Gmail
+   search/labels/filters — each teammate re-runs `gs.py login` once to grant the
+   new permissions.)
 
 ☐ **5. Make the credential.** *APIs & Services → Credentials → Create Credentials
    → OAuth client ID → Application type: **Desktop app*** → Create → **Download JSON**.

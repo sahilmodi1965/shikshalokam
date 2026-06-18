@@ -8,6 +8,17 @@ generated one is preserved at `archive/LEDGER-handwritten-through-2026-06-05.md`
 ---
 
 
+## 2026-06-18 — Sonal Bhasin — auto-sonal-bhasin
+
+**Auto-recorded so the brain compounds — a fuller digest wasn't written this session.**
+
+Source touched this session:
+- `.claude/gmail-signature.html`
+- `.claude/hooks/gmail_signature.py`
+- `onboarding/gsuite-setup.md`
+- `tools/gsuite/gs.py`
+
+
 ## 2026-06-17 — Sonal Bhasin — auto-sonal-bhasin
 
 **Auto-recorded so the brain compounds — a fuller digest wasn't written this session.**
