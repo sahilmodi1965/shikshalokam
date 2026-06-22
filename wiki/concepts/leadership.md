@@ -2,9 +2,9 @@
 type: concept
 title: "Leadership"
 sources: ["[[SOURCES]]", "[[awards-2027-nominations-live-2026-05]]"]
-corrected_by: ["awards-2027-ingest-2026-05-14", "vibe-team-export-2026-05-14"]
+corrected_by: ["awards-2027-ingest-2026-05-14", "vibe-team-export-2026-05-14", "leadership-titles-update-2026-06-14 — Neeraj → COO; Khushboo title in transition (confirm before use)"]
 created: 2026-05-10
-updated: 2026-05-14
+updated: 2026-06-14
 _status: user-validated
 ---
 
@@ -20,11 +20,16 @@ Full team roster sourced from Vibe Prospecting LinkedIn discovery (May 2026, 50 
   > When we invest in the growth of these leaders, we invest in the future of every child.
   Source: [shikshalokam.org](https://shikshalokam.org/)
 
+## Board of Directors
+
+- **Sanjay Purohit** — joined the ShikshaLokam Board of Directors (2026). **CEO & Chief Curator, Centre for Exponential Change**; architect of **Societal Thinking** — "an approach to resolve complex societal challenges with speed, at scale, sustainably" (since 2016). 30+ years across corporate and development sectors; has engaged 500+ change leaders across 20+ countries (climate, education, gender equity, healthcare, livelihoods). Author of the *Think* books (incl. *Think Scale*); co-founder/mentor, apurva.ai. Addressed InvokED Day 2 (Shikshagraha Utsav, 7 Feb 2026).
+  Source: [Centre for Exponential Change / Don Norman Design Award bio](https://dnda.design/sanjay-purohit/) · [Devex profile](https://www.devex.com/news/inside-the-mind-of-sanjay-purohit-a-societal-transformation-expert-109000) · [[../sources/invoked-5-proceedings-2026]] (InvokED address + quotes) · board appointment confirmed by user 2026-06-14
+
 ## C-Suite
 
-- **Khushboo Awasthi** — **Co-Founder & COO.** Also Co-Founder, Mantra4Change (cross-org). 13+ years across education and healthcare. Recognitions: Ashoka Fellow, Schwab Social Innovator 2023, NITI Aayog Women Transforming India Award 2021, BW Education 40 Under 40 (2022). Advises Government of India on three Ministry of Education committees.
-  Source: [shikshalokam.org/leading-is-like-living-in-goa](https://shikshalokam.org/leading-is-like-living-in-goa/) · Awards 2027 post
-- **Neeraj Doddamane** — **Chief Strategy Officer.** Skills: strategic partnerships, leadership development, large-scale systems, social entrepreneurship, government advocacy. Background: Teaching Fellow → Operations Leader → South Zone Manager → CSO.
+- **Khushboo Awasthi** — **Co-Founder.** ⚠️ **Designation in transition — confirm her current title before using her in any content; do not list her as COO (that title is now Neeraj's).** Also Co-Founder, Mantra4Change (cross-org). 13+ years across education and healthcare. Recognitions: Ashoka Fellow, Schwab Social Innovator 2023, NITI Aayog Women Transforming India Award 2021, BW Education 40 Under 40 (2022). Advises Government of India on three Ministry of Education committees.
+  Source: [shikshalokam.org/leading-is-like-living-in-goa](https://shikshalokam.org/leading-is-like-living-in-goa/) · Awards 2027 post · title update confirmed by user 2026-06-14
+- **Neeraj Doddamane** — **Chief Operating Officer (COO).** Updated 2026-06-14 from Chief Strategy Officer (user-confirmed). Skills: strategic partnerships, leadership development, large-scale systems, social entrepreneurship, government advocacy. Background: Teaching Fellow → Operations Leader → South Zone Manager → CSO → COO.
 - **Vijayashree Urs** — **Chief Technology Officer.** **Named in the SoW as "Vijayashree's team" for engineering support.** Career: Engineering Project Manager → Senior Program Manager → Director Software Development → CTO. Also on Mantra4Change's board (cross-org).
 
 ## Heads & Directors
@@ -106,7 +111,7 @@ These names appear in the Awards 2027 LinkedIn tag list but did not surface in t
 
 ## Cross-brain note (INTENT principle 7)
 
-- **Khushboo Awasthi** is Co-Founder & COO of both ShikshaLokam and Mantra4Change.
+- **Khushboo Awasthi** is Co-Founder of both ShikshaLokam and Mantra4Change. (SL designation in transition — confirm before use; no longer COO.)
 - **Vijayashree Urs** is CTO of ShikshaLokam and on Mantra4Change's board.
 - **Sharon Varghese** appears on both rosters (M4C primary; tagged in SL Awards post).
 - Mr & Mrs Shibulal are founders of ShikshaLokam (via SFPI) and patrons / trustee of Mantra4Change.

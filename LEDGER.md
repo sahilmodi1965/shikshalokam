@@ -8,6 +8,91 @@ generated one is preserved at `archive/LEDGER-handwritten-through-2026-06-05.md`
 ---
 
 
+## 2026-06-22 — Ayush — neeraj-quote-and-newsletter
+
+****
+
+Two threads picked up and parked cleanly.
+
+**Neeraj Doddamane — welcome poster quote (LOCKED, Option A).**
+Reworked his ghostwritten poster line from earlier. Ayush brought a blend of the ghostwritten +
+verbatim-fallback drafts, asked to weave in his thoughts on the mission, then to drop the "canvas is
+big and beautiful / going further, together" closers in favour of a Shikshagraha-centred ending.
+Final locked line:
+
+> "I've spent seven years growing alongside ShikshaLokam — and growing leaders at every level is
+> exactly what Shikshagraha does. This movement has never been about fixing schools from the outside;
+> it's about trusting the people inside them to lead the change. That's the Shikshagraha I want to
+> help carry further."
+
+Still **ghostwritten — pending Neeraj's own yes** before publish (Sonal approves → Drive). Verbatim
+fallback from his acceptance note remains the no-risk alternative. Record updated in memory
+(sanjay-neeraj-welcome-poster).
+
+**June 2026 newsletter — reviewed, paused.**
+All 5 blocks confirmed drafted: Mothers of Courage (ABBY Silver), Anekal enrolment drive, Glocal
+"Unbundling Evaluation", MItra (part 1, Stories That Matter), Portola Valley→Oxford. Resumable at
+`projects/newsletter-jun2026/page.md`. Blocked only on **4 CTA links** (Anekal, Glocal, MItra,
+Portola→Oxford — Mothers of Courage already has both) and **Chief Curator clearance** for Khushboo's
+sign-off before external send.
+
+**To improve next:** chase Neeraj's approval on the quote; get the 4 CTA links + designation
+clearance to take the newsletter to Sonal for approval → Drive.
+
+Live: []
+
+
+## 2026-06-15 — Ayush — invoked-stem-ai-caption
+
+****
+
+Drafted the post-session caption for the **InvokED STEM & AI Brain Date** (panel + student
+showcase). First pass came out as a long, bullet-per-speaker carousel; corrected to the **real
+InvokED session-post form** Sonal uses — question opener → moderator *in conversation with* the
+named panel `(designation)` → one-to-two sentence distillation → 🔴 YouTube link → CTA → hashtag
+stack. Designations were taken from the official panel slide (screenshot), not guessed.
+
+**Open items before posting:**
+- **YouTube link** — space left blank after 🔴.
+- **Krithika's title** — Ayush asked to call her "Co-founder," but the panel slide says
+  **"Founder's Office, MakerGhat"** (Mithun Mathew is the co-founder). Kept the slide's wording as
+  the sourced, safer choice; switch to Co-founder only if confirmed.
+
+**Final draft (output_channel is `none`, so it lives here for recall):**
+
+> How do we prepare students to *build* with AI — not just use it?
+>
+> In this Brain Date, Krithika Ganesan (Founder's Office, MakerGhat), in conversation with Shri Sunil
+> Bajaj (Additional Director, SCERT Haryana), Medha Krishnan (Co-Founder & CEO, Tan90), Ravi Rangan
+> (Co-Founder & CEO, ThinkTac), and Mehar MP (Co-Founder, TinkerHub Foundation), explored what it
+> takes to bring STEM and AI to students responsibly — and to turn it into agency rather than
+> dependence.
+>
+> The conversation reminded us that the goal is not to make students mere users of AI, but to lower
+> friction for teachers, build problem-solving into the everyday, and use technology to accelerate
+> learning, not replace the thinking behind it. It closed on a shared commitment — the Shikshagraha
+> STEM Collective, anchored by MakerGhat, bringing STEM organisations together so no one solves the
+> same problem alone.
+>
+> 🔴 Watch the full session on YouTube:
+>
+> Share your thoughts with us in the comments below 👇!
+>
+> #InvokED2026 #STEM #AIInEducation #Shikshagraha #MissionToMovement #EducationEquity #SystemsChange
+
+**Panel designations (from the slide, for reuse):** Krithika Ganesan — Founder's Office, MakerGhat ·
+Medha Krishnan — Co-Founder & CEO, Tan90 · Mehar MP — Co-Founder, TinkerHub Foundation · Mithun
+Mathew — Co-founder & Director Partnerships, MakerGhat · Naresh Kumar — Senior Manager, People
+Management, The Apprentice Project · Ravi Rangan — Co-Founder & CEO, ThinkTac · Shri Sunil Bajaj —
+Additional Director, SCERT Haryana.
+
+**To improve next:** drop in the link, settle Krithika's title, then it's ready to post. A separate
+Neeraj + Sanjay Purohit post was asked about but isn't saved in the brain (drafts here don't persist
+to file unless captured like this) — reconstruct from the old transcript if it's still wanted.
+
+Live: []
+
+
 ## 2026-06-09 — Sahil — masthanaiah-portrait-v4-aquib-second-review
 
 ****

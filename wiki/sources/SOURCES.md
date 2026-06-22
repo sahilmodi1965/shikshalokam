@@ -91,6 +91,16 @@ portraits gallery into a `wiki/sources/portraits-shikshalokam-org-<date>.md` so 
 first-class wiki anchor; build out `wiki/concepts/foundational-learning.md` if NIPUN-related stories
 become a recurring stream.
 
+## 2026-06-17 added by Ayush — monthly newsletter form (team reference)
+
+Team shared a full monthly newsletter (to "Vinod") as the tone/length/structure reference for this
+month's newsletter stories. Captured as the canonical newsletter-form exemplar →
+[[../voice/exemplars/newsletter-monthly-2026]] (anatomy: personalised greeting → reflective
+human-cascade opener → ~5 story blocks of headline-colon-subtitle + 1–2 paragraphs + one CTA →
+socials/feedback/unsubscribe footer). Stories referenced in the sample issue: Mothers of Courage /
+Shiksha Chaupal VI (Bihar), North East + Inclued Shiksha Samvaad, Nagaland NLNF 3.0, Up Close &
+Personal S3 (GenNext), Small Steps to Build Great Schools Vol. 3. *Provided in-session 2026-06-17.*
+
 ## How this file evolves
 
 Append new sources with a `## YYYY-MM-DD added by …` heading. Keep old entries even when superseded — provenance matters. When a source is fetched again, update its `*Fetched …*` line in place.

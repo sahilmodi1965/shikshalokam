@@ -446,10 +446,58 @@ Use these to show what last year's convening produced (gives 6.0 invites pull). 
 
 ---
 
+### Invite — Dr Martin Kasper (Childaid Network Foundation) · status `draft`
+
+**Segment:** VIP / Returning speaker (Template A adapted, Camille Massey pattern)
+**Signatory:** S.D. Shibulal
+**Relationship context:** Dr Kasper spoke in the "Reflections on Leadership" session at InvokED 5.0
+(alongside Aradhana Dalmia); recall built on his two verbatim quotes from that session — on
+collective action over individual heroics, and fragmentation of effort. Childaid Network's own
+"friend, not benefactor" framing connects directly to InvokED's Samaaj/Sarkaar/Bazaar/Sanchaar
+collective-action frame.
+**Drafted:** 2026-06-11 — awaiting Sonal's review.
+
+---
+
+> **Subject:** Invitation to Join Us at InvokED 6.0 | 26–27 February 2027, Bengaluru
+>
+> Dear Dr Kasper,
+>
+> I trust this message finds you in good health.
+>
+> Your reflections on leadership at InvokED 5.0 have stayed with us long after the session closed.
+> When you said that *"it is not about bricks and mortar, and not about individuals — it is about
+> inspiring activities that connect communities and move many people to act together,"* and that
+> *"the problem is not a lack of ideas or skilled individuals — it is the fragmentation of
+> efforts,"* you named precisely the gap InvokED was built to close.
+>
+> Childaid Network's own journey toward the day you "come simply as a friend and not as a
+> benefactor" speaks to the same shift in posture that collective action across Samaaj, Sarkaar,
+> Bazaar and Sanchaar asks of all of us. That alignment is precisely what InvokED — our annual
+> global dialogue on education leadership — is built to amplify.
+>
+> I'm writing to personally invite you as a distinguished speaker to InvokED 6.0, scheduled for
+> **26 and 27 February 2027** at the Prestige Centre for Performing Arts (PCPA), Bengaluru.
+>
+> Over six years now, InvokED has grown from a dialogue into a space where leaders from across
+> sectors gather around the shared urgency of education equity — and your voice in that room would
+> carry forward exactly the conviction we need.
+>
+> My team would love to connect at your convenience. Please do save the dates — it would be a
+> privilege to welcome you back to InvokED 6.0.
+>
+> Warm regards,
+> SD Shibulal
+> Founder, ShikshaLokam
+> Co-founder, Infosys
+
+---
+
 ## Content log
 
 | Date | What landed | Status |
 |---|---|---|
+| 11 Jun 2026 | First draft: Dr Martin Kasper (Childaid Network Foundation) — returning-speaker invite, recall built on his two InvokED 5.0 quotes (collective action, fragmentation) + "friend not benefactor" connector. | `draft` |
 | 5 Jun 2026 | End-to-end publish verified: source → rebuild → push → live URL confirmed. | `approved` |
 | 5 Jun 2026 | All four invites updated to Sonal's approved final versions: Peggy Dulany (two variants), Marc Benioff, Camille Massey, Advisors group. | `approved` |
 | 5 Jun 2026 | Camille Massey and Advisors-group invites rendered to live page — approved 3 Jun, missed from prior commit. | `approved` |
