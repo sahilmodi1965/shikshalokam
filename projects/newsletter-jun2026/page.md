@@ -2,7 +2,7 @@
 project: newsletter-jun2026
 title: "Monthly newsletter — June 2026 issue (workspace)"
 _status: draft
-last_updated: 2026-06-17
+last_updated: 2026-06-24
 maintainer: Ayush Tank
 daily_user: Ayush Tank
 sources:
@@ -23,42 +23,54 @@ Draft of this month's newsletter. Sent via YAMM (mail-merge from a contacts Shee
   context/preview lives in the opening message, not the blocks.
 - **Order:** grassroots → community → learning → global.
 
-## Open actions on resume
-1. ~~**MItra blog** — content not yet supplied; add block.~~ ✅ Block added after Glocal (2026-06-17).
-2. **CTA links** pending for: Anekal, Glocal, MItra, Visits.
-3. **Designation flag** — Chief Curator clearance for external send (unresolved).
-4. Stories dropped this issue: SG comms meetup (hadn't happened), Mysuru visioning, Germany visit,
-   STEAM/Nagaland blog.
-5. Sonal is the approver for publish → Drive.
+## Open actions on resume (updated 2026-06-24 — Khushboo's revised copy)
+1. **CTA links** still needed (real URLs) for 3 blocks: **Leadership** ("Meet the people of ShikshaLokam
+   here"), **Unbundling** ("Read more about the unbundling here"), **MItra** ("Experience the journey
+   here"). Mothers' News Minute link is live (https://lnkd.in/gnMtBJkg). MItra's CTA likely points to the
+   "Listening at Scale" Part-1 blog — confirm the URL.
+2. **Opener now states Khushboo's title publicly** — "Chief Curator of the Shikshagraha movement" in the
+   farewell + sign-off. ⚠️ Title flagged confidential ([[khushboo-designation-confidential]]) — confirm
+   clearance to state it externally before send.
+3. **Farewell wording is Khushboo's own revised text** (2026-06-24) — warmer, ties her move to Neeraj's
+   COO step-up; the "diaspora" co-owners line is gone. Still needs **Sonal's approval** before send;
+   the Neeraj-quote risk is moot (opener is prose, no direct quote).
+4. **Leadership block** — Sanjay → Board, Neeraj → COO. ⚠️ Coordinate with the social welcome post (same
+   news, still in draft) — don't let the newsletter front-run an unapproved announcement.
+5. **Dropped this issue:** SG partners' convening (was a stub) and Anekal — both removed in this revision,
+   alongside earlier drops (SG comms meetup, Mysuru visioning, Germany visit, STEAM/Nagaland blog,
+   Portola→Oxford global story).
+6. **Final order:** Leadership → Mothers → Unbundling → MItra (4 blocks).
+7. Sonal is the approver for publish → Drive. Send only on explicit permission ([[ayush-email-send-permission]]).
 
 ## Current draft
 
 Dear <<First Name>>,
 
-Hope this message finds you in good spirits.
+Hope this note finds you in great spirits.
 
-There's a quiet thread running through this edition: a movement rooted in one place rarely stays there — it travels. A film born in the villages of Bihar finds its way to Los Angeles and the ABBY stage. The same question asked on the streets of Anekal — does every child have a school worth believing in? — is the one carried into a room in San Francisco and a long table at Oxford. What holds it together is ownership: parents, teachers, youth, communities, partners, and the diaspora, each beginning to see themselves as co-owners of public education's future.
+When we set out to make education equity real, I learned something early: a goal this magnificent can't belong to just one person, or even one generation. It has to be believed in, handed from one pair of hands to the next and carried beyond any single journey.
 
-This is what Shikshagraha looks like in action — across chaupals, streets, and convenings, here and across the world. This edition is yet another window into the movement, in practice.
+In seven years of walking this mission together, I'm glad to share that Neeraj Doddamane steps in as our Chief Operating Officer. I have had the privilege of watching him grow, mentoring his leadership, and being mentored by his clarity of vision in return. The mission is safe in his hands while I myself step into something I've long wanted to give my fullest self to as Chief Curator of the Shikshagraha movement. The reins change hands; the cause stays exactly where it has always been. Closer than ever.
 
-Happy reading...
+If there's one thing I hope you take from this, it's this: leadership was never the title. It was always the act of believing the change is bigger than you, and choosing to pass it on well. Today, with great pride and a full heart, that's what I get to do.
+
+With this, now to this month's updates that prove the point.
+
+---
+
+**Celebrating Leadership and Evolved Roles**
+
+Two moments close to home this month. **Sanjay Purohit** — CEO & Chief Curator of the Centre for Exponential Change and the architect of Societal Thinking — joins ShikshaLokam's **Board of Directors**. And **Neeraj Doddamane**, after seven years with the mission, steps in as **Chief Operating Officer**. Both echo a conviction at the heart of Shikshagraha: no finite number of leaders can solve our challenges. We need millions — and we begin with our own.
+
+Meet the people of ShikshaLokam here: [link — to be shared]
 
 ---
 
 **From Bihar's Villages to the World's Stages: *Mothers of Courage***
 
-*Mothers of Courage* — the film following Bihar's Shiksha Chaupals — has won **Silver in the SDG category at the ABBY Awards 2026**, adding to Best Inspirational Film at the Los Angeles Film Awards and a feature at the Cannes Lions ERA Programme. The News Minute went behind the film: a crew that lived alongside these women until the camera all but disappeared and the real conversations began. 28,000+ Chaupals. 14 districts. 8 lakh+ people moved to act.
+Another proud moment emerged as our *Mothers of Courage* — the film following Bihar's Shiksha Chaupals — has won **Silver in the SDG category at the ABBY Awards 2026**, adding to Best Inspirational Film at the Los Angeles Film Awards and a feature at the Cannes Lions ERA Programme. The News Minute went behind the film: a crew that lived alongside these women until the camera all but disappeared and the real conversations began. 28,000+ Chaupals. 14 districts. 8 lakh+ people moved to act.
 
 Read The News Minute coverage: https://lnkd.in/gnMtBJkg
-Support the mothers leading this change — donate: https://bit.ly/49eRUgk
-
----
-
-**Every Child to School: Anekal Takes the Message to the Streets**
-
-On 29 May, over 350 people — government officials, NGOs, teachers, youth leaders, and community members — took to the streets of Anekal for every child's right to free, equal, quality education. Youth led the way: 55+ young leaders made placards, hoardings, and recorded enrolment messages. Slogans like "Every Child to School" and "Government Schools, Our Pride" spread through local media and community networks well beyond the day.
-
-[CTA link — to be shared]
 
 ---
 
@@ -66,34 +78,22 @@ On 29 May, over 350 people — government officials, NGOs, teachers, youth leade
 
 As part of GLOCAL Evaluation Week, the Centre for Exponential Change, ShikshaLokam, and CoLab hosted "Unbundling Evaluation" — a "one-size-fits-one" forum on closing the gap between evaluation theory and practice. Three insights stood out: sensemaking is the most under-resourced step in qualitative research; feedback loops are rarely closed with the communities who provide the data; and impact measurement too often misses the relational milestones that matter most — a first referral, a gained sense of identity.
 
-[CTA link — to be shared]
+Read more about the unbundling here: [link — to be shared]
 
 ---
 
-**Stories That Matter: A Tool That Listens Like a Friend**
+**Stories That Matter: Why We Must Listen to the Ground**
 
-India's 1.5 lakh schools sit on a goldmine of solutions — but they stay locked where they were born. The teacher in Nagaland never hears the attendance trick from Karnataka; the mother in Bihar doesn't know hundreds of others are fighting the same battle elsewhere. So we built **MItra** — a voice-enabled tool that lets school, community, and youth leaders share their micro-improvements in their own language, turning quiet conversations into stories worth learning from. An education leader's friend.
+Why does the teacher in Nagaland never hear the attendance trick from Karnataka? Why do the people closest to the child — teachers, school leaders, parents — stay missing from the data we build policy on? And what would it take to finally listen? In part one of our three-part series, *Stories That Matter*, we sit with these questions — and meet **MItra**, a voice tool that lets ground leaders share their micro-improvements in their own language, like talking to a friend.
 
-First in our three-part series, *Stories That Matter*.
-
-[CTA link — to be shared]
+Experience the journey here: [link — to be shared]
 
 ---
 
-**From Portola Valley to Oxford: Shikshagraha in Global Conversation**
-
-In Portola Valley, San Francisco, philanthropists, entrepreneurs, tech leaders, and members of the Indian diaspora gathered around one question: what will it take for every child in India's one million schools to be future-ready? The room invited the diaspora in as active partners, not distant supporters — with Mantra4Change US building bridges of collective action across geographies.
-
-Weeks later, at the Skoll World Forum in Oxford, Shikshagraha co-convened Education House with Teach For All, Salzburg Global, and Global Schools Forum (200+ participants), alongside a research roundtable with the Government Outcomes Lab and a listening circle with the Schwab Foundation and Synergos. The week opened doors to 30+ new partners.
-
-[CTA link — to be shared]
-
----
-
-*Stay updated on the latest stories in education leadership. Follow us!*
+*Stay updated on the latest stories in the education leadership space. Follow us!*
 LinkedIn · YouTube · Website · Spotify · Twitter
-Write to us with your feedback at social@shikshalokam.org
-To unsubscribe, reply with a 'U' to this email.
+Write to us with your feedback and comments at social@shikshalokam.org
+To Unsubscribe, reply with a 'U' to this email.
 
 Warm regards,
 **Khushboo Awasthi**

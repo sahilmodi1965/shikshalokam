@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Micro Miracles CTB 3.0 — Nagaland palette board</title>
+<style>
+  :root { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; }
+  body { margin: 0; background: #f6f3ec; color: #1a1a1a; }
+  header { padding: 32px 40px 8px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .sub { color: #6b6256; font-size: 14px; margin: 0 0 8px; }
+  .wrap { display: flex; flex-wrap: wrap; gap: 28px; padding: 16px 40px 48px; }
+  .card { flex: 1 1 320px; background: #fff; border-radius: 14px; overflow: hidden;
+          box-shadow: 0 2px 18px rgba(0,0,0,.08); }
+  .card h2 { font-size: 17px; margin: 0; padding: 18px 22px 4px; }
+  .card .note { font-size: 13px; color: #6b6256; padding: 0 22px 14px; margin: 0; }
+  .swatches { display: flex; flex-direction: column; }
+  .sw { display: flex; align-items: center; height: 66px; padding: 0 22px; gap: 16px; }
+  .chip { width: 54px; height: 38px; border-radius: 8px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); }
+  .meta { display: flex; flex-direction: column; }
+  .meta .name { font-size: 14px; font-weight: 600; }
+  .meta .hex { font-size: 12px; color: #6b6256; font-variant-numeric: tabular-nums; }
+  .meta .role { font-size: 12px; color: #948a7a; }
+  /* live mockup strip */
+  .demo { margin: 0 22px 22px; border-radius: 10px; overflow: hidden;
+          box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); }
+  .band { height: 26px; display: flex; }
+  .band span { flex: 1; }
+  .stripeblock { height: 70px; position: relative; }
+  .title-on { padding: 14px 16px; font-weight: 700; font-size: 15px; }
+  footer { padding: 8px 40px 40px; color: #6b6256; font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Micro Miracles CTB · 3rd edition — Nagaland palette board</h1>
+  <p class="sub">Sampled from your 7 shawl &amp; textile photos. Real colors below — pick the family that should lead.</p>
+</header>
+
+<div class="wrap">
+
+  <!-- WARM WARRIOR -->
+  <div class="card">
+    <h2>A · Warm warrior</h2>
+    <p class="note">From pics 6 &amp; 7 — the red/black/ivory warrior shawl. Most iconic &amp; story-rich.</p>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#C6202B"></div><div class="meta"><span class="name">Naga Red</span><span class="hex">#C6202B</span><span class="role">dominant</span></div></div>
+      <div class="sw"><div class="chip" style="background:#1A1A1A"></div><div class="meta"><span class="name">Charcoal</span><span class="hex">#1A1A1A</span><span class="role">stripes / text</span></div></div>
+      <div class="sw"><div class="chip" style="background:#EFE6D3"></div><div class="meta"><span class="name">Ivory ground</span><span class="hex">#EFE6D3</span><span class="role">page / median band</span></div></div>
+      <div class="sw"><div class="chip" style="background:#C8841E"></div><div class="meta"><span class="name">Ochre</span><span class="hex">#C8841E</span><span class="role">tiger accent</span></div></div>
+      <div class="sw"><div class="chip" style="background:#E03C2D"></div><div class="meta"><span class="name">Sun-red</span><span class="hex">#E03C2D</span><span class="role">tiny accents</span></div></div>
+    </div>
+    <div class="demo">
+      <div class="stripeblock" style="background:repeating-linear-gradient(#C6202B 0 9px,#1A1A1A 9px 12px)"></div>
+      <div class="band"><span style="background:#EFE6D3"></span></div>
+      <div class="title-on" style="background:#C6202B;color:#EFE6D3">Continuous acts of miracles</div>
+    </div>
+  </div>
+
+  <!-- COOL WOVEN -->
+  <div class="card">
+    <h2>B · Cool woven</h2>
+    <p class="note">From pics 1 &amp; 2 — cobalt/azure on ivory. Calmer, cleaner, contemporary.</p>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#1E3A8A"></div><div class="meta"><span class="name">Cobalt</span><span class="hex">#1E3A8A</span><span class="role">dominant</span></div></div>
+      <div class="sw"><div class="chip" style="background:#4A7FC9"></div><div class="meta"><span class="name">Azure</span><span class="hex">#4A7FC9</span><span class="role">secondary</span></div></div>
+      <div class="sw"><div class="chip" style="background:#EFE6D3"></div><div class="meta"><span class="name">Ivory ground</span><span class="hex">#EFE6D3</span><span class="role">page</span></div></div>
+      <div class="sw"><div class="chip" style="background:#1A1A1A"></div><div class="meta"><span class="name">Charcoal</span><span class="hex">#1A1A1A</span><span class="role">text / lattice</span></div></div>
+      <div class="sw"><div class="chip" style="background:#C6202B"></div><div class="meta"><span class="name">Naga Red</span><span class="hex">#C6202B</span><span class="role">rare accent</span></div></div>
+    </div>
+    <div class="demo">
+      <div class="stripeblock" style="background:repeating-linear-gradient(90deg,#1E3A8A 0 10px,#EFE6D3 10px 20px)"></div>
+      <div class="band"><span style="background:#4A7FC9"></span></div>
+      <div class="title-on" style="background:#1E3A8A;color:#EFE6D3">Continuous acts of miracles</div>
+    </div>
+  </div>
+
+  <!-- DUOTONE -->
+  <div class="card">
+    <h2>C · Duotone hybrid</h2>
+    <p class="note">Red leads covers &amp; openers; blue runs the interior story pages. Ceremony outside, calm to read inside.</p>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#C6202B"></div><div class="meta"><span class="name">Naga Red</span><span class="hex">#C6202B</span><span class="role">covers / openers</span></div></div>
+      <div class="sw"><div class="chip" style="background:#1E3A8A"></div><div class="meta"><span class="name">Cobalt</span><span class="hex">#1E3A8A</span><span class="role">interior pages</span></div></div>
+      <div class="sw"><div class="chip" style="background:#EFE6D3"></div><div class="meta"><span class="name">Ivory ground</span><span class="hex">#EFE6D3</span><span class="role">shared page</span></div></div>
+      <div class="sw"><div class="chip" style="background:#1A1A1A"></div><div class="meta"><span class="name">Charcoal</span><span class="hex">#1A1A1A</span><span class="role">shared motifs / text</span></div></div>
+      <div class="sw"><div class="chip" style="background:#C8841E"></div><div class="meta"><span class="name">Ochre</span><span class="hex">#C8841E</span><span class="role">shared warm accent</span></div></div>
+    </div>
+    <div class="demo">
+      <div class="stripeblock" style="background:linear-gradient(90deg,#C6202B 50%,#1E3A8A 50%)"></div>
+      <div class="band"><span style="background:#EFE6D3"></span></div>
+      <div class="title-on" style="background:#1A1A1A;color:#EFE6D3">Continuous acts of miracles</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>Tip: each ■ is the true color. Hex codes are copy-ready for Canva. — ShikshaLokam brain</footer>
+</body>
+</html>

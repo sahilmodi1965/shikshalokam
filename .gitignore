@@ -1,6 +1,9 @@
 .claude/settings.local.json
 __pycache__/
 
+# Microsoft Office temp/owner lock files (e.g. ~$document.docx)
+~$*
+
 # G-Suite engine — never commit personal logins or shared app secrets.
 # Tokens live in ~/.shikshalokam/ (outside the repo). The shared oauth_client.json
 # is distributed via the private Brain Output Drive folder, never via git.
