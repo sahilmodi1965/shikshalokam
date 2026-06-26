@@ -14,6 +14,7 @@ Capabilities (all gated the way brain.yml says):
   login / whoami            — one-time consent, who am I
   email-draft               — write a Gmail draft (nothing sent)
   email-send <draft_id>     — send a draft  (ONLY after explicit approval)
+  draft-update <draft_id>   — overwrite an existing draft in place (no duplicate)
   draft-read [draft_id]     — read a draft back (list drafts if id omitted) to learn from edits
   doc-create                — turn text/markdown into a real Google Doc
   drive-folder              — make a folder
@@ -236,6 +237,29 @@ def cmd_email_send(a):
         userId="me", body={"id": a.draft_id}
     ).execute()
     print(f"Sent. messageId={sent.get('id')}")
+
+
+def cmd_draft_update(a):
+    """Overwrite an existing draft in place (same draft id, so edits the team
+    sees in Gmail → Drafts update rather than spawning a duplicate). Subject and
+    recipients carry over from the existing draft when not given."""
+    g = svc("gmail", "v1")
+    existing = g.users().drafts().get(
+        userId="me", id=a.draft_id, format="metadata"
+    ).execute()
+    payload = existing.get("message", {}).get("payload", {})
+    to = a.to or _header(payload, "To")
+    subject = a.subject or _header(payload, "Subject")
+    cc = a.cc or _header(payload, "Cc") or None
+    body = Path(a.body_file).read_text() if a.body_file else a.body
+    msg = _build_message(to, subject, body, cc=cc,
+                         with_signature=not getattr(a, "no_signature", False))
+    raw = base64.urlsafe_b64encode(msg.as_bytes()).decode()
+    g.users().drafts().update(
+        userId="me", id=a.draft_id, body={"message": {"raw": raw}}
+    ).execute()
+    print(f"Draft {a.draft_id} updated in place. (review in Gmail → Drafts)")
+    print("To send after approval:  python3 tools/gsuite/gs.py email-send " + a.draft_id)
 
 
 def _header(payload, name):
@@ -540,6 +564,18 @@ def main():
     s = sub.add_parser("email-send", help="send a draft (ONLY after approval)")
     s.add_argument("draft_id")
     s.set_defaults(fn=cmd_email_send)
+
+    du = sub.add_parser("draft-update",
+                        help="overwrite an existing draft in place (to/subject carry over if omitted)")
+    du.add_argument("draft_id")
+    du.add_argument("--to")
+    du.add_argument("--subject")
+    du.add_argument("--cc")
+    du.add_argument("--body")
+    du.add_argument("--body-file")
+    du.add_argument("--no-signature", action="store_true",
+                    help="skip the team signature (attached by default)")
+    du.set_defaults(fn=cmd_draft_update)
 
     dr = sub.add_parser("draft-read",
                         help="read a draft's subject+body (or list drafts) to learn from edits")
