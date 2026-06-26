@@ -7,6 +7,7 @@ corrected_by:
   - "[[../../learnings/2026-06-08-narrative-throughline-and-fact-grounding]]"
   - "[[../../learnings/2026-06-08-portrait-diplomatic-system-thread]] — Aquib Rizwan's portrait feedback → § Long-form Ed-Leader Portrait register"
   - "[[../../learnings/2026-06-09-portrait-struggle-first-and-mentors]] — Aquib's second review → refined register rules 1 + 1a"
+  - "[[../../learnings/2026-06-26-internal-team-email-voice]] — Sonal's edits to the SL Brain announcement → § Internal team-announcement register"
 created: 2026-05-14
 updated: 2026-06-09
 _status: user-validated
@@ -242,6 +243,21 @@ more moves, layered on top of the five above:
    transcript) and a dramatized causal beat the transcript records quite differently (*"He turned
    around and never paid those fees"*). When the source is genuinely ambiguous, write only the
    part that's clearly supported. Duller and true beats vivid and invented, every time.
+
+## Internal team-announcement register
+
+How Sonal sounds in team-wide internal mail (Mantra + ShikshaLokam) — distinct from external
+stakeholder/social voice. Set 2026-06-26 from her edits to the SL Brain announcement, read back
+via `gs.py draft-read` ([[../../learnings/2026-06-26-internal-team-email-voice]]):
+
+1. **Open warm and relational** — "Dear team," + a check-in line ("Hope you are doing well."),
+   mirroring the newsletter's "Hope this email finds you in good spirits."
+2. **Name the concrete thing plainly up front** — state the literal *what* (e.g. "bringing AI in
+   to build the team's efficiency") before the brand name; don't hide it behind "a new way of working."
+3. **Friendly over clever** — prefer a plain "Here's a quick update, an exciting one at that." to a
+   performative em-dash one-liner.
+4. **Keep the "what changed" as tight, scannable bullets**, and close on the collective note
+   ("it gets smarter every time one of us uses it").
 
 ## Gaps for user validation
 

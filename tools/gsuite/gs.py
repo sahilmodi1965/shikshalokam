@@ -14,6 +14,7 @@ Capabilities (all gated the way brain.yml says):
   login / whoami            — one-time consent, who am I
   email-draft               — write a Gmail draft (nothing sent)
   email-send <draft_id>     — send a draft  (ONLY after explicit approval)
+  draft-read [draft_id]     — read a draft back (list drafts if id omitted) to learn from edits
   doc-create                — turn text/markdown into a real Google Doc
   drive-folder              — make a folder
   drive-init                — build the shared "Brain Output" tree + share it
@@ -235,6 +236,66 @@ def cmd_email_send(a):
         userId="me", body={"id": a.draft_id}
     ).execute()
     print(f"Sent. messageId={sent.get('id')}")
+
+
+def _header(payload, name):
+    for h in payload.get("headers", []):
+        if h.get("name", "").lower() == name.lower():
+            return h.get("value", "")
+    return ""
+
+
+def _extract_plain(payload):
+    """Best-effort plain-text body from a Gmail message payload. Prefers
+    text/plain; recurses through multipart; falls back to a tag-stripped
+    text/html so an edited HTML draft still reads back."""
+    mime = payload.get("mimeType", "")
+    body = payload.get("body", {})
+    data = body.get("data")
+    if mime == "text/plain" and data:
+        return base64.urlsafe_b64decode(data).decode("utf-8", "replace")
+    for part in payload.get("parts", []) or []:
+        text = _extract_plain(part)
+        if text:
+            return text
+    if mime == "text/html" and data:
+        import re
+        html = base64.urlsafe_b64decode(data).decode("utf-8", "replace")
+        html = re.sub(r"<br\s*/?>", "\n", html, flags=re.I)
+        html = re.sub(r"</(div|p|li|h[1-6])>", "\n", html, flags=re.I)
+        return re.sub(r"<[^>]+>", "", html)
+    return ""
+
+
+def cmd_draft_read(a):
+    """List drafts (id + subject), or print one draft's subject + body so the
+    brain can read a teammate's edits back and learn from them."""
+    g = svc("gmail", "v1")
+    if not a.draft_id:
+        res = g.users().drafts().list(userId="me", maxResults=a.max).execute()
+        drafts = res.get("drafts", [])
+        if not drafts:
+            print("(no drafts)")
+            return
+        for d in drafts:
+            mid = d.get("message", {}).get("id")
+            subj = "(no subject)"
+            if mid:
+                meta = g.users().messages().get(
+                    userId="me", id=mid, format="metadata",
+                    metadataHeaders=["Subject"],
+                ).execute()
+                subj = _header(meta.get("payload", {}), "Subject") or subj
+            print(f'{d["id"]}\t{subj}')
+        return
+    draft = g.users().drafts().get(
+        userId="me", id=a.draft_id, format="full"
+    ).execute()
+    payload = draft.get("message", {}).get("payload", {})
+    print(f'Subject: {_header(payload, "Subject")}')
+    print(f'To: {_header(payload, "To")}')
+    print("---")
+    print(_extract_plain(payload).strip())
 
 
 def _md_to_html(text):
@@ -479,6 +540,13 @@ def main():
     s = sub.add_parser("email-send", help="send a draft (ONLY after approval)")
     s.add_argument("draft_id")
     s.set_defaults(fn=cmd_email_send)
+
+    dr = sub.add_parser("draft-read",
+                        help="read a draft's subject+body (or list drafts) to learn from edits")
+    dr.add_argument("draft_id", nargs="?",
+                    help="draft id to read; omit to list drafts (id<TAB>subject)")
+    dr.add_argument("--max", type=int, default=30)
+    dr.set_defaults(fn=cmd_draft_read)
 
     dc = sub.add_parser("doc-create", help="make a Google Doc from text/markdown")
     dc.add_argument("--title", required=True)
