@@ -18,6 +18,7 @@ Running index of every source consulted. Every claim in `state/*.md` cites one o
 - [welcomeaboard.shikshalokam.org](https://welcomeaboard.shikshalokam.org/) — onboarding-style page; audience framing, role list. *Fetched 2026-05-10. Note: some date references are stale (Mar 2023 InvokED) — treat as not fully current.*
 - [shikshalokam.org/leading-is-like-living-in-goa](https://shikshalokam.org/leading-is-like-living-in-goa/) — long-form blog by Khushboo Awasthi; voice samples, cross-brain leadership data. *Fetched 2026-05-10.*
 - [shikshalokam.org/invoked](https://shikshalokam.org/invoked/) — InvokED page (referenced from search; not separately fetched). *Reference 2026-05-10.*
+- [shikshalokam.org/listening-at-scale-part-1-of-3-why-it-matters](https://shikshalokam.org/listening-at-scale-part-1-of-3-why-it-matters/) — MItra blog, Part 1 of 3 ("Stories That Matter" / Listening at Scale); the problem + case for listening, "treasure scattered, no map" image, MItra = voice listening tool. Co-authored, published 25 Jun 2026. Full extract: [[mitra-listening-at-scale-part1-2026]]. *Fetched 2026-06-26.*
 
 ## Press / third-party
 
