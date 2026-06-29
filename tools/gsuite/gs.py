@@ -444,6 +444,35 @@ def cmd_doc_replace(a):
     print(f"Replaced {n} occurrence(s).")
 
 
+def _find_tab(tabs, title):
+    for t in tabs or []:
+        if t.get("tabProperties", {}).get("title") == title:
+            return t
+        hit = _find_tab(t.get("childTabs", []), title)
+        if hit:
+            return hit
+    return None
+
+
+def cmd_doc_fill_tab(a):
+    """Insert text into an existing tab (by title). Tabs can't be created via
+    the API, so the tab must already exist; this fills it in one shot."""
+    docs = svc("docs", "v1")
+    doc = docs.documents().get(documentId=a.id, includeTabsContent=True).execute()
+    tab = _find_tab(doc.get("tabs", []), a.tab)
+    if not tab:
+        sys.exit(f"No tab titled {a.tab!r}. Create the (blank) tab in the doc first.")
+    tab_id = tab["tabProperties"]["tabId"]
+    text = Path(a.body_file).read_text() if a.body_file else a.body
+    docs.documents().batchUpdate(
+        documentId=a.id,
+        body={"requests": [{"insertText": {
+            "location": {"tabId": tab_id, "index": 1}, "text": text,
+        }}]},
+    ).execute()
+    print(f"Filled tab {a.tab!r}.")
+
+
 def cmd_doc_comments(a):
     """List a Doc's comments (author, the text they anchor to, the comment, and
     replies) so the brain can act on review feedback. Skips resolved unless --all."""
@@ -710,6 +739,13 @@ def main():
     drp.add_argument("--find", required=True, help="exact text to find (case-sensitive)")
     drp.add_argument("--replace", required=True, help="replacement text")
     drp.set_defaults(fn=cmd_doc_replace)
+
+    dft = sub.add_parser("doc-fill-tab", help="insert text into an existing tab (by title)")
+    dft.add_argument("--id", required=True, help="document id")
+    dft.add_argument("--tab", required=True, help="exact tab title (must already exist)")
+    dft.add_argument("--body")
+    dft.add_argument("--body-file")
+    dft.set_defaults(fn=cmd_doc_fill_tab)
 
     dco = sub.add_parser("doc-comments", help="list a Doc's comments + replies")
     dco.add_argument("--id", required=True, help="document id")
