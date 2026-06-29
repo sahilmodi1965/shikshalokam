@@ -365,6 +365,111 @@ def cmd_doc_create(a):
     print(f"Doc created: {doc.get('webViewLink')}")
 
 
+def cmd_drive_find(a):
+    """Find Drive files by name substring (newest first) so the brain can
+    locate a doc the team mentions by title."""
+    drive = svc("drive", "v3")
+    q = f"name contains '{a.query}' and trashed = false"
+    res = drive.files().list(
+        q=q, pageSize=a.max,
+        fields="files(id,name,mimeType,webViewLink,modifiedTime)",
+        orderBy="modifiedTime desc",
+        includeItemsFromAllDrives=True, supportsAllDrives=True,
+    ).execute()
+    files = res.get("files", [])
+    if not files:
+        print("(no matches)")
+        return
+    for f in files:
+        kind = f["mimeType"].rsplit(".", 1)[-1]
+        print(f'{f["id"]}\t{kind}\t{f["name"]}\t{f.get("webViewLink", "")}')
+
+
+def _read_elements(content):
+    """Flatten a list of structural elements (paragraphs + tables) to text."""
+    out = []
+    for el in content or []:
+        para = el.get("paragraph")
+        if para:
+            for run in para.get("elements", []):
+                tr = run.get("textRun")
+                if tr:
+                    out.append(tr.get("content", ""))
+        table = el.get("table")
+        if table:
+            for row in table.get("tableRows", []):
+                for cell in row.get("tableCells", []):
+                    out.append(_read_elements(cell.get("content", [])))
+    return "".join(out)
+
+
+def _tab_text(tab):
+    title = tab.get("tabProperties", {}).get("title", "")
+    body = tab.get("documentTab", {}).get("body", {})
+    parts = [f"\n===== TAB: {title} =====\n", _read_elements(body.get("content", []))]
+    for child in tab.get("childTabs", []) or []:
+        parts.append(_tab_text(child))
+    return "".join(parts)
+
+
+def _doc_text(doc):
+    """Flatten a Docs API document to plain text, across all tabs if present."""
+    tabs = doc.get("tabs")
+    if tabs:
+        return "".join(_tab_text(t) for t in tabs)
+    return _read_elements(doc.get("body", {}).get("content", []))
+
+
+def cmd_doc_read(a):
+    """Print a Google Doc's plain text (all tabs) so the brain can work from it."""
+    doc = svc("docs", "v1").documents().get(
+        documentId=a.id, includeTabsContent=True
+    ).execute()
+    print(_doc_text(doc).strip())
+
+
+def cmd_doc_replace(a):
+    """Find-and-replace exact text in a Google Doc in place (applies across all
+    tabs). Use to action review comments without recreating the doc."""
+    body = {"requests": [{
+        "replaceAllText": {
+            "containsText": {"text": a.find, "matchCase": True},
+            "replaceText": a.replace,
+        }
+    }]}
+    res = svc("docs", "v1").documents().batchUpdate(
+        documentId=a.id, body=body
+    ).execute()
+    n = (res.get("replies") or [{}])[0].get("replaceAllText", {}).get("occurrencesChanged", 0)
+    print(f"Replaced {n} occurrence(s).")
+
+
+def cmd_doc_comments(a):
+    """List a Doc's comments (author, the text they anchor to, the comment, and
+    replies) so the brain can act on review feedback. Skips resolved unless --all."""
+    drive = svc("drive", "v3")
+    res = drive.comments().list(
+        fileId=a.id, pageSize=100,
+        fields="comments(author/displayName,content,resolved,"
+               "quotedFileContent/value,replies(author/displayName,content))",
+    ).execute()
+    comments = res.get("comments", [])
+    if not a.all:
+        comments = [c for c in comments if not c.get("resolved")]
+    if not comments:
+        print("(no comments)")
+        return
+    for i, c in enumerate(comments, 1):
+        who = c.get("author", {}).get("displayName", "?")
+        anchor = (c.get("quotedFileContent") or {}).get("value", "")
+        print(f"[{i}] {who}{' (resolved)' if c.get('resolved') else ''}")
+        if anchor:
+            print(f'    on: "{anchor}"')
+        print(f"    {c.get('content', '')}")
+        for r in c.get("replies", []) or []:
+            print(f"    ↳ {r.get('author', {}).get('displayName', '?')}: {r.get('content', '')}")
+
+
 def cmd_drive_folder(a):
     meta = {"name": a.name, "mimeType": "application/vnd.google-apps.folder"}
     if a.parent:
@@ -590,6 +695,26 @@ def main():
     dc.add_argument("--body-file")
     dc.add_argument("--folder", help="folder id (default: Docs from drive_map.json)")
     dc.set_defaults(fn=cmd_doc_create)
+
+    dfind = sub.add_parser("drive-find", help="find Drive files by name (id<TAB>kind<TAB>name<TAB>link)")
+    dfind.add_argument("--query", required=True, help="name substring to match")
+    dfind.add_argument("--max", type=int, default=20)
+    dfind.set_defaults(fn=cmd_drive_find)
+
+    drd = sub.add_parser("doc-read", help="print a Google Doc's plain text")
+    drd.add_argument("--id", required=True, help="document id")
+    drd.set_defaults(fn=cmd_doc_read)
+
+    drp = sub.add_parser("doc-replace", help="find/replace exact text in a Doc in place")
+    drp.add_argument("--id", required=True, help="document id")
+    drp.add_argument("--find", required=True, help="exact text to find (case-sensitive)")
+    drp.add_argument("--replace", required=True, help="replacement text")
+    drp.set_defaults(fn=cmd_doc_replace)
+
+    dco = sub.add_parser("doc-comments", help="list a Doc's comments + replies")
+    dco.add_argument("--id", required=True, help="document id")
+    dco.add_argument("--all", action="store_true", help="include resolved comments")
+    dco.set_defaults(fn=cmd_doc_comments)
 
     df = sub.add_parser("drive-folder", help="create a Drive folder")
     df.add_argument("--name", required=True)
