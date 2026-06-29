@@ -473,6 +473,26 @@ def cmd_doc_fill_tab(a):
     print(f"Filled tab {a.tab!r}.")
 
 
+def cmd_doc_add_tab(a):
+    """Create a NEW tab in a doc and fill it — the correct way to add a new draft
+    (e.g. an InvokED invitee) to the shared register. Tabs ARE creatable via the
+    Docs API request `addDocumentTab` (NOT `createTab`/`insertTab`). Never fall
+    back to a separate doc just because a tab doesn't exist yet."""
+    docs = svc("docs", "v1")
+    doc = docs.documents().get(documentId=a.id, fields="tabs(tabProperties(index))").execute()
+    idx = len(doc.get("tabs", []))  # append at the end
+    r = docs.documents().batchUpdate(documentId=a.id, body={"requests": [
+        {"addDocumentTab": {"tabProperties": {"title": a.title, "index": idx}}}
+    ]}).execute()
+    tab_id = r["replies"][0]["addDocumentTab"]["tabProperties"]["tabId"]
+    text = Path(a.body_file).read_text() if a.body_file else (a.body or "")
+    if text:
+        docs.documents().batchUpdate(documentId=a.id, body={"requests": [
+            {"insertText": {"location": {"tabId": tab_id, "index": 1}, "text": text}}
+        ]}).execute()
+    print(f"Created tab {a.title!r} (tabId {tab_id}) and filled it.")
+
+
 def cmd_doc_comments(a):
     """List a Doc's comments (author, the text they anchor to, the comment, and
     replies) so the brain can act on review feedback. Skips resolved unless --all."""
@@ -746,6 +766,14 @@ def main():
     dft.add_argument("--body")
     dft.add_argument("--body-file")
     dft.set_defaults(fn=cmd_doc_fill_tab)
+
+    dad = sub.add_parser("doc-add-tab",
+                         help="create a NEW tab (addDocumentTab) and fill it — for a new draft")
+    dad.add_argument("--id", required=True, help="document id")
+    dad.add_argument("--title", required=True, help="tab title, e.g. the invitee's name")
+    dad.add_argument("--body")
+    dad.add_argument("--body-file")
+    dad.set_defaults(fn=cmd_doc_add_tab)
 
     dco = sub.add_parser("doc-comments", help="list a Doc's comments + replies")
     dco.add_argument("--id", required=True, help="document id")
