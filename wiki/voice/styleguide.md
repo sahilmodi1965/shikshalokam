@@ -8,6 +8,7 @@ corrected_by:
   - "[[../../learnings/2026-06-08-portrait-diplomatic-system-thread]] — Aquib Rizwan's portrait feedback → § Long-form Ed-Leader Portrait register"
   - "[[../../learnings/2026-06-09-portrait-struggle-first-and-mentors]] — Aquib's second review → refined register rules 1 + 1a"
   - "[[../../learnings/2026-06-26-internal-team-email-voice]] — Sonal's edits to the SL Brain announcement → § Internal team-announcement register"
+  - "[[../../learnings/2026-06-29-khushboo-invite-voice]] — Sonal's edits to the Arundhati invite → invite honorific + cleaner punctuation + don't over-explain the movement"
 created: 2026-05-14
 updated: 2026-06-09
 _status: user-validated
