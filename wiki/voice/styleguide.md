@@ -247,17 +247,28 @@ more moves, layered on top of the five above:
 ## Internal team-announcement register
 
 How Sonal sounds in team-wide internal mail (Mantra + ShikshaLokam) — distinct from external
-stakeholder/social voice. Set 2026-06-26 from her edits to the SL Brain announcement, read back
-via `gs.py draft-read` ([[../../learnings/2026-06-26-internal-team-email-voice]]):
+stakeholder/social voice. Set across three rounds of her edits to the SL Brain announcement,
+read back via `gs.py draft-read` ([[../../learnings/2026-06-26-internal-team-email-voice]]).
 
-1. **Open warm and relational** — "Dear team," + a check-in line ("Hope you are doing well."),
-   mirroring the newsletter's "Hope this email finds you in good spirits."
-2. **Name the concrete thing plainly up front** — state the literal *what* (e.g. "bringing AI in
-   to build the team's efficiency") before the brand name; don't hide it behind "a new way of working."
-3. **Friendly over clever** — prefer a plain "Here's a quick update, an exciting one at that." to a
-   performative em-dash one-liner.
-4. **Keep the "what changed" as tight, scannable bullets**, and close on the collective note
-   ("it gets smarter every time one of us uses it").
+**The governing rule — honest experience, never selling.** Write as a person sharing what they
+actually tried, not a product launch. Sonal's decisive note on the brain's draft: it "felt like
+I was selling AI rather than sharing an honest experience." If a sentence sounds like a press
+release ("redesign how the work gets done," "what we've automated so far," "this isn't a tool we
+hand over and forget"), cut it.
+
+1. **Field note, not announcement.** First-person and warm — a weekend hello, a smiley, "the part
+   I was most eager about." Sonal, not a comms department.
+2. **Lead with substance, not shine.** Put the honest foundation first (the shared brain / the
+   real point), the impressive-sounding capability second.
+3. **Name the real tool** — "Claude Code," not abstract "AI." Concrete beats buzzy.
+4. **Own the rough edges** — "still being built everyday," "the messy early weeks," "figuring out
+   where it helps and where it doesn't." A clean all-wins list reads as marketing.
+5. **Lived > listed.** Keep only workflows actually used; don't pad with a capability catalogue.
+6. **Credit people, not the tech.** A genuine shout-out reframes it as *what we learned together,
+   with help* — the opposite of "look what AI can do."
+7. **Open warm, close inviting** — "Dear team," + a check-in (echoing the newsletter's "Hope this
+   email finds you in good spirits"); close with "would love to discuss this in depth," not a
+   demand for feedback.
 
 ## Gaps for user validation
 
