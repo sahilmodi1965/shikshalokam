@@ -1,0 +1,42 @@
+name: deploy-pages (build + publish the brain site)
+# The site is now built and deployed ENTIRELY by CI — docs/ is never committed to the repo.
+# This kills the #1 cause of cross-session merge conflicts (parallel sessions regenerating docs/
+# differently) that wedged a teammate's brain. Source of truth = sessions/ + projects/*/page.md;
+# this workflow rebuilds the site from them on every push and deploys it to GitHub Pages.
+#
+# ONE-TIME repo setting: Settings → Pages → Build and deployment → Source = "GitHub Actions".
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never run two deploys at once; let the newest win.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build the site from source
+        run: python3 tools/build_site.py
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deploy
+        uses: actions/deploy-pages@v4
