@@ -1,13 +1,25 @@
 .claude/settings.local.json
 __pycache__/
 
-# Microsoft Office temp/owner lock files (e.g. ~$document.docx)
-~$*
+# Generated site pages + rollup — rebuilt + DEPLOYED BY CI (.github/workflows/deploy-pages.yml) on
+# every push, never committed. This removes the cross-session merge-conflict class that could wedge
+# the brain. STATIC assets in docs/ (style.css, .nojekyll, the projects index, demo) stay committed,
+# so CI's checkout has them and build_site.py only adds the generated pages on top.
+# Source of truth = sessions/ + projects/*/page.md. Rebuild locally: python3 tools/build_site.py
+/docs/index.html
+/docs/log.html
+/docs/projects/*.html
+!/docs/projects/index.html
+/LEDGER.md
 
-# G-Suite engine — never commit personal logins or shared app secrets.
-# Tokens live in ~/.shikshalokam/ (outside the repo). The shared oauth_client.json
-# is distributed via the private Brain Output Drive folder, never via git.
+# G-Suite engine — NO secrets in git, ever (keeps scanners + history clean).
+# Personal tokens live in ~/.shikshalokam/ (outside the repo). The shared
+# oauth_client.json is distributed via the private Brain Output Drive folder and
+# auto-placed by `gs.py login` from the teammate's Downloads — never committed.
 **/token*.json
 .shikshalokam/
 tools/gsuite/*.local.json
 tools/gsuite/oauth_client.json
+
+# Microsoft Office temp/owner lock files (e.g. ~$document.docx)
+~$*

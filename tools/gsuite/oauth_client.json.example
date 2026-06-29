@@ -1,5 +1,5 @@
 {
-  "_comment": "PLACEHOLDER. After Part A of onboarding/gsuite-setup.md, save the downloaded Desktop OAuth client here as oauth_client.json (without .example). It is GITIGNORED — never commit it. The brain uploads it once to the private Brain Output Drive folder; teammates download it from there during Part B login. The repo stays secret-free.",
+  "_comment": "PLACEHOLDER. After Part A of onboarding/gsuite-setup.md, save the downloaded Desktop OAuth client here as oauth_client.json (without .example). It is GITIGNORED — never commit it; no secret belongs in git. The brain uploads it once to the private Brain Output Drive folder, and `gs.py login` auto-places it from each teammate's Downloads. Personal tokens also stay out of git (~/.shikshalokam/).",
   "installed": {
     "client_id": "REPLACE.apps.googleusercontent.com",
     "project_id": "shikshalokam-brain",

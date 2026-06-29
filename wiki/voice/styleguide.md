@@ -3,8 +3,11 @@ type: voice
 title: "Voice"
 sources: ["[[SOURCES]]"]
 corrected_by:
+  - "[[../../learnings/2026-05-27-story-over-report]]"
+  - "[[../../learnings/2026-06-08-narrative-throughline-and-fact-grounding]]"
   - "[[../../learnings/2026-06-08-portrait-diplomatic-system-thread]] — Aquib Rizwan's portrait feedback → § Long-form Ed-Leader Portrait register"
   - "[[../../learnings/2026-06-09-portrait-struggle-first-and-mentors]] — Aquib's second review → refined register rules 1 + 1a"
+  - "[[../../learnings/2026-06-26-internal-team-email-voice]] — Sonal's edits to the SL Brain announcement → § Internal team-announcement register"
 created: 2026-05-14
 updated: 2026-06-09
 _status: user-validated
@@ -171,6 +174,90 @@ Phrases that appear in captions specifically (counts approximate across the doc)
 - Individual-hero framing in non-portrait posts. The dissemination plan names this directly: *"Frame them as contributors, not content. Maintain respectful, non-promotional tone."*
 - Standalone statistic-bombs — numbers are always paired with a human consequence ("1,500+ schools and nearly 69,000 students across five Western Ghats states"; "from 145 to over 600 students")
 - Devanagari script — Hindi-origin terms ("Samaaj," "Didi") appear transliterated, never in script
+
+## Story over report — narrative voice for portraits, coffee-book stories, long blogs
+
+Added 2026-06-08 from `learnings/2026-05-27-story-over-report.md` (Sonal's first-round feedback on
+the Masthanaiah portrait + Nagaland NLNF story) and `learnings/2026-06-08-narrative-throughline-and-fact-grounding.md`
+(her second-round feedback on the same portrait). **Binding for any narrative piece — portraits,
+coffee-book stories, long blogs, donor letters.**
+
+**The rule.** Write so the reader feels before they conclude. Five moves:
+
+1. **Build an arc.** Beginning → tension → turn → cost → outcome → close. If every paragraph
+   feels the same, it's reporting. The middle should feel different from the turn.
+2. **Slow at human moments.** The borrowed television. The tonic-syrup-bottle lamp. The
+   teacher who walked two kilometres every day. Give the moment its own paragraph. Don't
+   bury it inside a sentence about something else.
+3. **Fewer em-dashes. Vary sentence length.** Em-dashes are the punctuation of reporting.
+   One per paragraph in narrative, max. Short sentences make rhythm; long sentences make
+   thought. Mix them.
+4. **Show the cost.** What did this leader give up? When did they doubt themselves? What
+   was the hardest moment? A portrait without cost is a CV.
+5. **Let the leader feel like a person.** Family. Roots. What they read now. The texture
+   institutional vocabulary skips.
+
+**Never** in a narrative piece:
+
+- *"X happened. He did Y. He delivered Z."* — flat reporting cadence; collapse into an arc.
+- Stacking three achievements in one paragraph because they fall in the same chapter — each
+  beat deserves its own paragraph.
+- Institutional verbs (*"originated · delivered · cascaded"*) inside human moments.
+- "The X asked them" / "The school was tasked" — demanding voice. Prefer "encouraged" /
+  "chose to" / "stepped up to."
+- Numbers without a human consequence behind them.
+
+**Always for narrative pieces:**
+
+- A **Gaps that would lift this story** section at the bottom, phrased as questions the
+  source-person could answer. Surface what's missing — don't silently smooth over thin
+  material. (Sonal: *"Let's ask the AI to highlight gaps that would help create this portrait."*)
+
+### A well-told arc still isn't a story without a throughline (added 2026-06-08)
+
+A v2 Masthanaiah recompile applied all five moves above, beat by beat — and Sonal still called it
+fragmented: *"The narrative of education leadership and how it works to change system should be
+brought in. (Currently it seems fragmented)... shift from one paragraph to another paragraph should
+be smooth which carries on the overall narrative forward... The hook para is missing."* The lesson:
+craft per paragraph isn't enough if the paragraphs don't visibly serve **one stated idea**. Four
+more moves, layered on top of the five above:
+
+6. **Name the throughline before drafting, then write the hook to state it.** Not "his career" —
+   the specific claim the career proves (e.g., "a system changed because the person it nearly
+   failed refused to let it fail anyone else"). The hook paragraph states that claim up front, in
+   the brain's own voice, before the backstory begins. The close then answers it.
+7. **Every paragraph break should carry the throughline forward, not just the chronology.**
+   Replace neutral chapter-markers ("Then began the years inside...", "Then, in 1996, he did the
+   thing...") with sentences that say *why this chapter is the next expression of the same idea*
+   ("That same instinct... travelled with him to Hyderabad"). A transition that would fit any
+   leader's biography isn't doing its job.
+8. **Diplomatic register in connective tissue, not just human moments.** Default to measured,
+   motive-explaining language over combative staging. *"Teacher groups pushed back, he held the
+   line"* reads like a fight; *"Teachers' associations resisted the change. He stayed with it,
+   because he believed the children were owed the whole day"* keeps the cost and explains the
+   *why* without casting anyone as an antagonist. Same lens as "the Fest asked them" → "the Fest
+   encouraged them" — prefer language that explains motive over language that stages conflict.
+9. **Cross-check every vivid beat against the source before it ships.** If a sentence sounds *too*
+   good — a clean image, a clean turn, a clean irony — re-read it against the transcript. Sonal
+   caught two: an invented image that didn't even parse (*"The room watched the room"*, not in the
+   transcript) and a dramatized causal beat the transcript records quite differently (*"He turned
+   around and never paid those fees"*). When the source is genuinely ambiguous, write only the
+   part that's clearly supported. Duller and true beats vivid and invented, every time.
+
+## Internal team-announcement register
+
+How Sonal sounds in team-wide internal mail (Mantra + ShikshaLokam) — distinct from external
+stakeholder/social voice. Set 2026-06-26 from her edits to the SL Brain announcement, read back
+via `gs.py draft-read` ([[../../learnings/2026-06-26-internal-team-email-voice]]):
+
+1. **Open warm and relational** — "Dear team," + a check-in line ("Hope you are doing well."),
+   mirroring the newsletter's "Hope this email finds you in good spirits."
+2. **Name the concrete thing plainly up front** — state the literal *what* (e.g. "bringing AI in
+   to build the team's efficiency") before the brand name; don't hide it behind "a new way of working."
+3. **Friendly over clever** — prefer a plain "Here's a quick update, an exciting one at that." to a
+   performative em-dash one-liner.
+4. **Keep the "what changed" as tight, scannable bullets**, and close on the collective note
+   ("it gets smarter every time one of us uses it").
 
 ## Gaps for user validation
 

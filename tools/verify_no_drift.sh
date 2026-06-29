@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
-# tools/verify_no_drift.sh — the SINGLE definition of "the published site is not drifted."
+# tools/verify_no_drift.sh — sanity check that the site BUILDS cleanly from source.
 #
-# Rebuilds every generated file under docs/ from its sources (tools/build_site.py), then fails
-# LOUDLY if docs/ changed. Exit 0 = in sync. Exit 1 = drift (docs/ was out of sync; the working
-# tree is now rebuilt to the correct, source-derived state — commit it to publish the truth).
-# Exit 2 = the builder itself errored.
+# History: docs/ + LEDGER.md used to be committed, and this script checked them for "drift" from
+# their sources. They are now CI build artifacts (gitignored), built + deployed by
+# .github/workflows/deploy-pages.yml on every push — so there is no committed output to drift.
+# This script now just proves the build works (a malformed page/template would fail it).
 #
-# Used at every entry point: session_start.sh (after auto-pull), session_end.sh (before push),
-# and the GitHub Action backstop. Because the check lives here — in a script, not in model
-# memory — a resumed or compacted session that has forgotten every rule still cannot ship drift.
-#
-# Self-heal, runnable by hand any time:  bash tools/verify_no_drift.sh
+# Exit 0 = builds clean (or no Python here). Exit 2 = the builder errored.
+# Run by hand any time:  bash tools/verify_no_drift.sh
 set -u
 
 cd "${CLAUDE_PROJECT_DIR:-}" 2>/dev/null || cd "$(dirname "$0")/.." || exit 2
@@ -18,30 +15,17 @@ cd "${CLAUDE_PROJECT_DIR:-}" 2>/dev/null || cd "$(dirname "$0")/.." || exit 2
 # Portable Python — Windows usually exposes `python` or the `py` launcher, not `python3`.
 PY="$(command -v python3 || command -v python || command -v py || true)"
 if [ -z "$PY" ]; then
-  echo "ℹ verify_no_drift: no Python on this computer — skipping the local drift check."
-  echo "  This is fine: the server check on every push (CI) rebuilds + verifies with Python."
+  echo "ℹ verify_no_drift: no Python here — skipping local build check (CI builds with Python on push)."
   exit 0
 fi
 
 ERR="$(mktemp)"
 if ! "$PY" tools/build_site.py >/dev/null 2>"$ERR"; then
-  echo "✗ verify_no_drift: tools/build_site.py FAILED — cannot determine drift:"
+  echo "✗ verify_no_drift: the site does NOT build from source:"
   sed 's/^/    /' "$ERR"
   rm -f "$ERR"
   exit 2
 fi
 rm -f "$ERR"
-
-if git diff --quiet -- docs/ LEDGER.md; then
-  echo "✓ verify_no_drift: docs/ + LEDGER.md match sources — no drift."
-  exit 0
-fi
-
-echo "════════════════════════════════════════════════════════════════════"
-echo "✗ verify_no_drift: DRIFT DETECTED — generated files differ from what the sources generate."
-echo "  These published/generated files were out of sync with the brain's real content:"
-git diff --name-only -- docs/ LEDGER.md | sed 's/^/    /'
-echo "  The working tree has now been rebuilt to the correct (source-derived) state."
-echo "  Commit the rebuilt docs/ to publish the truth.  (self-heal: python3 tools/build_site.py)"
-echo "════════════════════════════════════════════════════════════════════"
-exit 1
+echo "✓ verify_no_drift: site builds cleanly from source."
+exit 0

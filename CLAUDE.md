@@ -56,14 +56,24 @@ This is how content moves. It is not optional.
   **Google Drive** (a Doc in the shared Brain Output folder). Nothing is written to Drive before that.
 - Flow: *anyone drafts → brain (versioned, on the dashboard) → Sonal approves → brain writes it to Drive.*
 
+**Two lanes — never confuse them:**
+- **Content lane** — what the team makes. Publishes **every session, seamlessly**; same-page edits
+  auto-merge and nothing is lost (`tools/publish.sh`). It never waits behind review.
+- **Architecture lane** — how the brain itself evolves (bugs, frictions, ideas, CI failures). These
+  become **GitHub Issues the system files and fixes itself**, via auto-merging PRs — nobody flags
+  anything on WhatsApp. Skill: `shikshalokam-ops` · tools: `tools/ops.sh`. And **every session must
+  compound** — if no digest is written, `tools/ensure_digest.py` records one so nothing is invisible.
+
 ## How it stays honest (the machinery — you can ignore this)
-- The published site (`docs/`) is **100% generated** from the brain's real content. No one ever
-  hand-edits a published page, so it can't drift from the truth.
-- Every session start and end — and a server check on every push — rebuilds the site from source and
-  refuses to let a stale page survive. Self-heal anytime with `python3 tools/build_site.py`.
-- **"It's live" is said only after** the site rebuilt clean and the push succeeded — surfaced in
-  chat. If publishing can't happen (e.g. no write access), the brain says so plainly, in chat. Never
-  promise a live page you haven't confirmed.
+- The published site is **100% generated** from the brain's real content (`sessions/` + project
+  pages). `docs/` is **not committed to the repo** — it's a build artifact that **GitHub Actions
+  rebuilds and deploys on every push**. Nothing is hand-edited, so the site can't drift from the
+  truth. (This also removes the cross-session merge conflicts that used to be able to wedge the brain.)
+- You just push your source; CI builds + deploys (~1–2 min). Preview locally any time:
+  `python3 tools/build_site.py` (writes a local, gitignored `docs/`).
+- **"Pushed" is said only after the push truly reached GitHub** — surfaced in chat. If it can't
+  (e.g. no write access), the brain says so plainly. The site then goes live via CI a minute later.
+  Never claim a page is live before the push has actually succeeded.
 
 ## How it gets smarter
 - Good material gets absorbed **during the session** — sourced and typed into `wiki/`, never
@@ -78,10 +88,12 @@ This is how content moves. It is not optional.
 ## Where things live
 `wiki/` what the brain knows · `wiki/voice/` how we sound · `projects/<slug>/page.md` a workspace's
 single source of truth · `sessions/` per-session digests (timeline + log build from these) ·
-`docs/` the generated public site (never hand-edited) · `tools/` the build + safety scripts.
+`docs/` the generated public site (a CI build artifact — not committed, deployed by GitHub Actions) ·
+`tools/` the build + safety scripts.
 
 `tools/gsuite/` the Google Workspace engine (acts for the team in Gmail/Drive/Docs/Calendar) ·
-`onboarding/` how a new teammate joins (incl. `gsuite-setup.md`).
+`onboarding/` how a new teammate joins (incl. `gsuite-setup.md`) · `CHEATSHEET.md` the team's
+copy-paste prompt list (point new teammates here once they're in).
 
 Built to grow: the brain already acts for the team in Google (above); the same clean seams let it
 serve new teams without re-architecting. Background, superseded: `archive/INTENT.md`,

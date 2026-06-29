@@ -50,11 +50,13 @@ Each portrait carries these fields. Keep them in this order so the HTML mirror c
 
 ### Portrait — Shri Vempuluru Nagoor Masthanaiah
 
-- **Status:** `review-ready` *(v4 — recompiled 2026-06-09 after Aquib Rizwan's second review; v3 archived in chatlog)*
-- **Role:** Recently retired Commissioner of School Education (CSE), Samagra Shiksha, Andhra Pradesh.
-  Forty years in service.
-- **Location:** Origin village on the railway line between Gudur and Renigunta, Tirupati district,
-  Andhra Pradesh. Served across Hyderabad, Medak, Nalgonda, and at the AP state headquarters.
+- **Status:** `review-ready` *(v5 — recompiled 2026-06-14 after Aquib Rizwan's third review, an
+  8-section structural rewrite; v3/v4 notes retained below for provenance)*
+- **Role:** Recently retired Commissioner / Director of School Education (CSE), Samagra Shiksha,
+  Andhra Pradesh. Forty years in service.
+- **Location:** Origin a remote village in Venkatagiri Taluk (now Tirupati district), on the railway
+  line between Guntur and Renigunta, Andhra Pradesh *(railway towns flagged — see verify list)*.
+  Served across Hyderabad, Medak, Nalgonda, SIEMAT, and at the AP state headquarters.
 - **Lead image:** *Pending. Masthanaiah Sir agreed to share photos from his career; team to chase
   before publication.*
 - **Hook (1 line):**
@@ -62,18 +64,21 @@ Each portrait carries these fields. Keep them in this order so the HTML mirror c
   > *"Not from the teacher. From dropout of fifth class."*
 
 - **Title (working):** **The dropout who refused to leave.**
-- **Subtitle (working):** *How Shri Vempuluru Nagoor Masthanaiah rose from a twice-over school
-  dropout in a village school under a tree to the Commissioner's office in Andhra Pradesh — caught,
-  at every fall, by someone who refused to let him go, and resolved to be that person for the
-  children who came after.*
+- **Subtitle (working):** *How Shri Vempuluru Nagoor Masthanaiah went from a twice-over near-dropout
+  in an open-air village school to the Commissioner's office in Andhra Pradesh — caught at every fall
+  by a teacher, a relative, someone who refused to let him go, and resolved to become that person for
+  the children who came after.*
 
-- **Body (~830 words, narrative arc):**
+- **Body (~970 words, narrative arc):**
 
-  The school where Vempuluru Nagoor Masthanaiah learned to read had no walls — four classes shared
-  the shade of a single tree. The nearest high school was three kilometres away, across live railway
-  tracks with no road to them. There was no money for lamp oil, so he studied in daylight and stopped
-  when the light went. By the time he was fifteen he had dropped out twice. By every ordinary measure,
-  he was a boy the system was about to lose.
+  The school where Vempuluru Nagoor Masthanaiah learned to read had no walls. It was a street school
+  — four classes held in the open air, under a single tree, in a remote village in Venkatagiri Taluk.
+  The nearest high school was three kilometres away, reached on foot along live railway tracks between
+  Guntur and Renigunta, with no road beside them. There was no lighting at home, so he studied while
+  the daylight lasted and stopped when it went. He was one of six children — four sisters, one brother
+  — and the only one who would stay in education to the end; the others left school early. By the time
+  he was a teenager he had come to the edge of dropping out twice. By every ordinary measure, he was a
+  boy the system was about to lose.
 
   He was not lost. And years later, when the interviewer offers to walk us through his journey *from
   teacher to commissioner*, he gently stops him.
@@ -85,87 +90,90 @@ Each portrait carries these fields. Keep them in this order so the HTML mirror c
   who, each time he slipped, chose to catch him.
 
   His father, a railway worker with little schooling of his own, woke the household before dawn to
-  make him copy out numbers and the names of railway stations. That was the whole of the schooling
-  the house could offer, and it was enough to start him. The first drop-off came after fifth class,
-  when staying home seemed the only sensible thing. What changed it was his teacher, **Sankara Raju**,
-  who himself walked two kilometres from the next village each day, and who walked the other way one
-  evening — to Nagoor's father — to ask that the boy be allowed to go on. The second came after
-  seventh, when only eleven of fifty-five students passed; a relative trained as a diploma engineer
-  took him to **Gudur** and found him a place in a Scheduled Tribe hostel — an old building that did
-  not allow so much as a book in its rooms — for his ninth and tenth years. The teacher who saw him
-  through those years, **V. Subba Reddy**, he still visits today, now past ninety. He has never
-  pretended he climbed alone: *"we have followed the seniors' expertise and experiences,"* he says,
-  *"I try to adopt as maximum as possible."*
+  make him copy out numbers and the names of railway stations. That was the whole of the schooling the
+  house could offer, and it was enough to start him. The first near-drop came after fifth class, when
+  staying home seemed the only sensible thing — and his primary-school teacher, **Virupattam Sankar
+  Raju**, walked the other way one evening, to Nagoor's father, to ask that the boy be allowed to go
+  on. The second came after eighth, when he was needed to support his parents. This time a relative, a
+  diploma engineer who, as he puts it, *changed his life*, found him a place in a Scheduled Tribe
+  hostel for his ninth and tenth years — a place where only the walls had been added and nothing else,
+  the infrastructure unchanged from what it had always been. His seventh- and eighth-class teacher, **V.
+  Subbaram Reddy**, now past ninety, he still visits today. He has never pretended he climbed alone.
+  Teaching, he says, is a noble profession, and he came to it because *teachers did this for me*:
+  *"we have followed the seniors' experiences,"* he says, *"I try to adopt as maximum as possible."*
 
-  In **1979**, some fifteen years after his village school first opened its doors, he passed tenth
-  class — the first student it had ever produced who did.
+  In **1979**, some fourteen or fifteen years after his village school first opened its doors, he
+  passed tenth class — the first student it had ever produced who did. He let the work, not the plan,
+  decide what came next: on his way to pay the fees for an MSc he learned a teacher-training college
+  had admitted him and turned toward it mid-walk; and in his first year of study, selected as a regular
+  teacher from among hundreds of applicants, he chose the classroom over the degree.
 
-  After that he let the work, not the plan, decide his course. On his way to pay the fees for an MSc
-  in Physics he learned that a teacher-training college had admitted him, and turned toward it; and
-  in his first year of the MSc, selected as one of about thirty-four regular teachers from four to
-  five hundred applicants, he chose the classroom over the degree. His first posting was a single-room
-  school in a remote Nellore village, where for nine years he taught science and mathematics to
-  classes six through ten alone. He holds a plain article of faith about that work: *"a teacher can
-  change the individual — and, in turn, society."*
+  His first posting, in **March 1986**, was a single room in a remote Nellore-district village, where
+  children were leaving school faster than they enrolled. He held a stubborn theory of how a school
+  grows — *get the students in, and the facilities will come* — and acted on it. Once the Sarpanch and
+  the village committee saw his commitment, the villagers themselves pitched in to build the school up
+  into a full high school; a Mandal President, watching the turnaround, asked him to revive a second,
+  all-but-defunct school nearby. For much of nine years he was the only teacher for classes six through
+  ten, teaching Science and Mathematics across all of them himself, with no blackboards and little
+  infrastructure — results, as he says plainly, *"not the best, but not the worst."* The remote
+  workload never pushed him to quit. But he could see the ceiling of a single classroom: as a teacher
+  he could touch perhaps a hundred children; from a higher post he could reach far more. That
+  arithmetic carried him into administration.
 
-  He also had a stubborn theory of how a school grows — *get the children in first;* the benches, the
-  staffing, the recognition all follow the count of children in the room. Two upper-primary schools
-  in his cluster became full high schools on the strength of it; the second, all but abandoned, he
-  was asked to revive by a Mandal President who had watched what he did with the first. But he could
-  see the ceiling of a single classroom. As a teacher, he reflects, he could reach perhaps a hundred
-  children; from an administrator's desk he could reach a great many more. That arithmetic carried
-  him into administration.
+  He cleared the competitive exams and was selected in **1993**, and served as **Deputy Educational
+  Officer in Hyderabad** for nine years. There he found a school system working against itself —
+  government schools split into morning and afternoon shifts, each child getting only part of a day,
+  the shift system quietly defeating the purpose of teaching. He moved them onto a single general
+  shift. He pushed rationalisation of teachers, micro-level inspection, and a merit system of
+  evaluation — and he led by presence, living near the schools and spending hours inside them so that
+  engagement and punctuality were not things he merely ordered. The reform his name is still spoken for
+  came in **1996**: until then, teacher transfers were settled by whoever a teacher could reach — an
+  official, a politician, a union leader. He opened it up, publishing the vacancies and allocating
+  every posting in the open, by merit and seniority, through counselling. *"That was originated in
+  Hyderabad district,"* he says — and the counselling system has since spread far beyond education.
+  Pressure groups resisted hard; he did not give in. Power and position, to him, were only ever about
+  impact — his name became known not for the seat but for the change.
 
-  The same instinct simply moved up a level. As Deputy Educational Officer in **Hyderabad** from
-  1993, he found government schools running on half-days — some opening in the morning, others in the
-  afternoon, each child getting only part of a school day. He moved every school in his charge onto a
-  single, full day. Teacher groups pushed back; he heard them out, and held the line.
+  The principle held even when it cost him. As District Educational Officer in **Medak** and then
+  **Nalgonda**, he cleaned up exam malpractice at the micro level; pass rates dipped for a year, then
+  those same cohorts went on to top intermediate. When a zero-result year brought an order from above
+  to suspend three school heads, he refused to act on anyone he had not first examined — and, looking,
+  found that two of the schools had survived at all only because their principals had personally fed
+  and housed their tenth-class teachers. He stood by them; the District Collector later thanked both
+  publicly. It is the part of his record he speaks about most quietly: *"In spite of so many positions,
+  pleasures, perks, hot deals, I never compromised in my forty years of service. Never deviated, at any
+  level — political pressure or official."* Problems came, as he knew they would — *"if you want to do
+  something, you will face problems"* — and each time, he held to the same currency: *"if you want
+  something, you must forgo something."*
 
-  The reform his name is still spoken for came in 1996. Until then, teachers in Hyderabad were
-  transferred at the discretion of whoever they could reach — an official, a politician, a union
-  leader — a system that quietly rewarded the well-connected and overlooked the rest. He opened it
-  up: he published the list of vacancies for the first time, called the teachers in, and allocated
-  every posting in the open, by merit and seniority. That counselling-based transfer system, first
-  run in Hyderabad that year, has since become standard practice across government departments and
-  well beyond Andhra Pradesh. *"That was originated in Hyderabad district,"* he says — one of the few
-  moments he allows himself the credit.
+  At the system level the same instinct kept scaling. Across five years at **SIEMAT** he developed and
+  won the system over to the idea that would define him — that you scale a school system through its
+  principals, by upskilling the people who run schools, not only those who teach in them. As Director
+  of **Jawahar Bal Bhavan** he revived a moribund network of more than two hundred centres with two
+  annual state-level programmes built to showcase children's talent. And in his longest posting and his
+  last — five and a half years as **Director / Commissioner of School Education**, the longest anyone
+  has held the office — the whole thread reached its clearest point. For three decades, he observed,
+  Indian education had trained its teachers in pedagogy and curriculum while leaving school heads
+  untrained and unmotivated. So he chose **250 school heads** on merit and sent them to **IIM
+  Ahmedabad** for a residential leadership programme; they carried it home, cascading it to the heads
+  of all roughly **45,000 schools** in the state. *"It impacted a lot,"* he says. *"It reflected in the
+  results."* He co-led the project document for **SALT**, the World Bank-supported learning programme,
+  and delivered among the highest counts of **PM SHRI** schools in the country — second only to Uttar
+  Pradesh, from a state ranked sixth by population. He does not gloss the gap that remains: the policy
+  documents exist, he says, but the distance to the ground is real, and closing it starts with
+  self-commitment at every level.
 
-  The principle held even when it cost him. As DEO in **Medak**, after a year in which three schools
-  returned zero-percent pass rates in tenth class, his seniors directed him to suspend the head of
-  each. He refused to act on anyone he had not first examined. When he looked, he found that two of
-  the three schools had stayed open at all only because their principals had personally fed and
-  housed their tenth-class teachers through the year. He stood by them; the District Collector later
-  went out of his way to thank both principals publicly. It is the part of his record he speaks about
-  most quietly: *"In spite of so many positions, pleasures, perks, hot deals, I never compromised in
-  my forty years of service. Never deviated, at any level — political pressure or official."*
-
-  His longest posting was his last — five and a half years as **Commissioner of School Education** for
-  Andhra Pradesh, the longest anyone has held the office, and there the thread of his whole career
-  reached its clearest point. For thirty years, he observed, Indian education had trained its teachers
-  — in pedagogy, in curriculum, in method — while leaving the people who *ran* the schools almost
-  entirely untrained. So he chose **250 school heads** on merit and sent them to **IIM Ahmedabad** for
-  a residential programme in leadership; those 250 carried what they learned home, cascading it to the
-  heads of all roughly **45,000 schools** in the state. *"It impacted a lot,"* he says. *"It reflected
-  in the results and the quality of education."* In the same chair he co-led the project document for
-  **SALT**, the World Bank-supported learning programme, and delivered the **second-highest number of
-  PM SHRI schools** of any state in India — behind only Uttar Pradesh, and from a state ranked sixth
-  by population.
-
-  Through all of it he held to a few fixed beliefs: that the office was never about the man in it —
-  *"it is for the position, it is for the seat"* — and that nothing is owed until something is done —
-  *"if we perform some responsibilities, then we will get some rights."* Ask him what carried him
-  through forty years and he answers as plainly as he answers everything: *"Discipline and hard work
-  serves and achieves anything. That is my belief — blind belief from the childhood."*
-
-  Ask what he leaves behind, and he gives the line he repeats twice in the closing minutes, as if to
-  be sure it is heard both times.
+  He insists, to the end, that he did none of it alone. *"I am not alone in the system,"* he says; *"it
+  takes everyone's effort to move it in the right direction."* Real change, for him, was never one
+  person's footprint — it was reaching every stakeholder, understanding them, staying close enough to
+  see whether anything had actually moved. From a village school under a tree, from a boy who came to
+  the edge of dropping out twice, to the Commissioner of School Education for Andhra Pradesh: a student
+  who refused to leave, then a teacher, then an administrator who made sure the change was real. From
+  having almost nothing, he built the whole of it himself — and when you ask him how, he answers not
+  with the achievements but with the principle, repeated twice in the closing minutes, as if to be sure
+  it is heard both times.
 
   *"Aims must be good. Aims must be good. If aims are good, results automatically will be good."*
-
-  From a village school under a tree, from a boy who dropped out twice, to the Commissioner of School
-  Education for the state of Andhra Pradesh. He insists the story does not begin at *teacher*. It
-  begins much further back — with a child the system almost let go, and the people who walked the
-  other way to keep him.
 
 - **Forward-looking close (1 line, in his own words):**
   > *"Aims must be good. Aims must be good. If aims are good, results automatically will be good."*
@@ -179,7 +187,46 @@ Each portrait carries these fields. Keep them in this order so the HTML mirror c
   **v3** on **8 June 2026** after Aquib Rizwan's craft feedback via Sonal (see
   [[../../learnings/2026-06-08-portrait-diplomatic-system-thread]]). Recompiled to **v4** on
   **9 June 2026** after Aquib's second review (see
-  [[../../learnings/2026-06-09-portrait-struggle-first-and-mentors]]).
+  [[../../learnings/2026-06-09-portrait-struggle-first-and-mentors]]). Recompiled to **v5** on
+  **14 June 2026** after Aquib's third review — an 8-section structural rewrite (see
+  [[../../learnings/2026-06-14-portrait-v5-structural-rewrite]]).
+
+#### Voice notes — what v5 changed (Aquib Rizwan's third review, 14 Jun 2026)
+
+Aquib supplied a full 8-section scaffold (origins → mentors → principles → teacher years →
+administration → Hyderabad reforms → working at scale → vision). What v5 incorporated:
+
+- **Origins sharpened and corrected.** Origin now named as a remote village in **Venkatagiri Taluk**
+  (now Tirupati district); **family of six** (four sisters, one brother), he the only one to stay in
+  education; the school reframed as an open-air **"street school"** under a tree. The lamp/tonic-bottle
+  detail stays out (per v4); deprivation carried by *"studied while the daylight lasted."*
+- **Two near-dropouts re-timed to Aquib's account.** Class 5 (teacher intervenes with his father) and
+  **after Class 8** (needed to support his parents) — replacing v4's "after seventh." ST hostel admission
+  after Class 8, reframed as *"only the walls were added, the infrastructure unchanged."*
+- **Mentors named precisely.** **Virupattam Sankar Raju** (primary) and **V. Subbaram Reddy** (7th–8th,
+  still visited past ninety) — corrected spellings per Aquib; the diploma-engineer relative who *"changed
+  his life."* Tied to his refrain *"teachers did this for me."*
+- **Teacher-years model made concrete.** Single room; Sarpanch/committee + villagers upgrade it to a high
+  school; Mandal President asks him to revive a second; sole teacher for classes 6–10; results *"not the
+  best, but not the worst";* the ~100-students-vs-far-more reflection kept as the bridge to administration.
+- **Administration timeline tightened.** Selected **1993**; **Deputy Educational Officer, Hyderabad**
+  (nine years); micro-level inspection + rationalisation + 1996 counselling transfers; **DEO Medak then
+  Nalgonda** with the malpractice clean-up (dip then top-of-state) and the unexamined-suspension refusal.
+- **Scale layer added.** **Five years at SIEMAT** (scale-through-principals conviction); **Jawahar Bal
+  Bhavan** (200+ centres, two annual programmes); SLDP → IIM-A 250 heads → ~45,000 schools; SALT; PM SHRI.
+- **Close re-pointed to principle, not achievement.** Lands on *"I am not alone in the system"* + the
+  student→teacher→administrator arc + *"Aims must be good."*
+
+**Still needs Aquib's confirmation before print:**
+- **Railway towns** — body says *Guntur and Renigunta* per Aquib; transcript and the ST-hostel location
+  both read *Gudur*. Confirm which.
+- **V. Subbaram Reddy** — spelling (transcript: "V Subradi").
+- **PM SHRI** — Aquib noted *"highest commitment/numbers in the country"*; transcript says **second**-highest
+  count (after UP). Body says "among the highest… second only to UP." Confirm the exact claim.
+- **Residential-schools society** — Aquib: *Secretary, APSWREIS*; transcript: *AP Residential Schools Society
+  (APRS)*. Currently left out of the body pending the exact name; add if confirmed.
+- **SIEMAT** — five-year tenure and the "convinced the system to adopt" framing are from Aquib's recall;
+  not in the transcript extract. Confirm.
 
 #### Voice notes — what v4 changed (Aquib Rizwan's second review, 9 Jun 2026)
 
@@ -288,12 +335,12 @@ Aquib should be able to bring most of these back in a 20–30 minute follow-up c
 > When we asked him to walk us through his journey from teacher to commissioner, Shri Vempuluru
 > Nagoor Masthanaiah corrected us.
 >
-> Then he told us about the lamp.
+> Then he told us about the tree.
 >
-> A tonic-syrup bottle, a kerosene wick. His father rationed the oil. Most reading happened in
-> daylight. He dropped out twice — fifth class, then seventh — and was each time pulled back by
-> someone else. In 1979 he became the first student his village school had ever produced who
-> passed tenth class.
+> Four classes under one tree, an open-air village school with no walls. No lighting at home, so he
+> studied while the daylight lasted. He came to the edge of dropping out twice — after fifth class,
+> then again after eighth — and was each time pulled back by someone who refused to let him go. In
+> 1979 he became the first student his village school had ever produced who passed tenth class.
 >
 > Forty years on, he was the Commissioner of School Education for the state of Andhra Pradesh.
 >

@@ -34,19 +34,26 @@ You're creating **one shared Google app** the whole team logs into. Do this once
    openid
    https://www.googleapis.com/auth/userinfo.email
    https://www.googleapis.com/auth/gmail.compose
+   https://www.googleapis.com/auth/gmail.modify
+   https://www.googleapis.com/auth/gmail.settings.basic
    https://www.googleapis.com/auth/drive
    https://www.googleapis.com/auth/documents
+   https://www.googleapis.com/auth/spreadsheets
    https://www.googleapis.com/auth/calendar.events
    ```
+   (If you added scopes to an app that was already set up — e.g. Gmail
+   search/labels/filters — each teammate re-runs `gs.py login` once to grant the
+   new permissions.)
 
 ☐ **5. Make the credential.** *APIs & Services → Credentials → Create Credentials
    → OAuth client ID → Application type: **Desktop app*** → Create → **Download JSON**.
 
-☐ **6. Drop it in (do NOT commit).** Save that file as
-   `tools/gsuite/oauth_client.json`. It is **gitignored on purpose** — never commit
-   an app secret. Tell the brain *"the Google app is set up"* and it uploads the
-   file once to the **private** Brain Output Drive folder, so teammates pull it
-   from there during their 60-second login. (Repo stays secret-free.)
+☐ **6. Drop it in (never committed) → the brain shares it via Drive.** Save the file
+   as `tools/gsuite/oauth_client.json` — it is **gitignored on purpose; no secret ever
+   touches git**. Tell the brain *"the Google app is set up"* and it uploads the key
+   once to the **private** Brain Output Drive folder. Teammates download it from there
+   and `gs.py login` places it for them automatically (Part B). Keeps the repo clean
+   and security scanners quiet.
 
 ☐ **7. Build the shared folder (once).**
    ```
@@ -64,20 +71,20 @@ Done. The team can now do Part B.
 
 ## Part B — each teammate (60 seconds)
 
-You don't need any of Part A. Just talk to the brain — *"set me up for Google"* —
-and it walks you through this. By hand it's three lines:
+You don't need any of Part A. Easiest: just tell the brain *"set me up for Google"* and
+it walks you through it. By hand it's three small steps:
 
-☐ **1. Get the shared key file.** Open the **Brain Output** Drive folder (you were
-   shared on it), download **`oauth_client.json`**, and save it into the brain at
-   `tools/gsuite/oauth_client.json`. (Stuck? Tell the brain *"I downloaded the
-   Google file"* and it moves it into place for you.)
+☐ **1.** Open the **"ShikshaLokam — Brain Output"** Drive folder (you're shared on it)
+   and **download `oauth_client.json`** — one click. (Leave it in Downloads.)
 ☐ **2.** In Terminal, inside the brain:
    ```
    pip3 install -r tools/gsuite/requirements.txt
    python3 tools/gsuite/gs.py login
    ```
-☐ **3.** A browser opens → pick your **@shikshalokam.org** account → **Allow**. Back
-   in Terminal you'll see `Logged in as you@shikshalokam.org`. That's it.
+   (On Windows use `pip` / `python` if `pip3`/`python3` aren't found.) It finds the key
+   in your Downloads and places it automatically — no file-wrangling.
+☐ **3.** A browser opens → pick your **@shikshalokam.org** account → **Allow**. You'll
+   see `Logged in as you@shikshalokam.org`. Done — and you never repeat this.
 
 Your login is saved on **your** computer only (`~/.shikshalokam/`, never shared).
 
