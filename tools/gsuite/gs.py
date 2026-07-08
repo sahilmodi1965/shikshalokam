@@ -297,8 +297,12 @@ def cmd_draft_update(a):
                          with_signature=not getattr(a, "no_signature", False),
                          attach=getattr(a, "attach", None))
     raw = base64.urlsafe_b64encode(msg.as_bytes()).decode()
+    message = {"raw": raw}
+    thread_id = existing.get("message", {}).get("threadId")
+    if thread_id:
+        message["threadId"] = thread_id  # keep the draft in its thread
     g.users().drafts().update(
-        userId="me", id=a.draft_id, body={"message": {"raw": raw}}
+        userId="me", id=a.draft_id, body={"message": message}
     ).execute()
     print(f"Draft {a.draft_id} updated in place. (review in Gmail → Drafts)")
     print("To send after approval:  python3 tools/gsuite/gs.py email-send " + a.draft_id)
