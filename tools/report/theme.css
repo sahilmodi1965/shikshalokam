@@ -1,0 +1,291 @@
+/* ============================================================
+   ShikshaLokam Report Design System — theme.css
+   Derived from the NLNF 3.0 benchmark report (the standard to beat).
+   Every report is a sequence of explicit A4 .page divs; the builder
+   (tools/report/build_report.py) prints them via headless Chrome.
+   ============================================================ */
+
+:root {
+  /* Brand palette (sampled from ShikshaLokam benchmark reports) */
+  --maroon: #A6413C;
+  --maroon-deep: #8E3733;
+  --orange: #F5A03B;
+  --blue: #2274B5;
+  --green: #2C5A25;
+  --green-deep: #1E4620;
+  --cream: #FBF3E3;
+  --ink: #1F2430;        /* headings */
+  --body: #3D3C3F;       /* body text */
+  --muted: #8A8A8A;
+  --card: #F5F5F5;
+  --rule: #D9D9D9;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@page { size: A4; margin: 0; }
+
+html, body {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--body);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ---------- Page scaffold ---------- */
+.page {
+  width: 210mm;
+  height: 297mm;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  padding: 16mm 15mm 22mm 15mm;
+  page-break-after: always;
+}
+.page--flush { padding: 0; }
+
+.page-footer {
+  position: absolute;
+  left: 15mm; right: 15mm; bottom: 9mm;
+  display: flex; align-items: center; gap: 4mm;
+  font-size: 7.5pt; color: var(--muted);
+}
+.page-footer .rule { flex: 1; height: 0.4mm; background: var(--rule); border-radius: 1mm; }
+.page-footer .pno { font-size: 11pt; font-weight: 700; color: #2b2b2b; }
+
+/* ---------- Typography ---------- */
+p { font-size: 10.5pt; line-height: 1.62; text-align: justify; margin-bottom: 4.5mm; }
+strong { color: inherit; }
+.small { font-size: 9pt; }
+
+.hl-maroon { color: var(--maroon); font-weight: 700; }
+.hl-orange { color: var(--orange); font-weight: 700; }
+.hl-blue   { color: var(--blue);   font-weight: 700; }
+.hl-green  { color: var(--green);  font-weight: 700; }
+
+/* Section heading: huge + two-tone underline bars */
+h1.section {
+  font-size: 30pt; font-weight: 800; color: var(--ink);
+  line-height: 1.15; letter-spacing: -0.2pt; margin-bottom: 5mm;
+}
+.bar2 { display: flex; gap: 2.5mm; margin-bottom: 8mm; }
+.bar2 i { display: block; height: 1.7mm; border-radius: 0.5mm; }
+.bar2 i:first-child { width: 15mm; background: var(--maroon); }
+.bar2 i:last-child  { width: 55mm; background: var(--orange); }
+.bar2.lead-blue  i:first-child { background: var(--blue); }
+.bar2.lead-green i:first-child { background: var(--green-deep); }
+
+/* h2 with check-circle icon */
+h2.check {
+  display: flex; align-items: center; gap: 4mm;
+  font-size: 19pt; font-weight: 700; color: var(--ink);
+  margin: 2mm 0 5mm;
+}
+h2.check .ico {
+  width: 9mm; height: 9mm; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; flex: none;
+}
+h2.check .ico svg { width: 5.5mm; height: 5.5mm; }
+.ico--maroon { background: var(--maroon); }
+.ico--blue   { background: var(--blue); }
+.ico--orange { background: var(--orange); }
+.ico--green  { background: var(--green-deep); }
+
+/* h3 with double-chevron */
+h3.arrow {
+  display: flex; align-items: center; gap: 2.5mm;
+  font-size: 13.5pt; font-weight: 700; color: var(--ink);
+  margin: 5mm 0 3.5mm;
+}
+h3.arrow svg { width: 7mm; height: 5mm; flex: none; }
+h3.arrow.t-maroon { color: var(--maroon); }
+h3.arrow.t-blue   { color: var(--blue); }
+h3.arrow.t-orange { color: var(--orange); }
+h3.arrow.t-green  { color: var(--green); }
+
+ul.disc { margin: 0 0 4.5mm 6mm; }
+ul.disc li { font-size: 10.5pt; line-height: 1.55; margin-bottom: 2mm; text-align: justify; }
+
+/* ---------- Cover components ---------- */
+.cover-logos {
+  background: var(--cream);
+  padding: 8mm 12mm;
+  display: flex; align-items: center; justify-content: space-between; gap: 8mm;
+}
+.cover-logos img { height: 13mm; }
+.logo-chip {
+  font-size: 10pt; font-weight: 700; color: var(--ink);
+  padding: 3mm 5mm; background: #fff; border: 0.4mm solid var(--rule); border-radius: 2mm;
+  text-align: center; line-height: 1.3;
+}
+.logo-chip span { display: block; font-size: 6.5pt; font-weight: 500; color: var(--muted); }
+
+.cover-band {
+  background: var(--maroon);
+  padding: 16mm 14mm;
+  display: flex; align-items: center; gap: 10mm;
+}
+.cover-band .title { flex: 1; }
+.cover-band h1 {
+  color: var(--cream); font-size: 38pt; font-weight: 800;
+  line-height: 1.12; letter-spacing: 0.5pt; text-transform: uppercase;
+}
+.cover-band .subtitle { color: var(--cream); font-size: 13pt; font-weight: 500; margin-top: 5mm; opacity: 0.95; }
+.cover-band .vbar { width: 2.5mm; align-self: stretch; background: var(--orange); border-radius: 1mm; }
+.cover-band .year { color: var(--cream); font-size: 30pt; font-weight: 700; white-space: nowrap; }
+
+.strip3 { display: flex; height: 8mm; }
+.strip3 i:nth-child(1) { flex: 4; background: var(--green-deep); }
+.strip3 i:nth-child(2) { flex: 0.7; background: var(--orange); }
+.strip3 i:nth-child(3) { flex: 0.55; background: var(--blue); }
+
+/* Cover motif tiles (used when photographs are not yet available) */
+.motif-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.motif-grid .tile { display: flex; align-items: center; justify-content: center; }
+.motif-grid .tile svg { width: 40%; height: 40%; }
+.t-bg-maroon { background: var(--maroon); }
+.t-bg-blue { background: var(--blue); }
+.t-bg-orange { background: var(--orange); }
+.t-bg-green { background: var(--green-deep); }
+.t-bg-cream { background: var(--cream); }
+
+/* ---------- Table of contents ---------- */
+.toc { margin-top: 6mm; }
+.toc .row {
+  display: flex; align-items: baseline; gap: 4mm;
+  padding: 4.2mm 0 2.6mm;
+  border-bottom: 0.45mm solid var(--maroon);
+}
+.toc .row .t { font-size: 12pt; font-weight: 700; color: var(--ink); }
+.toc .row .dots { flex: 1; }
+.toc .row .p { font-size: 12pt; font-weight: 700; color: var(--ink); }
+
+/* ---------- Stat tiles ---------- */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5mm; margin: 6mm 0; }
+.stat { text-align: center; padding: 6mm 2mm; background: var(--card); border-radius: 2mm; position: relative; }
+.stat::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1.6mm; border-radius: 2mm 2mm 0 0; background: var(--maroon); }
+.stat.s-blue::before { background: var(--blue); }
+.stat.s-orange::before { background: var(--orange); }
+.stat.s-green::before { background: var(--green-deep); }
+.stat .n { font-size: 21pt; font-weight: 800; color: var(--ink); line-height: 1.1; }
+.stat .l { font-size: 8pt; font-weight: 600; color: var(--body); margin-top: 1.5mm; line-height: 1.3; }
+
+/* ---------- Cards ---------- */
+.bcard {
+  position: relative; background: var(--card);
+  padding: 5mm 6mm 5mm 7mm; margin: 0 0 5mm 2mm;
+}
+.bcard::before {
+  content: ""; position: absolute; left: -2mm; top: 2.5mm; bottom: -2.5mm;
+  width: 1.8mm; background: var(--accent, var(--maroon));
+}
+.bcard.a-maroon { --accent: var(--maroon); }
+.bcard.a-blue   { --accent: var(--blue); }
+.bcard.a-orange { --accent: var(--orange); }
+.bcard.a-green  { --accent: var(--green-deep); }
+.bcard p, .bcard li { margin-bottom: 0; font-size: 10pt; line-height: 1.55; }
+.bcard .ctitle { font-size: 11pt; font-weight: 700; margin-bottom: 1.5mm; color: var(--accent, var(--maroon)); text-align: left; }
+.bcard .attr { font-weight: 600; color: var(--accent, var(--maroon)); }
+
+.icard { display: flex; gap: 5mm; align-items: flex-start; }
+.icard .isvg { width: 12mm; flex: none; padding-top: 0.5mm; }
+.icard .isvg svg { width: 12mm; height: 12mm; }
+
+/* Two-column card grid (programme design quadrants etc.) */
+.cardgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm 7mm; margin: 4mm 0 6mm; }
+
+/* Solid colour quadrant cards */
+.qcard { padding: 7mm; color: #fff; }
+.qcard.q-maroon { background: var(--maroon); }
+.qcard.q-blue { background: var(--blue); }
+.qcard.q-orange { background: var(--orange); }
+.qcard.q-green { background: var(--green-deep); }
+.qcard p { color: #fff; font-size: 10pt; margin: 0; text-align: left; }
+
+/* Timeline / cycle cards */
+.cyclegrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6mm 6mm; margin: 5mm 0; }
+.cycle .head {
+  background: var(--maroon); color: #fff;
+  font-size: 10.5pt; font-weight: 700; line-height: 1.35;
+  padding: 3mm 4mm;
+}
+.cycle .head span { display: block; font-size: 9.5pt; font-weight: 600; opacity: 0.95; }
+.cycle .bodyc { background: var(--card); padding: 4mm; font-size: 9.5pt; line-height: 1.5; min-height: 22mm; }
+
+/* Numbered step rows */
+.steps { margin: 5mm 0; }
+.step { display: flex; gap: 5mm; margin-bottom: 4.5mm; align-items: stretch; }
+.step .num {
+  flex: none; width: 12mm; display: flex; align-items: center; justify-content: center;
+  font-size: 15pt; font-weight: 800; color: #fff;
+}
+.step:nth-child(4n+1) .num { background: var(--maroon); }
+.step:nth-child(4n+2) .num { background: var(--blue); }
+.step:nth-child(4n+3) .num { background: var(--orange); }
+.step:nth-child(4n+0) .num { background: var(--green-deep); }
+.step .stext { flex: 1; background: var(--card); padding: 3.5mm 5mm; font-size: 9.8pt; line-height: 1.5; }
+.step .stext b { display: block; font-size: 10.5pt; color: var(--ink); margin-bottom: 1mm; }
+
+/* ---------- Data tables ---------- */
+table.data { width: 100%; border-collapse: collapse; margin: 4mm 0 6mm; }
+table.data th {
+  background: var(--maroon); color: #fff;
+  font-size: 9.5pt; font-weight: 700; text-align: left;
+  padding: 3mm 3.5mm; border: 0.3mm solid var(--maroon-deep);
+}
+table.data.h-blue th { background: var(--blue); border-color: #1b5d92; }
+table.data.h-green th { background: var(--green-deep); border-color: #16351a; }
+table.data td {
+  font-size: 9.5pt; padding: 2.8mm 3.5mm;
+  border: 0.3mm solid #c9c9c9; color: var(--body); line-height: 1.4;
+}
+table.data tr:nth-child(even) td { background: #FAFAFA; }
+table.data .num { text-align: right; font-variant-numeric: tabular-nums; }
+table.data.compact th { padding: 2.2mm 3mm; font-size: 9pt; }
+table.data.compact td { padding: 1.9mm 3mm; font-size: 8.8pt; }
+
+/* ---------- Note / callout box ---------- */
+.notebox {
+  background: var(--cream); border: 0.4mm solid var(--orange);
+  border-radius: 2mm; padding: 5mm 6mm; margin: 5mm 0;
+}
+.notebox .ntitle { font-size: 10.5pt; font-weight: 700; color: var(--ink); margin-bottom: 2mm; }
+.notebox p, .notebox li { font-size: 9pt; line-height: 1.55; margin-bottom: 1.5mm; text-align: left; }
+.notebox ul { margin-left: 5mm; }
+
+/* ---------- Chart card ---------- */
+.chartcard {
+  position: relative; background: var(--card);
+  padding: 6mm 7mm; margin: 0 0 6mm 2mm;
+  display: flex; gap: 7mm; align-items: center;
+}
+.chartcard::before {
+  content: ""; position: absolute; left: -2mm; top: 3mm; bottom: -3mm;
+  width: 1.8mm; background: var(--accent, var(--maroon));
+}
+.chartcard.a-maroon { --accent: var(--maroon); }
+.chartcard.a-blue { --accent: var(--blue); }
+.chartcard.a-orange { --accent: var(--orange); }
+.chartcard.a-green { --accent: var(--green-deep); }
+.chartcard .ctext { flex: 1; }
+.chartcard .ctext .ctitle { font-size: 12.5pt; font-weight: 700; color: var(--accent); margin-bottom: 2.5mm; }
+.chartcard .ctext p { font-size: 10pt; line-height: 1.55; margin: 0; text-align: left; }
+.chartcard .cplot { flex: none; }
+
+/* ---------- Photo placeholders (until images arrive) ---------- */
+.photogrid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin: 5mm 0; }
+.ph {
+  border: 0.5mm dashed #BDBDBD; border-radius: 1.5mm; background: #FCFCFC;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: #9E9E9E; font-size: 8pt; font-weight: 600; gap: 2mm; text-align: center;
+}
+.ph svg { width: 9mm; height: 9mm; opacity: 0.55; }
+
+/* ---------- Back cover ---------- */
+.backcover {
+  background: var(--maroon); height: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 20mm;
+}
+.backcover .tagline { color: var(--cream); font-size: 22pt; font-weight: 700; line-height: 1.4; max-width: 140mm; }
+.backcover .partners { color: var(--cream); font-size: 10.5pt; margin-top: 14mm; opacity: 0.92; line-height: 1.8; }
