@@ -3,8 +3,11 @@
 
 Gmail's API does NOT auto-append the account signature to API-created drafts
 (that only happens in the web compose UI). So drafts created by the brain ship
-bare. This hook intercepts every create_draft call and guarantees Sonal's rich
-HTML signature is attached:
+bare. This hook intercepts every create_draft call and attaches the rich HTML
+signature OF THE PERSON RUNNING THIS SESSION — resolved from `git config
+user.email` (the same identity the SessionStart roster check uses) to
+`.claude/signatures/<email>.html`. No file for that person = no signature
+(never someone else's):
 
   * If the call has no htmlBody, it builds one from the plain-text `body`
     (so the draft renders as rich HTML) and appends the signature.
@@ -17,6 +20,7 @@ is corrected automatically, no model action required.
 """
 import json
 import os
+import subprocess
 import sys
 from html import escape
 
@@ -36,13 +40,29 @@ def project_dir() -> str:
     )
 
 
+def session_email() -> str:
+    """Who is drafting = the signed-in teammate, per git config user.email
+    (the identity the SessionStart roster check validates)."""
+    try:
+        out = subprocess.run(
+            ["git", "config", "user.email"],
+            capture_output=True, text=True, cwd=project_dir(), timeout=5,
+        )
+        return out.stdout.strip()
+    except Exception:
+        return ""
+
+
 def load_signature() -> str:
-    path = os.path.join(project_dir(), ".claude", "gmail-signature.html")
+    email = session_email()
+    if not email:
+        return ""
+    path = os.path.join(project_dir(), ".claude", "signatures", f"{email}.html")
     try:
         with open(path, encoding="utf-8") as fh:
             return fh.read().strip()
     except OSError:
-        return ""
+        return ""  # no signature on file for this person — ship bare, never someone else's
 
 
 def text_to_html(body: str) -> str:

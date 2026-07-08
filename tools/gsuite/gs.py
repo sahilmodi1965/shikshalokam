@@ -45,12 +45,14 @@ HOME = Path.home() / ".shikshalokam"                            # OUTSIDE the re
 TOKEN_PATH = HOME / "token.json"                                # personal, never committed
 
 # Gmail's API does NOT auto-append the account signature to API-created drafts
-# (that only happens in the web compose UI), so we attach it ourselves. The
-# signature's images are referenced by public https URL (the same hosted URLs
-# Gmail uses for the native signature), NOT cid: inline parts — Gmail's web
-# composer collapses cid: inline images into one attachment when a draft is
-# edited and sent from there, which silently breaks the signature.
-SIG_HTML = REPO / ".claude" / "gmail-signature.html"
+# (that only happens in the web compose UI), so we attach it ourselves — the
+# signature OF THE LOGGED-IN ACCOUNT, from .claude/signatures/<email>.html.
+# No file for that account = no signature (never someone else's). Signature
+# images are referenced by public https URL (the same hosted URLs Gmail uses
+# for the native signature), NOT cid: inline parts — Gmail's web composer
+# collapses cid: inline images into one attachment when a draft is edited and
+# sent from there, which silently breaks the signature.
+SIG_DIR = REPO / ".claude" / "signatures"
 
 # Least surprise, broad enough for the stated capabilities. Keep in sync with
 # the consent screen in onboarding/gsuite-setup.md.
@@ -197,22 +199,57 @@ def _sig_text_to_html(body):
     return "<br>".join(out)
 
 
-def _build_message(to, subject, body, cc=None, with_signature=True):
+def _account_sig_html():
+    """The logged-in account's signature from SIG_DIR, or '' if none on file."""
+    try:
+        email = svc("oauth2", "v2").userinfo().get().execute().get("email", "")
+    except Exception:
+        return ""
+    p = SIG_DIR / f"{email}.html"
+    if p.exists():
+        return p.read_text().strip()
+    if email:
+        print(f"(no signature on file for {email} — add .claude/signatures/{email}.html; drafting without one)")
+    return ""
+
+
+def _build_message(to, subject, body, cc=None, with_signature=True, attach=None):
     """Build a MIME message. With the signature on (default), produce a
-    multipart/alternative (text + html). The signature references its images by
-    public https URL (not cid: inline parts) — see SIG_HTML — so it survives
-    being edited and re-sent through Gmail's web composer, which silently
-    collapses cid: inline images into a single attachment on edit+send."""
-    sig_html = SIG_HTML.read_text().strip() if (with_signature and SIG_HTML.exists()) else ""
+    multipart/alternative (text + html) carrying the LOGGED-IN person's
+    signature — see SIG_DIR. Signature images use public https URLs (not cid:
+    inline parts) so they survive being edited and re-sent through Gmail's web
+    composer, which silently collapses cid: inline images into a single
+    attachment on edit+send. `attach` = list of file paths to attach."""
+    sig_html = _account_sig_html() if with_signature else ""
     if not sig_html:
-        msg = MIMEText(body)
+        core = MIMEText(body)
     else:
         from email.mime.multipart import MIMEMultipart
         body_html = _sig_text_to_html(body)
         full_html = (body_html + "<br><br>" + sig_html) if body_html else sig_html
-        msg = MIMEMultipart("alternative")
-        msg.attach(MIMEText(body, "plain"))
-        msg.attach(MIMEText(full_html, "html"))
+        core = MIMEMultipart("alternative")
+        core.attach(MIMEText(body, "plain"))
+        core.attach(MIMEText(full_html, "html"))
+    files = [Path(p).expanduser() for p in (attach or [])]
+    if files:
+        import mimetypes
+        from email import encoders
+        from email.mime.base import MIMEBase
+        from email.mime.multipart import MIMEMultipart
+        msg = MIMEMultipart("mixed")
+        msg.attach(core)
+        for f in files:
+            if not f.exists():
+                sys.exit(f"attachment not found: {f}")
+            ctype, _ = mimetypes.guess_type(str(f))
+            maintype, subtype = (ctype or "application/octet-stream").split("/", 1)
+            part = MIMEBase(maintype, subtype)
+            part.set_payload(f.read_bytes())
+            encoders.encode_base64(part)
+            part.add_header("Content-Disposition", "attachment", filename=f.name)
+            msg.attach(part)
+    else:
+        msg = core
     msg["to"] = to
     if cc:
         msg["cc"] = cc
@@ -223,10 +260,14 @@ def _build_message(to, subject, body, cc=None, with_signature=True):
 def cmd_email_draft(a):
     body = Path(a.body_file).read_text() if a.body_file else a.body
     msg = _build_message(a.to, a.subject, body, cc=a.cc,
-                         with_signature=not getattr(a, "no_signature", False))
+                         with_signature=not getattr(a, "no_signature", False),
+                         attach=getattr(a, "attach", None))
     raw = base64.urlsafe_b64encode(msg.as_bytes()).decode()
+    message = {"raw": raw}
+    if getattr(a, "thread", None):
+        message["threadId"] = a.thread  # reply inside an existing thread
     draft = svc("gmail", "v1").users().drafts().create(
-        userId="me", body={"message": {"raw": raw}}
+        userId="me", body={"message": message}
     ).execute()
     print(f"Draft created. id={draft['id']}  (review in Gmail → Drafts)")
     print("To send after approval:  python3 tools/gsuite/gs.py email-send " + draft["id"])
@@ -253,7 +294,8 @@ def cmd_draft_update(a):
     cc = a.cc or _header(payload, "Cc") or None
     body = Path(a.body_file).read_text() if a.body_file else a.body
     msg = _build_message(to, subject, body, cc=cc,
-                         with_signature=not getattr(a, "no_signature", False))
+                         with_signature=not getattr(a, "no_signature", False),
+                         attach=getattr(a, "attach", None))
     raw = base64.urlsafe_b64encode(msg.as_bytes()).decode()
     g.users().drafts().update(
         userId="me", id=a.draft_id, body={"message": {"raw": raw}}
@@ -711,8 +753,11 @@ def main():
     d.add_argument("--cc")
     d.add_argument("--body")
     d.add_argument("--body-file")
+    d.add_argument("--attach", action="append",
+                   help="file to attach (repeatable)")
+    d.add_argument("--thread", help="Gmail threadId to draft the reply inside")
     d.add_argument("--no-signature", action="store_true",
-                   help="skip the team signature (attached by default)")
+                   help="skip your signature (your .claude/signatures/<email>.html is attached by default)")
     d.set_defaults(fn=cmd_email_draft)
 
     s = sub.add_parser("email-send", help="send a draft (ONLY after approval)")
@@ -727,8 +772,10 @@ def main():
     du.add_argument("--cc")
     du.add_argument("--body")
     du.add_argument("--body-file")
+    du.add_argument("--attach", action="append",
+                    help="file to attach (repeatable)")
     du.add_argument("--no-signature", action="store_true",
-                    help="skip the team signature (attached by default)")
+                    help="skip your signature (your .claude/signatures/<email>.html is attached by default)")
     du.set_defaults(fn=cmd_draft_update)
 
     dr = sub.add_parser("draft-read",

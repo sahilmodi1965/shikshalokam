@@ -88,6 +88,12 @@ it walks you through it. By hand it's three small steps:
 
 Your login is saved on **your** computer only (`~/.shikshalokam/`, never shared).
 
+☐ **4. (optional but nice)** Give the brain your email signature: paste your Gmail
+   signature HTML into `.claude/signatures/<your-email>.html` (or just tell the brain
+   *"here's my signature"* / *"copy my signature from a sent mail"* and it files it).
+   Every draft the brain writes **as you** then carries **your** signature — no file,
+   no signature; it never borrows someone else's.
+
 Now just talk to the brain:
 - *"Draft an email to <person> about <thing>."* → it writes the draft in **your**
   Gmail. You read it, you send it. The brain sends only if you say *"send it."*
