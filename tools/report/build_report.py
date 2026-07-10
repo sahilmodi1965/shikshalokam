@@ -15,6 +15,9 @@ import re
 import subprocess
 import sys
 
+# Bump when the engine's behaviour changes; record what changed in LEARNINGS.md.
+ENGINE_VERSION = "2.0"
+
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 
@@ -63,7 +66,7 @@ def main():
     expected = count_page_divs(html)
     actual = pdf_page_count(out)
     size_mb = os.path.getsize(out) / 1e6
-    print(f"built {out} ({size_mb:.1f} MB)")
+    print(f"built {out} ({size_mb:.1f} MB) — report engine v{ENGINE_VERSION}")
     if actual is not None:
         if actual == expected:
             print(f"page check OK: {actual} pages = {expected} .page divs")

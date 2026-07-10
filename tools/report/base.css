@@ -1,0 +1,362 @@
+/* ============================================================
+   ShikshaLokam Report Design System — base.css  (STRUCTURE ONLY)
+   ------------------------------------------------------------
+   This file owns layout, scaffold, spacing and type SCALE.
+   It owns NO colours and NO typefaces of its own: it reads them
+   from role variables that a THEME supplies.
+
+   A report links exactly two stylesheets:
+       base.css   (this file — never varies)
+       themes/<name>.css  (palette + motifs — varies per report)
+
+   Role variables a theme MUST define:
+       --c1 --c2 --c3 --c4          four accent roles, most→least dominant
+       --c1-deep .. --c4-deep       darker variants (table borders, bands)
+       --cream --card --ink --body --muted --rule
+       --font-head --font-body
+
+   Accent roles are NUMBERED, never named after a colour. A class
+   called .hl-maroon cannot survive a palette change; .hl-1 can.
+   ============================================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@page { size: A4; margin: 0; }
+
+html, body {
+  font-family: var(--font-body);
+  color: var(--body);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ---------- Page scaffold ---------- */
+.page {
+  width: 210mm;
+  height: 297mm;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  padding: 16mm 15mm 22mm 15mm;
+  page-break-after: always;
+}
+.page--flush { padding: 0; }
+
+.page-footer {
+  position: absolute;
+  left: 15mm; right: 15mm; bottom: 9mm;
+  display: flex; align-items: center; gap: 4mm;
+  font-size: 7.5pt; color: var(--muted);
+}
+.page-footer .rule { flex: 1; height: 0.4mm; background: var(--rule); border-radius: 1mm; }
+.page-footer .pno { font-size: 11pt; font-weight: 700; color: #2b2b2b; }
+
+/* ---------- Typography ---------- */
+p { font-size: 10.5pt; line-height: 1.62; text-align: justify; margin-bottom: 4.5mm; }
+strong { color: inherit; }
+.small { font-size: 9pt; }
+
+h1, h2, h3 { font-family: var(--font-head); }
+
+.hl-1 { color: var(--c1); font-weight: 700; }
+.hl-2 { color: var(--c2); font-weight: 700; }
+.hl-3 { color: var(--c3); font-weight: 700; }
+.hl-4 { color: var(--c4); font-weight: 700; }
+
+/* Section heading: huge + two-tone underline bars */
+h1.section {
+  font-size: 30pt; font-weight: 800; color: var(--ink);
+  line-height: 1.15; letter-spacing: -0.2pt; margin-bottom: 5mm;
+}
+.bar2 { display: flex; gap: 2.5mm; margin-bottom: 8mm; }
+.bar2 i { display: block; height: 1.7mm; border-radius: 0.5mm; }
+.bar2 i:first-child { width: 15mm; background: var(--c1); }
+.bar2 i:last-child  { width: 55mm; background: var(--c3); }
+.bar2.lead-2 i:first-child { background: var(--c2); }
+.bar2.lead-4 i:first-child { background: var(--c4-deep); }
+
+/* h2 with icon disc */
+h2.check {
+  display: flex; align-items: center; gap: 4mm;
+  font-size: 19pt; font-weight: 700; color: var(--ink);
+  margin: 2mm 0 5mm;
+}
+h2.check .ico {
+  width: 9mm; height: 9mm; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; flex: none;
+}
+h2.check .ico svg { width: 5.5mm; height: 5.5mm; }
+.ico--1 { background: var(--c1); }
+.ico--2 { background: var(--c2); }
+.ico--3 { background: var(--c3); }
+.ico--4 { background: var(--c4-deep); }
+
+/* h3 with double-chevron */
+h3.arrow {
+  display: flex; align-items: center; gap: 2.5mm;
+  font-size: 13.5pt; font-weight: 700; color: var(--ink);
+  margin: 5mm 0 3.5mm;
+}
+h3.arrow svg { width: 7mm; height: 5mm; flex: none; }
+h3.arrow.t-1 { color: var(--c1); }
+h3.arrow.t-2 { color: var(--c2); }
+h3.arrow.t-3 { color: var(--c3); }
+h3.arrow.t-4 { color: var(--c4); }
+
+ul.disc { margin: 0 0 4.5mm 6mm; }
+ul.disc li { font-size: 10.5pt; line-height: 1.55; margin-bottom: 2mm; text-align: justify; }
+
+/* ---------- Cover components ---------- */
+.cover-logos {
+  background: #fff;
+  padding: 6mm 12mm;
+  display: flex; align-items: center; justify-content: center; gap: 8mm;
+}
+/* Logos are supplied at different aspect ratios and paddings. A single
+   `height` makes a wide wordmark tower over a square crest. Each mark is
+   trimmed to its content, then sized so its optical MASS matches:
+   h ∝ 1/√aspect. Widths land in one band; nothing dominates. */
+.cover-logos img { width: auto; object-fit: contain; display: block; }
+.cover-logos .lg-crest    { height: 13mm; }   /* SCERT Haryana — near-square  */
+.cover-logos .lg-tall     { height: 14mm; }   /* DIKSHA        — taller than wide */
+.cover-logos .lg-wordmark { height: 6.6mm; }  /* ThinkTac      — 4.3:1        */
+.cover-logos .lg-lockup   { height: 7.2mm; }  /* ShikshaLokam  — 3.8:1        */
+.cover-logos .sep { width: 0.3mm; height: 10mm; background: var(--rule); flex: none; }
+
+.cover-band {
+  background: var(--c1);
+  padding: 16mm 14mm;
+  display: flex; align-items: center; gap: 10mm;
+  position: relative; overflow: hidden;
+}
+.cover-band .title { flex: 1; position: relative; z-index: 1; }
+.cover-band h1 {
+  color: var(--cream); font-size: 38pt; font-weight: 800;
+  line-height: 1.12; letter-spacing: 0.5pt; text-transform: uppercase;
+}
+.cover-band .subtitle { color: var(--cream); font-size: 13pt; font-weight: 500; margin-top: 5mm; opacity: 0.95; }
+.cover-band .vbar { width: 2.5mm; align-self: stretch; background: var(--c3); border-radius: 1mm; position: relative; z-index: 1; }
+.cover-band .year { color: var(--cream); font-size: 30pt; font-weight: 700; white-space: nowrap; position: relative; z-index: 1; }
+
+/* Motif wash inside a band — theme supplies --motif-band */
+.cover-band::after {
+  content: ""; position: absolute; right: -10mm; top: -20mm; bottom: -20mm; width: 90mm;
+  background: var(--motif-band, none) right center / contain no-repeat;
+  opacity: var(--motif-band-opacity, 0.16);
+}
+
+.strip3 { display: flex; height: 8mm; }
+.strip3 i:nth-child(1) { flex: 4; background: var(--c2); }
+.strip3 i:nth-child(2) { flex: 0.7; background: var(--c3); }
+.strip3 i:nth-child(3) { flex: 0.55; background: var(--c4); }
+
+/* Cover hero: photo-led composition with motif underlay */
+.cover-hero {
+  flex: 1; position: relative; overflow: hidden;
+  display: grid; grid-template-columns: 1.62fr 1fr; grid-template-rows: 1fr 1fr;
+}
+.cover-hero .cell { position: relative; overflow: hidden; }
+.cover-hero .cell:first-child { grid-row: span 2; }
+.cover-hero .cell img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Motif tiles (used where photographs are not yet available) */
+.motif-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.motif-grid .tile { display: flex; align-items: center; justify-content: center; }
+.motif-grid .tile svg { width: 40%; height: 40%; }
+.t-bg-1 { background: var(--c1); }
+.t-bg-2 { background: var(--c2); }
+.t-bg-3 { background: var(--c3); }
+.t-bg-4 { background: var(--c4-deep); }
+.t-bg-cream { background: var(--cream); }
+
+/* ---------- Table of contents ---------- */
+.toc { margin-top: 6mm; }
+.toc .row {
+  display: flex; align-items: baseline; gap: 4mm;
+  padding: 4.2mm 0 2.6mm;
+  border-bottom: 0.45mm solid var(--c1);
+}
+.toc .row .t { font-size: 12pt; font-weight: 700; color: var(--ink); font-family: var(--font-head); }
+.toc .row .dots { flex: 1; }
+.toc .row .p { font-size: 12pt; font-weight: 700; color: var(--ink); }
+
+/* ---------- Stat tiles ---------- */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5mm; margin: 6mm 0; }
+.stat { text-align: center; padding: 6mm 2mm; background: var(--card); border-radius: 2mm; position: relative; }
+.stat::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1.6mm; border-radius: 2mm 2mm 0 0; background: var(--c1); }
+.stat.s-2::before { background: var(--c2); }
+.stat.s-3::before { background: var(--c3); }
+.stat.s-4::before { background: var(--c4-deep); }
+.stat .n { font-size: 21pt; font-weight: 800; color: var(--ink); line-height: 1.1; font-family: var(--font-head); }
+.stat .l { font-size: 8pt; font-weight: 600; color: var(--body); margin-top: 1.5mm; line-height: 1.3; }
+
+/* ---------- Cards ---------- */
+.bcard {
+  position: relative; background: var(--card);
+  padding: 5mm 6mm 5mm 7mm; margin: 0 0 5mm 2mm;
+}
+.bcard::before {
+  content: ""; position: absolute; left: -2mm; top: 2.5mm; bottom: -2.5mm;
+  width: 1.8mm; background: var(--accent, var(--c1));
+}
+.bcard.a-1 { --accent: var(--c1); }
+.bcard.a-2 { --accent: var(--c2); }
+.bcard.a-3 { --accent: var(--c3); }
+.bcard.a-4 { --accent: var(--c4-deep); }
+.bcard p, .bcard li { margin-bottom: 0; font-size: 10pt; line-height: 1.55; }
+.bcard .ctitle { font-size: 11pt; font-weight: 700; margin-bottom: 1.5mm; color: var(--accent, var(--c1)); text-align: left; font-family: var(--font-head); }
+.bcard .attr { font-weight: 600; color: var(--accent, var(--c1)); }
+
+.icard { display: flex; gap: 5mm; align-items: flex-start; }
+.icard .isvg { width: 12mm; flex: none; padding-top: 0.5mm; }
+.icard .isvg svg { width: 12mm; height: 12mm; }
+
+.cardgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm 7mm; margin: 4mm 0 6mm; }
+
+/* Solid colour quadrant cards */
+.qcard { padding: 7mm; color: #fff; }
+.qcard.q-1 { background: var(--c1); }
+.qcard.q-2 { background: var(--c2); }
+.qcard.q-3 { background: var(--c3); }
+.qcard.q-4 { background: var(--c4-deep); }
+.qcard p { color: #fff; font-size: 10pt; margin: 0; text-align: left; }
+
+/* Timeline / cycle cards */
+.cyclegrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6mm 6mm; margin: 5mm 0; }
+.cycle .head {
+  background: var(--c1); color: #fff;
+  font-size: 10.5pt; font-weight: 700; line-height: 1.35;
+  padding: 3mm 4mm; font-family: var(--font-head);
+}
+.cycle .head span { display: block; font-size: 9.5pt; font-weight: 600; opacity: 0.95; }
+.cycle .bodyc { background: var(--card); padding: 4mm; font-size: 9.5pt; line-height: 1.5; min-height: 22mm; }
+
+/* Numbered step rows */
+.steps { margin: 5mm 0; }
+.step { display: flex; gap: 5mm; margin-bottom: 4.5mm; align-items: stretch; }
+.step .num {
+  flex: none; width: 12mm; display: flex; align-items: center; justify-content: center;
+  font-size: 15pt; font-weight: 800; color: #fff; font-family: var(--font-head);
+}
+.step:nth-child(4n+1) .num { background: var(--c1); }
+.step:nth-child(4n+2) .num { background: var(--c2); }
+.step:nth-child(4n+3) .num { background: var(--c3); }
+.step:nth-child(4n+0) .num { background: var(--c4-deep); }
+.step .stext { flex: 1; background: var(--card); padding: 3.5mm 5mm; font-size: 9.8pt; line-height: 1.5; }
+.step .stext b { display: block; font-size: 10.5pt; color: var(--ink); margin-bottom: 1mm; }
+
+/* ---------- Data tables ---------- */
+table.data { width: 100%; border-collapse: collapse; margin: 4mm 0 6mm; }
+table.data th {
+  background: var(--c1); color: #fff;
+  font-size: 9.5pt; font-weight: 700; text-align: left;
+  padding: 3mm 3.5mm; border: 0.3mm solid var(--c1-deep);
+}
+table.data.h-2 th { background: var(--c2); border-color: var(--c2-deep); }
+table.data.h-4 th { background: var(--c4-deep); border-color: var(--c4-deep); }
+table.data td {
+  font-size: 9.5pt; padding: 2.8mm 3.5mm;
+  border: 0.3mm solid #c9c9c9; color: var(--body); line-height: 1.4;
+}
+table.data tr:nth-child(even) td { background: #FAFAFA; }
+table.data .num { text-align: right; font-variant-numeric: tabular-nums; }
+table.data.compact th { padding: 2.2mm 3mm; font-size: 9pt; }
+table.data.compact td { padding: 1.9mm 3mm; font-size: 8.8pt; }
+
+/* ---------- Note / callout box ---------- */
+.notebox {
+  background: var(--cream); border: 0.4mm solid var(--c3);
+  border-radius: 2mm; padding: 5mm 6mm; margin: 5mm 0;
+}
+.notebox .ntitle { font-size: 10.5pt; font-weight: 700; color: var(--ink); margin-bottom: 2mm; font-family: var(--font-head); }
+.notebox p, .notebox li { font-size: 9pt; line-height: 1.55; margin-bottom: 1.5mm; text-align: left; }
+.notebox ul { margin-left: 5mm; }
+
+/* ---------- Chart card ---------- */
+.chartcard {
+  position: relative; background: var(--card);
+  padding: 6mm 7mm; margin: 0 0 6mm 2mm;
+  display: flex; gap: 7mm; align-items: center;
+}
+.chartcard::before {
+  content: ""; position: absolute; left: -2mm; top: 3mm; bottom: -3mm;
+  width: 1.8mm; background: var(--accent, var(--c1));
+}
+.chartcard.a-1 { --accent: var(--c1); }
+.chartcard.a-2 { --accent: var(--c2); }
+.chartcard.a-3 { --accent: var(--c3); }
+.chartcard.a-4 { --accent: var(--c4-deep); }
+.chartcard .ctext { flex: 1; }
+.chartcard .ctext .ctitle { font-size: 12.5pt; font-weight: 700; color: var(--accent); margin-bottom: 2.5mm; font-family: var(--font-head); }
+.chartcard .ctext p { font-size: 10pt; line-height: 1.55; margin: 0; text-align: left; }
+.chartcard .cplot { flex: none; }
+
+/* Chart bars/series pull their fill from the theme so a palette swap
+   repaints the data ink too (SVG uses fill="currentColor"). */
+.series-1 { color: var(--c1); }
+.series-2 { color: var(--c2); }
+.series-3 { color: var(--c3); }
+.series-4 { color: var(--c4-deep); }
+.axis-ink { color: var(--body); }
+
+/* ---------- Photo placeholders (until images arrive) ---------- */
+.photogrid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin: 5mm 0; }
+.ph {
+  border: 0.5mm dashed #BDBDBD; border-radius: 1.5mm; background: #FCFCFC;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: #9E9E9E; font-size: 8pt; font-weight: 600; gap: 2mm; text-align: center;
+  position: relative; overflow: hidden; padding: 3mm;
+}
+.ph svg { width: 9mm; height: 9mm; opacity: 0.55; }
+.ph .cap { font-weight: 500; font-size: 7.2pt; line-height: 1.35; max-width: 90%; }
+
+/* A placeholder that carries the theme's motif wash, so an image-less
+   page still reads as designed rather than as a hole in the layout. */
+.ph--motif {
+  border: none; color: #fff;
+  background: var(--c1) var(--motif-tile, none) center / 46mm no-repeat;
+}
+.ph--motif.m-2 { background-color: var(--c2); }
+.ph--motif.m-3 { background-color: var(--c3); }
+.ph--motif.m-4 { background-color: var(--c4-deep); }
+.ph--motif svg { opacity: 0.9; }
+.ph--motif .cap { opacity: 0.92; }
+
+/* ---------- Collage: varied image grid (brand p.4 "creative visuals") ----------
+   A 6-column / 2-row mosaic. Children take named spans so the rhythm
+   varies down the report instead of repeating one 2-up placement. */
+.collage {
+  display: grid; grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 26mm; gap: 3.5mm; margin: 5mm 0;
+}
+.collage .ph { border-radius: 1.5mm; }
+.collage .wide { grid-column: span 4; }
+.collage .half { grid-column: span 3; }
+.collage .third { grid-column: span 2; }
+.collage .tall { grid-row: span 2; }
+.collage .full { grid-column: span 6; }
+
+/* ---------- Back cover ---------- */
+.backcover {
+  background: var(--c1); height: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 20mm; position: relative; overflow: hidden;
+}
+/* Soil-wave washes the full width of the foot, as in the guidelines'
+   example assets — not a small centred stamp. */
+.backcover::before {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 72mm;
+  background: var(--motif-soil, none) center bottom / 100% auto no-repeat;
+  opacity: 0.20;
+}
+/* Brand Guidelines p.3 (Logo Misuse): the colour logo must never sit on a
+   background close to its own maroon. On a coloured back cover it gets a
+   white plate rather than a recoloured mark. */
+.backcover .mark {
+  position: relative; z-index: 1; margin-bottom: 12mm;
+  background: #fff; padding: 6mm 9mm; border-radius: 2mm;
+  display: flex; align-items: center; justify-content: center;
+}
+.backcover .mark img { height: 16mm; width: auto; display: block; }
+.backcover .tagline { color: var(--cream); font-size: 22pt; font-weight: 700; line-height: 1.4; max-width: 140mm; position: relative; z-index: 1; font-family: var(--font-head); }
+.backcover .partners { color: var(--cream); font-size: 10.5pt; margin-top: 14mm; opacity: 0.92; line-height: 1.8; position: relative; z-index: 1; }

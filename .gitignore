@@ -23,3 +23,6 @@ tools/gsuite/oauth_client.json
 
 # Microsoft Office temp/owner lock files (e.g. ~$document.docx)
 ~$*
+
+# Large reference material downloaded from Drive — fetch on demand, do not bloat the brain.
+assets/steam/prior-STEM-report.pdf
