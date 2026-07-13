@@ -19,6 +19,7 @@ Running index of every source consulted. Every claim in `state/*.md` cites one o
 - [shikshalokam.org/leading-is-like-living-in-goa](https://shikshalokam.org/leading-is-like-living-in-goa/) — long-form blog by Khushboo Awasthi; voice samples, cross-brain leadership data. *Fetched 2026-05-10.*
 - [shikshalokam.org/invoked](https://shikshalokam.org/invoked/) — InvokED page (referenced from search; not separately fetched). *Reference 2026-05-10.*
 - [shikshalokam.org/listening-at-scale-part-1-of-3-why-it-matters](https://shikshalokam.org/listening-at-scale-part-1-of-3-why-it-matters/) — MItra blog, Part 1 of 3 ("Stories That Matter" / Listening at Scale); the problem + case for listening, "treasure scattered, no map" image, MItra = voice listening tool. Co-authored, published 25 Jun 2026. Full extract: [[mitra-listening-at-scale-part1-2026]]. *Fetched 2026-06-26.*
+- [SL Communications Strategy (2026)](https://docs.google.com/document/d/1Q7ECTriysF3gUI4tJXD2oJs0nCHXtr868J4b6UO3-zY/edit) — canonical SL-org comms bible: current mission (verbatim), the Anchor (restoring agency), Sense→Make Sense→Learn→Improve loop, ELEVATE+MItra, 3 comms goals, 3 narrative pillars, Samaaj/Sarkaar/Bazaar audience map, channel plan. Full extract: [[shikshalokam-comms-strategy-2026]]. *Shared by Sonal 2026-07-10.*
 
 ## Press / third-party
 
