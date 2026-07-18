@@ -25,6 +25,7 @@ Running index of every source consulted. Every claim in `state/*.md` cites one o
 
 - [thewire.in — InvokED 2026 coverage](https://m.thewire.in/article/ptiprnews/invoked-2026-brings-global-and-grassroots-leaders-together-as-shikshagraha-announces-2026-awardees) — date, venue, speakers, awardees, Mantra4Change as co-organiser. *Fetched 2026-05-10.*
 - [hundred.org/en/innovations/shikshalokam](https://hundred.org/en/innovations/shikshalokam) — third-party characterisation; scale data (2024 numbers). *Fetched 2026-05-10.*
+- **Media coverage index → [[media-coverage-sweep-2026-07]]** — 2,548-row mention index (2020→2026) merged from the two internal Coverage Dossiers + public sweep; InvokED 3–5, Shikshagraha Awards 2025/2026, Shiksha Samvaad editions, Cannes Lions 2026, AWS. Canonical dataset in Drive Sheet *Media Coverage Tracker* (sortable, newest-first). Caveat: mostly ANI/PTI wire syndication — cite only the ★ tier-1 earned outlets. *Compiled 2026-07-18.*
 
 ## Search-derived (not directly fetched)
 
