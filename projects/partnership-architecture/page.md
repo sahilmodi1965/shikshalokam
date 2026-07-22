@@ -50,47 +50,61 @@ The roles group two ways: **institutional** and **individual**.
 
 ## Page 2 — Institutional roles
 
-**Co-Builders**
-Shape, champion, and anchor the movement's development in their geography. ShikshaLokam Foundation
-is the co-builder in India.
+*(Verbatim from the SL 2.0 note, pp. 27-28 — do not paraphrase these.)*
 
-**Strategic Partners**
-Long-term commitment of funding, technology, and knowledge.
-*Today: Axis Bank, AWS, Societal Thinking.*
+**CO-BUILDERS**
+Key organisations that commit to shaping, championing and anchoring the development of Shikshagraha in
+their respective geographies. This would mean allocating substantial resources to the movement. These
+organisations also play a crucial role in orchestration, convening stakeholders, and evangelising the
+movement's mission.
 
-**Anchor Partners**
-Drive a sub-collective within the movement; their founders commit to being Weavers.
-*Today: Commutiny (youth leadership).*
+**STRATEGIC PARTNERS**
+Long-term funding partners who provide critical financial, strategic and technological support for
+on-ground programme implementation. Their contributions ensure that change initiatives can be
+sustainably carried out across various regions.
 
-**Collaborators**
-Specialised partners engaged on paid mandates — academic, design, consulting.
-*Today: Gnothi Seauton (strategic communications), CoLab (programme design and evaluation).*
+**COLLABORATORS**
+Collaborators include academic institutions, design labs, consultants, and other entities that
+contribute specialised knowledge and services to the movement. These collaborators may be paid and
+support the design, research, and implementation of Shikshagraha initiatives.
 
-**Momentum Partners**
-Change initiatives running on the ground, in the places the movement is trying to move.
-*Today: Vidhya Vidhai (Tamil Nadu), Jyothi Mahila Samakhya (Bihar women's federation).*
+**ANCHOR PARTNERS**
+Anchor Partners are organisations with expertise in specific areas and serve as the primary drivers of
+sub-collectives within the movement. Their founders commit to being Weavers, and they also contribute
+to joint fundraising efforts, ensuring the movement's sustainability.
+
+**MOMENTUM PARTNERS**
+Organisations leading on-ground change initiatives. They are the driving force behind the field-level
+implementation of the Shikshagraha movement, bringing the vision to life through direct action in
+schools and communities.
 
 ---
 
 ## Page 3 — Individual roles
 
-**Founding Partners**
-Individuals who take early, catalytic bets on the movement and help shape its direction.
+**FOUNDING PARTNERS**
+Founding Partners are individuals who make early, catalytic bets on the Shikshagraha movement and
+help shape its direction. Through substantial multi-year commitments, they enable key initiatives and
+open pathways to scale, while extending access to high-trust networks that bring new institutions and
+resources to the movement. They engage in selective strategic discussions, both internal and external,
+and may choose to support a momentum partner or a specific Shikshagraha priority.
 
-Their role is to:
-- enable key initiatives and scale pathways
-- open access to high-trust networks
-- engage in selective strategic discussions, internal and external
-- optionally support a Momentum Partner or a key Shikshagraha priority
+**AMBASSADORS**
+Ambassadors, including industry leaders and public figures, play a vital role in championing the
+Shikshagraha movement. By leveraging their platforms and networks, they can bring mainstream
+visibility and support to the cause. Their involvement helps build credibility, attract broader public
+interest, and mobilise resources, further strengthening the movement. Through advocacy and
+endorsement, they amplify the narrative of leadership and education reform, making it a national
+priority.
 
-**Ambassadors**
-Public figures who bring the movement mainstream visibility.
+**ADVISORS**
+Advisors are individuals who provide strategic direction and support to Shikshagraha. Their expertise
+and experience help guide the movement, offering insights that shape its evolution and effectiveness.
 
-**Advisors**
-Offer strategic direction to the movement and its leadership.
-
-**Mentors**
-Practitioners who support Momentum Partners on the field — guidance from people who have done the work.
+**MENTORS**
+Practitioners, experts, and thought leaders who offer guidance and mentorship to Momentum Partners on
+the field. They play a vital role in capacity building and ensuring that the change agents on the
+ground have the support they need to succeed.
 
 ---
 

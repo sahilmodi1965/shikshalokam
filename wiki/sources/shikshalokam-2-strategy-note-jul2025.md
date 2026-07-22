@@ -114,6 +114,19 @@ Typically anchor large, multi-year contributions (e.g. ~$1M+), along with strate
 - Engage in selective strategic discussions (internal and external)
 - Optionally support a Momentum Partner or a key SG priority
 
+### Doc-ready entry — house style of pp. 27-28
+
+The live Doc's actor pages follow a fixed pattern: **ALL-CAPS title**, a set of verb numbers from the ten verbs, then **one flowing paragraph of 2-4 sentences** — no bullets, no monetary figures anywhere, British spelling, third person. This is the Founding Partner entry written to that pattern, ready to drop in:
+
+> **FOUNDING PARTNERS**
+> `4 | 6 | 7 | 9`
+>
+> Founding Partners are individuals who make early, catalytic bets on the Shikshagraha movement and help shape its direction. Through substantial multi-year commitments, they enable key initiatives and open pathways to scale, while extending access to high-trust networks that bring new institutions and resources to the movement. They engage in selective strategic discussions, both internal and external, and may choose to support a momentum partner or a specific Shikshagraha priority.
+
+Verb numbers are the brain's proposal, not Sonal's: **4 Design** (shaping direction), **6 Enable**, **7 Connect** (high-trust networks), **9 Fund**. Confirm before it goes into the Doc.
+
+Placement: with **ADVISORS** and **MENTORS** on p. 28 — the individual-role side of the spread — ahead of Advisors, since it carries the larger commitment.
+
 **How it differs from the neighbouring roles**
 - vs **Strategic Partners** — those are institutions (Axis Bank, AWS, Societal Thinking) bringing funding + tech + knowledge. Founding Partners are *individuals*, and the bet is early and catalytic rather than long-term operational.
 - vs **Momentum Partners** — those run change on the ground. A Founding Partner may *back* one, but does not run one.
