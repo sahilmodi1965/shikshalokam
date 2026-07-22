@@ -19,7 +19,9 @@ seq: 36
 - Traveller details come from the passport scan attached to the request thread, not from the
   covering email. Read the passport image; verify the number against the MRZ line.
 - Each traveller also needs a signed **Appendix-V Undertaking** alongside the invitation letter —
-  the ask usually arrives as a pair.
+  the ask usually arrives as a pair. Made for Sabine too, same trick: the signed Désirée
+  undertaking sits in Drive as a .docx with Shibu sir's signature embedded as an image; copy it
+  with conversion to a Google Doc (the signature survives), then replace only name and date.
 
 ## Improve next
 - Keep an eye on whether the travel window (currently 20 Sept – 10 Oct 2026, inherited from the
