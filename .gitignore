@@ -21,6 +21,12 @@ __pycache__/
 tools/gsuite/*.local.json
 tools/gsuite/oauth_client.json
 
+# Voice-note transcription: the SCRIPTS in tools/voice/ are permanent and committed.
+# Only the machine-local bits are ignored — the model cache lives in ~/.cache/huggingface,
+# and vendor/ is unused scratch. Never gitignore tools/voice/*.py or setup.sh.
+tools/voice/vendor/
+inbox/voice/
+
 # Microsoft Office temp/owner lock files (e.g. ~$document.docx)
 ~$*
 

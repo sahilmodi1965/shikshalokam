@@ -91,9 +91,16 @@ The note defines **10 actions** anyone joining Shikshagraha contributes through.
 - **Advisors** — strategic direction.
 - **Mentors** — practitioners supporting Momentum Partners on the field.
 
+### Institutional vs individual (how the roles group)
+
+Sonal's 2026-07-22 note confirms the live Doc splits these two ways. Keep the split when drafting:
+
+- **Institutional roles** — Co-Builders, Strategic Partners, Anchor Partners, Collaborators, Momentum Partners.
+- **Individual roles** — Ambassadors, Advisors, Mentors, and now **Founding Partners**.
+
 ## Shikshagraha Founding Partner (added post-note, Jul 2026)
 
-**Not in the Jul 2025 source doc.** Added by Sonal on 2026-07-22 as a new actor in the ecosystem role map. Sits alongside the categories above, at the top of the funding-and-influence end.
+**Not in the Jul 2025 source doc.** Added by Sonal on 2026-07-22 as a new **individual** role — it sits alongside Ambassador, Advisor and Mentor, at the top of that group's funding-and-influence end.
 
 **Who they are**
 Individuals who take early, catalytic bets on the movement and help shape its direction.

@@ -75,6 +75,19 @@ This is how content moves. It is not optional.
   (e.g. no write access), the brain says so plainly. The site then goes live via CI a minute later.
   Never claim a page is live before the push has actually succeeded.
 
+## Voice notes work — just send one
+Drop a WhatsApp voice note (or any audio file) and the brain transcribes it locally and acts on it.
+`python3 tools/voice/transcribe.py <file>` · one-time setup `bash tools/voice/setup.sh`. Nothing is
+uploaded anywhere, so candid notes stay candid. **This is permanent infrastructure — the brain must
+never reply "I can't read voice notes."** If it ever does, that's a bug: file it via
+`shikshalokam-ops`.
+
+## Features are permanent by default
+Anything the team asks the brain to build **stays built** — committed to this repo, wired into the
+skill/CLAUDE.md that will actually load it, and removed only when a teammate explicitly asks for it
+to go. A capability that lives only in a past chat, or only as an install on one laptop, does not
+exist. If you build something, land it in `tools/` + the skill that uses it in the same session.
+
 ## How it gets smarter
 - Good material gets absorbed **during the session** — sourced and typed into `wiki/`, never
   silently overwritten. Structure is always enforced (every entry is sourced and carries a valid

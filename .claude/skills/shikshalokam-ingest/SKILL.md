@@ -15,6 +15,22 @@ brain's structured memory in the same session.
 - Not for draft-feedback ("this isn't my voice" → `shikshalokam-feedback`) or content requests
   ("draft me…" → `shikshalokam-write`).
 
+## Voice notes — ALWAYS transcribe, never say you can't
+If the drop is (or names a path to) an audio file — `.ogg` `.opus` `.m4a` `.mp3` `.wav` `.aac`
+`.flac` `.mp4` `.mov` `.amr`, e.g. a WhatsApp `WhatsApp Ptt *.ogg` — **run the transcriber before
+replying**:
+
+```bash
+python3 tools/voice/transcribe.py "<path to audio>"
+```
+
+Runs fully locally (faster-whisper, no upload, no key, no cost). If it errors that the package is
+missing, run `bash tools/voice/setup.sh` once, then retry. **Never tell a teammate the voice note
+"didn't come through" or that there's no transcription tooling — there is, and this is it.**
+Then treat the transcript as the drop and continue below. Read the WHOLE transcript: voice notes
+routinely carry more asks than the accompanying text message did, and missing one is the failure
+mode here.
+
 ## What it does
 1. **Capture faithfully.** Append the raw drop to `raw/<YYYY-MM-DD>.md` under a
    `## <timestamp> — <label>` block (append-only; never edit prior entries). This is the unaltered
