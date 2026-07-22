@@ -5,11 +5,11 @@ kind: doc
 origin: https://docs.google.com/document/d/1O3auDLtgbiunHr0h0vK-moLJIja-IkshNGWR9N_LiGI/edit
 pdf_finalised: https://drive.google.com/file/d/1gcenMkcNPj1eQGzx_y0PNhT7i6GZH0Jl/view
 ingested: 2026-05-19
-tags: [canonical, sl-org, strategy, network, movement-builder, sfpi, nile]
+tags: [canonical, sl-org, strategy, network, movement-builder, sfpi, nile, founding-partner]
 sources: []
 corrected_by: []
 created: 2026-05-19
-updated: 2026-05-19
+updated: 2026-07-22
 _status: research-seeded
 ---
 
@@ -91,6 +91,29 @@ The note defines **10 actions** anyone joining Shikshagraha contributes through.
 - **Advisors** — strategic direction.
 - **Mentors** — practitioners supporting Momentum Partners on the field.
 
+## Shikshagraha Founding Partner (added post-note, Jul 2026)
+
+**Not in the Jul 2025 source doc.** Added by Sonal on 2026-07-22 as a new actor in the ecosystem role map. Sits alongside the categories above, at the top of the funding-and-influence end.
+
+**Who they are**
+Individuals who take early, catalytic bets on the movement and help shape its direction.
+
+**Nature of commitment** *(internal guidance — not for external collateral)*
+Typically anchor large, multi-year contributions (e.g. ~$1M+), along with strategic influence.
+
+**Role**
+- Enable key initiatives and scale pathways
+- Open access to high-trust networks
+- Engage in selective strategic discussions (internal and external)
+- Optionally support a Momentum Partner or a key SG priority
+
+**How it differs from the neighbouring roles**
+- vs **Strategic Partners** — those are institutions (Axis Bank, AWS, Societal Thinking) bringing funding + tech + knowledge. Founding Partners are *individuals*, and the bet is early and catalytic rather than long-term operational.
+- vs **Momentum Partners** — those run change on the ground. A Founding Partner may *back* one, but does not run one.
+- vs **Advisors** — advisors give strategic direction without the capital commitment.
+
+**Drafting rule:** the ~$1M+ figure is **internal guidance only**. Never put a rupee/dollar threshold into public-facing or partner-facing content unless Sonal explicitly clears it for that piece.
+
 ## SL Foundation — internal team structure (verbatim)
 
 ShikshaLokam Foundation (Section 8 non-profit; operational costs covered by SFPI) is organised internally as:
@@ -136,3 +159,5 @@ When the daily user asks "what does ShikshaLokam do?" or "what's the SL 2.0 thes
 ## Provenance
 
 Source document is marked DRAFT in headers but has been circulated as the canonical Jul 2025 strategy note. Owner: neeraj@shikshalokam.org. Surfaced to brain via Sonal's 2026-05-19 share of the SL Communications Drive folder. See [[../routes/drive-sl-communications]].
+
+**2026-07-22 — Sonal added the Shikshagraha Founding Partner role.** Not present in the Jul 2025 source doc; recorded in its own section above and flagged as a post-note addition so the verbatim category map stays clean. Source: Sonal, direct.
