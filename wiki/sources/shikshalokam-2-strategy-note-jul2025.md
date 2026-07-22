@@ -125,7 +125,33 @@ The live Doc's actor pages follow a fixed pattern: **ALL-CAPS title**, a set of 
 
 Verb numbers are the brain's proposal, not Sonal's: **4 Design** (shaping direction), **6 Enable**, **7 Connect** (high-trust networks), **9 Fund**. Confirm before it goes into the Doc.
 
-Placement: with **ADVISORS** and **MENTORS** on p. 28 — the individual-role side of the spread — ahead of Advisors, since it carries the larger commitment.
+Placement in the **role map (pp. 27-28)**: with **ADVISORS** and **MENTORS** on p. 28, the individual-role side of the spread, ahead of Advisors, since it carries the larger commitment.
+
+### Placement in the p. 31 hierarchy infographic (decided 2026-07-22)
+
+The p. 31 diagram is a **downward flow**, not a ranking:
+
+```
+   FOUNDING PARTNERS        ADVISORS / MENTORS
+            |                        |
+            +-----------+------------+
+                        v
+                   CO-BUILDERS
+            +-----------+------------+
+            v           v            v
+   Strategic Partners  Anchor Partners  Momentum Partners
+   Ambassadors         Education Dept   Collaborators
+```
+
+**Founding Partners go on the top row, in their own box, to the left of ADVISORS / MENTORS, with its own arrow into CO-BUILDERS.** Sonal reviewed the diagram and confirmed the placement; she did not want the infographic redrawn by the brain.
+
+Reasoning, so this is not re-litigated:
+- The top row is **what flows into the Co-Builder** (direction, counsel, backing). The bottom band is what the Co-Builder convenes and orchestrates outward. Founding Partners are upstream.
+- **This diagram is NOT organised by individual vs institutional** — Ambassadors is an individual role in the pp. 27-28 map yet sits in the bottom band here. The organising principle is relationship to the Co-Builder. Do not import the individual/institutional split into it.
+- **Own box, not merged into the slash group.** "ADVISORS / MENTORS / FOUNDING PARTNERS" would read as three equivalent advisory roles; Founding Partners are the only ones on that row bringing capital.
+- **Not beside Strategic Partners**, the obvious magnet: both fund, but the bottom band is who the Co-Builder brings in and coordinates. A Founding Partner backs the movement before that machinery exists.
+
+Note: the p. 31 diagram includes **Education Dept**, which is not a role in the pp. 27-28 list. The two are not subsets of each other.
 
 **How it differs from the neighbouring roles**
 - vs **Strategic Partners** — those are institutions (Axis Bank, AWS, Societal Thinking) bringing funding + tech + knowledge. Founding Partners are *individuals*, and the bet is early and catalytic rather than long-term operational.
