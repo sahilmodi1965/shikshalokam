@@ -38,6 +38,14 @@ about auth.
 - On Sonal's approval: `gs.py doc-create --title … --body-file <approved.md>` →
   lands in the shared **Docs** folder (from `drive_map.json`) and returns a link.
   Surface the link.
+- **InvokED content always routes to the InvokED tree — for every teammate.** Any
+  doc/file that belongs to InvokED (any edition, any author — Aquib, Ayush, anyone)
+  must be created with `--folder <edition id>` from `drive_map.json`, never left in
+  the generic `Docs` folder. Pick the edition folder by the content's edition:
+  `InvokED 3.0/4.0/5.0/6.0`, `InvokED Studio`, else `InvokED Cross-edition`. Name
+  files `InvokED <edition> | <thing>`. The parent `InvokED` folder holds only the
+  edition subfolders. Example:
+  `gs.py doc-create --title "InvokED 6.0 | Speaker Bios" --body-file … --folder <InvokED 6.0 id>`.
 - New project folder? `gs.py drive-folder --name … --parent <id>`. Keep the shared
   tree tidy — generated/approved content only, never raw dumps. The taxonomy lives
   in `brain.yml → gsuite.output_taxonomy`.
