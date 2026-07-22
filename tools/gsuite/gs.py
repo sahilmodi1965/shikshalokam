@@ -18,6 +18,7 @@ Capabilities (all gated the way brain.yml says):
   draft-read [draft_id]     — read a draft back (list drafts if id omitted) to learn from edits
   doc-create                — turn text/markdown into a real Google Doc
   drive-folder              — make a folder
+  drive-move                — file a doc/folder into its proper folder (folder hygiene)
   drive-init                — build the shared "Brain Output" tree + share it
   cal-invite                — create a calendar event (notify only with --notify)
   search                    — find threads by Gmail query (threadId + subject)
@@ -431,6 +432,21 @@ def cmd_drive_find(a):
         print(f'{f["id"]}\t{kind}\t{f["name"]}\t{f.get("webViewLink", "")}')
 
 
+def cmd_drive_move(a):
+    """File a Drive item into its proper folder. Folder hygiene is a standing
+    rule: nothing the brain creates is left loose in the generic Docs folder."""
+    drive = svc("drive", "v3")
+    cur = drive.files().get(
+        fileId=a.id, fields="id,name,parents,webViewLink", supportsAllDrives=True,
+    ).execute()
+    old = ",".join(cur.get("parents", []))
+    f = drive.files().update(
+        fileId=a.id, addParents=a.folder, removeParents=old,
+        fields="id,name,parents,webViewLink", supportsAllDrives=True,
+    ).execute()
+    print(f'Moved "{f["name"]}" → folder {a.folder}\n{f.get("webViewLink", "")}')
+
+
 def _read_elements(content):
     """Flatten a list of structural elements (paragraphs + tables) to text."""
     out = []
@@ -835,6 +851,11 @@ def main():
     df.add_argument("--name", required=True)
     df.add_argument("--parent")
     df.set_defaults(fn=cmd_drive_folder)
+
+    dm = sub.add_parser("drive-move", help="move a file/folder into its proper folder")
+    dm.add_argument("--id", required=True, help="file or folder id to move")
+    dm.add_argument("--folder", required=True, help="destination folder id")
+    dm.set_defaults(fn=cmd_drive_move)
 
     sub.add_parser("drive-init", help="build + share the Brain Output tree").set_defaults(fn=cmd_drive_init)
 

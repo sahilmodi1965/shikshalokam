@@ -38,6 +38,19 @@ about auth.
 - On Sonal's approval: `gs.py doc-create --title … --body-file <approved.md>` →
   lands in the shared **Docs** folder (from `drive_map.json`) and returns a link.
   Surface the link.
+- **Folder hygiene is non-negotiable — nothing is ever left loose.** Every file the
+  brain creates belongs to a workstream, and it lands in that workstream's folder,
+  whoever made it. Before `doc-create`, decide the folder; if the right one doesn't
+  exist, make it (`gs.py drive-folder`), register its id in `drive_map.json`, and use
+  it. A doc that ended up in the generic `Docs` folder is a mistake to fix, not a
+  default — move it with `gs.py drive-move --id <file> --folder <dest>`. Name files
+  `<Workstream> | <thing>` so the tree reads cleanly.
+- **Meghalaya content always routes to the Meghalaya tree — for every teammate.**
+  Anything touching Meghalaya (any author, any format) goes under `Meghalaya`:
+  `Meghalaya | CMLEAD Fellowship` for the CMLEAD Fellowship, `Meghalaya | Reading
+  Festival`, else `Meghalaya | State Programmes`. Ids are in `drive_map.json`. The
+  parent `Meghalaya` folder holds only subfolders. Example:
+  `gs.py doc-create --title "CMLEAD Fellowship | Email to Applicants (SPD)" --body-file … --folder <Meghalaya | CMLEAD Fellowship id>`.
 - **InvokED content always routes to the InvokED tree — for every teammate.** Any
   doc/file that belongs to InvokED (any edition, any author — Aquib, Ayush, anyone)
   must be created with `--folder <edition id>` from `drive_map.json`, never left in
