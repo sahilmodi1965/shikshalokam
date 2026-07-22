@@ -39,13 +39,13 @@ We received 1,398 applications from across India. After screening on eligibility
 written assignment, **45 candidates have been shortlisted for the final stage of selection.** You are
 one of them.
 
-Your interview with the selection panel will be held on **[[date]]**.
+Your interview with the selection panel will be held on **{{INTERVIEW DATE}}**.
 
 **Please refer to the attached schedule for your allotted time slot.** Find your name in the list and
-note the time against it. Kindly be ready [[15]] minutes before your slot, as the panel runs to a
+note the time against it. Kindly be ready {{15}} minutes before your slot, as the panel runs to a
 fixed schedule through the day.
 
-Mode: [[in person at <venue, Shillong> / online, joining link below]]
+Mode: {{MODE: in person at VENUE, Shillong / online on PLATFORM, joining link below}}
 
 The panel is chaired by the Commissioner and Secretary, Department of Education, or the State Project
 Director, Samagra Shiksha, and includes officials from DSEL, SSA-SEMAM, DERT, a District School
@@ -55,11 +55,10 @@ The conversation will cover how you approach problems, how you communicate, your
 field work in the districts, and what draws you to public service. You do not need to prepare a
 presentation. Speak to your own experience and to what you wrote in your application.
 
-Please keep the following at hand: [[proof of age, degree certificates, experience letters,
-photo identity]].
+Please keep the following at hand: {{DOCUMENTS: proof of age, degree certificates, experience letters, photo identity}}.
 
-Kindly confirm your attendance by replying to this email by [[confirmation date]]. If the slot given
-to you does not work, write to [[contact name, email, phone]] and we will do our best to
+Kindly confirm your attendance by replying to this email by {{CONFIRM BY DATE}}. If the slot given
+to you does not work, write to {{CONTACT NAME, EMAIL, PHONE}} and we will do our best to
 accommodate a change.
 
 The 12 selected Fellows will be announced in the first week of August 2026.
@@ -68,7 +67,7 @@ We look forward to speaking with you.
 
 With warm regards,
 
-[[SPD Name]]
+{{SPD NAME}}
 State Project Director, Samagra Shiksha
 Department of Education, Government of Meghalaya
 
@@ -79,7 +78,7 @@ Department of Education, Government of Meghalaya
 **From:** State Project Director, Samagra Shiksha, Department of Education, Government of Meghalaya
 **Subject:** Meghalaya CMLEAD Fellowship: an update on your application
 
-Dear [[Candidate name / Applicant]],
+Dear {{CANDIDATE NAME}},
 
 Thank you for applying to the Meghalaya CMLEAD Fellowship, and for the care you gave to your
 statement of purpose and your written assignment.
@@ -107,7 +106,7 @@ to Meghalaya's children and their learning.
 
 With warm regards,
 
-[[SPD Name]]
+{{SPD NAME}}
 State Project Director, Samagra Shiksha
 Department of Education, Government of Meghalaya
 
