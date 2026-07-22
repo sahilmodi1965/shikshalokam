@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2263" viewBox="0 0 1600 2263">
+  <rect width="1600" height="2263" fill="#F7F0F0"/>
+
+  <!-- nine converging lines, one per role -->
+  <g stroke="#5C2D91" stroke-width="3" fill="none" opacity="0.55">
+    <line x1="180"  y1="300" x2="800" y2="880"/>
+    <line x1="345"  y1="300" x2="800" y2="880"/>
+    <line x1="510"  y1="300" x2="800" y2="880"/>
+    <line x1="655"  y1="300" x2="800" y2="880"/>
+    <line x1="800"  y1="300" x2="800" y2="880"/>
+    <line x1="945"  y1="300" x2="800" y2="880"/>
+    <line x1="1090" y1="300" x2="800" y2="880"/>
+    <line x1="1255" y1="300" x2="800" y2="880"/>
+    <line x1="1420" y1="300" x2="800" y2="880"/>
+  </g>
+
+  <circle cx="800" cy="880" r="19" fill="#B0389E"/>
+  <line x1="800" y1="899" x2="800" y2="1010" stroke="#B0389E" stroke-width="3" opacity="0.8"/>
+
+  <text x="180" y="1420" font-family="Poppins, Quicksand, Helvetica, Arial, sans-serif"
+        font-size="128" font-weight="700" fill="#5C2D91">Shikshagraha</text>
+  <text x="180" y="1570" font-family="Poppins, Quicksand, Helvetica, Arial, sans-serif"
+        font-size="92" font-weight="400" fill="#B0389E">Partnership Architecture</text>
+
+  <line x1="180" y1="1660" x2="470" y2="1660" stroke="#B0389E" stroke-width="5"/>
+
+  <text x="180" y="1770" font-family="Poppins, Quicksand, Helvetica, Arial, sans-serif"
+        font-size="46" fill="#3B3550">The roles through which people and institutions</text>
+  <text x="180" y="1838" font-family="Poppins, Quicksand, Helvetica, Arial, sans-serif"
+        font-size="46" fill="#3B3550">join the movement</text>
+
+  <text x="180" y="2090" font-family="Poppins, Quicksand, Helvetica, Arial, sans-serif"
+        font-size="40" fill="#5C2D91" opacity="0.75">ShikshaLokam · 2026</text>
+
+  <rect x="0" y="2213" width="1600" height="50" fill="#F3D4F2"/>
+</svg>
