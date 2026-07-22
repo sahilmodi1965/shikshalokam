@@ -58,7 +58,9 @@ about auth.
   complete and nobody's library breaks. Say plainly which items are shortcuts vs real moves, and
   record every original parent to a manifest under `routes/` so the whole thing is reversible.
   Never move a file that belongs to another maintained library (media archives, dated asset
-  folders, mixed-state folders) — shortcut those on purpose.
+  folders, mixed-state folders) — shortcut those on purpose. **Shortcuts are an accepted end
+  state, not a workaround to fix later** (Sonal, 2026-07-22): once a workstream folder is
+  complete, don't chase owners to move their files or propose ownership transfer / a Shared Drive.
 - **InvokED content always routes to the InvokED tree — for every teammate.** Any
   doc/file that belongs to InvokED (any edition, any author — Aquib, Ayush, anyone)
   must be created with `--folder <edition id>` from `drive_map.json`, never left in
