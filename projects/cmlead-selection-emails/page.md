@@ -19,9 +19,10 @@ Two emails. **45 of 1,398** shortlisted for Stage 3, the jury-led final intervie
 positions. Both are in the voice of the **State Project Director, Samagra Shiksha**, following on
 from the all-applicant update already sent.
 
-- **Status:** review-ready. Nothing sent, nothing in Drive.
-- **Blocking:** the interview date, time and mode are not in the brain. Every `[[...]]` below is a
-  real gap Sonal has to fill before Email 1 can go.
+- **Status:** review-ready. Both are confirmed to go out (Sonal, 2026-07-22). Nothing sent yet.
+- **Structure decided by Sonal:** Email 1 is a **single broadcast to all 45**, not a mail merge. The
+  date stays a placeholder in the body; **each candidate's time slot comes from an attached PDF
+  schedule**, which the Department supplies.
 
 ---
 
@@ -30,7 +31,7 @@ from the all-applicant update already sent.
 **From:** State Project Director, Samagra Shiksha, Department of Education, Government of Meghalaya
 **Subject:** Meghalaya CMLEAD Fellowship: invitation to the final interview
 
-Dear [[Candidate name]],
+Dear Candidate,
 
 Thank you for the time and thought you gave to your application to the Meghalaya CMLEAD Fellowship.
 
@@ -38,12 +39,13 @@ We received 1,398 applications from across India. After screening on eligibility
 written assignment, **45 candidates have been shortlisted for the final stage of selection.** You are
 one of them.
 
-Your interview with the selection panel is scheduled as follows.
+Your interview with the selection panel will be held on **[[date]]**.
 
-> **Date:** [[date]]
-> **Time:** [[time]] (please join or arrive [[15]] minutes early)
-> **Mode:** [[in person at <venue, Shillong> / online, joining link below]]
-> **Duration:** approximately [[30]] minutes
+**Please refer to the attached schedule for your allotted time slot.** Find your name in the list and
+note the time against it. Kindly be ready [[15]] minutes before your slot, as the panel runs to a
+fixed schedule through the day.
+
+Mode: [[in person at <venue, Shillong> / online, joining link below]]
 
 The panel is chaired by the Commissioner and Secretary, Department of Education, or the State Project
 Director, Samagra Shiksha, and includes officials from DSEL, SSA-SEMAM, DERT, a District School
@@ -56,8 +58,8 @@ presentation. Speak to your own experience and to what you wrote in your applica
 Please keep the following at hand: [[proof of age, degree certificates, experience letters,
 photo identity]].
 
-Kindly confirm your attendance by replying to this email by [[confirmation date]]. If the time given
-does not work for you, write to [[contact name, email, phone]] and we will do our best to
+Kindly confirm your attendance by replying to this email by [[confirmation date]]. If the slot given
+to you does not work, write to [[contact name, email, phone]] and we will do our best to
 accommodate a change.
 
 The 12 selected Fellows will be announced in the first week of August 2026.
@@ -113,12 +115,25 @@ Department of Education, Government of Meghalaya
 
 ## ⚠️ Decisions and gaps before these go out
 
-**Blocking Email 1**
-1. **Date, time, mode, venue or joining link.** Not in the brain. If interviews are staggered across
-   days and slots, this needs to be a **mail merge** with a per-candidate slot, not one broadcast.
-2. **Contact point for rescheduling** (name, email, phone).
-3. **Documents to carry.** The list above is my assumption; confirm what the panel actually wants.
-4. **Interview duration** and how early to arrive or join.
+**Settled 2026-07-22 (Sonal)**
+- Both emails go out. Email 1 is not cancelled.
+- Date stays a placeholder in the body; the time slots ride in an **attached PDF** covering all 45.
+- So Email 1 is one broadcast, generic salutation ("Dear Candidate"), no per-candidate merge.
+
+**Still blocking Email 1**
+1. **The date** itself, to replace the placeholder.
+2. **Mode: in person or online.** If in person, the venue address. If online, the joining link and
+   platform. The mail cannot go without this, since it is what a candidate has to act on.
+3. **The PDF schedule** from the Department, to attach.
+4. **Contact point for rescheduling** (name, email, phone).
+5. **Documents to carry.** The list above is my assumption; confirm what the panel actually wants.
+
+**Worth one minute of thought before the PDF goes out**
+6. **A schedule listing all 45 shows every candidate the other 44.** Names, and possibly emails or
+   phone numbers, depending on how the PDF is built. That is normal practice for a government
+   interview list, and it is defensible, but it is a disclosure. If the Department would rather not
+   do it, the alternative is a per-candidate merge with only that person's slot. Sonal's call.
+7. **Send bcc**, so the 45 addresses are not exposed in the header on top of the PDF.
 
 **Blocking both**
 5. **The SPD's name.** Still a placeholder, carried over from the earlier mail. This is the second
