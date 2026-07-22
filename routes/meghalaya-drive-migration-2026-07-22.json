@@ -1,0 +1,330 @@
+{
+ "migrated": "2026-07-22T14:00:45.721108",
+ "items": [
+  {
+   "id": "1JjSoQFulkkqUpP_MuvUpDIDB1onQsdwyyayP2aufFcU",
+   "name": "PM Sheet - Meghalaya State Programs ",
+   "owner": "kashmiri@mantra4change.com",
+   "original_parents": "",
+   "dest": "1Mm3bbZtTFMuX1ZGXHSSw5BjoWhD4kjIR",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1JjSoQFulkkqUpP_MuvUpDIDB1onQsdwyyayP2aufFcU?ad"
+  },
+  {
+   "id": "121wNAO91Fb1q9HKFvGbFGADgQd1P9jQZHgz0Gi8YoGI",
+   "name": " LFA | Meghalaya Reading Festival",
+   "owner": "kashmiri@mantra4change.com",
+   "original_parents": "",
+   "dest": "1fa_mRkAO2NmQP7Ho5AojtFjEqErQti4-",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/121wNAO91Fb1q9HKFvGbFGADgQd1P9jQZHgz0Gi8YoGI?ad"
+  },
+  {
+   "id": "1MRAf_AK0-itfe8SnGct0vqcFqtrum-HmL20OM-qGav0",
+   "name": "Meghalaya Chief Minister LEAD Fellowship",
+   "owner": "syedhyder@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1MRAf_AK0-itfe8SnGct0vqcFqtrum-HmL20OM-qGav0?ad"
+  },
+  {
+   "id": "1yTYXa5bdC52y62Z7KMVvFR6pX8DOHKy1bmOHsvVqGzA",
+   "name": "Meghalaya CMLEAD Fellowship",
+   "owner": "vinaya@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1yTYXa5bdC52y62Z7KMVvFR6pX8DOHKy1bmOHsvVqGzA?ad"
+  },
+  {
+   "id": "1VCA-gUj008cbZPqxnNn-o38DzsMy_ZbsvVxCavM5uqU",
+   "name": "Meghalaya CM Leads PR",
+   "owner": "vinaya@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1VCA-gUj008cbZPqxnNn-o38DzsMy_ZbsvVxCavM5uqU?ad"
+  },
+  {
+   "id": "13NdtOcutuXMb4D0U0fjMUKeMKr-Z6jYA_QKTmgBqiWk",
+   "name": "Meghalaya CM Lead Media Report",
+   "owner": "vinaya@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/13NdtOcutuXMb4D0U0fjMUKeMKr-Z6jYA_QKTmgBqiWk?ad"
+  },
+  {
+   "id": "1kMAzBfD1BgtMy9_90S7njI0QD_eX9IsOFL_HaRYkVlQ",
+   "name": "Guiding Video Script Meghalaya CMLEAD",
+   "owner": "aquib@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1kMAzBfD1BgtMy9_90S7njI0QD_eX9IsOFL_HaRYkVlQ?ad"
+  },
+  {
+   "id": "1BDLb8NjcoDJKiaLPOyvDHmOQ2pMIrzax",
+   "name": "CM LEAD  MEGHALAYA FELLOWSHIP.pdf",
+   "owner": "bhasinsonal3@gmail.com",
+   "original_parents": "1wqGMB83Uc-WJQlHKdHDECFEc7xaKqNUA",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "moved"
+  },
+  {
+   "id": "1Pdig-EWC98-NDCJwnOv4khun8AG5T39uMoLVFFMG7o8",
+   "name": "Project Based Learning | Meghalaya",
+   "owner": "kashmiri@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1Mm3bbZtTFMuX1ZGXHSSw5BjoWhD4kjIR",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1Pdig-EWC98-NDCJwnOv4khun8AG5T39uMoLVFFMG7o8?ad"
+  },
+  {
+   "id": "1RDIMfjRwQI63bpe-KPBUeKiWvMZdoeRI3Z2uzpz5ElI",
+   "name": "Meghalaya Chief Minister Education Fellowship",
+   "owner": "kashmiri@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1RDIMfjRwQI63bpe-KPBUeKiWvMZdoeRI3Z2uzpz5ElI?ad"
+  },
+  {
+   "id": "17VgYQV10KVnu2g8jspEuJcqC2uuTsxuQ",
+   "name": "HoS Cycle3_Meghalaya Reading festival pdf.pdf",
+   "owner": "kashmiri@shikshalokam.org",
+   "original_parents": "1bVa6aym0zNrC_Y83W78sWlYoswvBmnrJ",
+   "dest": "1fa_mRkAO2NmQP7Ho5AojtFjEqErQti4-",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/17VgYQV10KVnu2g8jspEuJcqC2uuTsxuQ?addParents=1f"
+  },
+  {
+   "id": "18_cag7Qe1xhiCT0VyP0cwEgTyBSd0I9x1xReJXKu_bM",
+   "name": "Concept Note | Meghalaya Education Fellowship",
+   "owner": "vinay@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/18_cag7Qe1xhiCT0VyP0cwEgTyBSd0I9x1xReJXKu_bM?ad"
+  },
+  {
+   "id": "1Otqny4awiFLKQgI5oLjx4cgWME0_8CH-sKZPoFCQEtM",
+   "name": "Meghalaya Official",
+   "owner": "kashmiri@mantra4change.com",
+   "original_parents": "",
+   "dest": "1Mm3bbZtTFMuX1ZGXHSSw5BjoWhD4kjIR",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1Otqny4awiFLKQgI5oLjx4cgWME0_8CH-sKZPoFCQEtM?ad"
+  },
+  {
+   "id": "1DlRfA5aPEcEPWFpUz0NQRclGbHWcgGXrv6cjkjeMv5E",
+   "name": "Meghalaya Roadmap 2026-2027",
+   "owner": "kashmiri@mantra4change.com",
+   "original_parents": "",
+   "dest": "1Mm3bbZtTFMuX1ZGXHSSw5BjoWhD4kjIR",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1DlRfA5aPEcEPWFpUz0NQRclGbHWcgGXrv6cjkjeMv5E?ad"
+  },
+  {
+   "id": "1DjBXNsKuQ4n36GJTcmCz6hmW40rjQJbVy90AdyWc7AI",
+   "name": "Meghalaya Reading Festival_ Program Template",
+   "owner": "kashmiri@mantra4change.com",
+   "original_parents": "",
+   "dest": "1fa_mRkAO2NmQP7Ho5AojtFjEqErQti4-",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1DjBXNsKuQ4n36GJTcmCz6hmW40rjQJbVy90AdyWc7AI?ad"
+  },
+  {
+   "id": "1g6PzKlOjldkFCVIb6UhYnSQDdl7nZezs",
+   "name": "Cycle3_Meghalaya Reading Festival.pdf.pdf",
+   "owner": "kashmiri@mantra4change.com",
+   "original_parents": "1bVa6aym0zNrC_Y83W78sWlYoswvBmnrJ",
+   "dest": "1fa_mRkAO2NmQP7Ho5AojtFjEqErQti4-",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1g6PzKlOjldkFCVIb6UhYnSQDdl7nZezs?addParents=1f"
+  },
+  {
+   "id": "1VUe9dT30-Gr3AWGL6qg-bC47X-pONt0C7UIPQ1v4apg",
+   "name": "Meghalaya Reading Festival Outreach Strategy Document",
+   "owner": "aquib@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1fa_mRkAO2NmQP7Ho5AojtFjEqErQti4-",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1VUe9dT30-Gr3AWGL6qg-bC47X-pONt0C7UIPQ1v4apg?ad"
+  },
+  {
+   "id": "1hgAwAGLaSY-9oHHsEtLam7i0k_xrA2l8XUByjkHU8xU",
+   "name": "Meghalaya's Journey",
+   "owner": "anamikasrivastava@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1Mm3bbZtTFMuX1ZGXHSSw5BjoWhD4kjIR",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1hgAwAGLaSY-9oHHsEtLam7i0k_xrA2l8XUByjkHU8xU?ad"
+  },
+  {
+   "id": "1t1bPvViP2ZF00G_I1wcutZcueSf_xcFg",
+   "name": "The Meghalaya Guardian, Pg. No. 5, 26.4.2025.jpg",
+   "owner": "ayushtank@shikshalokam.org",
+   "original_parents": "1M7WMsEvDr2Fvv_FAOJ7Lo2sZ8xkDMMFb",
+   "dest": "1Mm3bbZtTFMuX1ZGXHSSw5BjoWhD4kjIR",
+   "action": "shortcut"
+  },
+  {
+   "id": "1MYjAcs0AHJdnz0fRAp4SGs4sP9m1bxTs",
+   "name": "2024-07-12_Meghalaya",
+   "owner": "social@shikshalokam.org",
+   "original_parents": "1QZ4ufxoR2CMbwvGqhl4SQkuF61GiFD0D",
+   "dest": "1Mm3bbZtTFMuX1ZGXHSSw5BjoWhD4kjIR",
+   "action": "shortcut"
+  },
+  {
+   "id": "1Fj2ogyLXMgJeC97YCFNsQyMQ80h_7076",
+   "name": "The Meghalaya Guardian, P-8, September 29.jpg",
+   "owner": "neeraj@shikshalokam.org",
+   "original_parents": "13O91mEevIq8ZPHyrO_RrWGdoIzlrK2VJ",
+   "dest": "1Mm3bbZtTFMuX1ZGXHSSw5BjoWhD4kjIR",
+   "action": "shortcut"
+  },
+  {
+   "id": "1Zu253x6Sn1viLqZqOS41VHNqyk3mzK9y",
+   "name": "Meghalaya.jpg",
+   "owner": "pratik.jain@mantra4change.com",
+   "original_parents": "",
+   "dest": "1Mm3bbZtTFMuX1ZGXHSSw5BjoWhD4kjIR",
+   "action": "shortcut"
+  },
+  {
+   "id": "1T9C5aB-_SEZpI3CL_SDRdZu9LTJyIjeR",
+   "name": "MoU_Meghalaya.pdf",
+   "owner": "aileen@mantra4change.com",
+   "original_parents": "",
+   "dest": "1Mm3bbZtTFMuX1ZGXHSSw5BjoWhD4kjIR",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1T9C5aB-_SEZpI3CL_SDRdZu9LTJyIjeR?addParents=1M"
+  },
+  {
+   "id": "1RJZII5KGPlU-CdbExQelT8tHt_v2afh3",
+   "name": "Assam and Meghalaya Training ",
+   "owner": "programdesign@shikshalokam.org",
+   "original_parents": "11mjzn5wHB_kyjE_MUpm83Uw6sbEJ7fv5",
+   "dest": "1Mm3bbZtTFMuX1ZGXHSSw5BjoWhD4kjIR",
+   "action": "shortcut"
+  },
+  {
+   "id": "1gT3gM0vjDAizk9opxqVWUmxqQxC9kLPzbT3m76mHgHU",
+   "name": "InvokED '23 Invite_Closed Group Discussion_Meghalaya",
+   "owner": "shwetha@shikshalokam.org",
+   "original_parents": "14PJlMGocCchVqePMbBt7IkgIS9DqaH3q",
+   "dest": "1Mm3bbZtTFMuX1ZGXHSSw5BjoWhD4kjIR",
+   "action": "shortcut"
+  },
+  {
+   "id": "1hldSj3DuLxqIiHhEIqGekiSudAtg9lfL",
+   "name": "CMLEAD_Fellow_Induction_Plan_16Day_Schedule.xlsx",
+   "owner": "wungreithan@mantra4change.com",
+   "original_parents": "",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1hldSj3DuLxqIiHhEIqGekiSudAtg9lfL?addParents=1I"
+  },
+  {
+   "id": "1bROvgqW5xewsSLwSzaJriGT9JMSAHmU2JlXxzZN75pI",
+   "name": "CMLEAD FELLOWSHIP | recruitment process",
+   "owner": "kashmiri@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1bROvgqW5xewsSLwSzaJriGT9JMSAHmU2JlXxzZN75pI?ad"
+  },
+  {
+   "id": "1hU6AbGYjz9Fcuf0A0QXIslCXD_vFybQboERJG3OutMA",
+   "name": "CMLEAD Fellowship Outreach Plan",
+   "owner": "aquib@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1hU6AbGYjz9Fcuf0A0QXIslCXD_vFybQboERJG3OutMA?ad"
+  },
+  {
+   "id": "1VHuYqG_wtsMPXeyuNPVpuAWXbIJjicdb2PxQ1QIwcDQ",
+   "name": "Comms Sync Up | CMLEAD | SL + M4C+ Aide Et Action - 2026/06/05 10:59 IST - Notes by Gemini",
+   "owner": "kashmiri@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1VHuYqG_wtsMPXeyuNPVpuAWXbIJjicdb2PxQ1QIwcDQ?ad"
+  },
+  {
+   "id": "1Rq-uMUYgziYc97DAdRXn9uTI-EwI3GZ41aOI7VhZVGI",
+   "name": "CMLEAD (Responses)",
+   "owner": "kashmiri@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1Rq-uMUYgziYc97DAdRXn9uTI-EwI3GZ41aOI7VhZVGI?ad"
+  },
+  {
+   "id": "1zfp11JZMcxmrS_qN7KMF72JLJws3U-uuN4-zj8h7JfY",
+   "name": "CMLEAD Mailer",
+   "owner": "sushant@mantra4change.com",
+   "original_parents": "",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1zfp11JZMcxmrS_qN7KMF72JLJws3U-uuN4-zj8h7JfY?ad"
+  },
+  {
+   "id": "1TbZEUgXZ5m_7cIUhJ0R83LQfx-_dZy-y",
+   "name": "Job Description _ CMLEAD Fellowship_2026.pdf",
+   "owner": "kashmiri@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1TbZEUgXZ5m_7cIUhJ0R83LQfx-_dZy-y?addParents=1I"
+  },
+  {
+   "id": "14EcCm6l81r50lD0n5cFRoU_ssuBHdG3u",
+   "name": "CMLEAD_Outreach_Budget.xlsx",
+   "owner": "aquib@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/14EcCm6l81r50lD0n5cFRoU_ssuBHdG3u?addParents=1I"
+  },
+  {
+   "id": "1xBCqXT8-WWK3Wt63TwNxQPTVJcGJEmp1",
+   "name": "CMLEAD Fellowship Logos, Motifs, Brand Guidelines",
+   "owner": "aquib@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1xBCqXT8-WWK3Wt63TwNxQPTVJcGJEmp1?addParents=1I"
+  },
+  {
+   "id": "1DeURyY4wyLSwUcg4X3W9n7kjQ8juIXep5xqRV3G2Qlg",
+   "name": "CMLEAD OUTREACH PLAN, BRANDING, LOGO  - 2026/04/22 11:55 IST - Notes by Gemini",
+   "owner": "aquib@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1DeURyY4wyLSwUcg4X3W9n7kjQ8juIXep5xqRV3G2Qlg?ad"
+  },
+  {
+   "id": "1dCAKXu66Iy1FXGYMmh2S1fODOPanGCPjmRIMOZLweA0",
+   "name": "CMLEAD FELLOWSHIP",
+   "owner": "aquib@shikshalokam.org",
+   "original_parents": "",
+   "dest": "1IHnoCSwjy9bAgZlChl2cYH4jV4pBjD4k",
+   "action": "shortcut (move denied)",
+   "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1dCAKXu66Iy1FXGYMmh2S1fODOPanGCPjmRIMOZLweA0?ad"
+  },
+  {
+   "id": "1fcvF7psS4--2wmATo1CnmjcEeUhhkyRx",
+   "name": "Mar 22, 2023_EastMojo_Shillong entrepreneur among 75 women felicitated at NITI Aayog\u2019s WTI Awards 2021.pdf",
+   "owner": "neeraj@shikshalokam.org",
+   "original_parents": "1o-QXTPTlspRqQjLbLcmBwz4aSUxm2JbF",
+   "dest": "1Mm3bbZtTFMuX1ZGXHSSw5BjoWhD4kjIR",
+   "action": "reverted (not Meghalaya programme content)"
+  }
+ ]
+}

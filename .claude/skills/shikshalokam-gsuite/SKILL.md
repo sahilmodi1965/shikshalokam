@@ -51,6 +51,14 @@ about auth.
   Festival`, else `Meghalaya | State Programmes`. Ids are in `drive_map.json`. The
   parent `Meghalaya` folder holds only subfolders. Example:
   `gs.py doc-create --title "CMLEAD Fellowship | Email to Applicants (SPD)" --body-file … --folder <Meghalaya | CMLEAD Fellowship id>`.
+- **Gathering someone else's existing files into a tree? Expect a 403.** Drive only lets an owner
+  or editor reparent a file, and the team's docs are owned by whoever made them, so a bulk
+  "migrate" mostly cannot move anything. Fall back to a **shortcut** in the destination folder
+  (`mimeType: application/vnd.google-apps.shortcut`, `shortcutDetails.targetId`) — the tree reads
+  complete and nobody's library breaks. Say plainly which items are shortcuts vs real moves, and
+  record every original parent to a manifest under `routes/` so the whole thing is reversible.
+  Never move a file that belongs to another maintained library (media archives, dated asset
+  folders, mixed-state folders) — shortcut those on purpose.
 - **InvokED content always routes to the InvokED tree — for every teammate.** Any
   doc/file that belongs to InvokED (any edition, any author — Aquib, Ayush, anyone)
   must be created with `--folder <edition id>` from `drive_map.json`, never left in
