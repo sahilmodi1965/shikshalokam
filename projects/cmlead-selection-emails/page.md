@@ -137,6 +137,9 @@ All three mails are placeholder-free and ready to send. Nothing here is open.
 - Salutations are generic: "Dear Candidate" and "Dear Applicant". No mail merge, no name field.
 - Notification Doc is a source only. It is not edited by the brain.
 - Drafting happens **in the Doc's existing tabs, edited in place**. No new tabs for revisions.
+- Doc is down to the **two mail tabs**. Spare tabs were emptied 2026-07-23 on Sonal's instruction;
+  the old all-applicant holding mail is kept at [[archive-holding-mail]]. The Docs API cannot delete
+  tabs, so the four empty ones need a manual right-click delete.
 
 **Held out on purpose**
 - **Qualifying scores** (82 for Meghalaya candidates, 87 for others) are in the Notification but not
