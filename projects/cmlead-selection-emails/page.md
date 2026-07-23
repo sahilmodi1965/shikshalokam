@@ -26,6 +26,9 @@ officer, following on from the all-applicant update already sent.
 - **Email 2** to the 1,354 not shortlisted.
 - **Status:** ready to send. Nothing sent yet. Every detail is sourced from the official
   Notification; the Notification Doc itself was read only, never edited.
+- **Live drafting happens in the Doc**, `CMLEAD Fellowship | Email to Applicants (SPD)`
+  (1QPmAwFL2...), tabs prefixed `FINAL 23 Jul`. This page mirrors it. Any further change goes into
+  the Doc first (standing rule, Sonal 2026-07-23).
 
 ---
 

@@ -55,6 +55,15 @@ This is how content moves. It is not optional.
 - **Approval → Drive.** Only on Sonal's explicit approval does the brain write the approved version to
   **Google Drive** (a Doc in the shared Brain Output folder). Nothing is written to Drive before that.
 - Flow: *anyone drafts → brain (versioned, on the dashboard) → Sonal approves → brain writes it to Drive.*
+- **Exception, and it is not optional: when a Google Doc is already the working surface** — someone
+  pastes a Doc link, or we opened one to draft in — **every edit goes into that Doc, each round.**
+  Never iterate in the brain and leave the Doc stale; the person is reading the Doc, and colleagues
+  comment there. Use `gs.py doc-fill-tab` to update a tab in place, `doc-add-tab` only for a
+  genuinely new draft, and say which tab changed. The brain still gets the approved version — it
+  just lands *after* approval, not before. Flow becomes: *draft in the Doc → Sonal approves → brain.*
+- **A Doc handed over as a _source_ is read only.** Read its body *and* its comments
+  (`gs.py doc-comments` — comments often carry corrections the body doesn't). Errors found in a
+  source Doc get flagged in chat, never fixed in place.
 
 **Two lanes — never confuse them:**
 - **Content lane** — what the team makes. Publishes **every session, seamlessly**; same-page edits
