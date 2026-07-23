@@ -10,16 +10,16 @@ sources:
   - "Google Doc `Notification, shortlisting for the Final Selection Round` (1keCkTnbb...) — the official notice going out; source for venue, dates, batches, timings, documents, 8+4 split"
   - "Google Doc `CMLEAD Fellowship | Email to Applicants (SPD)` (1QPmAwFL2...) — the earlier all-applicant mail this follows on from"
   - "Google Doc `CMLEAD FELLOWSHIP | recruitment process` (1bROvgqW5...) — four-stage selection, jury composition, panel norms"
-  - "Sonal, 2026-07-23 — official notification supplied, placeholders filled"
+  - "Sonal, 2026-07-23 — official notification supplied, placeholders filled; sender is Team CM LEAD, not a named person"
   - "Sonal, 2026-07-22 — 45 candidates shortlisted; asked for both emails, hopeful tone on the rejection"
-voice: "Government register, State Project Director. Plain, warm, first person, no marketing lift. Matches the SPD's 'Dear Youth' launch script and the earlier applicant mail."
+voice: "Government register, sent in the name of Team CM LEAD (not a named officer). Plain, warm, first person plural, no marketing lift. Carries the tone of the SPD's 'Dear Youth' launch script and the earlier applicant mail."
 ---
 
 # CMLEAD Fellowship, selection-outcome emails
 
 Two emails. **45 of 1,398** shortlisted for Stage 3, the jury-led final interview, for **12** Fellow
-positions. Both are in the voice of the **State Project Director, Samagra Shiksha**, following on
-from the all-applicant update already sent.
+positions. Both go out **in the name of Team CM LEAD**, not a named officer (Sonal, 2026-07-23),
+following on from the all-applicant update already sent.
 
 - **Status:** review-ready. Both are confirmed to go out (Sonal, 2026-07-22). Nothing sent yet.
 - **Structure, revised 2026-07-23:** the official Notification splits the 45 into **two batches on
@@ -36,7 +36,7 @@ from the all-applicant update already sent.
 Send as **two mails**. Everything below is identical for both batches except the bolded date line.
 Batch I goes to Sl. No. 1 to 23; Batch II to Sl. No. 24 to 45. **Send bcc.**
 
-**From:** State Project Director, Samagra Shiksha, Department of Education, Government of Meghalaya
+**From:** Team CM LEAD, Meghalaya CM LEAD Fellowship Programme {{SENDING MAILBOX}}
 **Subject:** Meghalaya CM LEAD Fellowship: invitation to the final selection round, {{30 / 31}} July 2026
 
 Dear Candidate,
@@ -86,15 +86,15 @@ We look forward to speaking with you.
 
 With warm regards,
 
-{{SPD NAME}}
-State Project Director, Samagra Shiksha
-Department of Education, Government of Meghalaya
+Team CM LEAD
+Meghalaya CM LEAD Fellowship Programme
+Samagra Shiksha, SEMAM, Department of Education, Government of Meghalaya
 
 ---
 
 ## Email 2, to those not shortlisted
 
-**From:** State Project Director, Samagra Shiksha, Department of Education, Government of Meghalaya
+**From:** Team CM LEAD, Meghalaya CM LEAD Fellowship Programme {{SENDING MAILBOX}}
 **Subject:** Meghalaya CM LEAD Fellowship: an update on your application
 
 Dear {{CANDIDATE NAME}},
@@ -128,9 +128,9 @@ to Meghalaya's children and their learning.
 
 With warm regards,
 
-{{SPD NAME}}
-State Project Director, Samagra Shiksha
-Department of Education, Government of Meghalaya
+Team CM LEAD
+Meghalaya CM LEAD Fellowship Programme
+Samagra Shiksha, SEMAM, Department of Education, Government of Meghalaya
 
 ---
 
@@ -157,8 +157,9 @@ Department of Education, Government of Meghalaya
 2. **Confirm-by date.** I have proposed 27 July 2026, three days before Batch I. Confirm or change.
 
 **Blocking both**
-3. **The SPD's name.** Still a placeholder, carried over from the earlier mail. This is the second
-   piece of candidate-facing content held up by it.
+3. **The sending mailbox.** Both mails go out as **Team CM LEAD**, so they need a shared address
+   that the team actually watches, since Email 1 asks for confirmations by reply. Which one?
+   (This retires the old blocker on the SPD's name, which is no longer needed.)
 
 **Two things to fix in the Notification itself, before it publishes**
 4. **Annexure-I lists "Medashisha Khongwir" twice**, at Sl. No. 14 and 15. Either a duplicate (which
