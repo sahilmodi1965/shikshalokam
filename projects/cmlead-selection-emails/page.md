@@ -72,10 +72,9 @@ presentation. Speak to your own experience and to what you wrote in your applica
 for verification.** This includes proof of age, degree and mark sheets, experience letters, and
 photo identity.
 
-Failure to report for the interview as scheduled may result in cancellation of candidature. Kindly
-confirm your attendance by replying to this email by **{{CONFIRM BY: 27 July 2026}}**. If the date
-given to you does not work, write to {{CONTACT NAME, EMAIL, PHONE}} and we will do our best to
-accommodate a change.
+Failure to report for the interview as scheduled may result in cancellation of candidature. **Kindly
+confirm your attendance by replying to this email within two days.** If the date given to you does
+not work, say so in the same reply and we will do our best to accommodate a change.
 
 The Fellowship will select 12 Fellows, 8 from Meghalaya and 4 from other parts of the country.
 Shortlisting for this round does not guarantee selection. The final outcome will rest on your
@@ -152,13 +151,13 @@ Samagra Shiksha, SEMAM, Department of Education, Government of Meghalaya
 - Generic salutation ("Dear Candidate"), no per-candidate merge. Now **two** broadcasts, one per
   batch, because the dates differ.
 
-**Still blocking Email 1**
-1. **Contact point for rescheduling** (name, email, phone).
-2. **Confirm-by date.** I have proposed 27 July 2026, three days before Batch I. Confirm or change.
+**Closed 2026-07-23 (Sonal)**
+- **Confirmation:** candidates reply to the same email, **within two days**. No fixed calendar date.
+- **Rescheduling:** handled in that same reply. No separate contact person, phone, or email.
 
 **Blocking both**
-3. **The sending mailbox.** Both mails go out as **Team CM LEAD**, so they need a shared address
-   that the team actually watches, since Email 1 asks for confirmations by reply. Which one?
+1. **The sending mailbox.** Both mails go out as **Team CM LEAD**, so they need a shared address the
+   team watches daily, since every confirmation and reschedule lands there by reply. Which one?
    (This retires the old blocker on the SPD's name, which is no longer needed.)
 
 **Two things to fix in the Notification itself, before it publishes**
