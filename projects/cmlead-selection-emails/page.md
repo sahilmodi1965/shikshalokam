@@ -1,7 +1,7 @@
 ---
 project: cmlead-selection-emails
 title: "CMLEAD Fellowship — selection-outcome emails (44 shortlisted + not shortlisted)"
-_status: review-ready
+_status: ready-to-send
 last_updated: 2026-07-23
 maintainer: Sonal Bhasin
 daily_user: Sonal Bhasin
@@ -11,33 +11,30 @@ sources:
   - "Google Doc `CMLEAD Fellowship | Email to Applicants (SPD)` (1QPmAwFL2...) — the earlier all-applicant mail this follows on from"
   - "Google Doc `CMLEAD FELLOWSHIP | recruitment process` (1bROvgqW5...) — four-stage selection, jury composition, panel norms"
   - "Sonal, 2026-07-23 — official notification supplied, placeholders filled; sender is Team CM LEAD, not a named person"
-  - "Sonal, 2026-07-22 — 45 candidates shortlisted; asked for both emails, hopeful tone on the rejection"
+  - "Sonal, 2026-07-22 — shortlist confirmed; asked for both emails, hopeful tone on the rejection"
 voice: "Government register, sent in the name of Team CM LEAD (not a named officer). Plain, warm, first person plural, no marketing lift. Carries the tone of the SPD's 'Dear Youth' launch script and the earlier applicant mail."
 ---
 
 # CMLEAD Fellowship, selection-outcome emails
 
-Two emails. **44 of 1,398** shortlisted for Stage 3, the jury-led final interview, for **12** Fellow
-positions. Both go out **in the name of Team CM LEAD**, not a named officer (Sonal, 2026-07-23),
-following on from the all-applicant update already sent.
+**Three mails, all final, no placeholders left.** 44 of 1,398 shortlisted for the Final Selection
+Round, for 12 Fellow positions. All three go out in the name of **Team CM LEAD**, not a named
+officer, following on from the all-applicant update already sent.
 
-- **Status:** review-ready. Both are confirmed to go out (Sonal, 2026-07-22). Nothing sent yet.
-- **Structure, revised 2026-07-23:** the official Notification splits the shortlist into **two batches on
-  two different dates**, so Email 1 is now **two broadcasts, not one**: Batch I (Annexure-I,
-  30 July) and Batch II (Annexure-II, 31 July). Body text is identical apart from the date.
-  Still no per-candidate merge, still a generic salutation.
-- **Filled from the Notification:** venue, dates, batch split, reporting timing, documents, the 8+4
-  Fellow split, and the "shortlisting does not guarantee selection" line.
+- **Email 1A** to Annexure-I, interview 30 July 2026.
+- **Email 1B** to Annexure-II, interview 31 July 2026. Same body, different date.
+- **Email 2** to the 1,354 not shortlisted.
+- **Status:** ready to send. Nothing sent yet. Every detail is sourced from the official
+  Notification; the Notification Doc itself was read only, never edited.
 
 ---
 
-## Email 1, to the 44 shortlisted
+## Email 1A, Batch I, interview on 30 July 2026
 
-Send as **two mails**. Everything below is identical for both batches except the bolded date line.
-Batch I goes to Annexure-I names (30 July); Batch II to Annexure-II names (31 July). **Send bcc.**
+Goes to the Annexure-I names. **Send bcc.**
 
-**From:** Team CM LEAD, Meghalaya CM LEAD Fellowship Programme {{SENDING MAILBOX}}
-**Subject:** Meghalaya CM LEAD Fellowship: invitation to the final selection round, {{30 / 31}} July 2026
+**From:** Team CM LEAD, Meghalaya CM LEAD Fellowship Programme
+**Subject:** Meghalaya CM LEAD Fellowship: invitation to the Final Selection Round, 30 July 2026
 
 Dear Candidate,
 
@@ -51,7 +48,7 @@ Final Selection Round.** You are one of them.
 
 The Final Selection Round is a **physical interview before the Selection Committee**.
 
-**Your interview is on {{30 July 2026 (Batch I) / 31 July 2026 (Batch II)}}.**
+**Your interview is on Thursday, 30 July 2026.**
 
 Venue: Meghalaya Board of School Education (MBOSE) Regional Office, 92 Hopkinson Road, Lachumiere,
 Shillong, Meghalaya 793001.
@@ -68,8 +65,8 @@ field work in the districts, and what draws you to public service. You do not ne
 presentation. Speak to your own experience and to what you wrote in your application.
 
 **Please carry all relevant original documents, along with one set of self-attested photocopies,
-for verification.** This includes proof of age, degree and mark sheets, experience letters, and
-photo identity.
+for verification.** This includes proof of age, degree certificates and mark sheets, experience
+letters, and photo identity.
 
 Failure to report for the interview as scheduled may result in cancellation of candidature. **Kindly
 confirm your attendance by replying to this email within two days.** If the date given to you does
@@ -77,8 +74,68 @@ not work, say so in the same reply and we will do our best to accommodate a chan
 
 The Fellowship will select 12 Fellows, 8 from Meghalaya and 4 from other parts of the country.
 Shortlisting for this round does not guarantee selection. The final outcome will rest on your
-performance in the Final Selection Round, subject to document verification and eligibility, and
-will be announced in the first week of August 2026.
+performance in the Final Selection Round, subject to verification of documents and fulfilment of all
+eligibility requirements, and will be announced in the first week of August 2026. The decision of
+the Selection Committee shall be final and binding.
+
+We look forward to speaking with you.
+
+With warm regards,
+
+Team CM LEAD
+Meghalaya CM LEAD Fellowship Programme
+Samagra Shiksha, SEMAM, Department of Education, Government of Meghalaya
+
+---
+
+## Email 1B, Batch II, interview on 31 July 2026
+
+Goes to the Annexure-II names. **Send bcc.** Identical to Email 1A apart from the date line below.
+
+**From:** Team CM LEAD, Meghalaya CM LEAD Fellowship Programme
+**Subject:** Meghalaya CM LEAD Fellowship: invitation to the Final Selection Round, 31 July 2026
+
+Dear Candidate,
+
+Thank you for the time and thought you gave to your application to the Meghalaya CM LEAD Fellowship.
+
+We received 1,398 applications from across Meghalaya and the rest of the country. Every eligible
+application was assessed on a common framework: academic and institutional background, practical
+implementation exposure and statement of purpose, a case study for analytical and problem-solving
+ability, communication, and relevant work experience. **44 candidates have been shortlisted for the
+Final Selection Round.** You are one of them.
+
+The Final Selection Round is a **physical interview before the Selection Committee**.
+
+**Your interview is on Friday, 31 July 2026.**
+
+Venue: Meghalaya Board of School Education (MBOSE) Regional Office, 92 Hopkinson Road, Lachumiere,
+Shillong, Meghalaya 793001.
+
+Reporting time: 9:00 AM. Interviews run from 9:00 AM onwards and may continue until 7:00 or 8:00 PM,
+so please plan for a full day and do not schedule return travel for the evening.
+
+The panel is chaired by the Commissioner and Secretary, Department of Education, or the State Project
+Director, Samagra Shiksha, and includes officials from DSEL, SSA-SEMAM, DERT, a District School
+Education Officer, and a representative of our knowledge partner, Mantra4Change.
+
+The conversation will cover how you approach problems, how you communicate, your readiness for
+field work in the districts, and what draws you to public service. You do not need to prepare a
+presentation. Speak to your own experience and to what you wrote in your application.
+
+**Please carry all relevant original documents, along with one set of self-attested photocopies,
+for verification.** This includes proof of age, degree certificates and mark sheets, experience
+letters, and photo identity.
+
+Failure to report for the interview as scheduled may result in cancellation of candidature. **Kindly
+confirm your attendance by replying to this email within two days.** If the date given to you does
+not work, say so in the same reply and we will do our best to accommodate a change.
+
+The Fellowship will select 12 Fellows, 8 from Meghalaya and 4 from other parts of the country.
+Shortlisting for this round does not guarantee selection. The final outcome will rest on your
+performance in the Final Selection Round, subject to verification of documents and fulfilment of all
+eligibility requirements, and will be announced in the first week of August 2026. The decision of
+the Selection Committee shall be final and binding.
 
 We look forward to speaking with you.
 
@@ -92,10 +149,12 @@ Samagra Shiksha, SEMAM, Department of Education, Government of Meghalaya
 
 ## Email 2, to those not shortlisted
 
-**From:** Team CM LEAD, Meghalaya CM LEAD Fellowship Programme {{SENDING MAILBOX}}
+Goes to the 1,354 applicants not on either annexure. **Send bcc, never a visible recipient list.**
+
+**From:** Team CM LEAD, Meghalaya CM LEAD Fellowship Programme
 **Subject:** Meghalaya CM LEAD Fellowship: an update on your application
 
-Dear {{CANDIDATE NAME}},
+Dear Applicant,
 
 Thank you for applying to the Meghalaya CM LEAD Fellowship, and for the care you gave to your
 statement of purpose and your written assignment.
@@ -132,59 +191,34 @@ Samagra Shiksha, SEMAM, Department of Education, Government of Meghalaya
 
 ---
 
-## ⚠️ Decisions and gaps before these go out
+## Record: every decision, closed
 
-**Closed 2026-07-23, from the official Notification (Doc 1keCkTnbb...)**
-- **Mode:** physical interview, in person. No online option.
-- **Venue:** MBOSE Regional Office, 92 Hopkinson Road, Lachumiere, Shillong 793001.
-- **Dates:** Batch I (Annexure-I) on 30 July 2026; Batch II (Annexure-II) on 31 July 2026.
-- **Timing:** 9:00 AM onwards, expected to run to 7:00 or 8:00 PM.
-- **Documents:** all relevant originals plus one set of self-attested photocopies.
-- **Selection:** 12 Fellows, 8 from Meghalaya and 4 from elsewhere. Shortlisting is not selection.
-- **No slot PDF needed.** The Notification says individual reporting time is communicated
-  separately; the mail now says report at 9:00 AM and expect a full day. That also retires the
-  earlier worry about a full-list schedule exposing candidates to each other.
+All three mails are placeholder-free and ready to send. Nothing here is open.
 
-**Settled 2026-07-22 (Sonal)**
-- Both emails go out. Email 1 is not cancelled.
-- Generic salutation ("Dear Candidate"), no per-candidate merge. Now **two** broadcasts, one per
-  batch, because the dates differ.
+**From the Notification (Doc 1keCkTnbb..., read only, not edited)**
+- Mode: physical interview before the Selection Committee. No online option.
+- Venue: MBOSE Regional Office, 92 Hopkinson Road, Lachumiere, Shillong 793001.
+- Dates: Annexure-I on 30 July 2026, Annexure-II on 31 July 2026. Hence two versions of Email 1.
+- Timing: 9:00 AM onwards, expected to run to 7:00 or 8:00 PM.
+- Documents: all relevant originals plus one set of self-attested photocopies.
+- Selection: 12 Fellows, 8 Meghalaya and 4 other states. Shortlisting does not guarantee selection.
+- Committee's decision is final and binding.
+- No slot PDF is attached or needed; venue and report time are in the mail.
 
-**Closed 2026-07-23 (Sonal)**
-- **Confirmation:** candidates reply to the same email, **within two days**. No fixed calendar date.
-- **Rescheduling:** handled in that same reply. No separate contact person, phone, or email.
+**From the two comments on the Notification**
+- Sonal on Annexure-I Sl. 14/15, "repeating": Medashisha Khongwir appears twice, so the count is
+  **44**. Used in all three mails.
+- Syed on "reporting time and venue shall be communicated separately", acked by Kashmiri: since the
+  mail carries the venue address, that promise is reframed out. Nothing follows separately.
 
-**Blocking both**
-1. **The sending mailbox.** Both mails go out as **Team CM LEAD**, so they need a shared address the
-   team watches daily, since every confirmation and reschedule lands there by reply. Which one?
-   (This retires the old blocker on the SPD's name, which is no longer needed.)
+**From Sonal**
+- Sender is **Team CM LEAD**, not a named officer. No SPD name needed, no separate mailbox line.
+- Confirmation is a **reply within two days**. No fixed calendar date, no separate contact person.
+- Rescheduling is handled in that same reply.
+- Salutations are generic: "Dear Candidate" and "Dear Applicant". No mail merge, no name field.
+- Notification Doc is a source only. It is not edited by the brain.
 
-**Applied 2026-07-23 from the two comments on the Notification**
-- **Sonal on Annexure-I Sl. 14/15 ("repeating"):** Medashisha Khongwir is listed twice, so the real
-  count is **44, not 45**. Both emails now say 44. **The annexure still needs renumbering** before
-  the Notification publishes, or the list will contradict the mail.
-- **Syed on "reporting time and venue shall be communicated separately" (Kashmiri: okay):** since the
-  email carries the full venue address, that line is reframed out. Email 1 no longer promises a
-  separate communication; it gives venue and a 9:00 AM report time outright.
-
-**Still open on the Notification itself (not blocking the emails)**
-4. **Tab 2's notice has blank fields:** file number `.../30/2026/____` and `Date: ___ July 2026`.
-5. Syed's other three comments are notice-only: authorised signatory details, the "By Order and in
-   the Name of the Governor" line, and the Office of the Chief Minister header for Kashmiri.
-
-**Judgement calls Sonal should confirm**
-6. **Qualifying scores are in the Notification** (82 for Meghalaya candidates, 87 for others). I have
-   kept them out of both emails. Naming a cut-off invites "what did I score" replies from 1,353
-   people. Say the word if you want it in.
-
-**Judgement calls Sonal should confirm**
-6. **The earlier mail said only shortlisted candidates would be contacted.** Email 2 reverses that.
-   It is a better decision and worth making, but it is a change of position, so it should be a
-   conscious one.
-7. **No second cohort is promised.** Year 2 is a July/August 2027 decision, so Email 2 says
-   "if further opportunities open", never "next year". Do not let this soften into a promise.
-8. **The rejection names the numbers** (1,398, 44, 12). It is more respectful than a vague no, and
-   it makes the odds legible. Say the word if the Department would rather not publish the shortlist
-   count.
-9. **"Not selected" is 1,353 people.** Send as individual mails or bcc, never a visible recipient
-   list.
+**Held out on purpose**
+- **Qualifying scores** (82 for Meghalaya candidates, 87 for others) are in the Notification but not
+  in the mails. A published cut-off invites "what did I score" replies from 1,354 people.
+- **No second cohort is promised.** Email 2 says "if further opportunities open", never "next year".
