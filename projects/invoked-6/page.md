@@ -493,10 +493,25 @@ collective-action frame.
 
 ---
 
+### Invite — Funders & Mentors group · status `draft`
+
+**Segment:** Funder / Mentor (Template B, Advisors-group pattern adapted)
+**Signatory:** S.D. Shibulal
+**Working surface:** the "Funders & Mentors" tab in the register Doc *Email Drafts | InvokED 6.0* —
+edits happen there each round; the approved version lands here.
+**Drafted:** 2026-07-23 — awaiting Sonal's review.
+
+Same bones as the Advisors-group invite (come-and-be-present, "Save the Dates" subject), with the
+funder-specific turn: the shift from funding isolated projects to strengthening leadership and
+capacity that outlasts any one programme was shaped by conversations with them.
+
+---
+
 ## Content log
 
 | Date | What landed | Status |
 |---|---|---|
+| 23 Jul 2026 | First draft: Funders & Mentors group invite in Shibulal Sir's name — added as its own tab in the InvokED 6.0 register Doc. | `draft` |
 | 11 Jun 2026 | First draft: Dr Martin Kasper (Childaid Network Foundation) — returning-speaker invite, recall built on his two InvokED 5.0 quotes (collective action, fragmentation) + "friend not benefactor" connector. | `draft` |
 | 5 Jun 2026 | End-to-end publish verified: source → rebuild → push → live URL confirmed. | `approved` |
 | 5 Jun 2026 | All four invites updated to Sonal's approved final versions: Peggy Dulany (two variants), Marc Benioff, Camille Massey, Advisors group. | `approved` |
