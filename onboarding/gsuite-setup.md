@@ -29,6 +29,23 @@ You're creating **one shared Google app** the whole team logs into. Do this once
      `aquib@shikshalokam.org`, and your own. (No Google verification needed for
      a small test-user list.)
 
+☐ **3b. Publishing status — take the app out of "Testing".** An **External** app
+   starts in **Testing** status, which has two sharp edges:
+   - Only accounts on the *Test users* list can log in — anyone else gets
+     *Error 403: access_denied* ("app is currently being tested").
+   - **Refresh tokens expire every 7 days**, so every teammate redoes the
+     browser consent weekly. This is Google policy for Testing-mode apps, not a
+     bug in the brain.
+
+   Fix, once scopes (step 4) are set: *OAuth consent screen → Publishing status →*
+   **Publish app** (Testing → In production). Our Gmail/Drive scopes mean the app
+   stays *unverified*, so each person sees a one-time *"Google hasn't verified
+   this app"* screen — click *Advanced → Go to shikshalokam-brain (unsafe)*.
+   That's expected for a private team app: logins stop expiring, the test-user
+   list stops mattering, and the only cap is 100 total users (we're nowhere
+   near it). **Internal** apps (step 3, Workspace-owned project) skip all of
+   this — which is why Internal is strongly preferred.
+
 ☐ **4. Add the scopes** (paste these in the scopes step):
    ```
    openid
