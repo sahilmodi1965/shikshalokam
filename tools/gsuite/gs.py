@@ -535,6 +535,59 @@ def cmd_doc_fill_tab(a):
     print(f"Filled tab {a.tab!r}.")
 
 
+def cmd_doc_set_tab(a):
+    """REPLACE an existing tab's whole body with new text — the in-place edit.
+
+    This is the default when a Doc is the working surface: the team reads and
+    comments in the Doc, so revisions must land in the tab they already have
+    open, not in a new one. `doc-fill-tab` only prepends; `doc-add-tab` makes a
+    fresh tab and leaves the stale draft behind. Use those two only when you
+    genuinely want to add.
+    """
+    docs = svc("docs", "v1")
+    doc = docs.documents().get(documentId=a.id, includeTabsContent=True).execute()
+    tab = _find_tab(doc.get("tabs", []), a.tab)
+    if not tab:
+        sys.exit(f"No tab titled {a.tab!r}.")
+    tab_id = tab["tabProperties"]["tabId"]
+    content = tab["documentTab"]["body"]["content"]
+    end = content[-1]["endIndex"] - 1  # final newline can't be deleted
+    text = Path(a.body_file).read_text() if a.body_file else a.body
+    reqs = []
+    if end > 1:
+        reqs.append({"deleteContentRange": {"range": {
+            "tabId": tab_id, "startIndex": 1, "endIndex": end}}})
+    reqs.append({"insertText": {"location": {"tabId": tab_id, "index": 1}, "text": text}})
+    docs.documents().batchUpdate(documentId=a.id, body={"requests": reqs}).execute()
+    print(f"Replaced contents of tab {a.tab!r}.")
+
+
+def cmd_doc_delete_tab(a):
+    """Blank a superseded tab and leave a pointer in it.
+
+    The Docs API can CREATE tabs (`addDocumentTab`) but has no delete request —
+    `deleteDocumentTab` does not exist and returns 400. Verified 2026-07-23.
+    So a tab can only be emptied here; the person removes it with a right-click
+    in the tab sidebar. This is the reason to prefer `doc-set-tab` (edit the tab
+    the team already has open) over `doc-add-tab` for revisions.
+    """
+    note = a.note or "SUPERSEDED - do not use. This tab can be deleted (right-click it in the sidebar).\n"
+    docs = svc("docs", "v1")
+    doc = docs.documents().get(documentId=a.id, includeTabsContent=True).execute()
+    tab = _find_tab(doc.get("tabs", []), a.tab)
+    if not tab:
+        sys.exit(f"No tab titled {a.tab!r}.")
+    tab_id = tab["tabProperties"]["tabId"]
+    end = tab["documentTab"]["body"]["content"][-1]["endIndex"] - 1
+    reqs = []
+    if end > 1:
+        reqs.append({"deleteContentRange": {"range": {
+            "tabId": tab_id, "startIndex": 1, "endIndex": end}}})
+    reqs.append({"insertText": {"location": {"tabId": tab_id, "index": 1}, "text": note}})
+    docs.documents().batchUpdate(documentId=a.id, body={"requests": reqs}).execute()
+    print(f"Blanked tab {a.tab!r}. The API cannot delete tabs — remove it by hand if you want it gone.")
+
+
 def cmd_doc_add_tab(a):
     """Create a NEW tab in a doc and fill it — the correct way to add a new draft
     (e.g. an InvokED invitee) to the shared register. Tabs ARE creatable via the
@@ -833,6 +886,21 @@ def main():
     dft.add_argument("--body")
     dft.add_argument("--body-file")
     dft.set_defaults(fn=cmd_doc_fill_tab)
+
+    dst = sub.add_parser("doc-set-tab",
+                         help="REPLACE an existing tab's contents in place — the default edit")
+    dst.add_argument("--id", required=True, help="document id")
+    dst.add_argument("--tab", required=True, help="exact tab title (must already exist)")
+    dst.add_argument("--body")
+    dst.add_argument("--body-file")
+    dst.set_defaults(fn=cmd_doc_set_tab)
+
+    ddt = sub.add_parser("doc-delete-tab",
+                         help="blank a superseded tab (the API cannot delete tabs)")
+    ddt.add_argument("--id", required=True, help="document id")
+    ddt.add_argument("--tab", required=True, help="exact tab title")
+    ddt.add_argument("--note", help="text to leave in the emptied tab")
+    ddt.set_defaults(fn=cmd_doc_delete_tab)
 
     dad = sub.add_parser("doc-add-tab",
                          help="create a NEW tab (addDocumentTab) and fill it — for a new draft")
