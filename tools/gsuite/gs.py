@@ -614,7 +614,7 @@ def cmd_doc_comments(a):
     drive = svc("drive", "v3")
     res = drive.comments().list(
         fileId=a.id, pageSize=100,
-        fields="comments(author/displayName,content,resolved,"
+        fields="comments(id,author/displayName,content,resolved,"
                "quotedFileContent/value,replies(author/displayName,content))",
     ).execute()
     comments = res.get("comments", [])
@@ -626,12 +626,24 @@ def cmd_doc_comments(a):
     for i, c in enumerate(comments, 1):
         who = c.get("author", {}).get("displayName", "?")
         anchor = (c.get("quotedFileContent") or {}).get("value", "")
-        print(f"[{i}] {who}{' (resolved)' if c.get('resolved') else ''}")
+        print(f"[{i}] {who}{' (resolved)' if c.get('resolved') else ''}  id={c.get('id')}")
         if anchor:
             print(f'    on: "{anchor}"')
         print(f"    {c.get('content', '')}")
         for r in c.get("replies", []) or []:
             print(f"    ↳ {r.get('author', {}).get('displayName', '?')}: {r.get('content', '')}")
+
+
+def cmd_comment_resolve(a):
+    """Resolve a Doc comment after its feedback has been incorporated. Optionally
+    leave a closing reply first (e.g. what changed). Get comment ids from
+    `doc-comments`."""
+    drive = svc("drive", "v3")
+    drive.replies().create(
+        fileId=a.id, commentId=a.comment,
+        body={"content": a.reply or "Done.", "action": "resolve"}, fields="id,action",
+    ).execute()
+    print(f"Resolved comment {a.comment}.")
 
 
 def cmd_drive_folder(a):
@@ -914,6 +926,13 @@ def main():
     dco.add_argument("--id", required=True, help="document id")
     dco.add_argument("--all", action="store_true", help="include resolved comments")
     dco.set_defaults(fn=cmd_doc_comments)
+
+    cr = sub.add_parser("comment-resolve",
+                        help="resolve a Doc comment (get its id from doc-comments)")
+    cr.add_argument("--id", required=True, help="document id")
+    cr.add_argument("--comment", required=True, help="comment id from doc-comments")
+    cr.add_argument("--reply", help="closing reply to leave (default 'Done.')")
+    cr.set_defaults(fn=cmd_comment_resolve)
 
     df = sub.add_parser("drive-folder", help="create a Drive folder")
     df.add_argument("--name", required=True)

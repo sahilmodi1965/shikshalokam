@@ -58,8 +58,9 @@ This is how content moves. It is not optional.
 - **Exception, and it is not optional: when a Google Doc is already the working surface** — someone
   pastes a Doc link, or we opened one to draft in — **every edit goes into that Doc, each round.**
   Never iterate in the brain and leave the Doc stale; the person is reading the Doc, and colleagues
-  comment there. Use `gs.py doc-fill-tab` to update a tab in place, `doc-add-tab` only for a
-  genuinely new draft, and say which tab changed. The brain still gets the approved version — it
+  comment there. Use `gs.py doc-set-tab` to update a tab in place (it replaces the whole tab body);
+  `doc-fill-tab` only prepends and leaves the stale draft below it, and `doc-add-tab` is for a
+  genuinely new invitee only. One draft per tab — say which tab changed. The brain still gets the approved version — it
   just lands *after* approval, not before. Flow becomes: *draft in the Doc → Sonal approves → brain.*
 - **A Doc handed over as a _source_ is read only.** Read its body *and* its comments
   (`gs.py doc-comments` — comments often carry corrections the body doesn't). Errors found in a
