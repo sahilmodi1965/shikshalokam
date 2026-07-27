@@ -45,15 +45,15 @@ against their parent question; they aren't separately numbered, but each spends 
 
 | Q | Block | Probes | Turns | Why it earns the space |
 |---|---|---|---|---|
-| 1 | Profile — role, org, location | — | 1 | Ecosystem diversity. First candidate for pre-fill. |
-| 2 | Editions attended | — | 1 | Repeat participation. Also pre-fillable. |
-| 3 | Perception shift | 1 | 2 | Magnitude *and* substance, in two turns instead of four |
-| **4** | **Action & outcome** | **3** | **4** | **The core metric and the stories. Never trade these away.** |
-| 5 | Org influence | — | 1 | Institutional change — scale + substance in one turn |
-| 6 | Continuity | — | 1 | Retention intent + design input for the year-round offer |
+| 1 | Profile — role, org, location | — | 1 | Ecosystem diversity. Pre-fillable. |
+| 2 | Perception shift | 1 | 2 | Magnitude *and* substance, in two turns instead of four |
+| **3** | **Action & outcome** | **3** | **4** | **The core metric and the stories. Never trade these away.** |
+| 4 | Org influence | — | 1 | Institutional change — scale + substance in one turn |
+| 5 | Continuity | — | 1 | Retention intent + design input for the year-round offer |
+| 6 | **Future readiness** | — | 1 | The narrative asset — how leaders define it, and what they're doing |
 | | | | **10** | |
 
-**Q4 carries 4 of the 10 turns** — main + three probes, branching on Yes/In-progress vs No:
+**Q3 carries 4 of the 10 turns** — main + three probes, branching on Yes/In-progress vs No:
 
 | | Yes / In progress | No |
 |---|---|---|
@@ -66,10 +66,27 @@ collaboration from one that merely happened afterwards. That distinction is the 
 Impact Report can make. On the No branch, probe 3 recovers network data from non-collaborators, so
 neither branch wastes its four turns.
 
-**Removed 2026-07-27 (Sonal):** the Stories & Recognition question — story/video willingness,
-Shikshagraha Awards nomination, follow-up contact — no longer aligns with the survey's purpose.
-The report spec still expects those three fields, so they move to the **post-close consent screen**
-alongside the optional photo upload. A post-close step isn't a turn, so this costs nothing.
+## Future readiness — one turn here, a separate survey elsewhere
+
+Q6 asks how the respondent *defines* future readiness and what they're doing about it. It sits last
+on purpose: reflective and expansive, so it never competes with the impact data upstream.
+
+**The "listen to a million voices" mission needs its own instrument** — different audience
+(teachers, youth, parents, system actors), different scale, different language. 150–250 InvokED
+alumni will never be a million voices, and bending an impact survey to carry a listening mission
+usually breaks both. What justifies one turn *here* is that this audience is different in kind:
+these are the people whose definition shapes how the sector uses the term. Treat the answers as
+**narrative source material, not a representative measure.**
+
+## Moved out of the conversation (nothing lost)
+
+- **Editions attended** — cut on 2026-07-27 to fund the future-readiness turn. Weakest turn, most
+  pre-fillable field. Recover via the registrant record (preferred) or a post-close tap. **If
+  neither is possible, reinstate it and drop Q5 instead** — repeat participation is a credibility
+  metric and must not vanish.
+- **Story/video willingness · Awards nomination · follow-up contact** — cut as no longer aligned,
+  but the report spec still expects all three. They move to the **post-close consent screen**
+  alongside the optional photo upload. A post-close step isn't a turn, so this costs nothing.
 
 Full text, branch logic, cut-and-recovery map and the probing rules live in the
 `Questions_Revised_10` tab, generated from `questions-10turn.json` in this folder.
@@ -77,19 +94,19 @@ Full text, branch logic, cut-and-recovery map and the probing rules live in the
 ## The rules matter as much as the questions
 
 A 10-question list without enforcement drifts straight back to 30:
-- Hard cap 10 turns, and the design now uses all 10. Only Q3 (one probe) and Q4 (three probes) may
+- Hard cap 10 turns, and the design now uses all 10. Only Q2 (one probe) and Q3 (three probes) may
   probe; the other four never do.
-- Never re-ask what was volunteered — if Q4's main answer already names the partner, skip probe 1
+- Never re-ask what was volunteered — if Q3's main answer already names the partner, skip probe 1
   (the conversation ends in 9).
 - Every branch, including every "No", must return something usable.
 
 ## Open decision
 
-**Can registration data pre-fill role / org / country / editions?** If yes, Q1+Q2 collapse into one
-confirm-tap and a turn comes free while staying at the cap. Best use of it: buy back the **perception
-baseline** before Q3 — *"before your first InvokED, how did you view collaboration?"* — which would
-make the before/after shift measurable rather than self-reported. It was the first thing cut (most
-expensive question per unit of insight), and it's the right thing to restore if a turn ever frees up.
+**Can registration data pre-fill role / org / country / editions?** This is now load-bearing: it's
+how editions-attended gets recovered at all. If yes, Q1 also collapses to a confirm-tap and a turn
+comes free. Best use of it: buy back the **perception baseline** before Q2 — *"before your first
+InvokED, how did you view collaboration?"* — which would make the before/after shift measurable
+rather than self-reported. It was the first thing cut, and the right thing to restore.
 
 ## Still to check
 

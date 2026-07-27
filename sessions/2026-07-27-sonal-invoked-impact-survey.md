@@ -16,8 +16,11 @@ project: invoked-impact-survey
   (story willingness, Awards nomination, follow-up contact) move to the post-close consent screen,
   which costs no turn. The freed turn went into a **third probe on Q4** — the attribution question
   ("met at InvokED, or already knew them?"), separating InvokED-caused collaborations from
-  InvokED-adjacent ones. Final shape: **6 mains + 4 probes = 10 turns**, Q4 holding 4 of them.
-  → https://docs.google.com/spreadsheets/d/1qMhSkrACZb4zmM2cBWDkyhEma_lDBa6_MkHnSsKU2B8/edit#gid=395746484
+  InvokED-adjacent ones. Finally Sonal raised the **future-readiness** listening mission; we added
+  one turn for it (how leaders define the term + what they're doing about it) and funded it by
+  cutting editions-attended, the weakest and most pre-fillable turn. Final shape: **6 mains + 4
+  probes = 10 turns**, Q3 (action) holding 4 of them.
+  → https://docs.google.com/spreadsheets/d/1qMhSkrACZb4zmM2cBWDkyhEma_lDBa6_MkHnSsKU2B8/edit#gid=1181288946
 - **`projects/invoked-impact-survey/`** — new project page + `questions-10turn.json`, the source the
   tab is generated from. Regenerate the tab any time by re-running `sheet-add-tab --replace`.
 - **`gs.py sheet-add-tab`** — new engine command: creates a tab and fills it from a JSON file, with
@@ -31,6 +34,13 @@ The requirement doc names post-event **action & collaboration** the most critica
 InvokED" baseline (senior respondents reconstruct baselines poorly, and the shift is what gets
 reported), the profile clarifier probes, and the standalone network question — then merging four
 questions into two.
+
+## The call on future readiness
+Sonal asked whether the "listen to a million voices on future readiness" mission should ride inside
+this survey or stand alone. **Both** — a separate instrument for the mission itself (different
+audience, scale and language; 150–250 alumni will never be a million voices), plus **one turn here**,
+because this audience is different in kind: they're the people whose *definition* shapes how the
+sector uses the term. Their answers are narrative source material, not a representative measure.
 
 ## What we learned
 - **`sheet-update`'s `--values` can't carry real content.** It splits on `|` and `;;`, and any
@@ -48,9 +58,10 @@ questions into two.
   Other people's sheets are read-only unless she specifically says otherwise.
 
 ## Next
-- **Decision needed from Sonal:** can registration data pre-fill role / org / country / editions? If
-  yes, Q1+Q2 collapse to a confirm-tap and 2 turns come free — best spent on *"was that collaboration
-  with someone you met at InvokED, or someone you already knew?"*, which separates InvokED-caused
-  from InvokED-adjacent.
+- **Load-bearing decision:** can registration data pre-fill role / org / country / **editions
+  attended**? Editions no longer has a turn, so pre-fill (or a post-close tap) is now the only way
+  that credibility metric survives. If neither is possible, reinstate it and drop Q5 (continuity).
+- **A separate future-readiness listening survey** — its own instrument, grassroots-appropriate
+  language, MItra's usual persona rather than this one. Not started.
 - `Dashboard_Metrics` and `Report_Metrics/Templates` still reference the original 12 questions —
   alignment pass needed before build.
