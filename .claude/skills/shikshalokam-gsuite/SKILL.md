@@ -75,6 +75,22 @@ about auth.
 - If `drive_map.json` is missing, the shared folder hasn't been built yet — the
   maintainer runs `gs.py drive-init` once (Part A step 7).
 
+**Sheets (read → write → new tab):**
+- `gs.py sheet-read --id <sheet id> --range "'Tab'!A1:J40"` prints the range as TSV.
+  The id is the long string in the sheet URL between `/d/` and `/edit`.
+- `gs.py sheet-update --id … --range "'Tab'!A1" --values "a|b;;c|d"` edits cells in
+  place — cells split by `|`, rows by `;;`. **Only for short, plain values:** any cell
+  containing `|` breaks it.
+- `gs.py sheet-add-tab --id … --title "New_Tab" --json rows.json [--replace]
+  [--header-row 2] [--freeze 2] [--col-width 250]` creates a **new** tab and fills it
+  from a JSON file (list of rows, each a list of cells). Use this for anything long or
+  punctuated — JSON carries any character. It **refuses to overwrite an existing tab**
+  unless `--replace` names one, and never touches other tabs.
+- **Prefer a new tab over editing someone's existing one.** Revised drafts land as a
+  new tab so the original stays intact and comparable.
+- **Whose sheet is it?** The user's own → edit freely. Someone else's → read only,
+  unless they specifically ask (Sonal, 2026-07-27).
+
 **Calendar (create → notify):**
 - `gs.py cal-invite --summary … --start … --end … --attendees …` adds it to their
   calendar **silently**. It emails attendees **only** with `--notify` — treat that

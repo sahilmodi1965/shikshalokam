@@ -732,6 +732,67 @@ def cmd_sheet_update(a):
     print(f"Updated {res.get('updatedCells', 0)} cell(s) in {a.range}.")
 
 
+def cmd_sheet_add_tab(a):
+    """Create a NEW tab in a Sheet and fill it. Existing tabs are never touched
+    unless --replace names one explicitly. Rows come from a JSON file (list of
+    lists) so cell text can contain any character — the --values pipe syntax of
+    sheet-update can't carry '|' or ';;'."""
+    s = svc("sheets", "v4")
+
+    meta = s.spreadsheets().get(spreadsheetId=a.id).execute()
+    existing = {sh["properties"]["title"]: sh["properties"]["sheetId"]
+                for sh in meta.get("sheets", [])}
+    if a.title in existing:
+        if not a.replace:
+            print(f"Tab '{a.title}' already exists — pass --replace to overwrite it.")
+            return
+        s.spreadsheets().batchUpdate(spreadsheetId=a.id, body={
+            "requests": [{"deleteSheet": {"sheetId": existing[a.title]}}]
+        }).execute()
+
+    added = s.spreadsheets().batchUpdate(spreadsheetId=a.id, body={
+        "requests": [{"addSheet": {"properties": {"title": a.title}}}]
+    }).execute()
+    sheet_id = added["replies"][0]["addSheet"]["properties"]["sheetId"]
+
+    rows = json.loads(Path(a.json).read_text()) if a.json else []
+    if rows:
+        ncols = max(len(r) for r in rows)
+        s.spreadsheets().values().update(
+            spreadsheetId=a.id, range=f"'{a.title}'!A1",
+            valueInputOption="USER_ENTERED", body={"values": rows},
+        ).execute()
+
+        reqs = [
+            {"repeatCell": {
+                "range": {"sheetId": sheet_id},
+                "cell": {"userEnteredFormat": {"wrapStrategy": "WRAP",
+                                               "verticalAlignment": "TOP"}},
+                "fields": "userEnteredFormat(wrapStrategy,verticalAlignment)"}},
+            {"updateDimensionProperties": {
+                "range": {"sheetId": sheet_id, "dimension": "COLUMNS",
+                          "startIndex": 0, "endIndex": ncols},
+                "properties": {"pixelSize": a.col_width},
+                "fields": "pixelSize"}},
+        ]
+        if a.header_row:
+            hr = a.header_row - 1
+            reqs.append({"repeatCell": {
+                "range": {"sheetId": sheet_id, "startRowIndex": hr, "endRowIndex": hr + 1},
+                "cell": {"userEnteredFormat": {"textFormat": {"bold": True},
+                                               "backgroundColor": {"red": 0.85, "green": 0.87, "blue": 0.94}}},
+                "fields": "userEnteredFormat(textFormat,backgroundColor)"}})
+        if a.freeze:
+            reqs.append({"updateSheetProperties": {
+                "properties": {"sheetId": sheet_id,
+                               "gridProperties": {"frozenRowCount": a.freeze}},
+                "fields": "gridProperties.frozenRowCount"}})
+        s.spreadsheets().batchUpdate(spreadsheetId=a.id, body={"requests": reqs}).execute()
+
+    print(f"Tab '{a.title}' created — {len(rows)} row(s) — "
+          f"https://docs.google.com/spreadsheets/d/{a.id}/edit#gid={sheet_id}")
+
+
 # ---- gmail: search + labels + filters --------------------------------------
 def _resolve_label(g, name_or_id):
     """Return a label id for a display name or id (system or user). None if
@@ -967,6 +1028,19 @@ def main():
     su.add_argument("--values", required=True,
                     help="cells split by '|', rows split by ';;'  (e.g. \"a|b||c;;d|e|f\")")
     su.set_defaults(fn=cmd_sheet_update)
+
+    sat = sub.add_parser("sheet-add-tab",
+                         help="create a NEW tab in a Sheet and fill it from a JSON file")
+    sat.add_argument("--id", required=True, help="spreadsheet id")
+    sat.add_argument("--title", required=True, help="new tab name")
+    sat.add_argument("--json", help="path to a JSON file: list of rows, each a list of cells")
+    sat.add_argument("--replace", action="store_true",
+                     help="overwrite the tab if it already exists (otherwise refuses)")
+    sat.add_argument("--header-row", type=int, default=0,
+                     help="1-indexed row to bold+shade as the header (0 = none)")
+    sat.add_argument("--freeze", type=int, default=0, help="freeze this many top rows")
+    sat.add_argument("--col-width", type=int, default=260, help="column width in pixels")
+    sat.set_defaults(fn=cmd_sheet_add_tab)
 
     se = sub.add_parser("search", help="search threads (prints 'threadId<TAB>subject')")
     se.add_argument("--query", required=True, help="Gmail search syntax")

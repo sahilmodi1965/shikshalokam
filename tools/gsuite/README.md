@@ -28,7 +28,16 @@ python3 tools/gsuite/gs.py doc-create --title "..." --body-file f.md
 python3 tools/gsuite/gs.py drive-folder --name "..." [--parent <id>]
 python3 tools/gsuite/gs.py drive-init       # build + share the Brain Output tree (once)
 python3 tools/gsuite/gs.py cal-invite --summary "..." --start ... --end ... [--notify]
+python3 tools/gsuite/gs.py sheet-read --id <sheet id> --range "'Tab'!A1:J40"
+python3 tools/gsuite/gs.py sheet-update --id <sheet id> --range "'Tab'!A1" --values "a|b;;c|d"
+python3 tools/gsuite/gs.py sheet-add-tab --id <sheet id> --title "New_Tab" --json rows.json \
+        [--replace] [--header-row 2] [--freeze 2] [--col-width 250]
 ```
+
+`sheet-update`'s `--values` splits on `|` and `;;`, so it can only carry short plain
+values. `sheet-add-tab` takes a JSON file (list of rows, each a list of cells) and can
+therefore carry any character — use it for real content. It refuses to overwrite an
+existing tab unless `--replace` is passed, and never touches other tabs.
 
 ## The two gates (never bypass)
 - **Email** — `email-draft` writes a draft; nothing leaves. `email-send` is a
