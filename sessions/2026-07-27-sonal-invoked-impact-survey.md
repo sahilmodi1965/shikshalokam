@@ -12,10 +12,12 @@ project: invoked-impact-survey
   Original `Questions` tab untouched, so the two stay comparable. Structured as **7 main questions
   + 3 probes**, with probes in the follow-up column against their parent — Sonal's correction: a
   probe numbered as its own question ("Q3 says Q4 is its probe") fights the sheet's columns.
-  Then Sonal cut the Stories & Recognition question as no longer aligned — leaving **6 mains + 3
-  probes = 9 turns**, one under the cap. Its three report fields (story willingness, Awards
-  nomination, follow-up contact) move to the post-close consent screen, which costs no turn.
-  → https://docs.google.com/spreadsheets/d/1qMhSkrACZb4zmM2cBWDkyhEma_lDBa6_MkHnSsKU2B8/edit#gid=872411099
+  Then Sonal cut the Stories & Recognition question as no longer aligned; its three report fields
+  (story willingness, Awards nomination, follow-up contact) move to the post-close consent screen,
+  which costs no turn. The freed turn went into a **third probe on Q4** — the attribution question
+  ("met at InvokED, or already knew them?"), separating InvokED-caused collaborations from
+  InvokED-adjacent ones. Final shape: **6 mains + 4 probes = 10 turns**, Q4 holding 4 of them.
+  → https://docs.google.com/spreadsheets/d/1qMhSkrACZb4zmM2cBWDkyhEma_lDBa6_MkHnSsKU2B8/edit#gid=395746484
 - **`projects/invoked-impact-survey/`** — new project page + `questions-10turn.json`, the source the
   tab is generated from. Regenerate the tab any time by re-running `sheet-add-tab --replace`.
 - **`gs.py sheet-add-tab`** — new engine command: creates a tab and fills it from a JSON file, with

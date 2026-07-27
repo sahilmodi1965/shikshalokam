@@ -40,18 +40,31 @@ capture areas, so it gets 3 of the 10 turns (Q5–Q7). That block is the only on
 **Action Stories** — who / what / outcome — which are what the Impact Report, the narrative assets
 and Shikshagraha Awards outreach are actually built from.
 
-**6 main questions + 3 probes = 9 turns**, against a cap of 10 — one turn spare. Probes live in the
-follow-up column against their parent question; they aren't separately numbered, but each spends a turn.
+**6 main questions + 4 probes = 10 turns**, exactly at the cap. Probes live in the follow-up column
+against their parent question; they aren't separately numbered, but each spends a turn.
 
 | Q | Block | Probes | Turns | Why it earns the space |
 |---|---|---|---|---|
 | 1 | Profile — role, org, location | — | 1 | Ecosystem diversity. First candidate for pre-fill. |
 | 2 | Editions attended | — | 1 | Repeat participation. Also pre-fillable. |
 | 3 | Perception shift | 1 | 2 | Magnitude *and* substance, in two turns instead of four |
-| **4** | **Action & outcome** | **2** | **3** | **The core metric and the stories. Never trade these away.** |
+| **4** | **Action & outcome** | **3** | **4** | **The core metric and the stories. Never trade these away.** |
 | 5 | Org influence | — | 1 | Institutional change — scale + substance in one turn |
 | 6 | Continuity | — | 1 | Retention intent + design input for the year-round offer |
-| | | | **9** | 1 turn spare |
+| | | | **10** | |
+
+**Q4 carries 4 of the 10 turns** — main + three probes, branching on Yes/In-progress vs No:
+
+| | Yes / In progress | No |
+|---|---|---|
+| Probe 1 | Who is it with, what are you doing together? | What would you still like to take forward, and what's blocking it? |
+| Probe 2 | **Met at InvokED, or already knew them?** | What would make it easier to act on it? |
+| Probe 3 | What's come out of it — or what do you expect? | Anyone from InvokED you're still in touch with? |
+
+Probe 2 on the Yes branch is the **attribution question** — it separates an InvokED-*caused*
+collaboration from one that merely happened afterwards. That distinction is the strongest claim the
+Impact Report can make. On the No branch, probe 3 recovers network data from non-collaborators, so
+neither branch wastes its four turns.
 
 **Removed 2026-07-27 (Sonal):** the Stories & Recognition question — story/video willingness,
 Shikshagraha Awards nomination, follow-up contact — no longer aligns with the survey's purpose.
@@ -64,22 +77,19 @@ Full text, branch logic, cut-and-recovery map and the probing rules live in the
 ## The rules matter as much as the questions
 
 A 10-question list without enforcement drifts straight back to 30:
-- Hard cap 10 turns, currently using 9. Only Q3 (one probe) and Q4 (two probes) may probe; the
-  other four never do.
+- Hard cap 10 turns, and the design now uses all 10. Only Q3 (one probe) and Q4 (three probes) may
+  probe; the other four never do.
 - Never re-ask what was volunteered — if Q4's main answer already names the partner, skip probe 1
   (the conversation ends in 9).
 - Every branch, including every "No", must return something usable.
 
-## Open decisions
+## Open decision
 
-**1. How to spend the spare turn.** The design sits at 9 of 10. Recommendation: a third probe on
-Q4 — *"was that collaboration with someone you met at InvokED, or someone you already knew?"* That
-separates InvokED-**caused** from InvokED-adjacent, which is the strongest claim the Impact Report
-can make. Not yet added; awaiting the call.
-
-**2. Can registration data pre-fill role / org / country / editions?** If yes, Q1+Q2 collapse into
-one confirm-tap and a second turn comes free — enough for a light network question so that
-respondents who answered "No" at Q4 still yield something.
+**Can registration data pre-fill role / org / country / editions?** If yes, Q1+Q2 collapse into one
+confirm-tap and a turn comes free while staying at the cap. Best use of it: buy back the **perception
+baseline** before Q3 — *"before your first InvokED, how did you view collaboration?"* — which would
+make the before/after shift measurable rather than self-reported. It was the first thing cut (most
+expensive question per unit of insight), and it's the right thing to restore if a turn ever frees up.
 
 ## Still to check
 
