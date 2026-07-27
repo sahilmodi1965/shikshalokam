@@ -40,14 +40,19 @@ capture areas, so it gets 3 of the 10 turns (Q5–Q7). That block is the only on
 **Action Stories** — who / what / outcome — which are what the Impact Report, the narrative assets
 and Shikshagraha Awards outreach are actually built from.
 
-| Turns | Block | Why it earns the space |
-|---|---|---|
-| 1–2 | Profile | Ecosystem diversity + repeat participation. First candidates for pre-fill. |
-| 3–4 | Perception shift | Magnitude *and* substance, in two turns instead of four |
-| **5–7** | **Action & outcome** | **The core metric and the stories. Never trade these away.** |
-| 8 | Org influence | Institutional change, scale + substance in one turn |
-| 9 | Continuity | Retention intent + design input for the year-round offer |
-| 10 | Stories & recognition | Consent, Awards pipeline, follow-up contact |
+**7 main questions + 3 probes = 10 turns.** Probes live in the follow-up column against their
+parent question — they are not separately numbered questions, but each one still spends a turn.
+
+| Q | Block | Probes | Turns | Why it earns the space |
+|---|---|---|---|---|
+| 1 | Profile — role, org, location | — | 1 | Ecosystem diversity. First candidate for pre-fill. |
+| 2 | Editions attended | — | 1 | Repeat participation. Also pre-fillable. |
+| 3 | Perception shift | 1 | 2 | Magnitude *and* substance, in two turns instead of four |
+| **4** | **Action & outcome** | **2** | **3** | **The core metric and the stories. Never trade these away.** |
+| 5 | Org influence | — | 1 | Institutional change — scale + substance in one turn |
+| 6 | Continuity | — | 1 | Retention intent + design input for the year-round offer |
+| 7 | Stories & recognition | — | 1 | Consent, Awards pipeline, follow-up contact |
+| | | | **10** | |
 
 Full text, branch logic, cut-and-recovery map and the probing rules live in the
 `Questions_Revised_10` tab, generated from `questions-10turn.json` in this folder.
@@ -55,8 +60,9 @@ Full text, branch logic, cut-and-recovery map and the probing rules live in the
 ## The rules matter as much as the questions
 
 A 10-question list without enforcement drifts straight back to 30:
-- Hard cap 10 turns. Only Q4, Q6, Q7 may probe. One probe each, never two.
-- Never re-ask what was volunteered — if Q5 already names the partner, skip Q6 (ends in 9).
+- Hard cap 10 turns. Only Q3 (one probe) and Q4 (two probes) may probe; the other five never do.
+- Never re-ask what was volunteered — if Q4's main answer already names the partner, skip probe 1
+  (the conversation ends in 9).
 - Every branch, including every "No", must return something usable.
 
 ## Open decision
