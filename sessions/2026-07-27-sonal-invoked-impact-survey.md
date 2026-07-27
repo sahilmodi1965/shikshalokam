@@ -64,6 +64,11 @@ sector uses the term. Their answers are narrative source material, not a represe
   *session start should detect it's running outside the brain directory and say so.*
 - **Sonal's standing rule on sheets, now recorded:** her own sheets are edited directly, no asking.
   Other people's sheets are read-only unless she specifically says otherwise.
+- **Deliverables carry the spec, never the reasoning.** The first cut of the tabs included
+  "what was cut and why", "change from v1" columns and design rationale. Sonal: *"dont ever do that
+  … it is confusing to the people who are not part of this conversation."* Correct — a teammate
+  opening the sheet has none of the context that made those rows feel useful. The spec goes in the
+  shared file; the reasoning goes here and on the project page, where someone can seek it out.
 
 ## Next
 - **Load-bearing decision:** can registration data pre-fill role / org / country / **editions

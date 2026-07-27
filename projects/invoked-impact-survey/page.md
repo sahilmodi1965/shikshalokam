@@ -33,6 +33,10 @@ https://docs.google.com/spreadsheets/d/1qMhSkrACZb4zmM2cBWDkyhEma_lDBa6_MkHnSsKU
 Each revised tab is generated from a JSON file in this folder, so it can be regenerated with
 `gs.py sheet-add-tab --replace` rather than hand-edited.
 
+**The sheet carries the spec only — no reasoning, no change history** (Sonal, 2026-07-27). People
+open it without any of the conversation behind it, and rationale reads as noise to them. Everything
+explaining *why* lives on this page instead. Keep it that way.
+
 ## The constraint that shapes everything
 
 **10 questions total, probes included.** Stakeholder feedback, confirmed by Sonal on 2026-07-27 —
