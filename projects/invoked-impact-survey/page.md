@@ -40,8 +40,8 @@ capture areas, so it gets 3 of the 10 turns (Q5–Q7). That block is the only on
 **Action Stories** — who / what / outcome — which are what the Impact Report, the narrative assets
 and Shikshagraha Awards outreach are actually built from.
 
-**7 main questions + 3 probes = 10 turns.** Probes live in the follow-up column against their
-parent question — they are not separately numbered questions, but each one still spends a turn.
+**6 main questions + 3 probes = 9 turns**, against a cap of 10 — one turn spare. Probes live in the
+follow-up column against their parent question; they aren't separately numbered, but each spends a turn.
 
 | Q | Block | Probes | Turns | Why it earns the space |
 |---|---|---|---|---|
@@ -51,8 +51,12 @@ parent question — they are not separately numbered questions, but each one sti
 | **4** | **Action & outcome** | **2** | **3** | **The core metric and the stories. Never trade these away.** |
 | 5 | Org influence | — | 1 | Institutional change — scale + substance in one turn |
 | 6 | Continuity | — | 1 | Retention intent + design input for the year-round offer |
-| 7 | Stories & recognition | — | 1 | Consent, Awards pipeline, follow-up contact |
-| | | | **10** | |
+| | | | **9** | 1 turn spare |
+
+**Removed 2026-07-27 (Sonal):** the Stories & Recognition question — story/video willingness,
+Shikshagraha Awards nomination, follow-up contact — no longer aligns with the survey's purpose.
+The report spec still expects those three fields, so they move to the **post-close consent screen**
+alongside the optional photo upload. A post-close step isn't a turn, so this costs nothing.
 
 Full text, branch logic, cut-and-recovery map and the probing rules live in the
 `Questions_Revised_10` tab, generated from `questions-10turn.json` in this folder.
@@ -60,17 +64,22 @@ Full text, branch logic, cut-and-recovery map and the probing rules live in the
 ## The rules matter as much as the questions
 
 A 10-question list without enforcement drifts straight back to 30:
-- Hard cap 10 turns. Only Q3 (one probe) and Q4 (two probes) may probe; the other five never do.
+- Hard cap 10 turns, currently using 9. Only Q3 (one probe) and Q4 (two probes) may probe; the
+  other four never do.
 - Never re-ask what was volunteered — if Q4's main answer already names the partner, skip probe 1
   (the conversation ends in 9).
 - Every branch, including every "No", must return something usable.
 
-## Open decision
+## Open decisions
 
-**Can registration data pre-fill role / org / country / editions?** If yes, Q1+Q2 collapse into one
-confirm-tap and 2 turns come free. Spend them on *"was that collaboration with someone you met at
-InvokED, or someone you already knew?"* — that separates InvokED-**caused** from InvokED-adjacent,
-a materially stronger claim for the report. This is the highest-leverage change available.
+**1. How to spend the spare turn.** The design sits at 9 of 10. Recommendation: a third probe on
+Q4 — *"was that collaboration with someone you met at InvokED, or someone you already knew?"* That
+separates InvokED-**caused** from InvokED-adjacent, which is the strongest claim the Impact Report
+can make. Not yet added; awaiting the call.
+
+**2. Can registration data pre-fill role / org / country / editions?** If yes, Q1+Q2 collapse into
+one confirm-tap and a second turn comes free — enough for a light network question so that
+respondents who answered "No" at Q4 still yield something.
 
 ## Still to check
 
