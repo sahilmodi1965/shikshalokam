@@ -21,8 +21,17 @@ InvokED's move **from visibility to credibility** — proving what happened *aft
 
 **Working template (Sonal's, editable):**
 https://docs.google.com/spreadsheets/d/1qMhSkrACZb4zmM2cBWDkyhEma_lDBa6_MkHnSsKU2B8/
-Tabs: `Overview` · `Questions` (original 12) · `Questions_Revised_10` (current) ·
-`Dashboard_Metrics` · `Report_Metrics/Templates`
+
+| Tab | Status |
+|---|---|
+| `Questions_Revised_10` | **current** — 6 mains + 4 probes |
+| `Dashboard_Metrics_Revised` | **current** — re-sourced to the new numbering |
+| `Report_Metrics_Revised` | **current** — per-conversation + aggregate |
+| `Questions` · `Dashboard_Metrics` · `Report_Metrics/Templates` | v1, kept for comparison |
+| `Overview` | programme brief — unchanged |
+
+Each revised tab is generated from a JSON file in this folder, so it can be regenerated with
+`gs.py sheet-add-tab --replace` rather than hand-edited.
 
 ## The constraint that shapes everything
 
@@ -108,8 +117,28 @@ comes free. Best use of it: buy back the **perception baseline** before Q2 — *
 InvokED, how did you view collaboration?"* — which would make the before/after shift measurable
 rather than self-reported. It was the first thing cut, and the right thing to restore.
 
-## Still to check
+## Dashboard & report — what the re-source changed
 
-`Dashboard_Metrics` and `Report_Metrics/Templates` were built against the original 12 questions.
-Cutting the perception baseline and the standalone network question may leave metrics with no
-source. Worth an alignment pass before build.
+Every metric was re-pointed at the new numbering. Three things are not just renumbering:
+
+**Two metrics no longer exist. Don't build tiles for them.**
+- **Perception baseline / measured before-after** — the baseline question was cut, so shift is
+  *self-reported magnitude*, not a measured delta. The published methodology must say so.
+- **Network continuity as a single %** — no question is now asked of every respondent about staying
+  connected, so a percentage would misrepresent the data. Report **named connections as a count**.
+
+**One metric is orphaned until a build decision lands.**
+- **Repeat participation** — editions-attended has no turn. It exists only via pre-fill from the
+  registrant record, or a post-close tap. No pre-fill, no metric, and no edition-level segmentation
+  in the aggregate report either.
+
+**Four new metrics, one of which should lead the report.**
+- **InvokED-caused vs InvokED-adjacent** (Q3 probe 2) — the split between partners *met at InvokED*
+  and partners already known. This is the difference between "things happened afterwards" and
+  "InvokED caused things." It is the most defensible number in the whole survey.
+- **Latent collaborations & barriers** (Q3 No branch) — the Forum lead list; previously the No
+  branch yielded almost nothing.
+- **Future readiness — definitions** and **— contributions** (Q6) — the narrative layer.
+
+Also carried into the report tab: a **methodology block** on self-selection (respondents who
+collaborated are likelier to reply, so collaboration rates skew high — publish the honest number).

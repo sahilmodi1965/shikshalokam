@@ -21,8 +21,16 @@ project: invoked-impact-survey
   cutting editions-attended, the weakest and most pre-fillable turn. Final shape: **6 mains + 4
   probes = 10 turns**, Q3 (action) holding 4 of them.
   → https://docs.google.com/spreadsheets/d/1qMhSkrACZb4zmM2cBWDkyhEma_lDBa6_MkHnSsKU2B8/edit#gid=1181288946
-- **`projects/invoked-impact-survey/`** — new project page + `questions-10turn.json`, the source the
-  tab is generated from. Regenerate the tab any time by re-running `sheet-add-tab --replace`.
+- **`Dashboard_Metrics_Revised`** and **`Report_Metrics_Revised`** — both re-sourced to the new
+  question numbering. Not just renumbering: **two metrics were retired** (the measured perception
+  baseline, and network continuity as a single %) because no question feeds them honestly any more;
+  **repeat participation is orphaned** until pre-fill or a post-close tap ships; and **four metrics
+  are new**, led by **InvokED-caused vs InvokED-adjacent** — the split between partners met at
+  InvokED and partners already known, which is the most defensible number in the survey and should
+  lead the Impact Report. A methodology block on self-selection went into the report tab.
+- **`projects/invoked-impact-survey/`** — project page + three JSON sources (`questions-10turn`,
+  `dashboard-metrics`, `report-metrics`). Every revised tab regenerates from these with
+  `gs.py sheet-add-tab --replace`, so the sheet is never hand-edited.
 - **`gs.py sheet-add-tab`** — new engine command: creates a tab and fills it from a JSON file, with
   header bolding, freeze rows and column widths. Refuses to overwrite an existing tab without
   `--replace`; never touches other tabs. Wired into the gsuite SKILL.md + engine README.
