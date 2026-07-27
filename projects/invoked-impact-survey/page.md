@@ -68,11 +68,20 @@ against their parent question; they aren't separately numbered, but each spends 
 
 **Q3 carries 4 of the 10 turns** — main + three probes, branching on Yes/In-progress vs No:
 
+The main question carries the causal frame itself — *"thinking about being at InvokED, the people
+you met, the conversations you had — has any of it led to something substantial since?"* — and names
+the shapes that count: a collaboration, a pilot, funding unlocked, a partnership, a decision taken
+differently. A "Yes" therefore already means *InvokED led to this*, and the probes only have to
+retrieve the detail rather than establish the link.
+
 | | Yes / In progress | No |
 |---|---|---|
-| Probe 1 | Who is it with, what are you doing together? | What would you still like to take forward, and what's blocking it? |
-| Probe 2 | **Met at InvokED, or already knew them?** | What would make it easier to act on it? |
+| Probe 1 | What is it, and who is it with? | What would you still like to take forward, and what's blocking it? |
+| Probe 2 | **Met them at InvokED, or already in your network?** | What would make it easier to act on it? |
 | Probe 3 | What's come out of it — or what do you expect? | Anyone from InvokED you're still in touch with? |
+
+Naming *funding unlocked* explicitly matters: without the prompt, respondents rarely volunteer it,
+and it's the outcome funders find most legible.
 
 Probe 2 on the Yes branch is the **attribution question** — it separates an InvokED-*caused*
 collaboration from one that merely happened afterwards. That distinction is the strongest claim the
