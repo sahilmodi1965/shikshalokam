@@ -34,7 +34,9 @@ questions into two.
   Sonal it "had no Sheets tool" and offered her an Apps Script to paste — while `sheet-read` /
   `sheet-update` sat in `tools/gsuite/`. She had to push back twice ("how do the abilities and
   features build are getting lost by you") before it went looking. **Capability the brain can't see
-  is capability it doesn't have.** Filed as an ops issue — session start should detect this.
+  is capability it doesn't have.** NOT filed as an ops issue — `gh` isn't installed on this
+  machine, so the architecture lane is unavailable here. Someone with `gh` should file it:
+  *session start should detect it's running outside the brain directory and say so.*
 - **Sonal's standing rule on sheets, now recorded:** her own sheets are edited directly, no asking.
   Other people's sheets are read-only unless she specifically says otherwise.
 
