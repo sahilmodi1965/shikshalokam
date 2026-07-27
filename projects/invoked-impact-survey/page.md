@@ -24,7 +24,7 @@ https://docs.google.com/spreadsheets/d/1qMhSkrACZb4zmM2cBWDkyhEma_lDBa6_MkHnSsKU
 
 | Tab | Status |
 |---|---|
-| `Questions_Revised_10` | **current** — 6 mains + 4 probes |
+| `Questions_Revised_10` | **current** — 8 mains + 2 probes |
 | `Dashboard_Metrics_Revised` | **current** — re-sourced to the new numbering |
 | `Report_Metrics_Revised` | **current** — per-conversation + aggregate |
 | `Questions` · `Dashboard_Metrics` · `Report_Metrics/Templates` | v1, kept for comparison |
@@ -46,47 +46,81 @@ Why it bites: respondents are senior, time-poor education leaders — funders, g
 researchers, philanthropy. This is the **inverse of MItra's usual grassroots persona**. Length kills
 completion in this audience, and a thin sample kills the report.
 
+## The primary objective (Sonal, 2026-07-27)
+
+**InvokED is not a two-day event. The survey exists to evidence what those two days set in
+motion afterwards, and the different ways that helped the ecosystem.** Every design call below
+serves that sentence. Anything that is feedback about the two days themselves does not belong
+in this instrument.
+
+Two consequences, both structural:
+- **Substantial action is not the only evidence.** Q3 sets a high bar (collaboration, pilot,
+  funding, partnership, decision). Most respondents will answer No to it, and most of the
+  ecosystem effect lives below that bar: an idea carried back to a team, an introduction
+  brokered between two people, a practice changed, InvokED spoken or written about. **Q4 catches
+  all of it, and is asked of everyone regardless of Q3.**
+- **Time is the argument.** **Q5** records when the action began and whether it is still live.
+  If a meaningful share started months after the edition, the two-day framing collapses on the
+  evidence rather than on assertion. That is the most quotable figure the survey can produce.
+
 ## What the 10 turns protect
 
-The requirement doc names **post-event action & collaboration** the most critical of the four
-capture areas, so it gets 3 of the 10 turns (Q5–Q7). That block is the only one that produces
-**Action Stories** — who / what / outcome — which are what the Impact Report, the narrative assets
-and Shikshagraha Awards outreach are actually built from.
-
-**6 main questions + 4 probes = 10 turns**, exactly at the cap. Probes live in the follow-up column
-against their parent question; they aren't separately numbered, but each spends a turn.
+**8 main questions + 2 probes = 10 turns**, exactly at the cap. Probes live in the follow-up
+column against their parent question; they aren't separately numbered, but each spends a turn.
+The post-event block (Q3, Q4, Q5) holds 4 of the 10.
 
 | Q | Block | Probes | Turns | Why it earns the space |
 |---|---|---|---|---|
 | 1 | Profile — role, org, location | — | 1 | Ecosystem diversity. Pre-fillable. |
 | 2 | Perception shift | 1 | 2 | Magnitude *and* substance, in two turns instead of four |
-| **3** | **Action & outcome** | **3** | **4** | **The core metric and the stories. Never trade these away.** |
-| 4 | Org influence | — | 1 | Institutional change — scale + substance in one turn |
-| 5 | Continuity | — | 1 | Retention intent + design input for the year-round offer |
-| 6 | **Future readiness** | — | 1 | The narrative asset — how leaders define it, and what they're doing |
+| **3** | **Action & outcome** | **1** | **2** | **The flagship stories and the headline metric** |
+| **4** | **Ripple beyond the project** | — | **1** | **The breadth layer. The "different ways" question** |
+| **5** | **Timing & continuity of action** | — | **1** | **The proof it isn't a two-day thing** |
+| 6 | Org influence | — | 1 | Institutional change — scale + substance in one turn |
+| 7 | Continuity | — | 1 | Retention intent + design input for the year-round offer |
+| 8 | **Future readiness** | — | 1 | The narrative asset — how leaders define it, and what they're doing |
 | | | | **10** | |
 
-**Q3 carries 4 of the 10 turns** — main + three probes, branching on Yes/In-progress vs No:
+### Q3 — one probe, not three
 
-The main question carries the causal frame itself — *"thinking about being at InvokED, the people
-you met, the conversations you had — has any of it led to something substantial since?"* — and names
-the shapes that count: a collaboration, a pilot, funding unlocked, a partnership, a decision taken
-differently. A "Yes" therefore already means *InvokED led to this*, and the probes only have to
-retrieve the detail rather than establish the link.
+Q3 was carrying 4 turns (main + three probes) until 2026-07-27. The three-probe ladder had two
+faults. On the **No** branch, probe 1 asked *what's holding it up* and probe 2 asked *what would
+make it easier to act* — the same question twice, back to back. And the two branches of any given
+probe were unrelated questions sharing a slot number: probe 2's Yes side was attribution, its No
+side was barriers. Sonal's call: **if they say Yes or In progress, just ask for the details all
+together.**
 
 | | Yes / In progress | No |
 |---|---|---|
-| Probe 1 | What is it, and who is it with? | What would you still like to take forward, and what's blocking it? |
-| Probe 2 | **Met them at InvokED, or already in your network?** | What would make it easier to act on it? |
-| Probe 3 | What's come out of it — or what do you expect? | Anyone from InvokED you're still in touch with? |
+| Probe | What it is · who it's with · **met at InvokED or already knew them** · what's come of it | What you'd still like to take forward · what's holding it up · anyone you're still in touch with |
 
-Naming *funding unlocked* explicitly matters: without the prompt, respondents rarely volunteer it,
-and it's the outcome funders find most legible.
+That returns 2 turns, which bought Q4 and Q5.
 
-Probe 2 on the Yes branch is the **attribution question** — it separates an InvokED-*caused*
-collaboration from one that merely happened afterwards. That distinction is the strongest claim the
-Impact Report can make. On the No branch, probe 3 recovers network data from non-collaborators, so
-neither branch wastes its four turns.
+**The cost, and the fix.** Partner origin — *met at InvokED vs already knew* — is the strongest
+attribution claim the report has. Buried inside a four-part open answer, a share of respondents
+will skip it. It is therefore **also a tap on the post-close screen**, which costs no turn. The
+report states the base rather than implying full coverage.
+
+Naming *funding unlocked* in the main question still matters: without the prompt, respondents
+rarely volunteer it, and it's the outcome funders find most legible.
+
+### Q4 — the ripple, asked of everyone
+
+*"Beyond a formal project — has anything from InvokED travelled? An idea you took back to your
+team, an introduction you made between two people, something you spoke or wrote about, a way of
+working you changed?"*
+
+Asked of every respondent, **including everyone who said No to Q3**. Before this question existed,
+a No made a respondent look like InvokED did nothing for them. Q4 is where the ecosystem story
+actually lives, and it produces two metrics that nothing else can: **ripple types** and **reach
+beyond attendees** (things that reached people who were never at InvokED).
+
+### Q5 — when, and is it still going
+
+Two taps in one turn: timing (within weeks / a few months later / later in the year / still
+unfolding) and state (still going / completed / stalled). Anchored to whatever the respondent
+described in Q3 or Q4. **If both were empty, Q5 is skipped and the conversation ends in 9.**
+Stalled cases go to the Forum lead list.
 
 ## Future readiness — one turn here, a separate survey elsewhere
 
@@ -119,28 +153,29 @@ Full text, branch logic, cut-and-recovery map and the probing rules live in the
 ## The rules matter as much as the questions
 
 A 10-question list without enforcement drifts straight back to 30:
-- Hard cap 10 turns, and the design now uses all 10. Only Q2 (one probe) and Q3 (three probes) may
-  probe; the other four never do.
-- Never re-ask what was volunteered — if Q3's main answer already names the partner, skip probe 1
-  (the conversation ends in 9).
+- Hard cap 10 turns, and the design now uses all 10. Only Q2 and Q3 may probe, once each; the other
+  six never do.
+- Q4 is asked of every respondent, whatever they answered in Q3.
+- Q5 is anchored to Q3 or Q4. If both were empty, skip it — the conversation ends in 9.
+- Never re-ask what was volunteered.
 - Every branch, including every "No", must return something usable.
 
 ## Open decision
 
 **Can registration data pre-fill role / org / country / editions?** This is now load-bearing: it's
 how editions-attended gets recovered at all. If yes, Q1 also collapses to a confirm-tap and a turn
-comes free. Best use of it: buy back the **perception baseline** before Q2 — *"before your first
-InvokED, how did you view collaboration?"* — which would make the before/after shift measurable
-rather than self-reported. It was the first thing cut, and the right thing to restore.
+comes free. Best use of that turn under the current objective: **split Q5**, so timing and
+still-live are asked cleanly rather than as two taps in one breath. Second best: buy back the
+perception baseline before Q2, which would make the shift measurable rather than self-reported.
 
 ## Dashboard & report — what the re-source changed
 
-Every metric was re-pointed at the new numbering. Three things are not just renumbering:
+Every metric is pointed at the new numbering. Beyond renumbering:
 
 **Two metrics no longer exist. Don't build tiles for them.**
 - **Perception baseline / measured before-after** — the baseline question was cut, so shift is
   *self-reported magnitude*, not a measured delta. The published methodology must say so.
-- **Network continuity as a single %** — no question is now asked of every respondent about staying
+- **Network continuity as a single %** — no question is asked of every respondent about staying
   connected, so a percentage would misrepresent the data. Report **named connections as a count**.
 
 **One metric is orphaned until a build decision lands.**
@@ -148,13 +183,21 @@ Every metric was re-pointed at the new numbering. Three things are not just renu
   registrant record, or a post-close tap. No pre-fill, no metric, and no edition-level segmentation
   in the aggregate report either.
 
-**Four new metrics, one of which should lead the report.**
-- **InvokED-caused vs InvokED-adjacent** (Q3 probe 2) — the split between partners *met at InvokED*
-  and partners already known. This is the difference between "things happened afterwards" and
-  "InvokED caused things." It is the most defensible number in the whole survey.
-- **Latent collaborations & barriers** (Q3 No branch) — the Forum lead list; previously the No
-  branch yielded almost nothing.
-- **Future readiness — definitions** and **— contributions** (Q6) — the narrative layer.
+**The metrics that carry the objective.**
+- **Any post-event effect** (Q3 + Q4) — the share of respondents reporting either substantial
+  action or a ripple. **This is now the number the report opens with**, not the collaboration
+  count, because it is the direct answer to "InvokED is not a two-day event."
+- **Action timeline** and **still live** (Q5) — when it started, whether it's ongoing. The chart
+  that makes the argument.
+- **Ripple types** and **reach beyond attendees** (Q4) — the different ways InvokED helped,
+  including everything that never became a project.
+- **Ripple among non-collaborators** (Q3 = No × Q4) — the guard against misreading a No.
+- **InvokED-caused vs InvokED-adjacent** (Q3 probe + post-close tap) — still the most defensible
+  attribution claim, now reported with its base stated.
+- **Latent collaborations & barriers** (Q3 No branch), plus stalled action from Q5 — the Forum
+  lead list.
 
-Also carried into the report tab: a **methodology block** on self-selection (respondents who
-collaborated are likelier to reply, so collaboration rates skew high — publish the honest number).
+**New methodology notes**, all carried into the report tab: *a "No" on action is not an absence of
+impact* (read Q3 and Q4 together, never publish the Q3 No rate alone) · *partner origin is
+partially captured* (state the base) · *timing is respondent-recalled* (indicative of pattern, not
+precise) · plus the existing self-selection note.
