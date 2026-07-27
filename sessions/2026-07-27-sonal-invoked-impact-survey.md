@@ -69,7 +69,8 @@ sector uses the term. Their answers are narrative source material, not a represe
 - **Load-bearing decision:** can registration data pre-fill role / org / country / **editions
   attended**? Editions no longer has a turn, so pre-fill (or a post-close tap) is now the only way
   that credibility metric survives. If neither is possible, reinstate it and drop Q5 (continuity).
-- **A separate future-readiness listening survey** — its own instrument, grassroots-appropriate
-  language, MItra's usual persona rather than this one. Not started.
-- `Dashboard_Metrics` and `Report_Metrics/Templates` still reference the original 12 questions —
-  alignment pass needed before build.
+- **Bot system prompt** — persona, tone and the probing rules turned into actual instructions for
+  the LLM. Not started; the rules currently live only as sheet columns.
+- **A separate future-readiness listening survey: NOT being built for now** (Sonal, 2026-07-27).
+  Consequence to hold onto — Q6 is the only future-readiness data there is, so the Impact Report
+  must frame it as 150–250 senior leaders, never as sector-wide listening.

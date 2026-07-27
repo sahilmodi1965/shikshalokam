@@ -80,12 +80,15 @@ neither branch wastes its four turns.
 Q6 asks how the respondent *defines* future readiness and what they're doing about it. It sits last
 on purpose: reflective and expansive, so it never competes with the impact data upstream.
 
-**The "listen to a million voices" mission needs its own instrument** — different audience
-(teachers, youth, parents, system actors), different scale, different language. 150–250 InvokED
-alumni will never be a million voices, and bending an impact survey to carry a listening mission
-usually breaks both. What justifies one turn *here* is that this audience is different in kind:
-these are the people whose definition shapes how the sector uses the term. Treat the answers as
-**narrative source material, not a representative measure.**
+What justifies one turn *here* is that this audience is different in kind: these are the people
+whose definition shapes how the sector uses the term. Treat the answers as **narrative source
+material, not a representative measure.**
+
+**A separate million-voices instrument is not being built for now** (Sonal, 2026-07-27). So Q6 is
+the *only* future-readiness data being collected — which makes the framing constraint sharper, not
+looser: the report must not imply coverage beyond 150–250 senior leaders. If the listening exercise
+is ever picked up, it needs its own audience (teachers, youth, parents, system actors), its own
+scale, and grassroots language — MItra's usual persona, not this one.
 
 ## Moved out of the conversation (nothing lost)
 
