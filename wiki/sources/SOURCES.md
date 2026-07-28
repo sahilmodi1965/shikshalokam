@@ -107,3 +107,18 @@ Personal S3 (GenNext), Small Steps to Build Great Schools Vol. 3. *Provided in-s
 ## How this file evolves
 
 Append new sources with a `## YYYY-MM-DD added by …` heading. Keep old entries even when superseded — provenance matters. When a source is fetched again, update its `*Fetched …*` line in place.
+
+## 2026-07-28 added by Sonal
+
+**Northeast newsletter draft, July 2026** — partner update on Meghalaya and Nagaland, signed Santosh
+More. Carries the freshest CMLEAD selection numbers (1,400+ applications, 50 shortlisted, interviews
+30–31 July), the CMLEAD + PBL MoU signings with the Government of Meghalaya, the PBL co-creation
+workshop, and Nagaland's move to implementation. Two unresolved Doc comments from Sushant asking for
+photos. → [[northeast-newsletter-jul2026]] *Fetched 2026-07-28. Read-only source Doc.*
+
+**Our Samvaad — org-wide reflection on the student education movement** — 11 breakout rooms against
+four prompts (saw/heard · assumptions challenged · tensions held · new possibilities). The clearest
+record the brain has of how this team thinks about collective action, and it holds a live unresolved
+question: can an organisation that works inside government also apply pressure on it.
+→ [[our-samvaad-movement-reflection-2026-07]] *Fetched 2026-07-28. **Internal, candid — not for
+outward quotation without Sonal's explicit yes.***
