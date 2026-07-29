@@ -122,3 +122,9 @@ record the brain has of how this team thinks about collective action, and it hol
 question: can an organisation that works inside government also apply pressure on it.
 → [[our-samvaad-movement-reflection-2026-07]] *Fetched 2026-07-28. **Internal, candid — not for
 outward quotation without Sonal's explicit yes.***
+
+**MItra Concept Note (V1 2025 + V2 24 Jun 2026)** — the canonical answer to what MItra is used for.
+V2 ("MItra by ELEVATE") is current and names **four use cases**: Discussion Capture · Story Capture ·
+Evaluation Studies · Perception or Feedback Capture. V1's older four are superseded. Also captures the
+live deployments visible in Drive (Shiksha Samvaad/Skoll, PPPI Pilot, WLC, InvokED).
+→ [[mitra-concept-note-use-cases]] *Fetched 2026-07-29.*

@@ -29,7 +29,7 @@ Workspace to **build the assets and track the plan**. The plan is locked; we exe
 3. **The Origin — how MItra was born** — the Shikshagraha story; listening to women's voices at scale.
 4. **What is MItra & who it's for** — what it is, how it works, the personas it serves.
 5. **Live Demo** — the Discussion Bot capturing community voices → structured insight.
-6. **Key features & use cases** — the four use cases + what partners can configure.
+6. **Key features & use cases** — the four use cases (Discussion Capture · Story Capture · Evaluation Studies · Perception/Feedback Capture — full detail in [[mitra-concept-note-use-cases]]) + what partners can configure.
 7. **Impact — the numbers & what they mean** — the story behind the data.
 8. **Q&A & close** — recap, the next step for partners, open questions.
 *(Speakers/facilitators: all TBD.)*
