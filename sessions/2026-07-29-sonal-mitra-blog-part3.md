@@ -60,6 +60,21 @@ artefact.
   hypothesis; and what we should be honest about as a limitation. The original asked for none of
   these.
 
+## Where it landed
+- **Title set to series form:** *Listening at Scale (Part 3 of 3): The Many Ways MItra Listens* —
+  matching *Why It Matters* and *Journey of Building MItra*.
+- **Cut from 26 questions to 14.** Two per use-case section, two for Tech, one for Comms, three for
+  everyone. Most contributors now answer one or two sections. What got cut was the inside-baseball
+  (how the four FGD bots differ, which story-capture mechanic users skip, language count, dashboard
+  visibility) — useful to us, but it produces process detail rather than blog material. The Odisha
+  youth angle folded into Q2.1, the recommendation engine into Q7.2.
+- **One question rewritten for plain language.** Q5.1 had asked "what had to flex, and what nearly
+  broke" — Sonal had to ask what it meant, which is the answer: a contributor who has to decode a
+  question is a bad question. Rewritten to name the thing plainly.
+- **Sonal began editing the Doc directly.** Switched from `doc-set-tab` (replaces the whole tab) to
+  `doc-replace` (targeted find-and-replace) so her edits and formatting survive. That is now the
+  mode for this piece.
+
 ## Next
 - **Four fresh consented stories**, one per use case. Discussion Capture and Evaluation Studies have
   none, and Goldi and Seema are already used in both Parts 1 and 2.
