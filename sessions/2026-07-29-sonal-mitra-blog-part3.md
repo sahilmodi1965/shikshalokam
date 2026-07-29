@@ -31,9 +31,20 @@ leaders"*, and it lets Part 3 answer what Parts 1 and 2 leave open: **what is th
 **Name the deployments and partners.** No generic "a state in the east." The tab now names Bihar,
 Karnataka, Nagaland, Odisha, Telangana and Delhi; WLC, PPPI, Shiksha Chaupal and Chavadi, Meena
 Manch, APSWREIS. Named work is what makes the piece credible to a funder or a government partner
-reading it. A clearance list went in at the bottom of the tab, with the government-partner items
-called out separately, and contributors are asked to flag anything in their own section that cannot
-be named yet.
+reading it.
+
+## The correction that matters more
+The first version of the tab carried a decision record, a note explaining what had changed and why,
+a clearance tracker and a "what the blog needs" section. Sonal: *"dont write the logics and changes
+done in the doc, mention it here in the terminal always. those documents should just carry the right
+content."* All of it stripped; the tab now holds theme, use cases, filling instructions, sections
+and questions, nothing else. Individual questions were de-editorialised too — several carried our
+framing ("this is likely the sharpest finding") rather than just asking the thing.
+
+**This was already a standing rule.** It was learned on 2026-07-27 about sheets and written into
+that session's digest, then broken two days later in a Doc. Now recorded as a permanent memory
+covering every deliverable, not just sheets: reasoning lives in chat and in the brain, never in the
+artefact.
 
 ## What we learned
 - **A questionnaire written before the product's shape was known will quietly narrow the piece.**
@@ -53,7 +64,7 @@ be named yet.
 - **Four fresh consented stories**, one per use case. Discussion Capture and Evaluation Studies have
   none, and Goldi and Seema are already used in both Parts 1 and 2.
 - **Clearances** for the named government deployments — Telangana, APSWREIS, Odisha, and the WLC
-  study's block and district stakeholders.
+  study's block and district stakeholders. Tracked here, not in the Doc.
 - **Decide whether Gritworks is credited** — the tech partner behind every dashboard.
 - Contributors to fill the tab. Tables can't be inserted via the API, so it went in as plain text;
   if the Contributor/Response table format is wanted, the table gets added by hand and the questions
