@@ -128,3 +128,15 @@ V2 ("MItra by ELEVATE") is current and names **four use cases**: Discussion Capt
 Evaluation Studies · Perception or Feedback Capture. V1's older four are superseded. Also captures the
 live deployments visible in Drive (Shiksha Samvaad/Skoll, PPPI Pilot, WLC, InvokED).
 → [[mitra-concept-note-use-cases]] *Fetched 2026-07-29.*
+
+## 2026-07-30 added by Sonal
+
+**Orchestrating Education System Change: Insights from the Shikshagraha Movement** — independent
+University of Oxford (GO Lab) playbook on Shikshagraha, by Harry Bregazzi, published 29 June 2026,
+from 30 interviews plus focus groups and field observations across Bihar, Nagaland and Telangana.
+The strongest third-party credibility asset SL has, and candid about three partnership risks.
+→ [[golab-oxford-shikshagraha-playbook-2026]] *Fetched 2026-07-30 (PDF read in full).*
+
+**Current impact numbers, as of 2026-07-30 (Sonal):** 27 states and union territories, 20L+ (over
+2 million) improvements catalysed. Supersedes the July 2025 strategy note's 25 states / 600,000
+micro-improvements. Recorded on [[shikshalokam-2-strategy-note-jul2025]].

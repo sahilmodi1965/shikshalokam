@@ -45,6 +45,15 @@ _status: research-seeded
 - Approach **institutionalised at federal level** via Vidya Amrit + DIKSHA.
 - Recognised by **Schwab, Ashoka, Catalyst 2030, Teach for All**.
 
+> **SUPERSEDED NUMBERS — confirmed by Sonal, 2026-07-30.** The figures below are from July 2025 and
+> are now a year stale. **Current as of 30 July 2026: 27 states and union territories, and over
+> 2 million (20L+) improvements catalysed.** Use the current numbers for anything outward-facing;
+> keep the 2025 set only when explicitly describing the SL 1.0 seven-year period as it was reported
+> then. Note that **27 states is SL's cumulative programme reach**, while **15 states is the current
+> Shikshagraha movement footprint** ([[golab-oxford-shikshagraha-playbook-2026]] and
+> [[shikshagraha-brief-collaterals-feb2026]] both say fifteen) — two different measures, do not
+> merge them.
+
 > Note: the [[shikshagraha-brief-collaterals-feb2026]] source has **fresher current-cycle numbers** (31K+ MIPs, 15 states, 33 districts, 21 partners, 1.03L women). The 2.0 Strategy Note's numbers are **7-year cumulative SL totals.** Use accordingly — recency wins for "now" claims; cumulative wins for "since 2017" claims.
 
 ## SL 2.0 — the network play (verbatim summary)
