@@ -140,3 +140,10 @@ The strongest third-party credibility asset SL has, and candid about three partn
 **Current impact numbers, as of 2026-07-30 (Sonal):** 27 states and union territories, 20L+ (over
 2 million) improvements catalysed. Supersedes the July 2025 strategy note's 25 states / 600,000
 micro-improvements. Recorded on [[shikshalokam-2-strategy-note-jul2025]].
+
+**IEFG membership application 2026 (working state)** — ShikshaLokam's application to the International
+Education Funders Group, as edited by Sonal. Captured 2026-07-30 on her instruction to read and save
+without changing. Holds the unresolved eligibility question (IEFG requires grantmakers; SL is a
+Section 8 non-profit funded by SFPI), the blank Q2e, and her own recorded doubts.
+→ [[iefg-membership-application-2026]] ***Internal — confidential to the IEFG Steering Committee;
+never quote outward, never put on a project page.***
