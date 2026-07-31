@@ -32,7 +32,32 @@ is for foundations and philanthropic organisations who give grants to other orga
 open to grantseekers or NGOs seeking funding."* Heard about it through IEFG's own leadership and
 **Synergos**.
 
-## The eligibility problem — Sonal has recorded it in the doc herself
+## RESOLVED 2026-07-31 — applying as a non-grantmaker
+
+**Sonal and her team spoke to a member of the IEFG committee, and the application now goes in
+openly as an operating philanthropy, not a grantmaker.** This settles the question below; keep the
+reasoning for context but do not reopen it.
+
+What changed in the doc on 2026-07-31, after a team review round captured as 17 Doc comments:
+- **Unticked:** "We grant-make" · Intermediary Grantmaker · Non-formal education · "seeking
+  collaboration opportunities" · "deepen strategic engagement in a geography" · Gender Equity ·
+  Leadership and Public Sector · **Domestic funder** (Reach now has neither box ticked, deliberately).
+- **Q2e answered** as an operating philanthropy: budget deployed through own programmes, open-source
+  infrastructure and co-designed work with governments and partners, not as grants.
+- **Every downstream grantmaking claim swept out**, including the donor-type "Other" text, the
+  section 4 contribution band, and the 1b opener, which now reads *"non-grantmaking activities are
+  what we do."*
+- **New material from Sonal folded into 3b:** the India context framing, a decade of learning on
+  aligning government, community, civil society and digital infrastructure, and the **Future
+  Readiness Skill Index — locally informed by one million community voices, globally relevant.**
+  (First appearance of this asset anywhere in the brain.)
+- 1b tightened: open-source bullet cut to about a third, MItra retained inside it; advocacy bullet
+  reduced to advocacy only; DIKSHA added to capacity building.
+
+**Still open:** Shwetha's response for 3b, and an attachment for 3a, neither shared with the brain.
+Plus the InvokED speaker/participant counts and the Shiksha Samvaad impact line.
+
+## The eligibility problem as originally flagged — now settled, see above
 
 > ShikshaLokam Foundation is a **Section 8 non-profit whose operational costs are covered by SFPI.**
 > That makes SL a recipient of philanthropy and an implementer, not a grantmaker. The structurally
