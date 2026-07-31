@@ -45,6 +45,20 @@ _status: research-seeded
 - Approach **institutionalised at federal level** via Vidya Amrit + DIKSHA.
 - Recognised by **Schwab, Ashoka, Catalyst 2030, Teach for All**.
 
+> **TWO DIFFERENT IMPROVEMENT COUNTS — never merge them (Sonal, 2026-07-31).**
+> **Over 2 million (20L+)** = *every* improvement ShikshaLokam has triggered, cumulative since 2017,
+> across all of its work. **1.57 million (15,68,224)** = improvements counted **since the Shikshagraha
+> movement began**, and is the figure on the live public dashboard
+> (https://dashboard.shikshagraha.org). The second is a subset of the first, on a later clock. When
+> either is used outward-facing, **say which denominator it is** — 20L+ reads as contradicting 1.57M
+> unless the scope is stated.
+>
+> Live dashboard also carries (as of 2026-07-31): 392,459 leaders and 212,899 schools driving
+> improvements · 44,709 community-led improvements · **44 Momentum Partners and 15 Strategic
+> Partners** (the brain's older 21 and 9 are stale) · INR 440 million (44 crore) mobilised. Its
+> "12 states / 250 districts / 521,415 schools" panel is the **2030 goal**, not achievement — it sits
+> under "To impact at least 30% of India's states and districts by 2030." Easy to misread.
+
 > **SUPERSEDED NUMBERS — confirmed by Sonal, 2026-07-30.** The figures below are from July 2025 and
 > are now a year stale. **Current as of 30 July 2026: 27 states and union territories, and over
 > 2 million (20L+) improvements catalysed.** Use the current numbers for anything outward-facing;
