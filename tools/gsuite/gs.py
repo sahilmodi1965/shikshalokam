@@ -686,6 +686,73 @@ def cmd_doc_highlight(a):
     print(f"Highlighted {len(reqs)} span(s){where} in {a.color}.")
 
 
+def cmd_doc_format_tab(a):
+    """Apply **bold** / *italic* markers already sitting in a tab, then strip them.
+
+    Same root problem as `doc-highlight`: `doc-add-tab` / `doc-set-tab` insert RAW
+    TEXT, so a tab draft cannot carry any formatting — `doc-create`'s markdown pass
+    doesn't run on tabs. So the flow is: write the tab with ordinary markdown
+    markers, then run this to turn them into real formatting in place.
+
+    One marker style per round-trip, re-reading the doc each time, because deleting
+    the markers shifts every index after them. Within a round: style first (styling
+    never changes length), then delete the markers back-to-front.
+    """
+    docs = svc("docs", "v1")
+    total = 0
+    for pattern, style, fields in (
+        (r"\*\*([^\n]+?)\*\*", {"bold": True}, "bold"),
+        (r"(?<!\*)\*(?!\*)([^\n*]+?)\*(?!\*)", {"italic": True}, "italic"),
+    ):
+        marker = 2 if fields == "bold" else 1
+        doc = docs.documents().get(documentId=a.id, includeTabsContent=True).execute()
+        tab = _find_tab(doc.get("tabs", []), a.tab)
+        if not tab:
+            sys.exit(f"No tab titled {a.tab!r}.")
+        tab_id = tab["tabProperties"]["tabId"]
+
+        text, idx_map = [], []
+        for start, chunk in _collect_runs(tab["documentTab"]["body"]["content"], []):
+            for offset, ch in enumerate(chunk):
+                text.append(ch)
+                idx_map.append(start + offset)
+        text = "".join(text)
+
+        matches = list(re.finditer(pattern, text))
+        if not matches:
+            continue
+
+        style_reqs, del_reqs = [], []
+        for m in matches:
+            inner_s, inner_e = m.start() + marker, m.end() - marker
+            style_reqs.append({"updateTextStyle": {
+                "range": {"tabId": tab_id,
+                          "startIndex": idx_map[inner_s],
+                          "endIndex": idx_map[inner_e - 1] + 1},
+                "textStyle": style, "fields": fields}})
+            # closing marker then opening marker; matches are reversed below, so
+            # every delete runs strictly back-to-front and no index goes stale
+            del_reqs.append([
+                {"deleteContentRange": {"range": {
+                    "tabId": tab_id,
+                    "startIndex": idx_map[inner_e],
+                    "endIndex": idx_map[m.end() - 1] + 1}}},
+                {"deleteContentRange": {"range": {
+                    "tabId": tab_id,
+                    "startIndex": idx_map[m.start()],
+                    "endIndex": idx_map[inner_s]}}},
+            ])
+        docs.documents().batchUpdate(
+            documentId=a.id, body={"requests": style_reqs}).execute()
+        docs.documents().batchUpdate(
+            documentId=a.id,
+            body={"requests": [r for pair in reversed(del_reqs) for r in pair]},
+        ).execute()
+        total += len(matches)
+    print(f"Formatted {total} span(s) in tab {a.tab!r}." if total
+          else f"No ** or * markers found in tab {a.tab!r}.")
+
+
 def _hex_to_rgb(value):
     h = value.lstrip("#")
     if len(h) != 6:
@@ -1078,6 +1145,12 @@ def main():
                     help=r"regex to highlight (default \[\[.*?\]\])")
     dh.add_argument("--color", default="#FFFF00", help="hex fill, default #FFFF00")
     dh.set_defaults(fn=cmd_doc_highlight)
+
+    dfm = sub.add_parser("doc-format-tab",
+                         help="apply **bold** / *italic* markers in a tab and strip them")
+    dfm.add_argument("--id", required=True, help="document id")
+    dfm.add_argument("--tab", required=True, help="exact tab title")
+    dfm.set_defaults(fn=cmd_doc_format_tab)
 
     dco = sub.add_parser("doc-comments", help="list a Doc's comments + replies")
     dco.add_argument("--id", required=True, help="document id")

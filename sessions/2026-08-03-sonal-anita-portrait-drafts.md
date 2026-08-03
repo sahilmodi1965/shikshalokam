@@ -33,3 +33,12 @@ project: portraits
   so drafts previously had no way to mark their own gaps. Convention now documented in the
   gsuite skill + README: write `[[FILL: …]]` inline, then highlight. Load-bearing gaps only.
 - Portrait stays in the Doc until Sonal approves; brain gets the approved version after.
+
+## Follow-on (same session)
+- Sonal asked for `Q:` / `A:` labels with the questions in bold. Tab bodies carry no
+  formatting, so this needed a second permanent command: **`gs.py doc-format-tab`**
+  applies `**bold**` / `*italic*` markers already sitting in a tab and strips the markers.
+- Standing order for tab drafts, now in the skill + README:
+  `doc-set-tab` → `doc-format-tab` → `doc-highlight`. Formatting deletes marker characters
+  and shifts every later index, so highlighting has to come last.
+- Draft 1 rewritten: 12 questions labelled and bolded, both placeholders still yellow.

@@ -75,9 +75,12 @@ about auth.
 - If `drive_map.json` is missing, the shared folder hasn't been built yet — the
   maintainer runs `gs.py drive-init` once (Part A step 7).
 
-**Marking gaps in a Doc draft (`doc-highlight`):**
+**Formatting and marking gaps in a Doc tab:**
 - Doc **tab** bodies go in as **plain text** — `doc-add-tab` / `doc-set-tab` skip the
   markdown pass that `doc-create` runs — so a draft can't bold or colour itself.
+- Write the tab with normal `**bold**` / `*italic*` markers, then
+  `gs.py doc-format-tab --id <doc> --tab "<tab title>"` applies them for real and strips
+  the markers. Never leave `**` sitting in a Doc a teammate is reading.
 - When a draft is missing a fact that matters (a number, a place, a named person),
   write it inline as `[[FILL: what we still need]]` and then run
   `gs.py doc-highlight --id <doc> --tab "<tab title>"` — it turns every `[[…]]` span
@@ -85,6 +88,8 @@ about auth.
   anything else. Omit `--tab` only on a doc with no tabs.
 - **Placeholders are for load-bearing gaps only.** A draft peppered with yellow reads
   as unfinished; two or three, each one genuinely blocking, reads as honest.
+- Order matters: `doc-set-tab` → `doc-format-tab` → `doc-highlight`. Formatting deletes
+  the marker characters, which shifts every index after them, so highlight last.
 
 **Sheets (read → write → new tab):**
 - `gs.py sheet-read --id <sheet id> --range "'Tab'!A1:J40"` prints the range as TSV.

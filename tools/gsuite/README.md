@@ -34,12 +34,20 @@ python3 tools/gsuite/gs.py sheet-add-tab --id <sheet id> --title "New_Tab" --jso
         [--replace] [--header-row 2] [--freeze 2] [--col-width 250]
 python3 tools/gsuite/gs.py doc-highlight --id <doc id> --tab "Draft 2" \
         [--pattern '\[\[.*?\]\]'] [--color '#FFFF00']
+python3 tools/gsuite/gs.py doc-format-tab --id <doc id> --tab "Draft 1"
 ```
 
-Tab bodies are inserted as **plain text** (`doc-add-tab` / `doc-set-tab` do not run the
-markdown pass that `doc-create` does), so a draft cannot mark its own gaps. Convention:
-write missing facts inline as `[[FILL: what we still need]]`, then run `doc-highlight`
-so the reader sees every gap in yellow. Defaults highlight exactly that bracket form.
+Tab bodies are inserted as **plain text** — `doc-add-tab` / `doc-set-tab` do not run the
+markdown pass that `doc-create` does — so a tab draft arrives with no formatting and no
+way to mark its own gaps. Two commands close that:
+- `doc-format-tab` turns `**bold**` and `*italic*` markers already in the tab into real
+  formatting and deletes the markers.
+- `doc-highlight` colours every regex match, defaulting to `[[…]]` in yellow. Convention:
+  write a missing fact inline as `[[FILL: what we still need]]` so the reader sees exactly
+  what is outstanding.
+
+Run `doc-set-tab` → `doc-format-tab` → `doc-highlight`, in that order: formatting deletes
+marker characters and shifts every index after them, so highlight last.
 
 `sheet-update`'s `--values` splits on `|` and `;;`, so it can only carry short plain
 values. `sheet-add-tab` takes a JSON file (list of rows, each a list of cells) and can
