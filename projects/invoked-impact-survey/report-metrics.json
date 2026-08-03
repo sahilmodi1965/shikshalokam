@@ -1,44 +1,212 @@
 [
-  ["MItra — Report Metrics / Templates [InvokED Impact Survey]", "", ""],
-  ["", "", ""],
-  ["A. PER-CONVERSATION REPORT (auto-generated after each chat)", "", ""],
-  ["Field", "What it captures", "Source"],
-  ["Respondent profile", "Role / persona, organisation type, geography (country; state if India)", "Q1"],
-  ["Editions attended", "How many of InvokED 1.0 to 5.0 the respondent attended", "Pre-filled from the registrant record, or the post-close tap"],
-  ["Perception shift", "Magnitude (no change / somewhat / significantly) and the belief or idea that changed — or, for non-shifters, what would have made a difference", "Q2 and its probe"],
-  ["Action & collaboration", "Did InvokED lead to something substantial? (Yes / In progress / No) · what it is (collaboration · pilot · funding unlocked · partnership · advisory · a decision taken differently) · who it is with · description and outcome, or expected outcome", "Q3 and its probe (Yes branch)"],
-  ["Partner origin", "Were the people involved met at InvokED, already known, or a mix", "Q3 probe (Yes branch), with the post-close tap as backstop"],
-  ["Latent action", "What the respondent still wants to take forward · what is blocking it · anyone from InvokED they remain in touch with", "Q3 probe (No branch)"],
-  ["Ripple beyond the project", "What travelled without becoming a project: an idea taken back to a team · an introduction brokered · something spoken or written about · a way of working changed · whether it reached people who were never at InvokED", "Q4"],
-  ["Timing & durability", "When the action began (within weeks / a few months later / later in the year / still unfolding) and whether it is still going, completed or stalled", "Q5"],
-  ["Influence on work", "Level (not at all / moderately / significantly) and what specifically changed", "Q6"],
-  ["Network & continuity", "Would return? (yes / maybe / no) · what would make year-round engagement worth their time · named connections", "Q7, plus named partners from Q3 and introductions from Q4"],
-  ["Future readiness", "How the respondent defines 'future readiness' in their own work, and what they are doing to advance it", "Q8"],
-  ["Stories & recognition", "Willing to share (written / video)? · Awards: nominate or be considered? · best contact to follow up", "Post-close screen"],
-  ["Pull-quote / highlight", "One sentence suitable for narrative, social or report use", "Q3 probe · Q4 · Q2 probe · Q8"],
-  ["Photo (optional)", "Photo of a collaboration, pilot or InvokED moment, if uploaded", "Post-close screen"],
-  ["", "", ""],
-  ["B. AGGREGATE IMPACT REPORT (feeds the InvokED Impact Report / photobook)", "", ""],
-  ["Block", "Contents", "Source"],
-  ["What InvokED set in motion", "The opening block. % of respondents reporting any post-event effect — substantial action or ripple — and the split between the two", "Q3 + Q4 · Dashboard_Metrics_Revised"],
-  ["It did not stop at two days", "When post-event action began and how much of it is still live. The share beginning months after the edition carries the argument", "Q5"],
-  ["Credibility metrics", "# collaborations initiated · # in progress · # pilots launched · # cross-sector partnerships · # geographies · % repeat participants", "Dashboard_Metrics_Revised"],
-  ["Partner origin", "Across everything reported, the split between people met at InvokED and people already known", "Q3 probe · post-close tap"],
-  ["The many ways it helped", "Ripple types and reach beyond attendees — ideas carried into teams, introductions brokered, practices changed, InvokED spoken and written about", "Q4"],
-  ["Narrative assets", "InvokED action stories (case studies) · feedback quotes and videos · transformation journeys", "Q3 probe · Q4 · Q2 probe · post-close consent"],
-  ["Future readiness narrative", "How senior education leaders define future readiness, the range of definitions, and what they are doing about it", "Q8"],
-  ["Forum & partnership leads", "Latent collaborations that never happened and the barriers that stopped them, plus action that stalled", "Q3 probe (No branch) · Q5 (stalled)"],
-  ["Segments", "Cut all metrics by persona, geography, and edition attended", "Q1 and pre-filled editions"],
-  ["Ambassadors", "High-value connectors · active collaborators · potential forum leaders", "Q3 probe × Q4 × Q7"],
-  ["Recommendations", "Perception gaps and corrective measures · the year-round engagement offer", "Q2 probe · Q7"],
-  ["", "", ""],
-  ["C. METHODOLOGY NOTES (to be published with the report)", "", ""],
-  ["Note", "What to state", ""],
-  ["A 'No' on action is not an absence of impact", "Q3 asks only about substantial action — a collaboration, pilot, funding, partnership or decision. Q4 captures effects that never became a project. Always read the two together, and never report the Q3 No rate on its own.", ""],
-  ["Perception shift is self-reported", "The survey does not measure a before/after change. It records what respondents say shifted. State this rather than implying a measured delta.", ""],
-  ["Network continuity is a count", "No single question is asked of every respondent about staying connected, so report named connections rather than a percentage.", ""],
-  ["Partner origin is partially captured", "Attribution sits inside a multi-part open answer, topped up by an optional post-close tap. Report it as a split of the responses that carry it, and state the base.", ""],
-  ["Timing is respondent-recalled", "Q5 records when respondents say action began, not a verified date. Treat the timeline as indicative of pattern, not precise.", ""],
-  ["Sample and self-selection", "~800 to 1,000 invited; 150 to 250 completions expected. Respondents who collaborated are likelier to reply, so collaboration rates skew high.", ""],
-  ["Future readiness sample", "Future-readiness findings represent 150 to 250 senior education leaders. They are not a sector-wide or population-level view.", ""]
+  [
+    "MItra — Report Metrics / Templates [InvokED Impact Survey]",
+    "",
+    ""
+  ],
+  [
+    "",
+    "",
+    ""
+  ],
+  [
+    "A. PER-CONVERSATION REPORT (auto-generated after each chat)",
+    "",
+    ""
+  ],
+  [
+    "Field",
+    "What it captures",
+    "Source"
+  ],
+  [
+    "Respondent profile",
+    "Role / persona, organisation type, geography (country; state if India)",
+    "Q1"
+  ],
+  [
+    "Editions attended",
+    "Which of InvokED 1.0 to 5.0 the respondent attended",
+    "Q2"
+  ],
+  [
+    "Perception shift",
+    "Where the respondent placed themselves before their first InvokED and where they place themselves today, on the same three-point scale, plus the belief or idea that changed — or, where the rating did not move, what would have made a difference",
+    "Q3 and Q4, plus the Q4 probe"
+  ],
+  [
+    "Action & collaboration",
+    "Did InvokED lead to something substantial? (Yes / In progress / No) · what it is (collaboration · pilot · funding unlocked · partnership · advisory · a decision taken differently) · who it is with · description and outcome, or expected outcome",
+    "Q5 and its probe (Yes branch)"
+  ],
+  [
+    "Partner origin",
+    "Were the people involved met at InvokED, already known, or a mix",
+    "Q5 probe (Yes branch), with the post-close tap as backstop"
+  ],
+  [
+    "Latent action",
+    "What the respondent still wants to take forward · what is blocking it · anyone from InvokED they remain in touch with",
+    "Q5 probe (No branch)"
+  ],
+  [
+    "Ripple beyond the project",
+    "What travelled without becoming a project: an idea taken back to a team · an introduction brokered · something spoken or written about · a way of working changed · whether it reached people who were never at InvokED",
+    "Q6"
+  ],
+  [
+    "Timing & durability",
+    "When the action began (within weeks / a few months later / later in the year / still unfolding) and whether it is still going, completed or stalled",
+    "Post-close screen taps"
+  ],
+  [
+    "Influence on work",
+    "How far it reached the organisation (not at all / somewhat / significantly), carried as a tap alongside the Q6 open answer",
+    "Q6 tap"
+  ],
+  [
+    "Network & continuity",
+    "Would return? (yes / maybe / no) · what would make year-round engagement worth their time · named connections",
+    "Q7, plus named partners from Q5 and introductions from Q6"
+  ],
+  [
+    "Future readiness",
+    "How the respondent defines 'future readiness' in their own work, and what they are doing to advance it",
+    "Q8"
+  ],
+  [
+    "Stories & recognition",
+    "Willing to share (written / video)? · Awards: nominate or be considered? · best contact to follow up",
+    "Post-close screen"
+  ],
+  [
+    "Pull-quote / highlight",
+    "One sentence suitable for narrative, social or report use",
+    "Q5 probe · Q6 · Q4 probe · Q8"
+  ],
+  [
+    "Photo (optional)",
+    "Photo of a collaboration, pilot or InvokED moment, if uploaded",
+    "Post-close screen"
+  ],
+  [
+    "",
+    "",
+    ""
+  ],
+  [
+    "B. AGGREGATE IMPACT REPORT (feeds the InvokED Impact Report / photobook)",
+    "",
+    ""
+  ],
+  [
+    "Block",
+    "Contents",
+    "Source"
+  ],
+  [
+    "What InvokED set in motion",
+    "The opening block. % of respondents reporting any post-event effect — substantial action or ripple — and the split between the two",
+    "Q5 + Q6 · Dashboard_Metrics_Revised"
+  ],
+  [
+    "It did not stop at two days",
+    "When post-event action began and how much of it is still live. The share beginning months after the edition carries the argument",
+    "Post-close screen taps"
+  ],
+  [
+    "Credibility metrics",
+    "# collaborations initiated · # in progress · # pilots launched · # cross-sector partnerships · # geographies · % repeat participants",
+    "Dashboard_Metrics_Revised"
+  ],
+  [
+    "Partner origin",
+    "Across everything reported, the split between people met at InvokED and people already known",
+    "Q5 probe · post-close tap"
+  ],
+  [
+    "The many ways it helped",
+    "Ripple types and reach beyond attendees — ideas carried into teams, introductions brokered, practices changed, InvokED spoken and written about",
+    "Q6"
+  ],
+  [
+    "Narrative assets",
+    "InvokED action stories (case studies) · feedback quotes and videos · transformation journeys",
+    "Q5 probe · Q6 · Q4 probe · post-close consent"
+  ],
+  [
+    "Future readiness narrative",
+    "How senior education leaders define future readiness, the range of definitions, and what they are doing about it",
+    "Q8"
+  ],
+  [
+    "Forum & partnership leads",
+    "Latent collaborations that never happened and the barriers that stopped them, plus action that stalled",
+    "Q5 probe (No branch) · post-close 'stalled' tap"
+  ],
+  [
+    "Segments",
+    "Cut all metrics by persona, geography, and edition attended",
+    "Q1 and Q2"
+  ],
+  [
+    "Ambassadors",
+    "High-value connectors · active collaborators · potential forum leaders",
+    "Q5 probe × Q6 × Q7"
+  ],
+  [
+    "Recommendations",
+    "Perception gaps and corrective measures · the year-round engagement offer",
+    "Q4 probe · Q7"
+  ],
+  [
+    "",
+    "",
+    ""
+  ],
+  [
+    "C. METHODOLOGY NOTES (to be published with the report)",
+    "",
+    ""
+  ],
+  [
+    "Note",
+    "What to state",
+    ""
+  ],
+  [
+    "A 'No' on action is not an absence of impact",
+    "Q5 asks only about substantial action — a collaboration, pilot, funding, partnership or decision. Q6 captures effects that never became a project. Always read the two together, and never report the Q5 No rate on its own.",
+    ""
+  ],
+  [
+    "Perception shift is a retrospective matched pair",
+    "Both the 'before' and 'today' ratings are given in the same conversation, so the delta is respondent recall on a matched scale, not a measured before/after. Report it as a shift respondents describe, and state that the baseline was collected after the fact.",
+    ""
+  ],
+  [
+    "Network continuity is a count",
+    "No single question is asked of every respondent about staying connected, so report named connections rather than a percentage.",
+    ""
+  ],
+  [
+    "Partner origin is partially captured",
+    "Attribution sits inside a multi-part open answer, topped up by an optional post-close tap. Report it as a split of the responses that carry it, and state the base.",
+    ""
+  ],
+  [
+    "Timing is respondent-recalled and partially captured",
+    "Timing and durability sit on the post-close screen, not in the conversation. They are recalled rather than verified, and only respondents who complete that screen supply them. Treat the timeline as indicative of pattern, and state the base.",
+    ""
+  ],
+  [
+    "Sample and self-selection",
+    "~800 to 1,000 invited; 150 to 250 completions expected. Respondents who collaborated are likelier to reply, so collaboration rates skew high.",
+    ""
+  ],
+  [
+    "Future readiness sample",
+    "Future-readiness findings represent 150 to 250 senior education leaders. They are not a sector-wide or population-level view.",
+    ""
+  ]
 ]
