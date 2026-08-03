@@ -8,7 +8,7 @@ tags: [iefg, membership, funder-network, sfpi, application, synergos, eligibilit
 sources: []
 corrected_by: []
 created: 2026-07-30
-updated: 2026-07-30
+updated: 2026-08-03
 _status: user-validated
 sensitivity: internal
 ---
@@ -54,8 +54,35 @@ What changed in the doc on 2026-07-31, after a team review round captured as 17 
 - 1b tightened: open-source bullet cut to about a third, MItra retained inside it; advocacy bullet
   reduced to advocacy only; DIKSHA added to capacity building.
 
-**Still open:** Shwetha's response for 3b, and an attachment for 3a, neither shared with the brain.
-Plus the InvokED speaker/participant counts and the Shiksha Samvaad impact line.
+## Second and third review rounds — 2026-07-31 to 2026-08-03
+
+**All green-highlighted checkboxes ticked** (green = tick; yellow = Sonal's "to be checked" legend).
+Newly ticked: Early childhood development · **Education in Emergencies** · Mother Tongue Instruction ·
+Out-of-School Children and Youth · Social Emotional Learning · Social Justice · Digital Literacy ·
+**"We want to influence the UNESCO SDG4 High-Level Steering Committee."**
+**Unticked:** "We receive the majority of our funding from private sources."
+
+- **1b cut by roughly half**, all eight bullets and every proof point kept. Every bullet now opens
+  with "we" (Sonal's consistency rule).
+- **Future Readiness Skill Index** now reads *"in development and expected by March 2027"*, so it no
+  longer implies the index already exists.
+- **InvokED numbers filled by Sonal:** 500+ speakers, 3,000+ participants to date.
+- **2h rebuilt from the live public dashboard** (https://dashboard.shikshagraha.org). The form's
+  partner numbers were badly stale: **21 → 44 Momentum Partners, 9 → 15 Strategic Partners.** Added:
+  1.57 million micro-improvements initiated, 392,459 leaders and 212,899 schools driving
+  improvements, 44,709 community-led improvements, INR 440 million mobilised, plus the dashboard URL
+  itself as verifiable evidence.
+- **Lakh/crore avoided** throughout for an international committee — see [[global-recipients-avoid-indian-terms]] equivalent practice.
+- **The two improvement counts are now scope-labelled** in the form (see
+  [[shikshalokam-2-strategy-note-jul2025]] for the rule): over 2 million *since 2017* in 1b and 1c,
+  1.57 million *since the movement began* in 2h.
+
+**Open comment deliberately left unresolved:** the DNP / CWS justification for Digital Literacy —
+Sonal is holding it for leadership to confirm. Do not resolve it.
+
+**Still open:** Shwetha's response for 3b · an attachment for 3a · the Shiksha Samvaad impact line ·
+yellow-highlighted checks on Education and Climate Change and the 3a heading. Neither Shwetha's
+response nor the attachment has been shared with the brain.
 
 ## The eligibility problem as originally flagged — now settled, see above
 
