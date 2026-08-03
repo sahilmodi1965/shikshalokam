@@ -32,7 +32,14 @@ python3 tools/gsuite/gs.py sheet-read --id <sheet id> --range "'Tab'!A1:J40"
 python3 tools/gsuite/gs.py sheet-update --id <sheet id> --range "'Tab'!A1" --values "a|b;;c|d"
 python3 tools/gsuite/gs.py sheet-add-tab --id <sheet id> --title "New_Tab" --json rows.json \
         [--replace] [--header-row 2] [--freeze 2] [--col-width 250]
+python3 tools/gsuite/gs.py doc-highlight --id <doc id> --tab "Draft 2" \
+        [--pattern '\[\[.*?\]\]'] [--color '#FFFF00']
 ```
+
+Tab bodies are inserted as **plain text** (`doc-add-tab` / `doc-set-tab` do not run the
+markdown pass that `doc-create` does), so a draft cannot mark its own gaps. Convention:
+write missing facts inline as `[[FILL: what we still need]]`, then run `doc-highlight`
+so the reader sees every gap in yellow. Defaults highlight exactly that bracket form.
 
 `sheet-update`'s `--values` splits on `|` and `;;`, so it can only carry short plain
 values. `sheet-add-tab` takes a JSON file (list of rows, each a list of cells) and can

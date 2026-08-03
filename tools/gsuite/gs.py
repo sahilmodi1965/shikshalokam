@@ -32,6 +32,7 @@ Setup + onboarding: onboarding/gsuite-setup.md
 import argparse
 import base64
 import json
+import re
 import sys
 from email.mime.text import MIMEText
 from pathlib import Path
@@ -608,6 +609,92 @@ def cmd_doc_add_tab(a):
     print(f"Created tab {a.title!r} (tabId {tab_id}) and filled it.")
 
 
+def _collect_runs(content, out):
+    """Flatten a body's text runs to (docIndex, text) pairs, tables included."""
+    for el in content or []:
+        para = el.get("paragraph")
+        if para:
+            for run in para.get("elements", []):
+                tr = run.get("textRun")
+                if tr and "startIndex" in run:
+                    out.append((run["startIndex"], tr.get("content", "")))
+        table = el.get("table")
+        if table:
+            for row in table.get("tableRows", []):
+                for cell in row.get("tableCells", []):
+                    _collect_runs(cell.get("content", []), out)
+    return out
+
+
+def cmd_doc_highlight(a):
+    """Apply a background colour to every span matching a regex.
+
+    Why this exists: tab bodies are written as PLAIN TEXT (`doc-add-tab` /
+    `doc-set-tab` insert raw text — no markdown pass), so a draft cannot mark
+    its own gaps visually. The convention is to write placeholders inline as
+    `[[LIKE THIS]]` and then run this to make them yellow, so the person
+    reading the Doc sees exactly what still needs filling.
+
+    Docs indices shift as text is styled? No — updateTextStyle does not change
+    length, so all matches can be sent in one batch, but they are sent in
+    reverse order anyway to stay safe if this ever grows an option that edits
+    text as well.
+    """
+    docs = svc("docs", "v1")
+    doc = docs.documents().get(documentId=a.id, includeTabsContent=True).execute()
+
+    tab_id, content = None, None
+    if a.tab:
+        tab = _find_tab(doc.get("tabs", []), a.tab)
+        if not tab:
+            sys.exit(f"No tab titled {a.tab!r}.")
+        tab_id = tab["tabProperties"]["tabId"]
+        content = tab["documentTab"]["body"]["content"]
+    else:
+        tabs = doc.get("tabs")
+        if tabs:
+            sys.exit("This doc has tabs — pass --tab to say which one.")
+        content = doc["body"]["content"]
+
+    runs = _collect_runs(content, [])
+    text, idx_map = [], []
+    for start, chunk in runs:
+        for offset, ch in enumerate(chunk):
+            text.append(ch)
+            idx_map.append(start + offset)
+    text = "".join(text)
+
+    rgb = _hex_to_rgb(a.color)
+    reqs = []
+    for m in re.finditer(a.pattern, text, re.DOTALL):
+        if m.start() == m.end():
+            continue
+        rng = {"startIndex": idx_map[m.start()], "endIndex": idx_map[m.end() - 1] + 1}
+        if tab_id:
+            rng["tabId"] = tab_id
+        reqs.append({"updateTextStyle": {
+            "range": rng,
+            "textStyle": {"backgroundColor": {"color": {"rgbColor": rgb}}},
+            "fields": "backgroundColor",
+        }})
+    if not reqs:
+        print(f"No matches for {a.pattern!r} — nothing highlighted.")
+        return
+    docs.documents().batchUpdate(
+        documentId=a.id, body={"requests": list(reversed(reqs))}).execute()
+    where = f" in tab {a.tab!r}" if a.tab else ""
+    print(f"Highlighted {len(reqs)} span(s){where} in {a.color}.")
+
+
+def _hex_to_rgb(value):
+    h = value.lstrip("#")
+    if len(h) != 6:
+        sys.exit(f"--color must be a 6-digit hex like #FFFF00 (got {value!r}).")
+    return {"red": int(h[0:2], 16) / 255,
+            "green": int(h[2:4], 16) / 255,
+            "blue": int(h[4:6], 16) / 255}
+
+
 def cmd_doc_comments(a):
     """List a Doc's comments (author, the text they anchor to, the comment, and
     replies) so the brain can act on review feedback. Skips resolved unless --all."""
@@ -982,6 +1069,15 @@ def main():
     dad.add_argument("--body")
     dad.add_argument("--body-file")
     dad.set_defaults(fn=cmd_doc_add_tab)
+
+    dh = sub.add_parser("doc-highlight",
+                        help="colour every regex match (default: [[PLACEHOLDERS]] in yellow)")
+    dh.add_argument("--id", required=True, help="document id")
+    dh.add_argument("--tab", help="exact tab title (required if the doc has tabs)")
+    dh.add_argument("--pattern", default=r"\[\[.*?\]\]",
+                    help=r"regex to highlight (default \[\[.*?\]\])")
+    dh.add_argument("--color", default="#FFFF00", help="hex fill, default #FFFF00")
+    dh.set_defaults(fn=cmd_doc_highlight)
 
     dco = sub.add_parser("doc-comments", help="list a Doc's comments + replies")
     dco.add_argument("--id", required=True, help="document id")
