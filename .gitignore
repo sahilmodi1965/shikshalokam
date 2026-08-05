@@ -23,3 +23,13 @@ tools/gsuite/oauth_client.json
 
 # Microsoft Office temp/owner lock files (e.g. ~$document.docx)
 ~$*
+
+# Tool build outputs — regenerable from source, and heavy (report PDFs/HTML alone
+# were 35MB). Rebuild with: python tools/report/build_report.py tools/report/<content>.json
+tools/*/out/
+tools/report/.imgcache/
+
+# Programme photographs are NEVER committed: this repo is PUBLIC and the images show
+# identifiable schoolchildren. They live in Google Drive; tools/report/photo-manifest.json
+# records exactly which Drive file each one is, so any of them can be fetched again.
+tools/report/assets/photos/

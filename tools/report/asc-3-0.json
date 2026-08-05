@@ -1,0 +1,480 @@
+{
+  "theme": {
+    "_note": "ASC 3.0 — dept blue (lead) + SL maroon + brand pink; no green",
+    "primary": "#183090",
+    "secondary": "#ab3935",
+    "accent": "#ffaea8",
+    "cream": "#fff9e4",
+    "tint": "#eef1f7"
+  },
+  "meta": {
+    "slug": "asc-3-0-report",
+    "eyebrow": "Program Report",
+    "title": "Aao School Chalein 3.0",
+    "subtitle": "A state-level enrolment drive, Haryana",
+    "meta_lines": [
+      "School Education Department, Government of Haryana",
+      "SCERT, Haryana · DIKSHA · Micro-Improvement Approach",
+      "In partnership with ShikshaLokam"
+    ],
+    "foot_left": "Aao School Chalein 3.0 · Government of Haryana",
+    "foot_right": "Program Report",
+    "cover_photos": [
+      "assets/photos/trimmed/cover_1_rally_fatehabad.jpg",
+      "assets/photos/cover_2_march_karnal.jpg",
+      "assets/photos/cover_3_assembly_fatehabad.jpg",
+      "assets/photos/cover_4_community_mahendergarh.jpg",
+      "assets/photos/trimmed/cover_5_doorstep_jind.jpg",
+      "assets/photos/cover_6_banner_ambala.jpg"
+    ],
+    "toc_hero": "assets/photos/toc_hero_event_rewari.jpg"
+  },
+  "sections": [
+    {
+      "title": "Program details",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "The Aao School Chalein (ASC) programme is a state-level enrolment drive designed by the School Education Department, Government of Haryana. It addresses key barriers to school attendance — family responsibilities and economic hardships that lead to student dropouts."
+        },
+        {
+          "type": "split",
+          "side": "right",
+          "image": {
+            "src": "assets/photos/trimmed/s1_school_sonipat.jpg",
+            "caption": "A targeted government school, Sonipat — enrolment banners at the gate"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "By mobilising teachers, school leaders, block and district officials, parents and community members, ASC aims to ensure that no child is left behind. The programme targets specific schools across the state with low enrolment rates, curated by the state for focused intervention."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "keyed": true,
+          "rows": [
+            [
+              "Programme Name",
+              "Aao School Chalein (ASC 3.0)"
+            ],
+            [
+              "Implementing Body",
+              "SCERT, Haryana"
+            ],
+            [
+              "Platform",
+              "DIKSHA App (Digital Infrastructure for Knowledge Sharing)"
+            ],
+            [
+              "Target Audience",
+              "Out-of-school children and dropouts — involving HMs, block and district officials, parents"
+            ],
+            [
+              "Approach",
+              "Micro-Improvement Projects documented on DIKSHA"
+            ],
+            [
+              "Geography",
+              "State of Haryana — all blocks and districts"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Timelines",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "The programme is structured as a 3-month drive, rolled out in a phased manner across the state."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Phase",
+            "Key milestones"
+          ],
+          "rows": [
+            [
+              "Preparation & Launch",
+              "State orientation; DIKSHA project goes live"
+            ],
+            [
+              "Implementation",
+              "Micro-improvement projects on the ground"
+            ],
+            [
+              "Celebration",
+              "State-level felicitation event; best-practice collation and sharing"
+            ]
+          ]
+        },
+        {
+          "type": "figure",
+          "h": "105mm",
+          "caption": "State orientation ahead of the DIKSHA project going live",
+          "src": "assets/photos/s2_orientation_jind.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Program phases",
+      "blocks": [
+        {
+          "type": "subhead",
+          "text": "Phase 1 — Preparation & Launch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Haryana state team oriented block and district officials and school leaders on the programme objectives, the Micro-Improvement Approach, and documenting projects on the DIKSHA App. The orientation was conducted online, and the programme was formally launched by making the DIKSHA project live."
+        },
+        {
+          "type": "split",
+          "side": "right",
+          "image": {
+            "src": "assets/photos/s3p1_orientation_kurukshetra.jpg",
+            "caption": "Phase 1 — orienting school leaders and officials"
+          },
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "State-level orientation for block/district officials and Head Masters",
+                "Detailed briefing on the Micro-Improvement Approach and DIKSHA workflow",
+                "Orientation on how to conduct activities on the ground, in schools",
+                "Official launch of the 'Aao School Chalein' project on DIKSHA"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "subhead",
+          "text": "Phase 2 — Implementation"
+        },
+        {
+          "type": "paragraph",
+          "text": "School leaders undertook a series of structured micro-improvement tasks listed on the DIKSHA App. Each completed task was documented with photographic or video evidence, enabling state and district officials to monitor progress in real time."
+        },
+        {
+          "type": "split",
+          "side": "right",
+          "image": {
+            "src": "assets/photos/trimmed/s3p2_doortodoor_karnal.jpg",
+            "caption": "Phase 2 — door-to-door visits to find out-of-school children"
+          },
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "School-based events to spread awareness about enrolment",
+                "Organised door-to-door visits",
+                "Community engagement to identify and enrol out-of-school children",
+                "Continuous monitoring via the DIKSHA dashboard at state/district level",
+                "Monthly open office-hour calls to resolve technical and project queries"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "pagebreak"
+        },
+        {
+          "type": "subhead",
+          "text": "Phase 3 — Celebration"
+        },
+        {
+          "type": "paragraph",
+          "text": "At the conclusion of the academic year, Haryana organised a celebration bringing together all stakeholders — block and district officials, head masters and teachers — to acknowledge their contributions and share best practices for sustained impact."
+        },
+        {
+          "type": "split",
+          "side": "right",
+          "image": {
+            "src": "assets/photos/s3p3_celebration_rewari.jpg",
+            "caption": "Phase 3 — recognising schools and school leaders"
+          },
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "State-level felicitation ceremony for outstanding contributors at SCERT",
+                "Sharing of best practices and success stories",
+                "Recognition of top-performing schools, blocks and districts"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Outreach practices",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "A structured, week-wise outreach plan sustained momentum throughout the programme, delivered across two primary channels."
+        },
+        {
+          "type": "subhead",
+          "text": "Social media"
+        },
+        {
+          "type": "split",
+          "side": "right",
+          "image": {
+            "src": "assets/photos/trimmed/s4_outreach_panipat.jpg",
+            "caption": "On-ground outreach — a community meeting with mothers, Panipat"
+          },
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "A 12-week social media content calendar",
+                "Regular posts on official platforms about ASC milestones and stories",
+                "WhatsApp broadcasts to school-leader and teacher groups — 'Monday Motivation', 'Thoughtful Thursday'"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "subhead",
+          "text": "Direct / on-ground"
+        },
+        {
+          "type": "split",
+          "side": "right",
+          "image": {
+            "src": "assets/photos/trimmed/s4_onground_mahendergarh.jpg",
+            "caption": "Direct, on-ground support to Head Masters and teachers by Sehyogis and district officials"
+          },
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "Direct support to Head Masters and teachers by Sehyogis and district-level officials"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "subhead",
+          "text": "Support structure"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Calls to address project-related and technical (DIKSHA App) queries from Head Masters"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Reflections",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Internal and external reflections that will sharpen the next cycle."
+        },
+        {
+          "type": "callouts",
+          "items": [
+            {
+              "head": "Timeline misaligned with the academic calendar",
+              "body": "Haryana's session begins in April, but the programme began in June — losing the most crucial mobilisation window when enrolment efforts peak."
+            },
+            {
+              "head": "Dependency on system processes slowed momentum",
+              "body": "Delays on the DIKSHA platform affected early momentum; heavy reliance on digital documentation meant a system lag delayed on-ground action."
+            },
+            {
+              "head": "Delay in felicitation",
+              "body": "The programme ran on voluntary participation — a sign of intrinsic motivation — but without structured incentives, adoption remained uneven."
+            },
+            {
+              "head": "Limited recognition structures",
+              "body": "A final felicitation event helped, but the absence of ongoing recognition during implementation may have affected sustained motivation."
+            },
+            {
+              "head": "Outreach consistent, but could be more engaging",
+              "body": "Regular posters, weekly updates and monthly orientations were consistent; reflections suggest they could be more interactive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Impact analysis",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "The data indicate a strong upward trajectory in student enrolment across many districts of Haryana, reflecting the impact of focused mobilisation."
+        },
+        {
+          "type": "chart",
+          "title": "District-level enrolment growth",
+          "unit": "%",
+          "bars": [
+            {
+              "label": "Gurugram",
+              "value": 70.12
+            },
+            {
+              "label": "Nuh",
+              "value": 8.71
+            },
+            {
+              "label": "Charkhi Dadri",
+              "value": 8.09
+            },
+            {
+              "label": "Kaithal",
+              "value": 7.48
+            },
+            {
+              "label": "Jhajjar",
+              "value": 2.23
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "+247%",
+              "label": "Sohna block — exceptional localised growth"
+            },
+            {
+              "value": "+70%",
+              "label": "Gurugram district — highest district gain"
+            }
+          ]
+        },
+        {
+          "type": "split",
+          "side": "right",
+          "image": {
+            "src": "assets/photos/trimmed/cls_1_desks_hisar.jpg",
+            "caption": "Children back in class — the outcome the numbers track"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "High-performing districts such as Nuh, Gurugram and Kaithal drove overall gains, pointing to the value of targeted district-level strategies and administrative ownership. At the block level, exceptional growth in Sohna (+247%) shows the power of localised, intensified outreach. Even traditionally low-performing districts like Charkhi Dadri and Jhajjar grew — a sign of broad-based impact."
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Critical gaps remain: blocks like Ladwa and Hathin recorded zero enrolment, and some schools show zero or declining numbers — pointing to last-mile challenges, data gaps, and the need for targeted re-engagement."
+        },
+        {
+          "type": "subhead",
+          "text": "Overall, the initiative"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Accelerated enrolment growth at scale",
+            "Enabled high-impact localised success stories",
+            "Strengthened district and block-level ownership",
+            "Surfaced low-performing pockets for targeted action"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Evidences",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Evidence of programme activities was collected and documented by school leaders through the DIKSHA App — photographs, videos and written records. Each micro-improvement task carried its own proof from the ground."
+        },
+        {
+          "type": "evidence",
+          "items": [
+            {
+              "src": "assets/photos/ev_7_doorstep_panipat.jpg",
+              "head": "Door-to-door visits",
+              "body": "School leaders and teachers went house to house to trace children who had slipped out of school. Panipat."
+            },
+            {
+              "src": "assets/photos/ev_2_meeting_gurugram.jpg",
+              "head": "SMC and working-committee meetings",
+              "body": "School Management Committees met to set enrolment targets and assign the village outreach. Gurugram."
+            },
+            {
+              "src": "assets/photos/ev_4_children_kaithal.jpg",
+              "head": "Enrolment drives at the school",
+              "body": "Schools hosted enrolment events so families could complete admissions on the spot. Kaithal."
+            },
+            {
+              "src": "assets/photos/trimmed/ev_6_homevisit_nuh.jpg",
+              "head": "Household follow-up",
+              "body": "Repeat visits to families who had not yet enrolled, to understand and remove the barrier. Nuh."
+            },
+            {
+              "src": "assets/photos/ev_3_gathering_jind.jpg",
+              "head": "Community engagement",
+              "body": "Village gatherings that put enrolment in front of the whole community, not just parents. Jind."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ASC 3.0 Felicitation",
+      "blocks": [
+        {
+          "type": "split",
+          "side": "right",
+          "image": {
+            "src": "assets/photos/s8_felicitation_rewari.jpg",
+            "caption": "Head Masters and officials felicitated for their contribution"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "As part of the Celebration Phase, SCERT, Government of Haryana, organised a felicitation ceremony to recognise contributions across all levels of the programme. The day-long event brought together Head Masters, Block and District officials from across the state — a platform for sharing best practices and reflecting on the changes observed in their schools, enabling cross-learning and peer recognition."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The felicitation was led by Additional Director Shri Sunil Bajaj, while Director SCERT Shri Samwartak Singh, IAS, joined virtually to acknowledge the efforts of teachers and school leaders and to encourage them to keep driving change at the grassroots. For many district leaders it was their first visit to SCERT — a reminder that such platforms not only recognise effort but motivate stakeholders to stay engaged as leaders within the system."
+        },
+        {
+          "type": "photos",
+          "srcs": [
+            "assets/photos/trimmed/s8_welcome_kaithal.jpg",
+            "assets/photos/s8_assembly_rewari.jpg"
+          ],
+          "cols": 2
+        }
+      ]
+    },
+    {
+      "title": "Conclusion",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aao School Chalein (ASC 3.0) stands as a meaningful milestone in the Government of Haryana's commitment to universal school education. Rooted in the state's trust in the programme and growing familiarity with its approach, ASC 3.0 was well-positioned for impact from the outset."
+        },
+        {
+          "type": "paragraph",
+          "text": "By integrating a structured Micro-Improvement Approach through DIKSHA, the programme enabled school leaders to take genuine ownership of enrolment outcomes. Its strength lay in the breadth of its collaboration — teachers, headmasters, block and district officials, parents and community members forming a cohesive ecosystem so that no child was left behind. Launched just before the new academic session, it maximised visibility and momentum at the right moment, translating awareness into action."
+        },
+        {
+          "type": "paragraph",
+          "text": "The insights from ASC 3.0 are more than a record of what worked — they are a repository of best practices that will inform future enrolment initiatives, scale successful micro-improvement practices, and build a stronger education ecosystem across Haryana."
+        },
+        {
+          "type": "figure",
+          "h": "100mm",
+          "caption": "No child left behind",
+          "src": "assets/photos/s9_classroom_panipat.jpg"
+        }
+      ]
+    }
+  ]
+}

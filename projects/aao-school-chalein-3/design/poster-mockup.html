@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Aao School Chalein 3.0 — poster mockup (real-photo layout)</title>
+<style>
+  :root{
+    --indigo:#23235b; --indigo2:#2d2d72; --violet:#7c3aed;
+    --gold:#f7b733; --amber:#e8752f; --cream:#efe9dc; --muted:#b9b4d6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#d8d5ce;font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+       display:flex;flex-direction:column;align-items:center;gap:14px;padding:26px}
+  .cap{color:#4a4a55;font-size:13px} .cap b{color:#23235b}
+  .poster{width:1080px;height:1080px;position:relative;overflow:hidden;display:flex;flex-direction:column;
+          box-shadow:0 30px 80px rgba(30,30,60,.28);transform-origin:top center;background:var(--indigo)}
+
+  /* ---- REAL PHOTO zone (top ~60%) ---- */
+  .photo{position:relative;height:640px;width:100%;
+    /* neutral daylight stand-in for a REAL photograph (not an illustration) */
+    background:
+      radial-gradient(120% 80% at 70% 20%, rgba(255,240,210,.9), transparent 60%),
+      linear-gradient(160deg,#e7c9a0 0%,#d9ad82 45%,#b98b66 100%);
+    display:flex;align-items:center;justify-content:center}
+  .photo .slot{border:2px dashed rgba(255,255,255,.75);border-radius:14px;padding:20px 26px;
+    background:rgba(40,25,15,.28);color:#fff;text-align:center;max-width:640px;backdrop-filter:blur(1px)}
+  .photo .slot .big{font-size:22px;font-weight:800;letter-spacing:.4px}
+  .photo .slot .sub{font-size:15px;opacity:.9;margin-top:6px;line-height:1.4}
+  .kicker{position:absolute;top:32px;left:60px;color:#fff;font-size:18px;font-weight:700;
+    letter-spacing:2px;text-transform:uppercase;text-shadow:0 2px 10px rgba(40,20,5,.5);max-width:640px}
+  .scrim{position:absolute;left:0;right:0;bottom:0;height:230px;
+    background:linear-gradient(to bottom,transparent,rgba(20,15,40,.72))}
+  .title{position:absolute;left:60px;bottom:26px;color:#fff;font-size:80px;font-weight:900;
+    letter-spacing:-1.5px;line-height:.98;text-shadow:0 4px 18px rgba(10,5,30,.6)}
+  .title .v{color:var(--gold)}
+
+  /* ---- brand band (bottom) ---- */
+  .band{flex:1;background:var(--indigo);padding:40px 60px 54px;display:flex;flex-direction:column;
+        border-top:5px solid var(--gold)}
+  .headline{color:#fff;font-size:44px;font-weight:800;line-height:1.06;letter-spacing:-.5px;max-width:900px}
+  .headline .u{color:var(--gold)}
+  .body{margin-top:18px;color:var(--muted);font-size:23px;line-height:1.45;max-width:880px;font-weight:500}
+  .spacer{flex:1}
+  .row{display:flex;align-items:flex-end;justify-content:space-between}
+  .logos{display:flex;gap:16px}
+  .logobox{width:148px;height:54px;border:1.6px dashed rgba(255,255,255,.4);border-radius:8px;
+    display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.55);font-size:13px;letter-spacing:.5px}
+  .cta{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+  .cta .note{color:var(--muted);font-size:14px}
+  .btn{background:linear-gradient(135deg,var(--amber),var(--gold));color:#241a05;font-size:26px;
+    font-weight:800;padding:16px 34px;border-radius:14px;letter-spacing:.3px;
+    box-shadow:0 14px 30px rgba(247,183,51,.32)}
+</style>
+</head>
+<body>
+  <div class="cap"><b>Aao School Chalein 3.0 — real-photo layout mockup.</b> The top zone is a REAL PHOTOGRAPH (placeholder shown); brand band + hierarchy for reference. 1080×1080.</div>
+
+  <div class="poster" id="poster">
+    <div class="photo">
+      <div class="kicker">A community drive to bring every child back to school</div>
+      <div class="slot">
+        <div class="big">📷 REAL PHOTOGRAPH HERE</div>
+        <div class="sub">Children &amp; community walking to school together — real faces, natural daylight, hopeful &amp; dignified.<br>Use a ShikshaLokam photo from an Aao School Chalein drive. <b>No illustration.</b></div>
+      </div>
+      <div class="scrim"></div>
+      <div class="title">Aao School Chalein <span class="v">3.0</span></div>
+    </div>
+
+    <div class="band">
+      <div class="headline">Every child back to school — <span class="u">one door at a time.</span></div>
+      <div class="body">A community-led, door-to-door drive to find the children who've slipped out of school — and walk them back to the classroom. Third year running. Every knock counts.</div>
+      <div class="spacer"></div>
+      <div class="row">
+        <div class="logos">
+          <div class="logobox">logo 1</div>
+          <div class="logobox">logo 2</div>
+        </div>
+        <div class="cta">
+          <div class="note">how to join → link / phone / QR</div>
+          <div class="btn">Join the drive →</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const p=document.getElementById('poster');
+  function fit(){
+    const avail=window.innerHeight-90;
+    const s=Math.min(1,avail/1080,(window.innerWidth-40)/1080);
+    p.style.transform='scale('+s+')';
+    p.style.marginBottom=(1080*s-1080)+'px';
+  }
+  fit();window.addEventListener('resize',fit);
+</script>
+</body>
+</html>

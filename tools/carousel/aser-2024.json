@@ -1,0 +1,28 @@
+{
+  "slug": "aser-2024",
+  "_note": "ShikshaLokam Research-Insight carousel — ASER 2024. SL brand: violet/maroon/cream/coral.",
+  "theme": {},
+  "slides": [
+    {"kind": "cover", "eyebrow": "ASER 2024 · Research Insight",
+     "big": "India's government schools just led the biggest learning recovery in two decades.",
+     "body": "The data behind a hopeful — and honest — story."},
+    {"kind": "stat", "eyebrow": "The survey",
+     "big": "6,49,491",
+     "body": "children · 605 districts. India's largest citizen-led learning survey, running since 2005."},
+    {"kind": "stat", "eyebrow": "Foundational reading",
+     "big": "16.3% → 23.4%",
+     "body": "Class 3 government-school children reading at a Class 2 level (2022 → 2024) — the highest since 2005."},
+    {"kind": "stat", "eyebrow": "Reading & numeracy, both rising",
+     "big": "44.8% · 33.7%",
+     "body": "Class 5 reading at Class 2 level (up from 38.5%). Class 3 subtraction (up from 28.1%)."},
+    {"kind": "statement", "eyebrow": "The shift",
+     "big": "Government schools led the recovery — for the first time.",
+     "body": "Outpacing private schools — credited to NEP 2020 and the NIPUN Bharat mission."},
+    {"kind": "honest", "eyebrow": "The honest half",
+     "big": "76.6%",
+     "body": "of Class 3 children still can't read at a Class 2 level. The gap is wide — what changed is the direction."},
+    {"kind": "closing", "eyebrow": "The point",
+     "big": "Public schools: places of hope, not problems to be solved.",
+     "body": "The movement Shikshagraha, co-built by ShikshaLokam, is part of.  → Full ASER 2024 report in the comments."}
+  ]
+}

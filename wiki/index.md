@@ -15,6 +15,7 @@ Auto-injected at every session start. Budget ≤ 1,500 tokens (per `TOKEN_BUDGET
 - [[concepts/audience]] — *user-validated.* Five segments: Civil Society, Government, Markets, Media, Shikshagraha Team.
 - [[concepts/programs]] — *user-validated.* Programs and mechanisms the movement runs; DIKSHA platform; micro-improvement approach.
 - [[concepts/ecosystem]] — *user-validated.* Samaj/Sarkar/Bazar/Sanchar four-actor framing; partners, funders, peers; relationship with Mantra4Change and other partner CSOs.
+- [[concepts/collaborative-philanthropy]] — *research-seeded.* How SL thinks about funding and funders: Fund Orchestration as an SL 2.0 capability, "capital beyond money" (trust/networks/relationships), the funder-role map (Strategic/Anchor/Momentum Partners), the three Roundtable questions, WEF + Punjab/Nagaland evidence.
 - [[concepts/leadership]] — *user-validated.* Khushboo Awasthi (Co-Founder & COO; also Co-Founder, Mantra4Change). Ashoka Fellow, Schwab Social Innovator 2023. Advises Government of India on three Ministry of Education committees.
 
 ## Voice

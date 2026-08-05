@@ -102,6 +102,25 @@ socials/feedback/unsubscribe footer). Stories referenced in the sample issue: Mo
 Shiksha Chaupal VI (Bihar), North East + Inclued Shiksha Samvaad, Nagaland NLNF 3.0, Up Close &
 Personal S3 (GenNext), Small Steps to Build Great Schools Vol. 3. *Provided in-session 2026-06-17.*
 
+## 2026-07-10 added by Ayush — CNN "Breakfast Club" feature (Mothers of Courage / Shikshagraha)
+
+- **CNN "Breakfast Club" TV segment** — Khushboo Awasthi + Urmila Didi on *Mothers of Courage* (India's
+  only SDG-category shortlist at Cannes Lions), Shiksha Chaupal, and Shikshagraha as a movement. Rich on:
+  the chaupal shift (women's agency), "not lack of aspiration but systemic barriers," Shikshagraha =
+  Satyagraha-for-education, collective voice/action, stories of hope; Urmila Didi's goat-for-exam-form
+  story + her dream of women running their own chaupals. Full extract → [[cnn-mothers-of-courage-feature-2026]];
+  raw → [[../../raw/2026-07-10]]. ⚠️ CNN called Khushboo "Co-founder & CEO of ShikshaLokam" — reconcile
+  with her confidential/Chief-Curator designation before using a title. *Transcript shared 2026-07-10.*
+
+## 2026-07-13 added by Ayush — Shiksha Chaupal participation milestone (Bihar)
+
+- **Metabase dashboard** — "Total Participants Across Districts": Bihar's Shiksha Chaupals have crossed
+  **1,011,139 participants ("over 1 million")** across **~20 districts** (Gaya, Rohtas, Sitamarhi,
+  Muzaffarpur, Kaimur, West Champaran leading). The canonical citation for the 1M-chaupal-participants
+  claim; basis for a standalone milestone LinkedIn post. Full breakdown →
+  [[shiksha-chaupal-participation-bihar-2026]]; raw → [[../../raw/2026-07-13]]. *Point-in-time read,
+  2026-07-13 — number grows; re-confirm before citing in dated material.*
+
 ## How this file evolves
 
 Append new sources with a `## YYYY-MM-DD added by …` heading. Keep old entries even when superseded — provenance matters. When a source is fetched again, update its `*Fetched …*` line in place.

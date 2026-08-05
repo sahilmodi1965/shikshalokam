@@ -41,6 +41,7 @@ visible day by day, not only at the weekly review. (Convention: `projects/README
 
 | Date | Slot | What landed | Status |
 |---|---|---|---|
+| 2026-07-27 | Tuesday — Tech (MItra) | **Hook reworked** — MItra Part 2 caption re-opened for a wider audience (NGO/govt/non-tech): led on unheard ground-voices instead of the "feature list" tech framing. V1 LinkedIn (~150w), V2 Instagram (short). | draft |
 | 2026-05-26 | Tuesday — Research Insight | **Variant 1 revised & approved** — *"What if collective action could be measured?"* — Shiksha Chaupals explained, SL/SG relation clarified, real actors (women from SHGs, didis, parents, named partners Jyoti Mahila Samakhya, Srishti Mahila Samakhya, other SHGs & CSOs) centred under the movement. #InvokED2026 removed. | approved |
 | 2026-05-21 | Tuesday — Research Insight | **Variant 4** drafted — *"The recovery no one's talking about."* — ASER 2024 equity data. **Variant 2 citation verified & corrected** — now anchored on Leithwood et al. (2004), Wallace Foundation, replacing the unconfirmed OECD placeholder. | draft |
 | 2026-05-21 | — (brain build) | Research pipeline live — `shikshalokam-research` skill added; three studies verified and filed as `wiki/sources/research-*.md`; `shikshalokam-write` now researches + cites by default. | — |
@@ -57,6 +58,51 @@ _(no candidates yet — populate as Sonal brings a feedback-video angle)_
 ## Tuesday — Tech / Research Insight
 
 **Brief (Sonal, 2026-05-19):** byte-sized informative posts anchored on research studies, surveys, and reports that strengthen SL-aligned messaging — collective action and/or importance of agency for education leaders.
+
+---
+
+### MItra blog Part 2 launch — "Journey of Building MItra"
+
+- **Source:** [[mitra-listening-at-scale-part1-2026]] (series) · Part 2 blog live at
+  https://shikshalokam.org/listening-at-scale-part-2-of-3-journey-of-building-mitra/
+  (co-authored by Kiran Haridas, Niveditha Mohan, Prateek Agarwal, Sonal Bhasin, Syed Hyder Ali)
+- **Hook rethought (Ayush, 2026-07-27):** dropped the "tech product / feature list" opener — too
+  insider. Wider audience = NGO partners, government stakeholders, tech AND non-tech. Lead on the
+  universal idea (good ideas on the ground going unheard), keep the blog's texture underneath.
+- **Ties to:** the Bihar MoU (MItra is the instrument the Dept of Education signed for) + July newsletter block.
+
+#### Variant 1 — "No one writes it down" (LinkedIn) — Ayush-edited, matched to Part 1 format
+
+- **Platform:** LinkedIn · **Status:** `draft` · **Length:** ~130 words
+- **Byline:** Part 2 authors, from the live blog — Kiran Haridas, Niveditha Mohan, Prateek Agarwal,
+  Sonal Bhasin, Syed Hyder Ali (note: differs from Part 1's co-authors).
+- **Format anchor:** mirrors the Part 1 caption — hook → case → 🔴 Read link → "Co-authored by" → 4-tag stack.
+
+> A teacher finds a better way to seat her class. A nodal officer makes a quiet, careful decision. A mother turns a school around. And more often than not — no one writes it down.
+>
+> That gap, between the wisdom on the ground and the systems that decide for it, is what MItra was built to close.
+>
+> Part 2 of *Listening at Scale* is the story of how. It didn't start with a list of features — it started with a question: what would it take for someone to feel genuinely heard, rather than tested by one more form? Built with generative AI in 2023, drawing on lessons from national platforms like DIKSHA and Karmayogi Bharat, MItra removes the barriers that usually keep these voices out — literacy, typing, language, bandwidth — instead of working around them.
+>
+> 🔴 Read Part Two: https://shikshalokam.org/listening-at-scale-part-2-of-3-journey-of-building-mitra/
+>
+> Co-authored by Kiran Haridas, Niveditha Mohan, Prateek Agarwal, Sonal Bhasin, and Syed Hyder Ali H.
+>
+> #Shikshagraha #EducationLeadership #MissionToMovement #ListeningAtScale
+
+#### Variant 2 — "The voices we keep missing" (Instagram / short)
+
+- **Platform:** Instagram · **Status:** `draft` · **Length:** ~70 words
+
+> The people closest to every child — teachers, parents, community leaders — often have the clearest sense of what would help. And too often, no one is listening.
+>
+> MItra was built to change that: to remove every barrier that keeps these voices out — literacy, typing, language, bandwidth — so what's left is simply a person, speaking, and being understood.
+>
+> Part 2 of *Listening at Scale* — the story of building MItra.
+>
+> 📖 Link in bio.
+>
+> #Shikshagraha #ListeningAtScale #MItra #EducationForAll
 
 ---
 
@@ -181,9 +227,25 @@ _(no candidates yet — populate as Sonal brings a feedback-video angle)_
 
 ---
 
-## Wednesday — InvokED Studio teaser
+## Wednesday — InvokED Studio (episode caption)
 
-_(no candidates yet)_
+**Template systematised 2026-07-29** from Ayush's caption chat → full anatomy + real examples in
+[[../../wiki/voice/exemplars/invoked-studio-caption-2026]]. **These get made often — it's now one ask:**
+say *"InvokED Studio caption for S03EP<N> — <Guest>"* and the brain drafts it in the format below
+(pulling the episode transcript from the Studio S3 doc / YouTube).
+
+**Format:** `**Episode N of Up Close & Personal with GenNext is out.**` → **Guest** *(title, org)* joins
+[student/GenNext] hosts **H1** and **H2** for a *heartfelt conversation on <themes>* → "From
+<school-memory beat> to <deeper reflection>, <Guest> shares…" (house thesis: leadership isn't authority
+or titles) → `🔴 Watch … [YouTube]` · `🟢 Listen on Spotify … [Spotify]` → `#CandidConversation
+#InvokED2026 #GlobalDialogue`. Optional: 2–3 thumbnail quote lines from the guest's **real words** (≤10 words).
+
+**Live episodes to caption** (from the S3 playlist): EP01 Kevileno Angami · EP02 Jack Sim · EP03 Wendy
+Kopp · EP04 Khadije Saleh · EP05 Alex Beard · EP06 Camila Pereira · EP07 Aradhana Dalmia · EP08 Raj Gilda
+· EP09 Janhvi Maheshwari ✅ · EP10 Meenakshi Ramesh ✅ · EP11 Manoj Kaushik ✅ · EP12 Camille Massey ·
+EP13 ✅ · EP14 Cynthia Rayner ✅. (✅ = caption already drafted in the source chat.)
+
+_No open drafts here — say the episode and it's produced._
 
 ---
 
@@ -193,9 +255,17 @@ _(no candidates yet — Thursday's portrait pairs naturally with the [[portraits
 
 ---
 
-## Friday — InvokED Session Post
+## Friday — InvokED 5.0 session teaser
 
-_(no candidates yet)_
+**Template systematised 2026-08-03** (5 live posts) → full anatomy + examples in
+[[../../wiki/voice/exemplars/invoked-session-teaser-2026]]. **One ask:** *"Friday teaser for the
+InvokED 5.0 <session> — <speakers>"* → the brain drafts it (pull the session from YouTube).
+
+**Format:** provocative **question** hook → `At InvokED 5.0, <Name>(<Role> at <Org>), … explored <topic>`
+(name every speaker, role@org) → one **systems-change insight** → `🔴 Watch the full session here: [link]`
+→ `#InvokED2026 #SystemsChange` + 2–4 topic tags. Optional `🟣` second link + @-tag the people.
+
+_No open drafts — say the session + link and it's produced._
 
 ---
 

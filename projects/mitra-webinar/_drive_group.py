@@ -1,33 +1,19 @@
 #!/usr/bin/env python3
-"""Trash the 4 single-asset Day-1 Docs and replace with 2 grouped Google Docs:
+"""Regenerate the 2 grouped Google Docs IN PLACE from page.md (links stay stable):
    - 'MItra Webinar — Emails'   (all emails)
    - 'MItra Webinar — Messages' (WhatsApp + LinkedIn + poster + clip script)
-Rebuilt from page.md each run."""
+Updates content of the existing fileIds; does not create new docs."""
 import re, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent / "tools" / "gsuite"))
 import gs
 from googleapiclient.http import MediaInMemoryUpload
 
-FOLDER = "1rjYIErAuZdpCoML5WAz4LFKD9hWY-05h"
-OLD_DOCS = [
-    "19p3Eut-RiO3CEA72x6MYcv9Wzy0NE_eiuUAeFF1YIXw",  # Email 1
-    "1BCOyraeBtu7vMCxpvSzJuxvT8gZ16AbTV0XQO06lD3s",  # Poster
-    "141OHdiMZoVAJegHhF7-pFndx5nDk8k7Of3_OLyw04Nw",  # WhatsApp 1:1
-    "1dUeQ7Jbcp99VjwcBCpoIIQtvXoW1n4sW8HnybXXVpDg",  # WhatsApp broadcast
-]
+EMAILS_ID = "1CKURznd2GU2fDJ4s-qeh2wn_4bvIbtFnFljuubRoPXw"
+MESSAGES_ID = "1nkJb1dkf_77T30cRHdlKQziGIxE_Alohr21HYkhQuVM"
 
 drive = gs.svc("drive", "v3")
 
-# 1) trash old docs
-for fid in OLD_DOCS:
-    try:
-        drive.files().update(fileId=fid, body={"trashed": True}, supportsAllDrives=True).execute()
-        print(f"trashed {fid}")
-    except Exception as e:
-        print(f"  (couldn't trash {fid}: {e})")
-
-# 2) parse asset blocks
 page = (gs.REPO / "projects" / "mitra-webinar" / "page.md").read_text(encoding="utf-8")
 lib = page.split("## Asset library", 1)[1]
 blocks = [b for b in ("\n" + lib).split("\n### ") if b.strip() and b.lstrip().startswith("Day ")]
@@ -36,11 +22,17 @@ def title_of(b):
     return b.splitlines()[0].split(" · status")[0].strip().replace("`", "")
 
 emails = [b for b in blocks if "Email" in title_of(b)]
-whatsapp = [b for b in blocks if "WhatsApp" in title_of(b)]
-linkedin = [b for b in blocks if "LinkedIn" in title_of(b)]
-poster = [b for b in blocks if "Poster" in title_of(b)]
-clip = [b for b in blocks if "Demo teaser clip" in title_of(b)]
-messages = whatsapp + linkedin + poster + clip
+non_email = [b for b in blocks if "Email" not in title_of(b)]
+
+def grp(b):
+    t = title_of(b)
+    if "WhatsApp" in t: return 0
+    if "LinkedIn" in t: return 1
+    if "Blog Part 2" in t: return 2
+    if "Poster" in t: return 3
+    if "Demo teaser clip" in t: return 4
+    return 5  # anything else (e.g. Q&A) lands at the end — nothing dropped
+messages = sorted(non_email, key=grp)  # each asset classified once; stable order
 
 def inline(s):
     s = s.replace("`", "")
@@ -72,18 +64,16 @@ def md_html(md):
 def build(group):
     parts = []
     for b in group:
-        lines = b.splitlines()
         parts.append(f"<h1>{inline(title_of(b))}</h1>")
-        parts.append(md_html("\n".join(lines[1:])))
+        parts.append(md_html("\n".join(b.splitlines()[1:])))
     return "<html><body>" + "\n".join(parts) + "</body></html>"
 
-def make(title, group):
-    html = build(group)
-    media = MediaInMemoryUpload(html.encode("utf-8"), mimetype="text/html", resumable=False)
-    doc = drive.files().create(
-        body={"name": title, "mimeType": "application/vnd.google-apps.document", "parents": [FOLDER]},
-        media_body=media, fields="id,webViewLink", supportsAllDrives=True).execute()
-    print(f"{title}: {doc.get('webViewLink')}")
+def update(fid, group, label):
+    html = build(group).encode("utf-8")
+    media = MediaInMemoryUpload(html, mimetype="text/html", resumable=False)
+    doc = drive.files().update(fileId=fid, media_body=media,
+                               fields="id,webViewLink", supportsAllDrives=True).execute()
+    print(f"{label} ({len(group)} assets): {doc.get('webViewLink')}")
 
-make("MItra Webinar — Emails", emails)
-make("MItra Webinar — Messages", messages)
+update(EMAILS_ID, emails, "Emails")
+update(MESSAGES_ID, messages, "Messages")

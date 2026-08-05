@@ -1,0 +1,31 @@
+{
+  "title": "Strategic Comms All-Hands — 09 July 2026",
+  "slides": [
+    { "title": "STRATEGIC COMMUNICATIONS · ShikshaLokam",
+      "body": "All-Hands · 09 July 2026\n[cover photo]" },
+    { "title": "A Highlight · A Challenge · The focus areas",
+      "body": "" },
+
+    { "title": "ShikshaLokam — Org Metrics Progress",
+      "body": "[metric 1] — [progress] / [target]\n[metric 2] — [progress] / [target]\n[metric 3] — [progress] / [target]\n[metric 4] — [progress] / [target]\n(May'26: brand survey · orgs partnered for advocacy · SL mentions · geographies covered)" },
+    { "title": "ShikshaLokam — Highlight of the month",
+      "body": "[highlight — what happened + the numbers behind it]\n[photo]" },
+    { "title": "ShikshaLokam — Challenge",
+      "body": "[challenge]" },
+    { "title": "ShikshaLokam — Focus area for next month",
+      "body": "[focus 1]\n[focus 2]" },
+
+    { "title": "Shikshagraha — Org Metrics Progress",
+      "body": "[metric 1] — [progress] / [target]\n[metric 2] — [progress] / [target]\n[metric 3] — [progress] / [target]\n[metric 4] — [progress] / [target]\n(May'26: media mentions · byline articles · major assets · awards applied/received)" },
+    { "title": "Shikshagraha — Highlight of the month",
+      "body": "[highlight — what happened + the numbers behind it]\n[photo]" },
+    { "title": "Shikshagraha — Challenge",
+      "body": "[challenge]" },
+    { "title": "Shikshagraha — Focus area for next month",
+      "body": "[focus 1]\n[focus 2]" },
+
+    { "title": "[Campaign CTA — e.g. Become a part of the campaign!]",
+      "body": "[campaign photo]" },
+    { "title": "THANK YOU", "body": "" }
+  ]
+}

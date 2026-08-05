@@ -1,0 +1,18 @@
+{
+  "name": "mitra-impact",
+  "size": [1080, 1350],
+  "slides": [
+    {"type": "cover", "kicker": "MItra · Listening at scale",
+     "headline": "What does listening at scale really look like?",
+     "sub": "Not a survey. Not a form. A companion."},
+    {"type": "stat", "big": "32,742", "label": "chaupals",
+     "sub": "Conversations held — not forms filled."},
+    {"type": "stat", "big": "8.79 lakh", "label": "members",
+     "sub": "Voices in the room."},
+    {"type": "stat", "big": "79,148", "label": "challenges surfaced",
+     "sub": "Named by the people living them."},
+    {"type": "close", "headline": "Not a survey.\nNot a form.\nA companion.",
+     "sub": "See it live · 17 July 2026",
+     "cta": "Register → {{REGISTER_LINK}}"}
+  ]
+}

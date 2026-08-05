@@ -1,0 +1,80 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Poppins:wght@400;500;600;700;800&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#197a3e; --dark:#14532b; --mint:#d7ede0; --mint2:#eaf5ee;
+  --maroon:#b01e3c; --mustard:#e0a12a; --teal:#1a9bb0; --yellow:#f2c21e; --ink:#20302a;
+}
+html,body{width:1080px;height:1350px}
+body{font-family:'Poppins',sans-serif;background:var(--green);color:var(--ink);position:relative;overflow:hidden}
+/* colourful tile motif (corners) */
+.tiles{position:absolute;display:grid;grid-template-columns:repeat(3,26px);grid-auto-rows:26px;gap:6px}
+.tiles.tl{top:26px;left:26px} .tiles.br{bottom:26px;right:26px;transform:rotate(180deg)}
+.tiles i{border-radius:5px;display:block}
+.card{position:absolute;inset:64px 40px 120px;background:#fff;border-radius:26px;box-shadow:0 20px 50px rgba(0,0,0,.18);padding:26px 44px 40px;display:flex;flex-direction:column}
+/* logo bar */
+.logos{display:flex;align-items:center;justify-content:space-between;gap:14px;border:1px solid #e6e6e6;border-radius:14px;padding:12px 16px}
+.logos .lg{flex:1;height:46px;border-radius:8px;background:#f2f4f3;display:flex;align-items:center;justify-content:center;color:#9aa4a0;font-size:9px;font-weight:600;text-align:center;padding:4px}
+/* title */
+.tt{text-align:center;margin-top:22px}
+.tt .m{font-family:'Merriweather';font-weight:700;color:var(--green);font-size:34px;line-height:1}
+.tt h1{font-family:'Merriweather';font-weight:900;color:var(--dark);font-size:56px;line-height:1;letter-spacing:.5px}
+.tt .lat{color:var(--maroon);font-weight:700;letter-spacing:2px;font-size:17px;margin-top:8px}
+.chip{display:inline-block;background:var(--maroon);color:#fff;font-weight:700;letter-spacing:2px;font-size:15px;padding:8px 20px;border-radius:30px;margin:18px auto 0}
+/* hero stat */
+.hero{background:var(--mint);border:3px solid var(--green);border-radius:18px;padding:18px 24px;margin:20px 0 8px;text-align:center}
+.hero .n{font-family:'Merriweather';font-weight:900;color:var(--dark);font-size:64px;line-height:1}
+.hero .n small{font-size:26px;color:var(--maroon);font-weight:900}
+.hero .cap{font-weight:600;color:var(--green);font-size:18px;margin-top:2px}
+/* process steps */
+.steps{margin-top:12px;display:flex;flex-direction:column;gap:12px}
+.step{display:flex;gap:16px;align-items:flex-start}
+.step .dot{flex:0 0 42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:18px}
+.step .b{flex:1}
+.step .h{font-weight:700;color:var(--dark);font-size:20px;line-height:1.15}
+.step .s{color:#55635d;font-size:15.5px;margin-top:2px}
+.step .tag{display:inline-block;font-weight:700;font-size:12.5px;padding:3px 10px;border-radius:20px;margin-top:6px}
+.done .dot{background:var(--green)} .now .dot{background:var(--maroon)} .next .dot{background:var(--mustard)}
+.done .tag{background:#e5f2ea;color:var(--green)} .now .tag{background:#fbe4ea;color:var(--maroon)} .next .tag{background:#fdf1d9;color:#a5741a}
+.announce{margin-top:16px;text-align:center}
+.announce .pill{display:inline-block;background:var(--maroon);color:#fff;font-weight:700;font-size:20px;padding:12px 26px;border-radius:34px}
+.announce .pill b{font-family:'Merriweather'}
+/* bottom band */
+.band{position:absolute;left:0;right:0;bottom:0;height:96px;background:var(--dark);display:flex;align-items:center;justify-content:center}
+.band i{font-family:'Poppins';font-style:italic;color:#eafff2;font-size:22px;font-weight:500}
+.cm{position:absolute;right:44px;bottom:120px;width:150px;height:190px;border-radius:12px;background:#eef1ef;display:flex;align-items:center;justify-content:center;color:#9aa4a0;font-size:11px;font-weight:600;text-align:center;border:2px dashed #c7cec9}
+</style></head>
+<body>
+  <div class="tiles tl"><i style="background:var(--green)"></i><i style="background:var(--mustard)"></i><i style="background:var(--teal)"></i><i style="background:var(--yellow)"></i><i style="background:var(--green)"></i><i></i><i style="background:var(--teal)"></i><i></i><i></i></div>
+  <div class="tiles br"><i style="background:var(--yellow)"></i><i style="background:var(--green)"></i><i style="background:var(--mustard)"></i><i></i><i style="background:var(--teal)"></i><i></i><i></i><i></i><i style="background:var(--green)"></i></div>
+
+  <div class="card">
+    <div class="logos">
+      <div class="lg">Govt of<br>Meghalaya</div><div class="lg">CMLEAD<br>Fellowship</div><div class="lg">DERT<br>Meghalaya</div><div class="lg">Samagra<br>Shiksha</div><div class="lg">Mantra</div>
+    </div>
+
+    <div class="tt">
+      <div class="m">Meghalaya</div>
+      <h1>CMLEAD FELLOWSHIP</h1>
+      <div class="lat">LEAD. ACT. TRANSFORM.</div>
+      <div class="chip">SELECTION UPDATE</div>
+    </div>
+
+    <div class="hero">
+      <div class="n">[ N ]<small> applications</small></div>
+      <div class="cap">received for the first cohort</div>
+    </div>
+
+    <div class="steps">
+      <div class="step done"><div class="dot">&#10003;</div><div class="b"><div class="h">Applications received</div><div class="s">[ N ] applications from across Meghalaya.</div><span class="tag">DONE</span></div></div>
+      <div class="step now"><div class="dot">&#9679;</div><div class="b"><div class="h">Interviews with shortlisted candidates</div><div class="s">Being conducted <b>next week</b>. Shortlisted candidates will receive the communication accordingly.</div><span class="tag">WE ARE HERE</span></div></div>
+      <div class="step next"><div class="dot">&#9733;</div><div class="b"><div class="h">Final 12 Fellows announced</div><div class="s">The department will announce the list of <b>12 Fellows</b>.</div><span class="tag">31 JULY 2026</span></div></div>
+    </div>
+
+    <div class="announce"><div class="pill">Final list out on <b>31&#8202;July&#8202;2026</b></div></div>
+    <div class="cm">CM<br>photo</div>
+  </div>
+
+  <div class="band"><i>Be part of the first cohort driving change on the ground</i></div>
+</body></html>

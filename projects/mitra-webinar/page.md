@@ -1,198 +1,219 @@
 ---
 project: mitra-webinar
-title: "MItra Webinar (17 Jul 2026) — promotion campaign workspace"
+title: "MItra Webinar (24 Jul 2026) — partner-invite workspace"
 _status: draft
-last_updated: 2026-06-29
+last_updated: 2026-07-16
 maintainer: Ayush Tank
 daily_user: Ayush Tank
 sources:
   - "[[mitra-listening-at-scale-part1-2026]] — MItra positioning, 'treasure scattered / no map', listening-to-the-ground case"
-  - "Promotional calendar (author-supplied, 10-day plan) — pasted 2026-06-29"
-voice: "[[styleguide]] — social + email registers; anchor line 'Not a survey. Not a form. A companion.'"
+  - "Team direction (Anupriya, via email 2026-07-15) — webinar #1 goes through internal Shikshagraha partner networks (SLC/YLC/WLC), not social; Google Meet invite to SG partners, not registration-based"
+  - "shikshagraha.org — SLC = System Leadership Collective (govt–CSO partnerships), WLC = Women Leadership Collective, YLC = Youth Leadership Collective"
+voice: "[[styleguide]] — email + WhatsApp registers; community-listening focus (v2, 2026-07-13). Anchor: 'Not a survey. Not a form. A companion.'"
 ---
 
-# MItra Webinar — promotion campaign (10-day plan)
+# MItra Webinar — partner invite (internal-network approach)
 
-Workspace to **build the assets and track the plan**. The plan is locked; we execute here.
+Workspace to **build + track the invite assets**. Approach changed 2026-07-15 (see below); we execute here.
 
-- **Webinar:** MItra — **17 July 2026**, **1 hour** (Day 10 = day of event).
-- **Objective:** introduce MItra to ecosystem partners as a *listening-at-scale* capability — build understanding of what it does and the problem it solves, and spark interest in adopting / collaborating around it.
-- **Audience:** 40–50 ecosystem partners who (1) work with communities at scale, (2) already do some community listening / feedback collection, (3) could adopt, adapt, or collaborate around MItra.
-- **Channels:** Email (SG network), LinkedIn, WhatsApp, X/Twitter, partner cross-promo.
+- **Webinar:** MItra — **Friday, 24 July 2026**, **2:00–3:30 PM** (90 min).
+- **Platform:** **Google Meet** (a calendar invite is rolled out to SG partners — **not registration-based**).
+- **Objective:** introduce MItra to Shikshagraha partner organisations as a *listening-at-scale* capability — and, more broadly, share what we've learned about listening to communities and hear how partners do it.
+- **How it reaches partners (the new engine):** **no social campaign.** The **SLC, YLC and WLC teams** carry the invite to *their* partner organisations. **Flow:** each team member sends the **invite email once** (draft below), then all follow-up **nudges go via WhatsApp** — personal 1:1 messages the team member personalises/edits before sending. Comms (us) is on standby for future sessions.
+  - **SLC** — System Leadership Collective (govt–CSO partnerships; teachers, principals)
+  - **WLC** — Women Leadership Collective (women leading school governance + community change)
+  - **YLC** — Youth Leadership Collective (young leaders documenting schools + amplifying stories)
+- **Channels:** **Email + WhatsApp only.**
 - **Anchor / hook:** **"Not a survey. Not a form. A companion."**
-- **Impact numbers (campaign):** 32,742 chaupals · 8.79 lakh members · 79,148 challenges surfaced.
-- **Collaterals:** MItra Webinar Concept Note *(link not supplied — add it)*.
+- **Impact numbers:** 32,742 chaupals · 8.79 lakh voices · 79,148 challenges surfaced.
 
-## Webinar agenda (1 hr, for the Day-10 "what to expect" copy)
-1. **Welcome & warm-up** — live poll + open discussion: what work partners do, how they listen to communities today, what's hard.
-2. **The Challenge** — frame the gap in community listening, drawing on participant responses.
-3. **The Origin — how MItra was born** — the Shikshagraha story; listening to women's voices at scale.
-4. **What is MItra & who it's for** — what it is, how it works, the personas it serves.
-5. **Live Demo** — the Discussion Bot capturing community voices → structured insight.
-6. **Key features & use cases** — the four use cases + what partners can configure.
-7. **Impact — the numbers & what they mean** — the story behind the data.
-8. **Q&A & close** — recap, the next step for partners, open questions.
-*(Speakers/facilitators: all TBD.)*
+## What changed (2026-07-15) — and what it retired
+Anupriya (as discussed with Neeraj): webinar #1 rolls out via **internal Shikshagraha partner networks**, not a social-media campaign. Direct consequences:
+- **Retired for this webinar:** LinkedIn Posts 2/3/8, the impact carousel, team amplification, the demo-clip *social* pushes, blog-share posts, poster, and all **registration / "limited seats" scarcity** framing.
+- **No registration:** partners receive a **Google Meet calendar invite**; there is no register link / form.
+- **Kept + reworked:** the invite itself, on the **v2 community-listening voice** (redrafted 2026-07-13), as **email + WhatsApp** the collectives can forward.
 
 ## ⚠️ Confirm before assets go out
-1. **Registration link / form URL** — every CTA needs it. Not supplied yet. *(blocking)*
-2. **Time of day + platform** (Zoom/Meet?). Date ✓ 17 Jul, duration ✓ 1 hr.
-3. **Impact numbers** — 32,742 chaupals · 8.79 lakh members · 79,148 challenges. Confirm against source (newsletter/blog used different chaupal figures — e.g. "28,000+ chaupals, 8 lakh+ people"). Lock the canonical set.
-4. **Demo clip (Day 3)** — needs real screen-capture/video footage. Brain can write the **script + captions**, not produce the video. Who shoots/edits?
-5. **Poster (Day 1)** — brain writes copy + layout spec; who does the visual design?
-6. **Priority partner list (15–20)** for the personal WhatsApp/email touches.
-7. **Partners to tag for signal** (plan names EkStep, Pratham, CivicDataLab) — confirm handles.
-8. **Concept Note link** + **signatory** for Email 1.
-9. **Speakers/facilitators** for the 8 agenda segments (all TBD).
-
-## Date map (Day N → calendar)
-Day 1 = **Jul 8** · Day 3 = Jul 10 · Day 5 = Jul 12 · Day 7 = Jul 14 · Day 8 = Jul 15 · Day 9 = Jul 16 · Day 10 = **Jul 17**.
-*(Today: 29 Jun — ~9 days of runway to build everything before launch.)*
+1. **Google Meet link** — Ayush is creating the calendar invite; fill `{{MEET_LINK}}` when ready. *(blocking for the day-of copy)*
+2. **Signatory** for the emails (`{{SIGNATORY}}`) — Anupriya? SG partnerships lead?
+3. **Impact numbers** — 32,742 chaupals · 8.79 lakh voices · 79,148 challenges. Confirm the canonical set (older collateral used "28,000+ chaupals, 8 lakh+").
+4. **Which collective leads** get the cover note (names/handles for SLC, YLC, WLC).
+5. **Speakers/facilitators** for the session (still TBD).
 
 ## The plan — tracker
-
-**Ground truth (29 Jun):** only the **MItra blog** is published + shared on platforms. Nothing else
-in this campaign has gone out yet — everything below marked `draft` is built in the workspace, waiting
-on the registration link + time/platform before it can ship.
-
 Status: `—` not started · `draft` written, in workspace · `ready` approved-to-use · `sent` shipped.
 
-| Day | Phase | Channel | Asset | Hook / angle | CTA | Status |
-|---|---|---|---|---|---|---|
-| 1 | Launch | Email | **Email 1 — The Invitation** (SG network) | Origin story: the chaupal conversations that vanished. Meet MItra. | Register now | draft |
-| 1 | Launch | All | **MItra Blog Part 1** share | The stories we were missing — the need for a companion | Follow / engage | sent ✅ (published 25 Jun + shared) |
-| 1 | Launch | WhatsApp | **Personal notes** to 15–20 priority partners + **poster** circulation | "Thought of you and your work — would love you in the room." | RSVP via link | draft |
-| 3 | Storytelling | LinkedIn | **Post 2 — Demo teaser clip** (60s) | Watch MItra turn a spoken conversation into a live dashboard | Register to see live | draft |
-| 3 | Storytelling | WhatsApp | Demo clip in groups + broadcast | "Show, don't tell" 60s clip; tag EkStep/Pratham/CivicDataLab for signal | Register | draft |
-| 5 | Conversion | Email | **Email 2 — Why You, Specifically** | "For partners who already listen to communities" + impact numbers | Save your seat | — |
-| 5 | Conversion | LinkedIn | **Post 3 — Impact-numbers carousel** | 32,742 chaupals · 8.79 lakh members · 79,148 challenges | Register | — |
-| 7 | Personal nudge | WhatsApp/Email | **1:1 follow-up** to partner orgs | Highest-converting touch in the window | RSVP | — |
-| 8 | Amplify | LinkedIn | **Team amplification** — mass repost | Compound earned reach while interest is fresh | Engage / share | — |
-| 8 | Storytelling | All | **MItra Blog Part 2** share (the making of MItra) | The making of MItra's capability | Engage / share | — (Part 2 not yet published) |
-| 9 | Scarcity | Email | **Reminder** to registrants + invitees | "Limited seats — a curated room of ecosystem leaders" | Confirm + calendar invite | — |
-| 9 | Scarcity | WhatsApp/LinkedIn | Re-share demo clip + scarcity line | Few seats left | Register now | — |
-| 9 | Scarcity | WhatsApp | Final personal push to priority targets | Last chance to lock your spot | RSVP today | — |
-| 10 | Day of | Email | Morning-of reminder + join link | "What to expect in this hour" | Join link | — |
-| 10 | Day of | WhatsApp | Morning + 30-min-before join-link drops | Two nudges so people show up | Join now | — |
-| 10 | Day of | All | Go live + capture attendance / Q&A | Google Form or open chat | — | — |
+| When | Channel | Asset | Purpose | Status |
+|---|---|---|---|---|
+| Prep | Email | **Cover note** to SLC / YLC / WLC leads | ask the collectives to forward the invite to their partner orgs | draft |
+| Invite | Email | **Invitation** (forwardable to partner orgs) | the core invite — community-listening voice | draft |
+| Invite | WhatsApp | **Invitation** (personal 1:1) | a personal note to each partner, referencing their work | draft |
+| Invite | WhatsApp | **One-liner + group variant** | fast personal send, or a light-touch drop into a partner group | draft |
+| Nudge (post-email) | WhatsApp | **Follow-up nudges** (4 angles) | team picks + personalises one a few days later | draft |
+| Day before (23 Jul) | Email | **Reminder** | gentle "looking forward to tomorrow" + Meet link | draft |
+| Day before (23 Jul) | WhatsApp | **Reminder** (personal 1:1) | personal nudge to each partner | draft |
+| Day of (24 Jul) | Email | **Morning-of + join link** | "we're live today", what to expect, Meet link | draft |
+| Day of (24 Jul) | WhatsApp | **Join-link drops** (morning + 30-min) | make sure people show up | draft |
+| After (24 Jul) | WhatsApp | **"Couldn't make it"** follow-up | keep the door open with no-shows | draft |
 
 ## Asset library
-*(Built assets land here under `### <Day N> — <asset>` as they're written.)*
+*(Built assets land here under `### Day N — <asset>`. **One** Drive doc regenerates from this section via `_drive_tabs.py`: the **📧 Emails** tab = every "Email" block; the **💬 WhatsApp** tab = every "WhatsApp" block. The old separate Emails doc is retired to a pointer.)*
 
-**Drive (Google Docs, owned by ayushtank@, in *Pictures & Resources › MItra Webinar*):**
+**Drive (one Google Doc, two tabs, owned by ayushtank@, in *Pictures & Resources › MItra Webinar*):**
 [folder](https://drive.google.com/drive/folders/1rjYIErAuZdpCoML5WAz4LFKD9hWY-05h) ·
-[Emails doc](https://docs.google.com/document/d/1CKURznd2GU2fDJ4s-qeh2wn_4bvIbtFnFljuubRoPXw/edit) (all emails) ·
-[Messages doc](https://docs.google.com/document/d/1nkJb1dkf_77T30cRHdlKQziGIxE_Alohr21HYkhQuVM/edit) (WhatsApp + LinkedIn + poster + clip script)
-*(page.md stays the source of truth; Drive docs are working copies, rebuilt from it. Regenerate via `_drive_group.py` whenever assets change.)*
+[**MItra Webinar — Copy (Emails + WhatsApp)**](https://docs.google.com/document/d/1nkJb1dkf_77T30cRHdlKQziGIxE_Alohr21HYkhQuVM/edit) ·
+[~~Emails doc~~ (retired → pointer)](https://docs.google.com/document/d/1CKURznd2GU2fDJ4s-qeh2wn_4bvIbtFnFljuubRoPXw/edit)
 
-### Day 1 — Email 1: The Invitation · status `draft`
-*Placeholders: `{{REGISTER_LINK}}`, `{{DATE + TIME}}`, `{{SIGNATORY}}`. Impact numbers in [brackets] pending confirm.*
+**Placeholders:** `{{DATE}}` = Friday, 24 July 2026 · `{{TIME}}` = 2:00–3:30 PM · `{{MEET_LINK}}` · `{{SIGNATORY}}`.
 
-> **Subject:** Not a survey. Not a form. A companion.
-> *(alt: "The conversations we keep losing — and a way to keep them")*
+### Day 1 — Email 0: Cover note to SLC / YLC / WLC leads (internal) · status `draft`
+*Not for partners — this is the ask to the collective leads to forward the invite. Fill `<<Name>>` and pick the collective.*
+
+> Hi `<<Name>>`,
+>
+> We're kicking off our webinar series with the **MItra Webinar** — a session on listening to communities at scale, and the voice companion we built for it. We'd love the `<<System / Women / Youth>>` Leadership Collective's partner organisations in the room.
+>
+> Rather than a public campaign, we're going through the people who know these partners best — you. Could you forward the short invite below to the partner orgs in your network, and personally nudge the ones you think would really value it?
+>
+> It's on **Friday, 24 July, 2:00–3:30 PM, on Google Meet**. There's no registration — we'll send a Google Meet calendar invite to everyone who wants in, so just send me the names/emails of those who'd like to join.
+>
+> Thank you for carrying this. 🙏
+>
+> Warm regards,
+> `{{SIGNATORY}}`
+
+### Day 1 — Email 1: The Invitation (to partner orgs) · status `draft`
+*The core, forwardable invite. Community-listening voice (v2).*
+
+> **Subject:** The conversations we keep losing
+> *(alt: "You listen to communities. So do we.")*
 >
 > Dear `<<First Name>>`,
 >
-> Some of the most important conversations in Indian education happen where no report ever reaches.
+> Hope this finds you well.
 >
-> In a chaupal in Bihar, a mother says exactly why her daughter stopped coming to school. A teacher in the hills names the one change that finally got her class reading. Across [32,742] chaupals and [8.79 lakh] members, people name what their children need — every single day.
+> Some of the most important conversations in Indian education happen where no report ever reaches. In a chaupal in Bihar, a mother says exactly why her daughter stopped coming to school. A teacher in the hills names the one change that finally got her class reading.
 >
-> And most of it vanishes. Unrecorded, unshared — treasure scattered across the country, with no map to find it.
+> You know these conversations — because listening to communities is already part of your work. And you know the hard part too: across thousands of them, people tell us exactly what they need, and most of it vanishes — unrecorded, unshared. Treasure scattered across the country, with no map to find it.
 >
-> We built something to change that. **Not a survey. Not a form. A companion.**
+> We've spent the last few years trying to change that — and we built **MItra**, a voice companion that helps hold on to these conversations, in people's own words and their own language.
 >
-> **MItra** is a voice-enabled tool that lets school, community and youth leaders share what's working in their own words and their own language — turning quiet conversations into stories the whole movement can learn from.
+> We'd love to show you. Join us for the **MItra Webinar** — a live session where we'll put MItra in your hands, share what we've learned about listening at scale (what's worked, and what hasn't), and hear how you do this work too.
 >
-> We'd love for you to see it. Join us for a live session on **{{DATE + TIME}}**, where we'll show MItra in action — a spoken conversation becoming a living dashboard — and what it could mean for how we all listen to the ground.
+> 🗓️ **Friday, 24 July 2026** · 🕐 **2:00–3:30 PM** · 💻 **Google Meet**
 >
-> 👉 **Register now:** {{REGISTER_LINK}}
+> There's nothing to register for — just reply to let us know you'd like to join, and we'll send you a Google Meet calendar invite with the link. We'd love to have your organisation in the room.
 >
 > Warm regards,
-> {{SIGNATORY}}
+> `{{SIGNATORY}}`
 
-### Day 1 — Poster (copy + design spec) · status `draft`
-*Brain supplies copy + layout; needs a designer to build the visual. One poster, invite format.*
-
-- **Eyebrow:** MItra Webinar · for ecosystem partners
-- **Hero line:** **Not a survey. Not a form. A companion.**
-- **Subhead:** Meet MItra — listening to communities at scale.
-- **Visual idea:** a spoken conversation turning into structured insight — a voice waveform on the left resolving into clean dashboard cards on the right.
-- **Details strip:** 📅 17 July 2026  ·  🕐 {{TIME}}  ·  💻 Online ({{PLATFORM}})
-- **Impact strip (small, along the bottom):** 32,742 chaupals · 8.79 lakh members · 79,148 challenges surfaced
-- **CTA:** **Register** → {{REGISTER_LINK}}  *(add QR code of the link)*
-- **Footer:** ShikshaLokam · Shikshagraha logos.
-
-### Day 1 — WhatsApp: 1:1 personal note (priority partners) · status `draft`
-*Send individually to the 15–20 priority list. Fill the `<<…>>` personalisation each time — that's the whole point.*
+### Day 1 — WhatsApp: The Invitation (personal 1:1) · status `draft`
+*Sent individually — not a broadcast. Fill `<<Name>>` and `<<their work>>` each time; that personal line is the whole point.*
 
 > Hi `<<Name>>`, 👋
 >
-> Thought of you and the work `<<org / their listening work>>` does with communities.
+> Thought of you and the work `<<org / their listening work>>` does with communities — the listening is so much of what you do.
 >
-> On **17 July**, we're hosting a small, curated session for ecosystem partners to meet **MItra** — a voice companion that turns community conversations into insight, at scale. Not a survey, not a form — a companion.
+> We're hosting the **MItra Webinar** on **Fri, 24 July (2:00–3:30 PM, Google Meet)** — on listening to communities at scale, and the voice companion (MItra) we built for it. It sits so close to your work that I'd genuinely love you in the room.
 >
-> It sits so close to what you do that I'd genuinely love to have you in the room.
->
-> 👉 Register here: {{REGISTER_LINK}}
->
-> Would mean a lot to see you there. 🙌
+> No registration — just say the word and I'll send you the Google Meet invite. 🙌
 
-### Day 1 — WhatsApp: broadcast / poster circulation · status `draft`
-*Goes to groups + broadcast list with the poster attached.*
+### Day 1 — WhatsApp: Quick one-liner + group variant · status `draft`
+*Two extra shapes of the invite — a fast personal one-liner, and a lighter version for dropping into a partner WhatsApp group.*
 
+**Quick one-liner (personal):**
+> `<<Name>>`, would love you at the **MItra Webinar** — listening to communities at scale — Fri 24 July, 2 PM on Google Meet. Join: `{{MEET_LINK}}` 🙌
+
+**Group / broadcast variant (light-touch):**
 > 🎙️ *Not a survey. Not a form. A companion.*
->
-> Meet **MItra** — listening to communities at scale.
->
-> Join us for a live webinar for ecosystem partners on **17 July 2026**. We'll show MItra in action — a spoken conversation becoming a living dashboard — and what it could mean for how we all listen to the ground.
->
-> 👉 Register: {{REGISTER_LINK}}
->
-> *(poster attached)*
+> You're invited to **MItra: Listening at Scale** — Fri, 24 July, 2:00–3:30 PM, Google Meet.
+> We'll share how thousands of community conversations become something a movement can act on — and show MItra, the companion we built for it.
+> 💻 Join: `{{MEET_LINK}}`
 
-### Day 3 — Demo teaser clip (60s): script + shoot brief · status `draft`
-*Brain supplies script + captions + shot list; needs real screen-capture of MItra + production. Format: square/vertical for social, captions burned in (sound-off friendly), end card with date + register CTA.*
+### Day 2 — WhatsApp: Follow-up nudges (pick one, personalise) · status `draft`
+*A few days after the first message, send one nudge. Pick the angle that fits the partner and edit freely — the point is that it sounds like you.*
 
-| Time | Visual | On-screen caption / VO |
-|---|---|---|
-| 0:00–0:05 | Text on black | "Most community insight dies in a form." → "What if it didn't have to?" |
-| 0:05–0:15 | A school/community leader speaking naturally into the phone (MItra's Discussion Bot) | "A leader just talks — in their own words, their own language." |
-| 0:15–0:30 | Screen-capture: MItra capturing the spoken conversation in real time | "MItra listens. Like a friend, not a form." |
-| 0:30–0:45 | Screen-capture: the conversation resolving into a structured dashboard — themes, challenges, tags | "…and turns it into insight you can act on." |
-| 0:45–0:55 | Numbers animate in | "32,742 chaupals · 8.79 lakh voices · 79,148 challenges surfaced." |
-| 0:55–1:00 | End card | "Not a survey. Not a form. A companion." · "See it live — MItra Webinar, 17 July" · Register: {{REGISTER_LINK}} |
+**① Their-work angle:**
+> Hi `<<Name>>`, circling back on the **MItra Webinar** (Fri, 24 July, 2 PM). It's a room of people who take listening to communities seriously — so much of what `<<org>>` already does. Would genuinely love your take in it. 🙌
+> 💻 Join: `{{MEET_LINK}}`
 
-*Production needs: real MItra screen-capture (Discussion Bot + dashboard); a representative voice clip (with consent); brand colours + logo; captions EN (optionally Hindi).*
+**② Curiosity / demo angle:**
+> Hi `<<Name>>`, one reason I think you'll enjoy Friday's **MItra Webinar**: we'll show a real community conversation becoming something you can act on — live. Not a survey, not a form — a companion.
+> 🗓️ 24 July, 2 PM · 💻 `{{MEET_LINK}}`
 
-### Day 3 — LinkedIn (Post 2: demo teaser) · status `draft`
+**③ Impact-numbers angle:**
+> Hi `<<Name>>`, a number that stayed with me — 79,148 challenges surfaced by communities themselves, across 32,742 chaupals. That's what we'll get into at the **MItra Webinar** on Friday (24 July, 2 PM). Would love you there.
+> 💻 `{{MEET_LINK}}`
 
-> You can't fix what you can't hear.
->
-> Across India's communities, people say exactly what their children need — but most of it disappears into forms, or never gets written down at all.
->
-> So we built MItra to listen differently. Watch a spoken conversation become a living dashboard 👇
->
-> *[attach 60-sec demo clip]*
->
-> A school or community leader simply talks — in their own words, their own language. MItra captures it like a companion, not a questionnaire, and turns it into structured insight teams can act on. At scale.
->
-> We're showing it live on **17 July**, for ecosystem partners who already listen to communities.
->
-> 📌 Register to see the full demo live: {{REGISTER_LINK}}
->
-> #ListeningAtScale #MItra #Shikshagraha #EducationLeadership
->
-> *Signal tactic: tag/mention @EkStep, @Pratham, @CivicDataLab (and similar listening-focused partners) in the post or first comment — confirm exact handles.*
+**④ Peer angle:**
+> Hi `<<Name>>`, a few partners who work closely on community listening are joining Friday's **MItra Webinar** (24 July, 2 PM) — it'd be a great room to have `<<org>>` in too.
+> 💻 Join: `{{MEET_LINK}}`
 
-### Day 3 — WhatsApp (demo clip share: groups + broadcast) · status `draft`
+### Day 7 — Email 2: Reminder (day before, 23 Jul) · status `draft`
+*Gentle — no scarcity, no "seats". Just a warm nudge + the link.*
 
-> 🎥 Show, don't tell.
+> **Subject:** Tomorrow — the MItra Webinar, 2 PM (Google Meet)
 >
-> Watch MItra turn a spoken community conversation into a live dashboard — in 60 seconds.
+> Dear `<<First Name>>`,
 >
-> *[clip attached]*
+> A quick note ahead of tomorrow's session. It's an hour and a half among people who take listening to communities seriously — we'll share what we've learned, show MItra in action, and spend real time on how you do this work too.
 >
-> Not a survey. Not a form. A companion. See the full thing live on **17 July**.
-> 👉 Register: {{REGISTER_LINK}}
+> 🗓️ **Friday, 24 July** · 🕐 **2:00–3:30 PM** · 💻 **Google Meet:** `{{MEET_LINK}}`
+>
+> Looking forward to having you there.
+>
+> Warm regards,
+> `{{SIGNATORY}}`
 
-*Tactic: forward into ecosystem groups + broadcast list; share directly with EkStep / Pratham / CivicDataLab contacts for signal (WhatsApp can't @-tag orgs — that's the LinkedIn move above).*
+### Day 7 — WhatsApp: Reminder (day before, personal 1:1) · status `draft`
+*Sent individually. Fill `<<Name>>` / `<<their work>>`.*
+
+> Hi `<<Name>>`, really looking forward to having you at tomorrow's **MItra Webinar** 🙂
+>
+> 🗓️ Fri, 24 July · 🕐 2:00–3:30 PM · 💻 Google Meet — join link's in your invite.
+>
+> Genuinely keen to hear how `<<org / their work>>` approaches listening to communities too. See you there!
+
+### Day 8 — Email 3: Morning-of + join link (24 Jul) · status `draft`
+
+> **Subject:** We're live today — the MItra Webinar, 2 PM (join link inside)
+>
+> Dear `<<First Name>>`,
+>
+> Today's the day. Here's everything you need.
+>
+> 🕐 **2:00–3:30 PM**  ·  💻 **Join on Google Meet:** `{{MEET_LINK}}`
+>
+> What to expect:
+> - A live look at what gets in the way of listening to communities
+> - How communities are being heard at scale — the stories behind the numbers
+> - A live demo — a spoken conversation becoming something you can act on
+> - The ways partners are already using this in their own work
+> - Time for your questions, and how you do it
+>
+> Block the full 90 minutes if you can — the demo and the Q&A are the best part.
+>
+> See you there!
+>
+> Warm regards,
+> `{{SIGNATORY}}`
+
+### Day 8 — WhatsApp: Join-link drops (two nudges, personal 1:1) · status `draft`
+*Sent individually. Fill `<<Name>>`.*
+
+**Morning-of:**
+> Hi `<<Name>>`, today's the day! 🔴 The **MItra Webinar** is at **2 PM**.
+> 💻 Join: `{{MEET_LINK}}`
+> Would love to see you in the room 🙌
+
+**30 minutes before:**
+> `<<Name>>`, we're starting in 30 minutes ⏳ — see you at the MItra Webinar.
+> 💻 Join: `{{MEET_LINK}}`
+
+### Day 9 — WhatsApp: "Couldn't make it" follow-up (after the session) · status `draft`
+*For partners who didn't join — keep the door open, no guilt.*
+
+> Hi `<<Name>>`, missed you at the **MItra Webinar** today — no worries at all. Happy to share what we covered, or set up a quick call if it'd be useful for `<<org>>`'s work. Listening at scale is a long game, and I'd love to keep the conversation going. 🙂
+
+## Superseded (kept for reference)
+The **social-promotion plan** (10-day multi-channel campaign: LinkedIn posts + carousel, demo teaser, team amplification, blog shares, poster, WhatsApp broadcast/scarcity, registration) was retired on 2026-07-15 when webinar #1 moved to the internal-network approach. If a **future** webinar needs the social push, recover it from git history (this file, pre-2026-07-16) or the Drive docs' version history. The **demo clip content** and **impact framing** remain reusable inside the session itself.

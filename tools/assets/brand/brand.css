@@ -1,0 +1,13 @@
+/* brand.css — optional brand overrides, applied to every generated asset
+   (carousel, poster). Drop @font-face rules + variable overrides here.
+
+   Example (after dropping the font files into tools/assets/brand/fonts/):
+
+   @font-face{
+     font-family:"SL Display";
+     src:url("fonts/sl-display.woff2") format("woff2");
+     font-weight:800;
+   }
+   .hero,.cover-h,.close-h,.big{font-family:"SL Display",sans-serif;}
+
+   Until brand fonts are dropped in, assets use a clean system stack. */

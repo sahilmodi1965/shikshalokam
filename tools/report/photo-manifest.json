@@ -1,0 +1,219 @@
+{
+  "_readme": "Provenance for every photo used in the ASC 3.0 report. The image files themselves are NOT in git (public repo, photographs of identifiable children). This manifest makes them re-downloadable and stops anyone re-sweeping the 7,368-photo folder to find the same pictures again.",
+  "source_folder": {
+    "name": "Aao School Chalein 3.0",
+    "drive_folder_id": "1qanQpZHM4BmyWGxn06c6c1_Ut48wPnKR",
+    "districts": 22,
+    "photos": 7368,
+    "note": "roughly half are paper records, not usable imagery"
+  },
+  "benchmark_reports_folder": "1ycNoD0KyUifGIF9Yz-bEHIkNGK2nDtKJ",
+  "content_folder": "1Q4cz9ao8M7S5JBZVdYtlS1mDcZbHUFqC",
+  "local_path": "tools/report/assets/photos/  (trimmed crops in trimmed/)",
+  "selected": {
+    "cover_1_rally_fatehabad.jpg": {
+      "drive_file_id": "1TeRS-bWIW09nlQG0iJrdW4BbYLAAY_9U",
+      "district": "Fatehabad",
+      "original_name": "1748675851981.jpg",
+      "sweep": "pass-1"
+    },
+    "cover_2_march_karnal.jpg": {
+      "drive_file_id": "1RoqREMvtDty39zmkEdQHpWTBCGhYqDnr",
+      "district": "Karnal",
+      "original_name": "1750421526801.jpg",
+      "sweep": "pass-1"
+    },
+    "cover_3_assembly_fatehabad.jpg": {
+      "drive_file_id": "1pkGBKg0jd11YY8sKAKuO9b3ULgqfARsZ",
+      "district": "Fatehabad",
+      "original_name": "1751547215838.jpg",
+      "sweep": "pass-1"
+    },
+    "cover_4_community_mahendergarh.jpg": {
+      "drive_file_id": "1R4GDa3ZYDq8cOma3BWU142aHICLUvNNS",
+      "district": "Mahendergarh",
+      "original_name": "1750411999926.jpg",
+      "sweep": "pass-1"
+    },
+    "cover_5_doorstep_jind.jpg": {
+      "drive_file_id": "14veEU594EvP4XkSvvm_oy7lYvqQT7hdH",
+      "district": "Jind",
+      "original_name": "1748326662446.jpg",
+      "sweep": "pass-1"
+    },
+    "cover_6_banner_ambala.jpg": {
+      "drive_file_id": "1jl0RNzFLYvSOLP_OjjTzhrcoIyvh-9g0",
+      "district": "Ambala",
+      "original_name": "1748245166019.jpg",
+      "sweep": "pass-1"
+    },
+    "s1_school_sonipat.jpg": {
+      "drive_file_id": "1mp2TSRBPJaU9pg2t5K-7KBxqtxCb8fOo",
+      "district": "Sonipat",
+      "original_name": "1751279822112.jpg",
+      "sweep": "pass-1"
+    },
+    "s2_orientation_jind.jpg": {
+      "drive_file_id": "1WG3lJ9fDEKgMlnxXIZ3-0f7Uj0ViFh_r",
+      "district": "Jind",
+      "original_name": "1751359890639.jpg",
+      "sweep": "pass-1"
+    },
+    "s3p1_orientation_kurukshetra.jpg": {
+      "drive_file_id": "1u9HU4o6XkLgKDa9wufPVdFcttGNYAcEJ",
+      "district": "Kurukshetra",
+      "original_name": "1748324593913.jpg",
+      "sweep": "pass-1"
+    },
+    "s3p2_doortodoor_karnal.jpg": {
+      "drive_file_id": "1v4usA4BZGvgLaztZxRCnQvT3imV9Nawt",
+      "district": "Karnal",
+      "original_name": "1749627405094.jpg",
+      "sweep": "pass-1"
+    },
+    "s3p3_celebration_rewari.jpg": {
+      "drive_file_id": "1BRXw1RKONJEavp5C-sD5SS-AnDSCiFKZ",
+      "district": "Rewari",
+      "original_name": "1750854828063.jpg",
+      "sweep": "pass-1"
+    },
+    "s4_outreach_panipat.jpg": {
+      "drive_file_id": "1aArrDbGvfaHYlaN4N7BFxHLwuAKSkNJm",
+      "district": "Panipat",
+      "original_name": "1751085801623.jpg",
+      "sweep": "pass-1"
+    },
+    "ev_1_road_faridabad.jpg": {
+      "drive_file_id": "1SyGutleJI_fq0FUc59Uu5gLscsPwxMMv",
+      "district": "Faridabad",
+      "original_name": "1748512036900.jpg",
+      "sweep": "pass-1"
+    },
+    "ev_2_meeting_gurugram.jpg": {
+      "drive_file_id": "12d5U2U83dTQ-cPoN9_w2xQGho3ycb_cq",
+      "district": "Gurugram",
+      "original_name": "1751097127381.jpg",
+      "sweep": "pass-1"
+    },
+    "ev_3_gathering_jind.jpg": {
+      "drive_file_id": "1AKjadfbQiH0fYGJzUl7TGd6t_lBXwphs",
+      "district": "Jind",
+      "original_name": "1749101726821.jpg",
+      "sweep": "pass-1"
+    },
+    "ev_4_children_kaithal.jpg": {
+      "drive_file_id": "1UOs2sIb6z1bTNCOHvRif8O7RurQA_6hX",
+      "district": "Kaithal",
+      "original_name": "1749807199659.jpg",
+      "sweep": "pass-1"
+    },
+    "ev_5_community_mahendergarh.jpg": {
+      "drive_file_id": "1THdLKqUbsmD3Y9iBOxBSn_seOiTqF-64",
+      "district": "Mahendergarh",
+      "original_name": "1748657445141.jpg",
+      "sweep": "pass-1"
+    },
+    "ev_6_homevisit_nuh.jpg": {
+      "drive_file_id": "153uw6_8Mu_YrV8bVbwildVUeX7Oh8WB1",
+      "district": "Nuh",
+      "original_name": "1750580811337.jpg",
+      "sweep": "pass-1"
+    },
+    "ev_7_doorstep_panipat.jpg": {
+      "drive_file_id": "1LL90PraI_LkTBW7HSvwmuslre0D23rPH",
+      "district": "Panipat",
+      "original_name": "1749557686420.jpg",
+      "sweep": "pass-1"
+    },
+    "ev_8_teacher_rewari.jpg": {
+      "drive_file_id": "14utJO5-s8DPKPHa7u7ndqYoNVIMeImWG",
+      "district": "Rewari",
+      "original_name": "1748618600387.jpg",
+      "sweep": "pass-1"
+    },
+    "ev_9_group_sonipat.jpg": {
+      "drive_file_id": "1UaWxEXNPJcmEeLXwhJcH05cqsBE-Ih68",
+      "district": "Sonipat",
+      "original_name": "1750414330862.jpg",
+      "sweep": "pass-1"
+    },
+    "s8_felicitation_rewari.jpg": {
+      "drive_file_id": "1Pf2agXX6rfN4u6waCZ9LI2YUVUjB8k3l",
+      "district": "Rewari",
+      "original_name": "1748317382899.jpg",
+      "sweep": "pass-1"
+    },
+    "s8_welcome_kaithal.jpg": {
+      "drive_file_id": "1-_zKtZ73BjGA9AWhxki5AWjwXet3CWxu",
+      "district": "Kaithal",
+      "original_name": "1748711210776.jpg",
+      "sweep": "pass-1"
+    },
+    "s8_assembly_rewari.jpg": {
+      "drive_file_id": "1PWxJXZ6jYeuWzj56TjrHAiNnXaODkXs3",
+      "district": "Rewari",
+      "original_name": "1749883707376.jpg",
+      "sweep": "pass-1"
+    },
+    "s9_classroom_panipat.jpg": {
+      "drive_file_id": "1VfA5-ietkiaMIeru6U-_x9WzcvD2Vpdm",
+      "district": "Panipat",
+      "original_name": "1747195701286.jpg",
+      "sweep": "pass-1"
+    },
+    "toc_hero_event_rewari.jpg": {
+      "drive_file_id": "1M1hmZEIlB56tsQVV-KN3zBuE_8GHwPdt",
+      "district": "Rewari",
+      "original_name": "1749114597874.jpg",
+      "sweep": "pass-1"
+    },
+    "ev_10_school_sirsa.jpg": {
+      "drive_file_id": "18VRR3QkPrwFCJJxlALlH3Bi3zVooUdlF",
+      "district": "Sirsa",
+      "original_name": "1751290024460.jpg",
+      "sweep": "pass-1"
+    },
+    "ev_11_classroom_yamunanagar.jpg": {
+      "drive_file_id": "1ZxY1PskYnWIz0aeM8V5iiqlLTGth-zXZ",
+      "district": "Yamunanagar",
+      "original_name": "1748325947835.jpg",
+      "sweep": "pass-1"
+    },
+    "ev_12_meeting_bhiwani.jpg": {
+      "drive_file_id": "166FTRC6YJiUktT8EqtJFu5CYXWmuMLb8",
+      "district": "Bhiwani",
+      "original_name": "1747808578954.jpg",
+      "sweep": "pass-1"
+    },
+    "s4_onground_mahendergarh.jpg": {
+      "drive_file_id": "1QGwjFbNvs3306I7BxQsxeR60WGqB0kzv",
+      "district": "Mahendergarh",
+      "original_name": "1747909241119.jpg",
+      "sweep": "pass-1"
+    },
+    "cls_1_desks_hisar.jpg": {
+      "drive_file_id": "1UPFNwqNLKVy7crXLD6E-LWcpdjkXLexP",
+      "district": "Hisar",
+      "original_name": "1747369516238.jpg",
+      "sweep": "pass-2"
+    },
+    "cls_2_young_rohtak.jpg": {
+      "drive_file_id": "14jBxS9uESin8Ai474FNRsIWV_p3zIWIc",
+      "district": "Rohtak",
+      "original_name": "1750835002588.jpg",
+      "sweep": "pass-2"
+    },
+    "cls_3_rows_charkhidadri.jpg": {
+      "drive_file_id": "1Jh3WdZV38QE-76H2mQ4s9MZDAHxZ73LH",
+      "district": "Charkhi Dadri",
+      "original_name": "1750651956034.jpg",
+      "sweep": "pass-2"
+    },
+    "cls_4_tables_kurukshetra.jpg": {
+      "drive_file_id": "1BrbxW96dY0tMkTFEyy3liLgx3CoG4FVj",
+      "district": "Kurukshetra",
+      "original_name": "1751439301142.jpg",
+      "sweep": "pass-2"
+    }
+  }
+}

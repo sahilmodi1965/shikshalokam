@@ -1,0 +1,11 @@
+{
+  "name": "mitra-poster",
+  "size": [1080, 1080],
+  "eyebrow": "MItra Webinar",
+  "hero": ["Not a survey.", "Not a form.", "A companion."],
+  "subhead": "Meet MItra — listening to communities at scale.",
+  "details": "17 July 2026   ·   {{TIME}}   ·   Online",
+  "cta": "Register",
+  "register_link": "{{REGISTER_LINK}}",
+  "footer": "ShikshaLokam · Shikshagraha"
+}

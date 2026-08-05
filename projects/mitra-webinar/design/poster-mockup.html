@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MItra Webinar — poster mockup (layout & feel only)</title>
+<style>
+  :root{
+    --indigo:#23235b; --purple:#4b2e83; --violet:#7c3aed; --violet2:#a78bfa;
+    --teal:#14b8a6; --teal2:#2dd4bf; --slate:#1e1e2a; --muted:#6b6b7c;
+    --off:#f7f3ec; --line:#e7e1d6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#d8d5ce;font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+       display:flex;flex-direction:column;align-items:center;gap:14px;padding:28px}
+  .cap{color:#4a4a55;font-size:13px;letter-spacing:.3px}
+  .cap b{color:#23235b}
+  /* 1080x1080 poster, scaled to fit viewport */
+  .poster{
+    width:1080px;height:1080px;background:var(--off);position:relative;overflow:hidden;
+    padding:74px 74px 64px;display:flex;flex-direction:column;
+    box-shadow:0 30px 80px rgba(30,30,60,.28);
+    transform-origin:top center;
+  }
+  /* subtle top-left geometric accent */
+  .blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.10}
+  .blob.a{width:360px;height:360px;top:-120px;right:-90px;
+          background:radial-gradient(circle at 30% 30%,var(--violet),var(--indigo))}
+  .blob.b{width:220px;height:220px;bottom:120px;left:-80px;
+          background:radial-gradient(circle at 50% 50%,var(--teal),transparent 70%);opacity:.14}
+
+  .eyebrow{display:flex;align-items:center;gap:10px;color:var(--indigo);
+           font-size:19px;font-weight:600;letter-spacing:2.4px;text-transform:uppercase;z-index:2}
+  .eyebrow .dot{width:9px;height:9px;border-radius:50%;background:var(--violet)}
+
+  .hero{margin-top:64px;z-index:2}
+  .hero h1{color:var(--slate);font-size:78px;line-height:1.04;font-weight:800;letter-spacing:-1.5px;max-width:820px}
+  .hero h1 .q{color:var(--violet)}
+  .tagline{margin-top:26px;color:var(--muted);font-size:26px;font-weight:600;letter-spacing:.2px}
+  .subhead{margin-top:10px;color:var(--indigo);font-size:23px;font-weight:500;opacity:.9}
+
+  .visual{flex:1;display:flex;align-items:center;justify-content:center;z-index:2;margin:8px 0}
+  canvas{width:930px;height:270px}
+
+  .details{display:flex;gap:30px;color:var(--slate);font-size:22px;font-weight:600;z-index:2;
+           flex-wrap:wrap;align-items:center}
+  .details .ph{color:var(--violet)}
+
+  .impact{margin-top:22px;display:flex;gap:0;border-top:1.5px solid var(--line);
+          border-bottom:1.5px solid var(--line);padding:18px 0;z-index:2}
+  .impact .col{flex:1;text-align:center}
+  .impact .col + .col{border-left:1.5px solid var(--line)}
+  .impact .n{color:var(--indigo);font-size:34px;font-weight:800;letter-spacing:-.5px}
+  .impact .l{color:var(--muted);font-size:16px;font-weight:600;letter-spacing:.4px;margin-top:4px;text-transform:uppercase}
+
+  .foot{margin-top:26px;display:flex;align-items:flex-end;justify-content:space-between;z-index:2}
+  .logos{display:flex;gap:16px}
+  .logobox{width:150px;height:56px;border:1.6px dashed #c9c2b4;border-radius:8px;
+           display:flex;align-items:center;justify-content:center;color:#b3ab9b;font-size:13px;letter-spacing:.5px}
+  .cta{display:flex;align-items:center;gap:18px}
+  .register{background:var(--violet);color:#fff;font-size:24px;font-weight:700;
+            padding:16px 30px;border-radius:12px;letter-spacing:.3px;
+            box-shadow:0 12px 26px rgba(124,58,237,.32)}
+  .qr{width:92px;height:92px;border:2px dashed var(--indigo);border-radius:10px;
+      display:flex;align-items:center;justify-content:center;color:var(--indigo);
+      font-size:13px;font-weight:600;text-align:center;line-height:1.2}
+</style>
+</head>
+<body>
+  <div class="cap"><b>MItra Webinar — poster mockup.</b> Layout, hierarchy &amp; palette only; final art via Canva using the saved prompt. 1080×1080.</div>
+
+  <div class="poster" id="poster">
+    <div class="blob a"></div>
+    <div class="blob b"></div>
+
+    <div class="eyebrow"><span class="dot"></span>MItra Webinar · for ecosystem partners</div>
+
+    <div class="hero">
+      <h1>India's communities are speaking. <span class="q">Are we listening?</span></h1>
+      <div class="tagline">Not a survey. Not a form. A companion.</div>
+      <div class="subhead">Listening to India's communities, at scale.</div>
+    </div>
+
+    <div class="visual"><canvas id="wave" width="930" height="270"></canvas></div>
+
+    <div class="details">
+      <span>📅 17 July 2026</span>
+      <span>·</span>
+      <span>🕐 <span class="ph">{{TIME}}</span></span>
+      <span>·</span>
+      <span>💻 Online (<span class="ph">{{PLATFORM}}</span>)</span>
+    </div>
+
+    <div class="impact">
+      <div class="col"><div class="n">32,742</div><div class="l">chaupals</div></div>
+      <div class="col"><div class="n">8.79 lakh</div><div class="l">voices</div></div>
+      <div class="col"><div class="n">79,148</div><div class="l">challenges surfaced</div></div>
+    </div>
+
+    <div class="foot">
+      <div class="logos">
+        <div class="logobox">logo 1</div>
+        <div class="logobox">logo 2</div>
+      </div>
+      <div class="cta">
+        <div class="qr">QR<br>Code</div>
+        <div class="register">Register →</div>
+      </div>
+    </div>
+  </div>
+
+<script>
+// Voices -> heard. Left: a warm human chorus of voice bars. Right: it resolves into
+// a small, calm cluster of structured insight dots. Weight stays on the voices.
+(function(){
+  const c = document.getElementById('wave'), x = c.getContext('2d');
+  const W = c.width, H = c.height;
+  // seeded rng so the mockup looks the same each open
+  let s = 20260717; const rnd = () => (s = (s*1103515245+12345) & 0x7fffffff, s/0x7fffffff);
+  const lerp=(a,b,t)=>a+(b-a)*t;
+  function col(t){ // indigo -> violet -> teal across x
+    const stops=[[35,35,91],[124,58,237],[20,184,166]];
+    const seg = t<0.5 ? [stops[0],stops[1],t/0.5] : [stops[1],stops[2],(t-0.5)/0.5];
+    const [a,b,k]=seg; return `rgb(${a.map((v,i)=>Math.round(lerp(v,b[i],k)).toString()).join(',')})`;
+  }
+  x.clearRect(0,0,W,H);
+  const splitX = W*0.60;              // voices region ends here; insight begins
+  const rows = 3, cy = H/2, rowGap = 78;
+  // --- the chorus of voices (left 60%) ---
+  for(let r=0;r<rows;r++){
+    const baseY = cy + (r-1)*rowGap;
+    const amp = [1,0.62,0.46][r];     // top row loudest
+    const barW = 6, gap = 9;
+    for(let px=0; px<splitX; px+=barW+gap){
+      const t = px/W;
+      // organic envelope: strong on the left, easing down as it nears the split
+      const env = Math.pow(1 - px/splitX, 0.6);
+      const wobble = 0.35 + 0.65*Math.abs(Math.sin(px*0.05 + r*1.3) + 0.5*rnd());
+      let h = 84 * amp * env * wobble;
+      h = Math.max(4, h);
+      x.fillStyle = col(t);
+      x.globalAlpha = r===0 ? 0.95 : 0.5;
+      const rad = 3;
+      roundBar(px, baseY-h/2, barW, h, rad);
+    }
+  }
+  // --- resolves into structured insight (right 40%): a calm tidy grid of dots ---
+  x.globalAlpha = 1;
+  const gx0 = splitX + 48, cols=4, gRows=3, dotR=9, dgap=42;
+  for(let i=0;i<gRows;i++){
+    for(let j=0;j<cols;j++){
+      const cxp = gx0 + j*dgap, cyp = cy + (i-1)*dgap;
+      x.beginPath(); x.arc(cxp,cyp,dotR,0,Math.PI*2);
+      x.fillStyle = (j%2===0)?'rgba(20,184,166,0.95)':'rgba(124,58,237,0.85)';
+      x.fill();
+    }
+  }
+  // faint converging threads from voices into the insight cluster
+  x.strokeStyle='rgba(75,46,131,0.18)'; x.lineWidth=1.4;
+  for(let r=0;r<rows;r++){
+    const baseY = cy + (r-1)*rowGap;
+    x.beginPath(); x.moveTo(splitX, baseY);
+    x.quadraticCurveTo((splitX+gx0)/2, cy, gx0-6, cy+(r-1)*dgap); x.stroke();
+  }
+  function roundBar(bx,by,bw,bh,rad){
+    const rr=Math.min(rad,bw/2,bh/2);
+    x.beginPath();
+    x.moveTo(bx+rr,by); x.arcTo(bx+bw,by,bx+bw,by+bh,rr);
+    x.arcTo(bx+bw,by+bh,bx,by+bh,rr); x.arcTo(bx,by+bh,bx,by,rr);
+    x.arcTo(bx,by,bx+bw,by,rr); x.closePath(); x.fill();
+  }
+})();
+
+// scale poster to fit the window height
+(function(){
+  const p=document.getElementById('poster');
+  function fit(){
+    const avail = window.innerHeight - 90;
+    const scale = Math.min(1, avail/1080, (window.innerWidth-40)/1080);
+    p.style.transform = 'scale('+scale+')';
+    p.style.marginBottom = (1080*scale - 1080) + 'px';
+  }
+  fit(); window.addEventListener('resize',fit);
+})();
+</script>
+</body>
+</html>
