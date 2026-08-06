@@ -33,9 +33,11 @@ https://docs.google.com/spreadsheets/d/1qMhSkrACZb4zmM2cBWDkyhEma_lDBa6_MkHnSsKU
 Each revised tab is generated from a JSON file in this folder, so it can be regenerated with
 `gs.py sheet-add-tab --replace` rather than hand-edited.
 
-**The sheet carries the spec only — no reasoning, no change history** (Sonal, 2026-07-27). People
-open it without any of the conversation behind it, and rationale reads as noise to them. Everything
-explaining *why* lives on this page instead. Keep it that way.
+**The sheet carries the spec only — no reasoning, no rules, no change history** (Sonal, 2026-07-27,
+restated 2026-08-06). People open it without any of the conversation behind it, and rationale reads
+as noise. That includes build rules: they govern how the instrument is assembled, so they live here,
+not in the tab. The tab is questions, columns and metric rows — nothing else. Everything explaining
+*why* lives on this page.
 
 ## The constraint that shapes everything
 
@@ -200,6 +202,7 @@ Full text, branch logic, cut-and-recovery map and the probing rules live in the
 
 A 10-question list without enforcement drifts straight back to 30:
 - **Every metric traces to a question.** If nothing in the questionnaire produces it, no tile.
+  (This rule lives here, not in the sheet.)
 - Hard cap 10 turns, and the design now uses all 10. Only Q3 and Q4 may probe, once each; the other
   six never do.
 - Q5 is asked of every respondent, whatever they answered in Q4.

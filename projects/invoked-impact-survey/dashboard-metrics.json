@@ -33,13 +33,13 @@
     "Repeat participation",
     "% who attended 2+ editions; % who attended all 5",
     "Q2",
-    "Loyalty signal. A conversational turn, so it is complete rather than dependent on pre-fill. Pre-fill from the registrant record where possible and ask only to confirm."
+    "Pre-fill from the registrant record where possible and ask only to confirm."
   ],
   [
     "Perception shift",
     "% reporting 'somewhat' or 'significantly' shifted views",
     "Q3",
-    "Self-reported magnitude. The survey does not measure a before/after change — say so in the methodology."
+    "Self-reported magnitude, not a measured before/after."
   ],
   [
     "What changed (thematic)",
@@ -51,7 +51,7 @@
     "Any post-event effect",
     "% of all respondents reporting either substantial action (Q4) or a ripple (Q5). The single number behind 'InvokED is not a two-day event'",
     "Q4 + Q5 combined",
-    "Lead the report with this. A No in Q4 on its own is not an absence of effect."
+    "Report a No in Q4 together with Q5, never on its own."
   ],
   [
     "Substantial change initiated",
@@ -81,7 +81,7 @@
     "Met at InvokED vs already known",
     "Of all reported collaborations, the split between partners met at InvokED and partners the respondent already knew (plus 'a mix')",
     "Q4 probe, Yes branch",
-    "The attribution metric. It sits inside a multi-part open answer, so expect gaps — report it as a split of the responses that carry it and state the base."
+    "Sits inside a multi-part open answer, so expect gaps. Report as a split of the answers that carry it, and state the base."
   ],
   [
     "Cross-sector partnerships",
@@ -93,43 +93,43 @@
     "Pilots / missions initiated",
     "# pilots or missions launched off the back of InvokED",
     "Q4 probe, Yes branch",
-    "The same probe carries both the description and what has come of it, so it distinguishes launched from intent."
+    "The probe carries both the description and what has come of it, so launched is distinguishable from intent."
   ],
   [
     "Ripple types",
     "Breakdown of the non-project effects: idea taken back to a team · introduction brokered between two people · spoken or written about publicly · a way of working changed · resource or method adopted",
     "Q5",
-    "Coded at report time. The breadth layer beneath the flagship stories — the different ways InvokED helped the ecosystem without ever becoming a project."
+    "Coded at report time."
   ],
   [
     "Ripple among non-collaborators",
     "% of respondents who answered No to Q4 but reported a ripple in Q5",
     "Q4 = No × Q5",
-    "The metric that stops a Q4 'No' being read as 'no impact'."
+    ""
   ],
   [
     "Reach beyond attendees",
     "# instances where something from InvokED reached people who were never at InvokED — teams, networks, audiences, readers",
     "Q5",
-    "Second-order reach. The ecosystem-breadth claim."
+    ""
   ],
   [
     "Action timeline",
     "When post-event action began: within weeks / a few months later / later in the year / still unfolding",
     "Q6",
-    "The direct evidence that InvokED is not a two-day event. Chart it. The share of action that began months after the edition is the most quotable figure in the survey."
+    "Chart it."
   ],
   [
     "Still live",
     "% of reported action that is still going, vs completed, vs stalled",
     "Q6",
-    "Durability. Stalled cases are a Forum lead list."
+    "Stalled cases are a Forum lead list."
   ],
   [
     "Org-level influence",
     "% whose organisation's approach was reached moderately or significantly",
     "Q5 tap",
-    "From the tap carried alongside the Q5 open answer, in the same turn. Prose with no tap is recorded as unanswered, not as 'not at all'."
+    "Prose with no tap is recorded as unanswered, not as 'not at all'."
   ],
   [
     "Latent collaborations & barriers",
@@ -159,7 +159,7 @@
     "Future readiness — definitions",
     "Clustered themes of how senior education leaders define 'future readiness'",
     "Q8",
-    "Narrative source material. Sample is 150 to 250 senior leaders."
+    "Sample is 150 to 250 senior leaders."
   ],
   [
     "Future readiness — contributions",
@@ -171,6 +171,6 @@
     "Ambassadors / connectors",
     "# high-value connectors, active collaborators and potential forum leaders",
     "Q4 probe × Q5 (introductions brokered) × Q7",
-    "People who collaborated or brokered connections and who want year-round formats."
+    ""
   ]
 ]
