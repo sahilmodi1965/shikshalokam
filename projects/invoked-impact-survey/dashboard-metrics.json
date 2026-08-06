@@ -33,114 +33,114 @@
     "Repeat participation",
     "% who attended 2+ editions; % who attended all 5",
     "Q2",
-    "Loyalty signal. Now a conversational turn, so it is complete rather than dependent on pre-fill. Pre-fill from the registrant record where possible and ask only to confirm."
+    "Loyalty signal. A conversational turn, so it is complete rather than dependent on pre-fill. Pre-fill from the registrant record where possible and ask only to confirm."
   ],
   [
     "Perception shift",
-    "Movement from the Q3 baseline to the Q4 rating on the same three-point scale: % who moved up one step, % who moved up two, % unchanged",
-    "Q3 → Q4 delta",
-    "A matched then-and-now pair, not a single self-rated magnitude. Both ratings are given in the same conversation, so it is retrospective recall — state that in the methodology."
+    "% reporting 'somewhat' or 'significantly' shifted views",
+    "Q3",
+    "Self-reported magnitude. The survey does not measure a before/after change — say so in the methodology."
   ],
   [
     "What changed (thematic)",
-    "Clustered themes of the belief or idea that shifted, and — for respondents whose rating did not move — what would have made a difference",
-    "Q4 probe",
+    "Clustered themes of the belief or idea that shifted, and — for non-shifters — what would have made a difference",
+    "Q3 probe",
     "Qualitative. Also a pull-quote source."
   ],
   [
     "Any post-event effect",
-    "% of all respondents reporting either substantial action (Q5) or a ripple (Q6). The single number behind 'InvokED is not a two-day event'",
-    "Q5 + Q6 combined",
-    "Lead the report with this. A No in Q5 on its own is not an absence of effect."
+    "% of all respondents reporting either substantial action (Q4) or a ripple (Q5). The single number behind 'InvokED is not a two-day event'",
+    "Q4 + Q5 combined",
+    "Lead the report with this. A No in Q4 on its own is not an absence of effect."
   ],
   [
     "Substantial change initiated",
     "# respondents for whom InvokED led to something substantial — a collaboration, pilot, funding unlocked, partnership, or a decision taken differently",
-    "Q5 = Yes",
+    "Q4 = Yes",
     "Headline impact metric."
   ],
   [
     "Substantial change in progress",
     "# respondents with something substantial underway but not yet landed",
-    "Q5 = In progress",
+    "Q4 = In progress",
     "Report separately from 'initiated'."
   ],
   [
     "Types of change",
     "Breakdown by what InvokED led to: collaboration / co-creation · pilot · funding unlocked · partnership · advisory · a decision taken differently · knowledge exchange",
-    "Q5 probe, Yes branch",
+    "Q4 probe, Yes branch",
     "Coded at report time from the open answer."
   ],
   [
     "Funding unlocked",
     "# instances where InvokED led to funding being unlocked or a funding conversation opening",
-    "Q5 probe, Yes branch",
+    "Q4 probe, Yes branch",
     "Coded from the open answer. Report the count; amounts only where volunteered."
   ],
   [
     "Met at InvokED vs already known",
     "Of all reported collaborations, the split between partners met at InvokED and partners the respondent already knew (plus 'a mix')",
-    "Q5 probe, Yes branch; post-close tap as backstop",
-    "The attribution metric. It now sits inside a multi-part open answer, so expect gaps — the post-close tap is what keeps it complete."
+    "Q4 probe, Yes branch",
+    "The attribution metric. It sits inside a multi-part open answer, so expect gaps — report it as a split of the responses that carry it and state the base."
   ],
   [
     "Cross-sector partnerships",
     "# collaborations spanning different sectors / persona types",
-    "Q5 probe (partner named) × Q1 (respondent persona)",
+    "Q4 probe (partner named) × Q1 (respondent persona)",
     "Match the named partner org to a sector; compare with the respondent's own."
   ],
   [
     "Pilots / missions initiated",
     "# pilots or missions launched off the back of InvokED",
-    "Q5 probe, Yes branch",
+    "Q4 probe, Yes branch",
     "The same probe carries both the description and what has come of it, so it distinguishes launched from intent."
   ],
   [
     "Ripple types",
     "Breakdown of the non-project effects: idea taken back to a team · introduction brokered between two people · spoken or written about publicly · a way of working changed · resource or method adopted",
-    "Q6",
+    "Q5",
     "Coded at report time. The breadth layer beneath the flagship stories — the different ways InvokED helped the ecosystem without ever becoming a project."
   ],
   [
     "Ripple among non-collaborators",
-    "% of respondents who answered No to Q5 but reported a ripple in Q6",
-    "Q5 = No × Q6",
-    "The metric that stops a Q5 'No' being read as 'no impact'."
+    "% of respondents who answered No to Q4 but reported a ripple in Q5",
+    "Q4 = No × Q5",
+    "The metric that stops a Q4 'No' being read as 'no impact'."
   ],
   [
     "Reach beyond attendees",
     "# instances where something from InvokED reached people who were never at InvokED — teams, networks, audiences, readers",
-    "Q6",
+    "Q5",
     "Second-order reach. The ecosystem-breadth claim."
   ],
   [
     "Action timeline",
     "When post-event action began: within weeks / a few months later / later in the year / still unfolding",
-    "Post-close screen tap",
-    "The direct evidence that InvokED is not a two-day event. Chart it. Moved off the conversation on 2026-08-03 to free a turn; it costs no turn on the post-close screen, but coverage now depends on that screen shipping and on respondents completing it. State the base."
+    "Q6",
+    "The direct evidence that InvokED is not a two-day event. Chart it. The share of action that began months after the edition is the most quotable figure in the survey."
   ],
   [
     "Still live",
     "% of reported action that is still going, vs completed, vs stalled",
-    "Post-close screen tap",
-    "Durability. Stalled cases are a Forum lead list. Same coverage caveat as action timeline."
+    "Q6",
+    "Durability. Stalled cases are a Forum lead list."
   ],
   [
     "Org-level influence",
     "% whose organisation's approach was reached moderately or significantly",
-    "Q6 tap",
-    "Comes from the tap carried alongside the Q6 open answer, in the same turn. Respondents who answer in prose only are recorded as unanswered, not as 'not at all'."
+    "Q5 tap",
+    "From the tap carried alongside the Q5 open answer, in the same turn. Prose with no tap is recorded as unanswered, not as 'not at all'."
   ],
   [
     "Latent collaborations & barriers",
     "Among respondents who answered No: what they still want to take forward, and what is blocking it",
-    "Q5 probe, No branch",
+    "Q4 probe, No branch",
     "Lead list for InvokED Forums. Cluster the barriers."
   ],
   [
     "Network continuity",
     "Connections respondents have kept with InvokED peers",
-    "Q5 probe (partners named on the Yes branch; continuing contacts on the No branch) and Q6 (introductions brokered)",
+    "Q4 probe (partners named on the Yes branch; continuing contacts on the No branch) and Q5 (introductions brokered)",
     "Report as a count of named connections, not a percentage."
   ],
   [
@@ -170,19 +170,7 @@
   [
     "Ambassadors / connectors",
     "# high-value connectors, active collaborators and potential forum leaders",
-    "Q5 probe × Q6 (introductions brokered) × Q7",
+    "Q4 probe × Q5 (introductions brokered) × Q7",
     "People who collaborated or brokered connections and who want year-round formats."
-  ],
-  [
-    "Story pipeline",
-    "# willing to share their experience (written / video)",
-    "Post-close screen",
-    "Requires the post-close screen to ship."
-  ],
-  [
-    "Awards pipeline",
-    "# nominations and self-nominations for the Shikshagraha Awards",
-    "Post-close screen",
-    "Requires the post-close screen to ship."
   ]
 ]

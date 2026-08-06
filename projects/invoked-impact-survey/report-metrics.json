@@ -31,43 +31,43 @@
   ],
   [
     "Perception shift",
-    "Where the respondent placed themselves before their first InvokED and where they place themselves today, on the same three-point scale, plus the belief or idea that changed — or, where the rating did not move, what would have made a difference",
-    "Q3 and Q4, plus the Q4 probe"
+    "Magnitude (no change / somewhat / significantly) and the belief or idea that changed — or, for non-shifters, what would have made a difference",
+    "Q3 and its probe"
   ],
   [
     "Action & collaboration",
     "Did InvokED lead to something substantial? (Yes / In progress / No) · what it is (collaboration · pilot · funding unlocked · partnership · advisory · a decision taken differently) · who it is with · description and outcome, or expected outcome",
-    "Q5 and its probe (Yes branch)"
+    "Q4 and its probe (Yes branch)"
   ],
   [
     "Partner origin",
     "Were the people involved met at InvokED, already known, or a mix",
-    "Q5 probe (Yes branch), with the post-close tap as backstop"
+    "Q4 probe (Yes branch)"
   ],
   [
     "Latent action",
     "What the respondent still wants to take forward · what is blocking it · anyone from InvokED they remain in touch with",
-    "Q5 probe (No branch)"
+    "Q4 probe (No branch)"
   ],
   [
     "Ripple beyond the project",
     "What travelled without becoming a project: an idea taken back to a team · an introduction brokered · something spoken or written about · a way of working changed · whether it reached people who were never at InvokED",
-    "Q6"
+    "Q5"
+  ],
+  [
+    "Influence on work",
+    "How far it reached the organisation (not at all / somewhat / significantly), carried as a tap alongside the Q5 open answer",
+    "Q5 tap"
   ],
   [
     "Timing & durability",
     "When the action began (within weeks / a few months later / later in the year / still unfolding) and whether it is still going, completed or stalled",
-    "Post-close screen taps"
-  ],
-  [
-    "Influence on work",
-    "How far it reached the organisation (not at all / somewhat / significantly), carried as a tap alongside the Q6 open answer",
-    "Q6 tap"
+    "Q6"
   ],
   [
     "Network & continuity",
     "Would return? (yes / maybe / no) · what would make year-round engagement worth their time · named connections",
-    "Q7, plus named partners from Q5 and introductions from Q6"
+    "Q7, plus named partners from Q4 and introductions from Q5"
   ],
   [
     "Future readiness",
@@ -75,19 +75,19 @@
     "Q8"
   ],
   [
-    "Stories & recognition",
-    "Willing to share (written / video)? · Awards: nominate or be considered? · best contact to follow up",
-    "Post-close screen"
-  ],
-  [
     "Pull-quote / highlight",
     "One sentence suitable for narrative, social or report use",
-    "Q5 probe · Q6 · Q4 probe · Q8"
+    "Q4 probe · Q5 · Q3 probe · Q8"
   ],
   [
-    "Photo (optional)",
-    "Photo of a collaboration, pilot or InvokED moment, if uploaded",
-    "Post-close screen"
+    "",
+    "",
+    ""
+  ],
+  [
+    "",
+    "",
+    ""
   ],
   [
     "",
@@ -107,12 +107,12 @@
   [
     "What InvokED set in motion",
     "The opening block. % of respondents reporting any post-event effect — substantial action or ripple — and the split between the two",
-    "Q5 + Q6 · Dashboard_Metrics_Revised"
+    "Q4 + Q5 · Dashboard_Metrics_Revised"
   ],
   [
     "It did not stop at two days",
     "When post-event action began and how much of it is still live. The share beginning months after the edition carries the argument",
-    "Post-close screen taps"
+    "Q6"
   ],
   [
     "Credibility metrics",
@@ -122,17 +122,17 @@
   [
     "Partner origin",
     "Across everything reported, the split between people met at InvokED and people already known",
-    "Q5 probe · post-close tap"
+    "Q4 probe"
   ],
   [
     "The many ways it helped",
     "Ripple types and reach beyond attendees — ideas carried into teams, introductions brokered, practices changed, InvokED spoken and written about",
-    "Q6"
+    "Q5"
   ],
   [
     "Narrative assets",
-    "InvokED action stories (case studies) · feedback quotes and videos · transformation journeys",
-    "Q5 probe · Q6 · Q4 probe · post-close consent"
+    "InvokED action stories (case studies) · feedback quotes · transformation journeys, drawn from the open answers. Consent to be written up or filmed is requested by the thank-you email that follows the survey, not by the survey itself",
+    "Q4 probe · Q5 · Q3 probe"
   ],
   [
     "Future readiness narrative",
@@ -141,8 +141,8 @@
   ],
   [
     "Forum & partnership leads",
-    "Latent collaborations that never happened and the barriers that stopped them, plus action that stalled",
-    "Q5 probe (No branch) · post-close 'stalled' tap"
+    "Latent collaborations that never happened and the barriers that stopped them, plus action recorded as stalled",
+    "Q4 probe (No branch) · Q6"
   ],
   [
     "Segments",
@@ -152,12 +152,12 @@
   [
     "Ambassadors",
     "High-value connectors · active collaborators · potential forum leaders",
-    "Q5 probe × Q6 × Q7"
+    "Q4 probe × Q5 × Q7"
   ],
   [
     "Recommendations",
     "Perception gaps and corrective measures · the year-round engagement offer",
-    "Q4 probe · Q7"
+    "Q3 probe · Q7"
   ],
   [
     "",
@@ -176,12 +176,12 @@
   ],
   [
     "A 'No' on action is not an absence of impact",
-    "Q5 asks only about substantial action — a collaboration, pilot, funding, partnership or decision. Q6 captures effects that never became a project. Always read the two together, and never report the Q5 No rate on its own.",
+    "Q4 asks only about substantial action — a collaboration, pilot, funding, partnership or decision. Q5 captures effects that never became a project. Always read the two together, and never report the Q4 No rate on its own.",
     ""
   ],
   [
-    "Perception shift is a retrospective matched pair",
-    "Both the 'before' and 'today' ratings are given in the same conversation, so the delta is respondent recall on a matched scale, not a measured before/after. Report it as a shift respondents describe, and state that the baseline was collected after the fact.",
+    "Perception shift is self-reported",
+    "The survey does not measure a before/after change. It records what respondents say shifted. State this rather than implying a measured delta.",
     ""
   ],
   [
@@ -191,12 +191,12 @@
   ],
   [
     "Partner origin is partially captured",
-    "Attribution sits inside a multi-part open answer, topped up by an optional post-close tap. Report it as a split of the responses that carry it, and state the base.",
+    "Attribution sits inside a multi-part open answer, so some respondents will not supply it. Report it as a split of the responses that carry it, and state the base.",
     ""
   ],
   [
-    "Timing is respondent-recalled and partially captured",
-    "Timing and durability sit on the post-close screen, not in the conversation. They are recalled rather than verified, and only respondents who complete that screen supply them. Treat the timeline as indicative of pattern, and state the base.",
+    "Timing is respondent-recalled",
+    "Q6 records when respondents say action began, not a verified date. Treat the timeline as indicative of pattern, not precise.",
     ""
   ],
   [
