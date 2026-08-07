@@ -16,6 +16,16 @@ voice: "[[styleguide]] — person to person, warm, lightly formal Indian-English
 
 # InvokED Impact Survey — the plan
 
+> ⏸️ **PAUSED 2026-08-07 — pick up any time.** The plan below is settled. Four things came from
+> Ayush directly and shouldn't be reopened on resume: **plain spoken English everywhere** (in the
+> files, not just chat) · **AI does the number-crunching**, so analysis is three days and the saved
+> time went into collecting answers · **MItra is not the only route** — five ways to answer ·
+> **its own page**, not folded into 6.0 or the Listening at Scale plan.
+>
+> **First thing to do on resume:** the calendar is worked backwards from 30 Sep with prep starting
+> **Mon 10 Aug**. If it's later than that, re-date the whole thing before doing anything else — don't
+> just carry on as written. Then §10, questions 1–3.
+
 **What we're doing:** getting 150–250 senior education people to spend five minutes telling us what
 happened for them *after* InvokED, and turning that into a report **by 30 September 2026**.
 
