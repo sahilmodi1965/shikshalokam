@@ -95,6 +95,8 @@ def theme_style(doc):
             f"--green:{t['secondary']};"
             f"--coral:{t['accent']};"
             f"--cream:{t['cream']};--dawn:{t['tint']};--ink:{t['ink']};"
+            # one colour for every motif piece, inline SVG and CSS alike
+            f"--motif:{t['secondary']};--coral2:#c2564f;"
             "}")
 
 # ---- SL motif kit — the nested corner-arcs UNIT, composed into a system:
@@ -167,17 +169,52 @@ def motif_style():
             f'.rulewrap{{background-image:url("{band}")}}'
             f'.callout::after{{background-image:url("{bullet}")}}')
 
+FONTS = ASSETS / "fonts"
+
+def font_face():
+    """Inline the faces. An @import to a font CDN is invisible in headless print
+    (and blocked outright when the page is published), so it must not be relied on."""
+    out = ""
+    for f in sorted(FONTS.glob("*.woff2")):
+        fam, wt = f.stem.rsplit("-", 1)
+        fam = "Montserrat" if fam.startswith("Montserrat") else fam
+        b = base64.b64encode(f.read_bytes()).decode()
+        out += (f"@font-face{{font-family:'{fam}';font-style:normal;font-weight:{wt};"
+                f"font-display:block;src:url(data:font/woff2;base64,{b}) format('woff2');}}")
+    return out
+
+def trim_alpha(p):
+    """Crop a logo's transparent margin. The SL mark carries 25% empty space on top,
+    SCERT's is padded evenly — sized by file height they end up different optical
+    sizes sitting at different heights. Cropping to the ink lets them align."""
+    p = rp(p)
+    try:
+        from PIL import Image
+    except ImportError:
+        return p
+    CACHE.mkdir(exist_ok=True)
+    st = p.stat()
+    key = CACHE / f"trim-{p.stem}-{int(st.st_mtime)}-{st.st_size}.png"
+    if not key.exists():
+        im = Image.open(p).convert("RGBA")
+        box = im.split()[-1].getbbox()
+        (im.crop(box) if box else im).save(key, "PNG")
+    return key
+
 def cobrand_lockup(h=64):
-    scert = (f'<span class="dv"></span><img src="{b64_opt(SCERT)}" alt="SCERT Haryana">'
+    # SCERT is a round seal; a disc reads smaller than a wordmark at equal height,
+    # so it takes a little more to sit level with the ShikshaLokam mark.
+    scert = (f'<span class="dv"></span>'
+             f'<img class="seal" src="{b64(trim_alpha(SCERT))}" alt="SCERT Haryana">'
              if SCERT.exists() else "")
-    return f'<span class="lockup" style="--lh:{h}px"><img src="{b64(LOGO)}" alt="ShikshaLokam">{scert}</span>'
+    return (f'<span class="lockup" style="--lh:{h}px">'
+            f'<img src="{b64(trim_alpha(LOGO))}" alt="ShikshaLokam">{scert}</span>')
 
 def divider():
     return '<div class="rulewrap"></div>'
 
 # ---- brand + print stylesheet ------------------------------------------------
 CSS = """
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Nunito:wght@400;600;700&display=swap');
 :root{
   --maroon:#ab3935; --violet:#391949; --dawn:#f6efef; --grey:#1e1e1e;
   --cream:#fff9e4; --green:#43a53f; --coral:#ffaea8; --ink:#2a2320; --muted:#6b625f;
@@ -186,7 +223,8 @@ CSS = """
 @page{ size:A4; margin:0; }
 html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
 body{ font-family:'Nunito',system-ui,Arial,sans-serif; color:var(--ink); font-size:11.2pt; line-height:1.55; }
-h1,h2,h3,h4{ font-family:'Montserrat',system-ui,Arial,sans-serif; color:var(--violet); line-height:1.15; }
+h1,h2,h3,h4{ font-family:'Montserrat',system-ui,Arial,sans-serif; color:var(--violet);
+  line-height:1.15; text-wrap:balance; }
 .page{ position:relative; width:210mm; min-height:297mm; padding:22mm 20mm 24mm; page-break-after:always; overflow:hidden; }
 .page:last-child{ page-break-after:auto; }
 .flowpage{ height:297mm; min-height:0; }
@@ -212,10 +250,11 @@ h1,h2,h3,h4{ font-family:'Montserrat',system-ui,Arial,sans-serif; color:var(--vi
 .rule{ height:9px; width:78px; background:none; background-repeat:no-repeat;
   background-size:auto 100%; margin:2px 0 16px; }
 .rulewrap{ height:14px; width:106px; background-repeat:no-repeat; background-size:auto 100%;
-  margin:7px 0 16px; }
-.lockup{ display:inline-flex; gap:16px; align-items:center; }
-.lockup img{ height:var(--lh,50px); width:auto; }
-.lockup .dv{ width:1px; height:calc(var(--lh,50px)*0.68); background:#00000022; }
+  margin:6px 0 12px; }
+.lockup{ display:inline-flex; gap:20px; align-items:center; }
+.lockup img{ height:var(--lh,50px); width:auto; display:block; }
+.lockup img.seal{ height:calc(var(--lh,50px)*1.12); }
+.lockup .dv{ width:1px; height:calc(var(--lh,50px)*0.82); background:#0000001f; }
 /* Cover C — framed / centered, image-rich */
 .coverc{ background:var(--cream); display:flex; flex-direction:column; align-items:center; text-align:center; padding:22mm 22mm 0; overflow:hidden; }
 .coverc .cc{ position:absolute; line-height:0; pointer-events:none; }
@@ -224,7 +263,7 @@ h1,h2,h3,h4{ font-family:'Montserrat',system-ui,Arial,sans-serif; color:var(--vi
 .coverc .eye{ font-family:'Montserrat'; font-weight:600; letter-spacing:.16em; text-transform:uppercase; font-size:10.5pt; color:var(--violet); }
 .coverc h1{ color:var(--maroon); font-size:32pt; font-weight:800; margin:8px 0 6px; }
 .coverc .sub{ font-family:'Montserrat'; font-weight:600; font-size:12.5pt; color:var(--violet); }
-.coverc .meta{ color:#6b625f; font-size:10.4pt; line-height:1.85; margin-top:8mm; }
+.coverc .meta{ color:#6b625f; font-size:10.4pt; line-height:1.8; margin-top:7mm; }
 .cphotos{ display:grid; grid-template-columns:repeat(3,1fr); gap:9px; width:100%; margin:9mm 0 0; }
 .cphotos .ct{ aspect-ratio:1/1; border-radius:10px; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,.12); }
 /* the arc unit as a photo frame — top corners rounded into the motif's sweep */
@@ -245,7 +284,7 @@ h1,h2,h3,h4{ font-family:'Montserrat',system-ui,Arial,sans-serif; color:var(--vi
 .sec .secbody{ padding:22mm 20mm 24mm 40mm; }
 .sec .secbody h2{ font-size:21pt; color:var(--violet); }
 .sec .pfoot{ left:40mm; }
-p{ margin:0 0 10px; }
+p{ margin:0 0 8px; text-wrap:pretty; }
 .section-lead{ color:var(--muted); }
 
 /* toc */
@@ -254,16 +293,17 @@ p{ margin:0 0 10px; }
 .toc-item .t{ font-family:'Montserrat'; font-weight:600; color:var(--violet); font-size:12.5pt; }
 
 /* lists */
-ul.b{ list-style:none; margin:6px 0 12px; }
+ul.b{ list-style:none; margin:5px 0 10px; }
 ul.b li{ position:relative; padding-left:22px; margin:6px 0; }
 ul.b li::before{ content:''; position:absolute; left:0; top:5px; width:13px; height:13px;
   background-repeat:no-repeat; background-size:contain; }
 
 /* tables */
-table{ width:100%; border-collapse:collapse; margin:8px 0 14px; font-size:10.6pt; }
-th{ background:var(--maroon); color:#fff; text-align:left; padding:9px 12px; font-family:'Montserrat'; font-weight:600; }
-td{ padding:9px 12px; border-bottom:1px solid #eadddb; vertical-align:top; }
-tr:nth-child(even) td{ background:var(--dawn); }
+table{ width:100%; border-collapse:collapse; margin:6px 0 12px; font-size:10.6pt; }
+th{ background:var(--maroon); color:#fff; text-align:left; padding:10px 13px;
+  font-family:'Montserrat'; font-weight:600; letter-spacing:.01em; }
+td{ padding:10px 13px; border-bottom:1px solid #ece2e0; vertical-align:top; }
+tr:nth-child(even) td{ background:color-mix(in srgb, var(--dawn) 62%, #fff); }
 td.k{ font-weight:700; color:var(--violet); width:34%; background:#fff; }
 
 /* callouts */
@@ -279,11 +319,11 @@ td.k{ font-weight:700; color:var(--violet); width:34%; background:#fff; }
 .stats{ display:flex; gap:12px; flex-wrap:wrap; margin:6px 0 14px; }
 .stat{ position:relative; overflow:hidden; flex:1; min-width:120px; background:var(--violet);
   color:#fff; border-radius:12px; padding:14px 16px; }
-.stat .v{ font-family:'Montserrat'; font-weight:800; font-size:22pt; color:var(--cream); }
+.stat .v{ font-variant-numeric:tabular-nums; font-family:'Montserrat'; font-weight:800; font-size:22pt; color:var(--cream); }
 .stat .l{ font-size:9.6pt; color:#e9dcf0; margin-top:2px; }
 
 /* bar chart */
-.chart{ margin:6px 0 14px; }
+.chart{ font-variant-numeric:tabular-nums; margin:6px 0 14px; }
 .chart .row{ display:flex; align-items:center; gap:10px; margin:7px 0; }
 .chart .lab{ width:34%; font-family:'Montserrat'; font-weight:600; font-size:10pt; color:var(--violet); }
 .chart .track{ flex:1; background:var(--dawn); border-radius:6px; height:20px; overflow:hidden; }
@@ -297,10 +337,10 @@ td.k{ font-weight:700; color:var(--violet); width:34%; background:#fff; }
 .phtwrap{ display:flex; flex-direction:column; gap:5px; }
 .phtcap{ font-size:8.4pt; color:var(--muted); line-height:1.35; }
 .evlist{ margin:0; }
-.evrow + .evrow{ margin-top:11px; }
+.evrow + .evrow{ margin-top:8px; }
 .evrow{ display:flex; gap:14px; align-items:stretch; margin:0; }
-.fitem.evlist + .fitem.evlist{ margin-top:11px; }
-.evthumb{ flex:0 0 54mm; aspect-ratio:4/3; border-radius:10px; overflow:hidden;
+.fitem.evlist + .fitem.evlist{ margin-top:8px; }
+.evthumb{ flex:0 0 45mm; aspect-ratio:4/3; border-radius:10px; overflow:hidden;
   background:var(--dawn); box-shadow:0 4px 14px rgba(0,0,0,.10); }
 .evthumb img{ width:100%; height:100%; object-fit:cover; display:block; }
 .evtext{ flex:1; display:flex; flex-direction:column; justify-content:center; }
@@ -310,15 +350,43 @@ td.k{ font-weight:700; color:var(--violet); width:34%; background:#fff; }
 .fig.arch{ border-radius:44% 44% 12px 12px / 17% 17% 4px 4px; }
 .pht.arch{ border-radius:44% 44% 10px 10px / 20% 20% 4px 4px; }
 .note{ background:var(--cream); border:1px solid #f0e4b8; border-radius:10px; padding:12px 15px; color:#7a6a2e; font-size:10.6pt; }
+
+/* ---- borrowed layout vocabulary ---- */
+.chip{ display:inline-flex; align-items:baseline; gap:9px; background:var(--c); color:#fff;
+  font-family:'Montserrat'; font-weight:700; font-size:10pt; letter-spacing:.06em;
+  text-transform:uppercase; padding:6px 13px; border-radius:4px; margin:2px 0 8px; }
+.chip .cs{ font-weight:600; opacity:.85; letter-spacing:.03em; text-transform:none; font-size:9.4pt; }
+.chvrow{ display:flex; align-items:stretch; gap:0; margin:4px 0 12px; }
+.chv{ flex:1; border-top:4px solid var(--c); background:var(--dawn); border-radius:3px;
+  padding:10px 12px 12px; }
+.chv-h{ font-family:'Montserrat'; font-weight:700; font-size:10.5pt; color:var(--c); margin-bottom:3px; }
+.chv-b{ font-size:9.8pt; color:var(--ink); line-height:1.45; }
+.chv-a{ flex:0 0 22px; align-self:center; height:9px; position:relative; }
+.chv-a::after{ content:''; position:absolute; left:4px; top:0; width:9px; height:9px;
+  border-top:2px solid var(--muted); border-right:2px solid var(--muted); transform:rotate(45deg); }
+.irows{ display:flex; flex-direction:column; gap:7px; margin:4px 0 12px; }
+.irow{ display:flex; align-items:center; gap:11px; background:var(--dawn);
+  border-left:3px solid var(--c); border-radius:0 6px 6px 0; padding:8px 12px; }
+.ir-m{ flex:0 0 22px; line-height:0; }
+.ir-t{ font-size:10.4pt; color:var(--ink); }
+.pcts{ display:flex; flex-direction:column; gap:8px; margin:4px 0 12px; }
+.pct{ display:flex; align-items:baseline; gap:12px; }
+.pct .pv{ flex:0 0 auto; min-width:74px; font-family:'Montserrat'; font-weight:800; font-size:14pt;
+  color:var(--c); font-variant-numeric:tabular-nums; }
+.pct .pt{ font-size:10.5pt; color:var(--ink); }
 /* subtle section number + header */
 .shead{ display:flex; align-items:baseline; gap:12px; margin-bottom:2px; }
 .shead .sn{ font-family:'Montserrat'; font-weight:700; font-size:11.5pt; color:var(--coral); }
-.shead h2{ font-size:22pt; }
-.subhead{ color:var(--maroon); font-size:13pt; margin:13px 0 5px; font-family:'Montserrat'; font-weight:700; }
+.shead h2{ font-size:24pt; font-weight:800; letter-spacing:-.012em; }
+.fitem.sec-start{ margin-top:11mm; }
+.fbody > .fitem.sec-start:first-child{ margin-top:0; }
+.subhead{ color:var(--maroon); font-size:12.5pt; margin:16px 0 3px; font-family:'Montserrat';
+  font-weight:700; letter-spacing:.005em; }
+.subhead + p, .subhead + ul.b, .subhead + .split{ margin-top:0; }
 /* text-beside-image + figures */
-.split{ display:flex; gap:18px; align-items:stretch; margin:8px 0 12px; }
+.split{ display:flex; gap:18px; align-items:stretch; margin:6px 0 10px; }
 .split>.c{ flex:1; min-width:0; }
-.split>.figwrap{ flex:0 0 60mm; display:flex; flex-direction:column; }
+.split>.figwrap{ flex:0 0 54mm; display:flex; flex-direction:column; }
 .fig{ border-radius:12px; overflow:hidden; position:relative; flex:1; box-shadow:0 8px 20px rgba(24,48,144,.10); }
 .fig img{ width:100%; height:100%; object-fit:cover; display:block; }
 .figph{ width:100%; height:100%; min-height:52mm; background:var(--dawn); display:flex; align-items:center; justify-content:center; color:#9aa4bf; font-family:'Montserrat'; font-weight:700; font-size:8.5pt; text-align:center; padding:10px; }
@@ -330,7 +398,7 @@ td.k{ font-weight:700; color:var(--violet); width:34%; background:#fff; }
 .secmotif{ position:absolute; line-height:0; pointer-events:none; }
 
 /* footer */
-.pfoot{ position:absolute; left:20mm; right:20mm; bottom:12mm; display:flex; justify-content:space-between; font-family:'Montserrat'; font-size:8.5pt; color:var(--muted); border-top:1px solid #eadddb; padding-top:6px; }
+.pfoot{ font-variant-numeric:tabular-nums; position:absolute; left:20mm; right:20mm; bottom:12mm; display:flex; justify-content:space-between; font-family:'Montserrat'; font-size:8.5pt; color:var(--muted); border-top:1px solid #eadddb; padding-top:6px; }
 """
 
 # ---- block renderers ---------------------------------------------------------
@@ -417,11 +485,51 @@ def r_evidence(b):
                  f'<h4>{esc(it["head"])}</h4><p>{esc(it["body"])}</p></div></div>')
     return f'<div class="evlist">{rows}</div>'
 
+
+# ---- layout vocabulary borrowed from the NLNF 3.0 report ---------------------
+# Phase chips, a chevron timeline, icon rows and percentage bullets. Same shapes,
+# ASC's own content — nothing here invents a claim the source doesn't make.
+CYC = ("var(--maroon)", "var(--violet)", "var(--coral2)")
+
+def r_chip(b):
+    i = int(b.get("tone", 0)) % len(CYC)
+    sub = f'<span class="cs">{esc(b["sub"])}</span>' if b.get("sub") else ""
+    return f'<div class="chip" style="--c:{CYC[i]}">{esc(b["label"])}{sub}</div>'
+
+def r_chevrons(b):
+    n = len(b["items"])
+    cells = ""
+    for i, it in enumerate(b["items"]):
+        c = CYC[i % len(CYC)]
+        arrow = '<div class="chv-a"></div>' if i < n - 1 else ""
+        cells += (f'<div class="chv" style="--c:{c}"><div class="chv-h">{esc(it["label"])}</div>'
+                  f'<div class="chv-b">{esc(it["body"])}</div></div>{arrow}')
+    return f'<div class="chvrow">{cells}</div>'
+
+def r_iconrows(b):
+    rows = ""
+    for i, it in enumerate(b["items"]):
+        c = CYC[i % len(CYC)]
+        rows += (f'<div class="irow" style="--c:{c}">'
+                 f'<span class="ir-m">{arcs("var(--c)", 22, 4.6, radii=(0.5,1.0,1.5))}</span>'
+                 f'<span class="ir-t">{esc(it)}</span></div>')
+    return f'<div class="irows">{rows}</div>'
+
+def r_pctbullets(b):
+    rows = ""
+    for i, it in enumerate(b["items"]):
+        c = CYC[i % len(CYC)]
+        rows += (f'<div class="pct" style="--c:{c}"><span class="pv">{esc(it["value"])}</span>'
+                 f'<span class="pt">{esc(it["text"])}</span></div>')
+    return f'<div class="pcts">{rows}</div>'
+
 def r_note(b): return f"<div class='note'>{esc(b['text'])}</div>"
 
 RENDER = {"paragraph": r_paragraph, "lead": r_lead, "bullets": r_bullets, "subhead": r_subhead,
           "table": r_table, "callouts": r_callouts, "stats": r_stats, "chart": r_chart,
-          "photos": r_photos, "note": r_note, "evidence": r_evidence, "figure": r_figure, "split": r_split}
+          "photos": r_photos, "note": r_note, "evidence": r_evidence,
+          "chip": r_chip, "chevrons": r_chevrons, "iconrows": r_iconrows,
+          "pctbullets": r_pctbullets, "figure": r_figure, "split": r_split}
 
 def render_blocks(blocks):
     return "\n".join(RENDER[b["type"]](b) for b in blocks)
@@ -440,12 +548,11 @@ def cover(meta):
     return f"""
     <div class="page coverc">
       <div class="cc cc-tl">{arcs('var(--motif)', 280, 20)}</div>
-      <div class="cc cc-br">{arcs('var(--motif)', 280, 20, rot=180)}</div>
       <div class="lock">{cobrand_lockup(84)}</div>
       <div class="eye">{esc(meta.get('eyebrow','Program Report'))}</div>
       <h1>{esc(meta['title'])}</h1>
       <div class="sub">{esc(meta.get('subtitle',''))}</div>
-      <div style="margin:5mm 0 0">{ring('var(--motif)', 34, 5, op=.95)}</div>
+      <div style="margin:7mm 0 1mm">{ring('var(--motif)', 52, 3.2, op=.9)}</div>
       <div class="cphotos">{tiles}</div>
       <div class="meta">{m}</div>
       <div class="cband">
@@ -484,7 +591,7 @@ def split_blocks(blocks):
 def section_flow(i, s):
     """One section as a continuous run of items — no page box. The paginator packs
     these onto pages, so a new section starts wherever the last one ended."""
-    out = [f'<div class="fitem shead-wrap" data-keep="1">'
+    out = [f'<div class="fitem shead-wrap sec-start" data-keep="1">'
            f'<div class="shead"><span class="sn">{i:02d}</span><h2>{esc(s["title"])}</h2></div>'
            f'{divider()}</div>']
     for b in s["blocks"]:
@@ -494,29 +601,41 @@ def section_flow(i, s):
         if b["type"] == "evidence":      # rows flow individually across pages
             out += [f'<div class="fitem evlist">{_ev_row(it)}</div>' for it in b["items"]]
             continue
-        keep = ' data-keep="1"' if b["type"] in ("subhead", "lead") else ""
+        keep = ' data-keep="1"' if b["type"] in ("subhead", "lead", "chip") else ""
         out.append(f'<div class="fitem"{keep}>{RENDER[b["type"]](b)}</div>')
     return "".join(out)
 
 # Chrome runs this before printing, so the PDF gets the packed result.
 PAGINATE_JS = """
 <script>
-(function(){
+// Wait for the inlined faces: measuring with fallback metrics gives wrong heights,
+// and the page then overflows once the real font paints. Chrome's print waits for
+// this to settle because of --virtual-time-budget.
+document.fonts.ready.then(function(){
   const FOOT_L = "__FOOT__", START = __START__;
   const probe = document.createElement('div');
   probe.style.cssText = 'position:absolute;visibility:hidden;height:100mm';
   document.body.appendChild(probe);
   const mm = probe.getBoundingClientRect().height / 100;
   probe.remove();
-  const MAXH = 247 * mm;                 // 297 - 22 top - 24 bottom
+  const MAXH = 249 * mm;                 // 297 - 22 top - 24 bottom, less rounding slack
+  const SECGAP = 11 * mm;                // the air above a new section heading
 
   const flow = document.getElementById('flow');
   const host = document.getElementById('pages');
   if(!flow || !host) return;
   const items = Array.from(flow.children);
+
+  // Measure every block ONCE, while they are still laid out at the content width.
+  // Packing from known heights is predictable; the old approach appended, detected
+  // overflow and moved things back, which stranded whole sections and left holes.
+  const H = items.map(el => {
+    const r = el.getBoundingClientRect(), cs = getComputedStyle(el);
+    return r.height + parseFloat(cs.marginTop || 0) + parseFloat(cs.marginBottom || 0);
+  });
   flow.remove();
 
-  let page = null, body = null, n = START - 1;
+  let page = null, body = null, used = 0, n = START - 1;
   function newPage(){
     n++;
     page = document.createElement('div');
@@ -526,39 +645,57 @@ PAGINATE_JS = """
       String(n).padStart(2,'0') + '</span></div>';
     host.appendChild(page);
     body = page.querySelector('.fbody');
+    used = 0;
   }
   newPage();
 
-  for(let k = 0; k < items.length; k++){
-    const it = items[k];
-    if(it.dataset.break){ if(body.children.length) newPage(); continue; }
-    body.appendChild(it);
-    if(body.getBoundingClientRect().height > MAXH){
-      // doesn't fit: push it (and a heading it belongs to) onto the next page
-      const prev = it.previousElementSibling;
-      const carry = (prev && prev.dataset.keep) ? prev : null;
+  const isSec = i => items[i].classList.contains('sec-start');
+  // a heading at the top of a page doesn't need the section gap above it
+  const costOf = (i, atTop) => H[i] - (atTop && isSec(i) ? SECGAP : 0);
+
+  for(let i = 0; i < items.length; i++){
+    if(items[i].dataset.break){ if(body.children.length) newPage(); continue; }
+
+    const atTop = body.children.length === 0;
+    let cost = costOf(i, atTop);
+
+    // keep-with-next, following the whole chain: a heading followed by a lead
+    // followed by cards must ALL fit, or the heading goes over with them.
+    // Checking only the next item stranded headings on their own page.
+    let need = cost;
+    let j = i;
+    while(items[j].dataset.keep && j + 1 < items.length && !items[j+1].dataset.break){
+      j++;
+      need += H[j];
+      if(!items[j].dataset.keep) break;
+    }
+    if(!atTop && used + need > MAXH){
       newPage();
-      if(carry) body.appendChild(carry);
-      body.appendChild(it);
+      cost = costOf(i, true);
     }
+
+    body.appendChild(items[i]);
+
+    // Predicted heights decide WHERE to break; the real box decides whether it fit.
+    // Trusting the prediction alone let pages run past A4 and clip their last block.
+    let real = body.getBoundingClientRect().height;
+    if(real > MAXH && body.children.length > 1){
+      body.removeChild(items[i]);
+      newPage();
+      body.appendChild(items[i]);
+      real = body.getBoundingClientRect().height;
+    }
+    used = real;
   }
-  // a heading stranded alone at the foot of a page has nothing to head
-  const pages = Array.from(host.querySelectorAll('.flowpage'));
-  pages.forEach((p, i) => {
-    const kids = p.querySelector('.fbody').children;
-    const last = kids[kids.length - 1];
-    if(last && last.dataset.keep && pages[i+1]){
-      pages[i+1].querySelector('.fbody').prepend(last);
-    }
-  });
-  // drop any page left empty, then renumber
-  let num = START;
+
   Array.from(host.querySelectorAll('.flowpage')).forEach(p => {
-    if(!p.querySelector('.fbody').children.length){ p.remove(); return; }
-    p.querySelector('.pfoot span:last-child').textContent =
-      'Page ' + String(num++).padStart(2,'0');
+    if(!p.querySelector('.fbody').children.length) p.remove();
   });
-})();
+  let num = START;
+  host.querySelectorAll('.flowpage .pfoot span:last-child').forEach(s => {
+    s.textContent = 'Page ' + String(num++).padStart(2,'0');
+  });
+});
 </script>
 """
 
@@ -574,7 +711,7 @@ def build_html(doc):
     body = (cover(meta) + toc(doc["sections"], program, 1, meta.get("toc_hero"))
             + f'<div id="pages"></div><div id="flow">{flow}</div>' + js)
     return ("<!doctype html><html><head><meta charset='utf-8'>"
-            f"<style>{CSS}{theme_style(doc)}{motif_style()}</style></head><body>{body}</body></html>")
+            f"<style>{font_face()}{CSS}{theme_style(doc)}{motif_style()}</style></head><body>{body}</body></html>")
 
 # ============================ REVIEW MODE ====================================
 # Renders the real designed report on screen and lets the reviewer pin a comment
@@ -597,7 +734,7 @@ body{ background:#e7e1e0; }
 /* any tagged element is commentable; the innermost one under the cursor wins */
 .ct-el{ position:relative; }
 /* .ct-el must not steal positioning from elements that place themselves */
-.page > .pfoot{ position:absolute; }
+.page > .pfoot{ font-variant-numeric:tabular-nums; position:absolute; }
 .ct-el.hot{ outline:2px dashed rgba(171,57,53,.55); outline-offset:3px; background:rgba(255,174,168,.13); }
 .ct-el.has{ outline:2px solid rgba(24,48,144,.45); outline-offset:3px; }
 .addc{ position:absolute; width:26px; height:26px; border-radius:50%; background:var(--maroon);
@@ -857,7 +994,7 @@ def build_review_html(doc):
            '<button onclick="exportComments()">Export ↓</button></div>')
     panel = ('<div class="panel" id="panel"><h3>Comments</h3><div id="list"></div></div>')
     js = REVIEW_JS.replace("__SLUG__", meta["slug"])
-    return (f"<!doctype html><html><head><meta charset='utf-8'><style>{CSS}{REVIEW_CSS}{theme_style(doc)}{motif_style()}</style></head>"
+    return (f"<!doctype html><html><head><meta charset='utf-8'><style>{font_face()}{CSS}{REVIEW_CSS}{theme_style(doc)}{motif_style()}</style></head>"
             f"<body>{bar}{panel}<div class='wrap'>{''.join(pages)}</div>{js}</body></html>")
 
 

@@ -91,29 +91,25 @@
           "text": "The programme is structured as a 3-month drive, rolled out in a phased manner across the state."
         },
         {
-          "type": "table",
-          "headers": [
-            "Phase",
-            "Key milestones"
-          ],
-          "rows": [
-            [
-              "Preparation & Launch",
-              "State orientation; DIKSHA project goes live"
-            ],
-            [
-              "Implementation",
-              "Micro-improvement projects on the ground"
-            ],
-            [
-              "Celebration",
-              "State-level felicitation event; best-practice collation and sharing"
-            ]
+          "type": "chevrons",
+          "items": [
+            {
+              "label": "Preparation & Launch",
+              "body": "State orientation; DIKSHA project goes live"
+            },
+            {
+              "label": "Implementation",
+              "body": "Micro-improvement projects on the ground"
+            },
+            {
+              "label": "Celebration",
+              "body": "State-level felicitation event; best-practice collation and sharing"
+            }
           ]
         },
         {
           "type": "figure",
-          "h": "105mm",
+          "h": "72mm",
           "caption": "State orientation ahead of the DIKSHA project going live",
           "src": "assets/photos/s2_orientation_jind.jpg"
         }
@@ -123,8 +119,10 @@
       "title": "Program phases",
       "blocks": [
         {
-          "type": "subhead",
-          "text": "Phase 1 — Preparation & Launch"
+          "type": "chip",
+          "label": "Phase 1",
+          "sub": "Preparation & Launch",
+          "tone": 0
         },
         {
           "type": "paragraph",
@@ -150,8 +148,10 @@
           ]
         },
         {
-          "type": "subhead",
-          "text": "Phase 2 — Implementation"
+          "type": "chip",
+          "label": "Phase 2",
+          "sub": "Implementation",
+          "tone": 1
         },
         {
           "type": "paragraph",
@@ -178,11 +178,10 @@
           ]
         },
         {
-          "type": "pagebreak"
-        },
-        {
-          "type": "subhead",
-          "text": "Phase 3 — Celebration"
+          "type": "chip",
+          "label": "Phase 3",
+          "sub": "Celebration",
+          "tone": 2
         },
         {
           "type": "paragraph",
@@ -228,7 +227,7 @@
           },
           "blocks": [
             {
-              "type": "bullets",
+              "type": "iconrows",
               "items": [
                 "A 12-week social media content calendar",
                 "Regular posts on official platforms about ASC milestones and stories",
@@ -250,7 +249,7 @@
           },
           "blocks": [
             {
-              "type": "bullets",
+              "type": "iconrows",
               "items": [
                 "Direct support to Head Masters and teachers by Sehyogis and district-level officials"
               ]
@@ -262,7 +261,7 @@
           "text": "Support structure"
         },
         {
-          "type": "bullets",
+          "type": "iconrows",
           "items": [
             "Calls to address project-related and technical (DIKSHA App) queries from Head Masters"
           ]
@@ -373,7 +372,7 @@
           "text": "Overall, the initiative"
         },
         {
-          "type": "bullets",
+          "type": "iconrows",
           "items": [
             "Accelerated enrolment growth at scale",
             "Enabled high-impact localised success stories",
@@ -470,7 +469,7 @@
         },
         {
           "type": "figure",
-          "h": "100mm",
+          "h": "84mm",
           "caption": "No child left behind",
           "src": "assets/photos/s9_classroom_panipat.jpg"
         }
