@@ -42,6 +42,12 @@ Conclusion) · full-bleed photo dividers (~4 extra pages).
   with `theme.css` + `check_report.py` + a `shikshalokam-report` skill, which shipped the
   STEAM Manch report). Ours is a second, unpushed engine. **Resolve with Sahil before pushing.**
   Local work is pinned at branch `asc-3-0-report-work` / tag `asc-3-0-2026-08-07`.
+- **Another session works in this repo concurrently.** On 7 Aug its `pull --rebase` ran while
+  this one was committing: HEAD moved mid-command and a pin was dragged onto the wrong commit.
+  Nothing was lost, but **re-check `git log` before trusting a pin**, and don't rewrite history
+  here — a teammate's commits sit on top of ours.
+- Commit `8370bdb` is labelled "line-ending normalisation" but actually carries that other
+  session's caption + campaign edits. Left as-is rather than rewriting shared history.
 - Never commit programme photographs — this repo is **public** and they show
   identifiable children. `.gitignore` blocks them; the manifest makes them re-fetchable.
 - Fonts must stay inlined. A font-CDN `@import` is invisible in headless print.
