@@ -15,8 +15,15 @@ cd "$CLAUDE_PROJECT_DIR" 2>/dev/null || {
   exit 0
 }
 
-# Portable Python — Windows usually exposes `python` or the `py` launcher, not `python3`.
-PY="$(command -v python3 || command -v python || command -v py || true)"
+# Portable Python — Windows usually exposes `python` or the `py` launcher, not `python3`, AND it
+# ships a `python3` Microsoft Store alias stub that IS on PATH but errors out. So test each
+# candidate actually runs; `command -v` alone picks the stub and every build "fails".
+PY=""
+for cand in python3 python py; do
+  if command -v "$cand" >/dev/null 2>&1 && "$cand" -c "import sys" >/dev/null 2>&1; then
+    PY="$(command -v "$cand")"; break
+  fi
+done
 
 build_check() {
   # docs/ + LEDGER.md are CI build artifacts now (gitignored) — GitHub Actions rebuilds + deploys

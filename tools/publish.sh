@@ -11,7 +11,14 @@ set +e
 cd "${CLAUDE_PROJECT_DIR:-}" 2>/dev/null || cd "$(dirname "$0")/.." || { echo "NOT PUBLISHED — repo not found."; exit 1; }
 
 BASE="https://sahilmodi1965.github.io/shikshalokam"
-PY="$(command -v python3 || command -v python || command -v py || true)"
+# Pick an interpreter that actually RUNS. On Windows, `python3` is often a Microsoft Store
+# alias stub that exists on PATH but errors out — so test each candidate, don't just find it.
+PY=""
+for cand in python3 python py; do
+  if command -v "$cand" >/dev/null 2>&1 && "$cand" -c "import sys" >/dev/null 2>&1; then
+    PY="$(command -v "$cand")"; break
+  fi
+done
 
 # 1) Local build sanity check (catch a broken page/template before it reaches CI).
 if [ -n "$PY" ]; then

@@ -14,7 +14,14 @@ cd "$CLAUDE_PROJECT_DIR" 2>/dev/null || {
 
 DIRTY="$(git status --porcelain 2>/dev/null)"
 TODAY="$(date -u +%Y-%m-%d)"
-PY="$(command -v python3 || command -v python || command -v py || true)"
+# Pick an interpreter that actually RUNS — on Windows `python3` is often a Microsoft Store
+# alias stub that exists on PATH but errors out, so test each candidate rather than trusting it.
+PY=""
+for cand in python3 python py; do
+  if command -v "$cand" >/dev/null 2>&1 && "$cand" -c "import sys" >/dev/null 2>&1; then
+    PY="$(command -v "$cand")"; break
+  fi
+done
 
 # Compounding guard (non-negotiable: every session makes the brain better). If the brain changed
 # source but no sessions/<date>-*.md digest was written, write a minimal one so the session is

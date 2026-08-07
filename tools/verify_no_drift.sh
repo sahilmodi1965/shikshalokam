@@ -12,8 +12,15 @@ set -u
 
 cd "${CLAUDE_PROJECT_DIR:-}" 2>/dev/null || cd "$(dirname "$0")/.." || exit 2
 
-# Portable Python — Windows usually exposes `python` or the `py` launcher, not `python3`.
-PY="$(command -v python3 || command -v python || command -v py || true)"
+# Portable Python — Windows usually exposes `python` or the `py` launcher, not `python3`, AND it
+# ships a `python3` Microsoft Store alias stub that IS on PATH but errors out. So test each
+# candidate actually runs; `command -v` alone picks the stub and every build "fails".
+PY=""
+for cand in python3 python py; do
+  if command -v "$cand" >/dev/null 2>&1 && "$cand" -c "import sys" >/dev/null 2>&1; then
+    PY="$(command -v "$cand")"; break
+  fi
+done
 if [ -z "$PY" ]; then
   echo "ℹ verify_no_drift: no Python here — skipping local build check (CI builds with Python on push)."
   exit 0
