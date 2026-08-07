@@ -1,0 +1,400 @@
+<title>Collaborative Philanthropy — for confirmation</title>
+<style>
+  :root {
+    --paper:        #FCFCFD;
+    --panel:        #F3F4F7;
+    --ink:          #1B2432;
+    --ink-soft:     #4A5468;
+    --muted:        #757F92;
+    --rule:         #DFE2E9;
+    --accent:       #8A2942;
+    --accent-soft:  #F0E2E6;
+    --indigo:       #2F4A7A;
+    --flag-bg:      #FBF0E4;
+    --flag-rule:    #C98A3C;
+
+    --serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:       #12161E;
+      --panel:       #1B212C;
+      --ink:         #E7EAF0;
+      --ink-soft:    #B3BAC8;
+      --muted:       #8C95A6;
+      --rule:        #2B3341;
+      --accent:      #E58BA2;
+      --accent-soft: #33202A;
+      --indigo:      #8FADE0;
+      --flag-bg:     #2A2213;
+      --flag-rule:   #C98A3C;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:       #12161E;
+    --panel:       #1B212C;
+    --ink:         #E7EAF0;
+    --ink-soft:    #B3BAC8;
+    --muted:       #8C95A6;
+    --rule:        #2B3341;
+    --accent:      #E58BA2;
+    --accent-soft: #33202A;
+    --indigo:      #8FADE0;
+    --flag-bg:     #2A2213;
+    --flag-rule:   #C98A3C;
+  }
+
+  :root[data-theme="light"] {
+    --paper:       #FCFCFD;
+    --panel:       #F3F4F7;
+    --ink:         #1B2432;
+    --ink-soft:    #4A5468;
+    --muted:       #757F92;
+    --rule:        #DFE2E9;
+    --accent:      #8A2942;
+    --accent-soft: #F0E2E6;
+    --indigo:      #2F4A7A;
+    --flag-bg:     #FBF0E4;
+    --flag-rule:   #C98A3C;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+  }
+
+  /* ---- header ---- */
+  .masthead { display: flex; flex-direction: column; gap: 0.9rem; }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(1.9rem, 5.5vw, 2.5rem);
+    line-height: 1.15;
+    font-weight: 400;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+
+  .standfirst {
+    font-family: var(--serif);
+    font-size: 1.075rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 34rem;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.4rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .meta b { color: var(--ink-soft); font-weight: 600; }
+
+  .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 0.15rem 0.55rem;
+    border-radius: 3px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-family: var(--mono);
+  }
+
+  /* ---- sections ---- */
+  section { display: flex; flex-direction: column; gap: 1rem; }
+
+  h2 {
+    font-family: var(--sans);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding-bottom: 0.55rem;
+    border-bottom: 2px solid var(--accent);
+  }
+
+  p { max-width: 36rem; }
+  p + p { margin-top: 0.75rem; }
+
+  .lede { color: var(--ink-soft); }
+
+  /* ---- claim list ---- */
+  .claims { display: flex; flex-direction: column; gap: 0.9rem; list-style: none; }
+
+  .claims li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.35rem 0.75rem;
+    padding-left: 0.9rem;
+    border-left: 2px solid var(--rule);
+  }
+  .claims .tick { color: var(--indigo); font-weight: 700; line-height: 1.55; }
+  .claims .body { min-width: 0; }
+  .claims .src {
+    grid-column: 2;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+
+  /* ---- questions ---- */
+  .questions { display: flex; flex-direction: column; gap: 1.25rem; counter-reset: q; }
+
+  .q {
+    display: grid;
+    grid-template-columns: 1.7rem 1fr;
+    gap: 0.3rem 0.6rem;
+    background: var(--panel);
+    padding: 1rem 1.1rem;
+    border-radius: 4px;
+  }
+  .q::before {
+    counter-increment: q;
+    content: counter(q);
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--accent);
+    padding-top: 0.15rem;
+  }
+  .q .ask { font-weight: 600; }
+  .q .why { grid-column: 2; font-size: 0.9rem; color: var(--ink-soft); }
+  .q .opts {
+    grid-column: 2;
+    margin-top: 0.35rem;
+    font-family: var(--mono);
+    font-size: 0.76rem;
+    color: var(--muted);
+  }
+
+  /* ---- flag ---- */
+  .flag {
+    background: var(--flag-bg);
+    border-left: 3px solid var(--flag-rule);
+    padding: 0.95rem 1.1rem;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+  .flag b { color: var(--ink); }
+
+  ul.plain { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  ul.plain li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.65rem;
+  }
+  ul.plain li::before {
+    content: "—";
+    color: var(--muted);
+  }
+
+  blockquote {
+    font-family: var(--serif);
+    font-size: 1.02rem;
+    font-style: italic;
+    color: var(--ink-soft);
+    border-left: 2px solid var(--accent);
+    padding-left: 1rem;
+    max-width: 34rem;
+  }
+
+  em.term { font-style: normal; font-weight: 600; color: var(--ink); }
+  code {
+    font-family: var(--mono);
+    font-size: 0.85em;
+    background: var(--panel);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+  }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 1.1rem;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">ShikshaLokam brain · knowledge page</div>
+    <h1>Collaborative Philanthropy</h1>
+    <p class="standfirst">
+      A new page pulling together what we already hold on funding and funders — from the SL 2.0
+      strategy note, the InvokED corpus, and the external evidence. Before it becomes something
+      drafts cite from, it needs a read.
+    </p>
+    <div class="meta">
+      <span class="status">Awaiting confirmation</span>
+      <span>Drafted by <b>Ayush</b></span>
+      <span><b>4 Aug 2026</b></span>
+      <span>Lives at <b>wiki/concepts/collaborative-philanthropy.md</b></span>
+    </div>
+  </header>
+
+  <section>
+    <h2>The thesis it lands on</h2>
+    <blockquote>
+      Philanthropy that funds isolated projects buys outputs. Philanthropy that funds leadership,
+      coherence, and long-term institutional capacity — alongside government, community, markets
+      and media — builds a system that keeps improving after the grant ends.
+    </blockquote>
+    <p class="lede">
+      The differentiator the material gave us: in both Punjab and Nagaland, the funder sits
+      <em class="term">inside</em> the collective with a role, not outside it with a reporting
+      requirement. That line is now explicit on the page.
+    </p>
+  </section>
+
+  <section>
+    <h2>What the page asserts</h2>
+    <ul class="claims">
+      <li>
+        <span class="tick">✓</span>
+        <span class="body"><b>Fund Orchestration</b> is one of six capabilities SL 2.0 must add
+        (HNIs + institutions + philanthropies), with a standing Funding Orchestration Team.</span>
+        <span class="src">SL 2.0 Strategy Note, Jul 2025</span>
+      </li>
+      <li>
+        <span class="tick">✓</span>
+        <span class="body"><b>Fund is one of the 10 verbs</b> of the movement — level with Amplify,
+        Convene, Orchestrate, Mentor. Money is one contribution among ten, not the senior one.</span>
+        <span class="src">SL 2.0 Strategy Note, Jul 2025</span>
+      </li>
+      <li>
+        <span class="tick">✓</span>
+        <span class="body"><b>Funders have named roles</b> — Strategic Partners (Axis Bank, AWS,
+        Societal Thinking), Anchor Partners (Commutiny), Momentum Partners (Vidhya Vidhai, Jyothi
+        Mahila Samakhya). Better vocabulary than "donor".</span>
+        <span class="src">SL 2.0 Strategy Note, ecosystem role map</span>
+      </li>
+      <li>
+        <span class="tick">✓</span>
+        <span class="body"><b>"Capital beyond money"</b> — trust, networks, relationships,
+        knowledge, governance, shared ownership. From the InvokED 5.0 Brain Date "Beyond
+        Fundraising — Orchestrating Capital".</span>
+        <span class="src">InvokED 5.0 proceedings + approved session caption</span>
+      </li>
+      <li>
+        <span class="tick">✓</span>
+        <span class="body"><b>The three Roundtable questions</b> we already put to funders, carried
+        verbatim: isolated projects → capacity; funders as bridges across Sarkaar/Samaaj/Bazaar/
+        Sanchar; conditions for a movement to thrive.</span>
+        <span class="src">Strategic Partners Roundtable invite, S.D. Shibulal</span>
+      </li>
+      <li>
+        <span class="tick">✓</span>
+        <span class="body"><b>The evidence</b> — Punjab Education Collective moved 13th → 1st in two
+        years, funded by Deloitte and A.T.E. Chandra Foundation; Nagaland PBL funded by Education
+        Above All. Both corroborated by the WEF report.</span>
+        <span class="src">Brazil / Lemann Summit stories + WEF <i>The Future is Collective</i></span>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What I need from you</h2>
+    <p class="lede">Five open questions. Answer as many as you can — the rest stay flagged on the page.</p>
+
+    <div class="questions">
+      <div class="q">
+        <div class="ask">Is "collaborative philanthropy" language we actually use?</div>
+        <div class="why">Everything in the corpus says <i>fund orchestration</i> or <i>orchestrating
+        capital</i>. I haven't picked for us.</div>
+        <div class="opts">collaborative philanthropy · fund orchestration · both, different audiences</div>
+      </div>
+
+      <div class="q">
+        <div class="ask">Should funders be their own audience segment?</div>
+        <div class="why">Today they're lumped into "philanthropy" in the audience page. The brain has
+        flagged this as a gap since May.</div>
+        <div class="opts">split it · leave as is</div>
+      </div>
+
+      <div class="q">
+        <div class="ask">Any funders of SL itself beyond SFPI?</div>
+        <div class="why">Deloitte, A.T.E. Chandra and Education Above All fund <i>collectives</i>, not
+        SL. If there are others, the page should say so.</div>
+        <div class="opts">SFPI only · there are others →</div>
+      </div>
+
+      <div class="q">
+        <div class="ask">Did the 2026 Strategic Partners Roundtable produce anything to record?</div>
+        <div class="why">The proceedings digest truncates right before that section, so we have the
+        invite but not the outcome.</div>
+        <div class="opts">nothing to add · yes, here's what came out →</div>
+      </div>
+
+      <div class="q">
+        <div class="ask">Are Centre for Exponential Change and Synergos nameable in public content?</div>
+        <div class="why">Right now they appear only as InvokED stage presences. Worth knowing before a
+        draft names them as relationships.</div>
+        <div class="opts">yes, name them · stage only · ask first each time</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>One thing to watch</h2>
+    <div class="flag">
+      <b>The WEF report needs eyes on the PDF before we cite it in print.</b> <i>The Future is
+      Collective</i> (Schwab Foundation / World Economic Forum, 2025) is our strongest outside
+      validation — it names SFPI as enabling collective action "by weaving Shikshagraha". But the
+      exact in-report naming of <i>Shikshagraha</i> was never verified against the document itself.
+      The flag is carried on the page and travels with every draft that cites it.
+    </div>
+  </section>
+
+  <section>
+    <h2>If you're happy with it</h2>
+    <ul class="plain">
+      <li>Say the word and I'll flip its status from <code>research-seeded</code> to
+      <code>user-validated</code> — that's what tells later drafts they can cite it as settled.</li>
+      <li>Corrections are cheap. Tell me what's wrong and it's fixed in the same sitting, with the
+      reason recorded so the brain doesn't repeat the miss.</li>
+    </ul>
+  </section>
+
+  <footer>
+    Nothing here is published. The page sits in the brain until it's confirmed — this document is
+    just the read-through.
+  </footer>
+
+</div>

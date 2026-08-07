@@ -15,6 +15,19 @@ voice: "[[styleguide]] — movement, human, hopeful; 'Not a survey. Not a form. 
 
 # Comms campaign plan — "One Question. Every Voice."
 
+> ⏸️ **PAUSED 2026-08-04 — resumable.** Plan is at v5 and settled. Everything below reflects five
+> decisions already made; **don't re-litigate them on resume** — they came from Ayush directly:
+> no public numbers · voices are audio, few and uneven · no public report · InvokED is bigger than
+> listening · comms scope only, nothing empty. See §7 for what's blocked.
+>
+> **Companions:** [[copy-bank]] (drafted copy for every format) · [[thought-piece-brief]] (the
+> opening byline) · [review Doc](https://docs.google.com/document/d/1sWTk4cw3UKvrU6qds6ffny5SHBltKbYZ1MeRbLUps0o/edit)
+> (colour-formatted, in Ayush's own Drive — *not* Brain Output; that write is Sonal's gate) ·
+> [artifact page](https://claude.ai/code/artifact/1b20f381-70ca-4d2a-95ce-b77153fb4e96).
+>
+> **Next action:** the evidence sweep — nothing in the Evidence pillar (a third of the campaign) can
+> publish until sourced research is filed in `wiki/sources/`.
+
 **Scope: what the communications team publishes.** Collection, consent and fieldwork sit with the
 field and product teams — they're a *dependency* named here, never a task in this plan.
 

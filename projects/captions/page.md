@@ -41,6 +41,7 @@ visible day by day, not only at the weekly review. (Convention: `projects/README
 
 | Date | Slot | What landed | Status |
 |---|---|---|---|
+| 2026-08-07 | Thursday — Ed-Leader Portrait | **Champa Saha caption generalised** — opener no longer hinges on one named child + her diagnosis; leads with the idea, then attributes it to Champa. **Written live into the SM Captions 2026-27 doc → August 2026 tab (8th Thursday).** Open thread: Ayush may want it pulled one notch more general still. | live in doc, open for another pass |
 | 2026-07-27 | Tuesday — Tech (MItra) | **Hook reworked** — MItra Part 2 caption re-opened for a wider audience (NGO/govt/non-tech): led on unheard ground-voices instead of the "feature list" tech framing. V1 LinkedIn (~150w), V2 Instagram (short). | draft |
 | 2026-05-26 | Tuesday — Research Insight | **Variant 1 revised & approved** — *"What if collective action could be measured?"* — Shiksha Chaupals explained, SL/SG relation clarified, real actors (women from SHGs, didis, parents, named partners Jyoti Mahila Samakhya, Srishti Mahila Samakhya, other SHGs & CSOs) centred under the movement. #InvokED2026 removed. | approved |
 | 2026-05-21 | Tuesday — Research Insight | **Variant 4** drafted — *"The recovery no one's talking about."* — ASER 2024 equity data. **Variant 2 citation verified & corrected** — now anchored on Leithwood et al. (2004), Wallace Foundation, replacing the unconfirmed OECD placeholder. | draft |
@@ -251,7 +252,43 @@ _No open drafts here — say the episode and it's produced._
 
 ## Thursday — Buffer / Ed-Leader Portrait
 
-_(no candidates yet — Thursday's portrait pairs naturally with the [[portraits]] project page; a portrait section there should produce a Thursday caption here)_
+Portraits pair naturally with the [[portraits]] project page. Source stories live in the
+**CTB Story Drafts** doc (one tab per leader) —
+https://docs.google.com/document/d/1MixHieo-adlETR_KIvuIwDcGiqivG22scQU0u5_dDbE/edit
+— and the published book is *Small Steps to Build Great Schools* Vol II
+(https://heyzine.com/flip-book/d4afa18256.html).
+
+**Format that's holding:** concrete opener (the moment / the idea) → the belief, attributed to the
+leader → where they work now + their own quote → `<Name>'s story is part of our Education Leader
+Portraits — for the people who go beyond their roles so every child belongs.` → 🔗 Vol II link.
+
+### Champa Saha — Mayakunj, Bengaluru (August 8, Thursday)
+
+- **Status:** `live in doc` — written into **SM Captions 2026-27 → August 2026 tab, "8th - Thursday |
+  Ed-leader portrait | VIDEO (page 1-8)"** on 2026-08-07 (replaced the earlier Jaspreet-led version).
+- **Source:** CTB Story Drafts → tab *10 - Champa Saha* ("Learning With Dignity, Living With
+  Confidence") — https://docs.google.com/document/d/1MixHieo-adlETR_KIvuIwDcGiqivG22scQU0u5_dDbE/edit?tab=t.zdbknhaeumn9
+- **Edit made (Ayush, 2026-08-07):** *"make it a little general."* Dropped the named child (Jaspreet)
+  and her diagnosis from the hook; led with the universal idea instead, then attributed the belief to
+  Champa. Mayakunj para, her quote, the series line and the link were left untouched.
+- **"Nearly four decades"** is sourced — her first posting was under PIED in the late 1980s.
+- **⚠️ For design:** the source tab carries an instruction — *blur the faces of the children wherever
+  they are visible* — applies to the video/creative for this slot.
+
+> A child who can't manage a pencil on a small page can often manage one on a large sheet. The ability was never missing — the page was the wrong size.
+>
+> That is the belief Champa Saha has carried through nearly four decades of teaching: a child's whole potential can wait behind a single adjustment no one thought to make.
+>
+> At Mayakunj, the inclusive learning space she founded in Bengaluru, Champa puts comfort before curriculum — reshaping the system around each child instead of forcing the child to fit it. "The true purpose of education," she says, "is self-awareness."
+>
+> Champa's story is part of our Education Leader Portraits — for the people who go beyond their roles so every child belongs.
+>
+> 🔗 Read more stories like hers in Volume II of Small Steps to Build Great Schools: https://heyzine.com/flip-book/d4afa18256.html
+
+**⏸️ OPEN — resume here.** Ayush paused before answering the one open question: does this land, or
+should it go **one notch more general still** — dropping the pencil image entirely for a plainer,
+idea-first opener? If he wants that, draft the plainer variant and rewrite the same block in the
+August 2026 tab (the edit script pattern is in the session digest).
 
 ---
 
