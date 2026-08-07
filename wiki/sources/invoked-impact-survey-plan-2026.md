@@ -1,6 +1,6 @@
 ---
 type: source
-title: "InvokED Impact & Perception Survey — MItra product requirement doc (7 tabs)"
+title: "InvokED Impact & Perception Survey — the build sheet for the MItra survey (7 tabs)"
 kind: gsheet
 origin: https://docs.google.com/spreadsheets/d/1qMhSkrACZb4zmM2cBWDkyhEma_lDBa6_MkHnSsKU2B8/edit
 ingested: 2026-08-07
@@ -12,10 +12,10 @@ updated: 2026-08-07
 _status: user-validated
 ---
 
-# InvokED Impact & Perception Survey — the MItra PRD
+# InvokED Impact & Perception Survey — the build sheet
 
-The product requirement doc for a **MItra instance that runs the InvokED Impact & Perception
-Survey** as a conversational interview across the InvokED alumni base. Shared into the brain by
+The build sheet ("product requirement document") for a **MItra bot that runs the InvokED Impact &
+Perception Survey** as a conversation, not a form, across everyone who came to InvokED. Shared into the brain by
 Ayush on 2026-08-07 as the reference for a comms campaign, so treated as user-validated org
 material.
 
@@ -42,7 +42,7 @@ or more of InvokED 1.0–5.0.
 InvokED alumni: senior education-sector professionals — practitioners, funders, researchers,
 government officials, civil-society and philanthropy leaders, social entrepreneurs, academics,
 edtech leaders. India and global. **Highly literate, digitally fluent, English-comfortable and
-time-poor.** The PRD flags this explicitly as *"the INVERSE of MItra's usual grassroots persona — so
+time-poor.** The sheet flags this openly as *"the INVERSE of MItra's usual grassroots persona — so
 the bot must be crisp, professional and respectful of their time, never simplistic or hand-holding."**
 
 - **Base:** ~800–1,000 registrants/attendees across 5 editions.
@@ -65,7 +65,7 @@ the bot must be crisp, professional and respectful of their time, never simplist
 | 7 | Network & Continuity | Would you take part again? What would make staying connected year-round worth your time? | Tap Yes/Maybe/No + open | No |
 | 8 | Future Readiness | "Future readiness" — what does it actually mean in your work, and what are you doing that moves it forward? | Open, two parts, 2–4 sentences | No |
 
-**Q4 is the critical question** — the PRD calls the probing "the key value-add": it turns *"Yes, I
+**Q4 is the critical question** — the sheet calls the follow-up question "the key value-add": it turns *"Yes, I
 collaborated"* into a structured **Action Story** (who / what / outcome).
 
 **Opening line:** *"Hello, and thank you for being part of InvokED. I'm Mitra. Over the next few
@@ -96,9 +96,9 @@ initiated · ripple types · ripple among non-collaborators · reach beyond atte
 · still live · org-level influence · latent collaborations & barriers · network continuity · return
 intent · year-round engagement demand · future-readiness definitions & contributions · ambassadors.
 
-## Methodology notes the PRD requires be published with the report
+## Five honesty rules the sheet says must be printed with the report
 
-These are honesty constraints, and they bind any comms built on this data:
+These bind anything we write off this data:
 
 1. **A 'No' on action is not an absence of impact.** Q4 asks only about *substantial* action. Q5
    captures effects that never became a project. Always read the two together; **never report the Q4
@@ -118,8 +118,8 @@ These are honesty constraints, and they bind any comms built on this data:
 - **Q8 (future readiness) is the only question that gives the respondent something back** — an
   aggregate read on how 150–250 senior leaders define a term everyone uses differently. That is the
   campaign's strongest incentive to participate.
-- The PRD is thorough on what the survey *takes* and silent on what the alumnus *gets*. Closing that
-  gap is a comms job, not a product one.
+- The sheet is thorough on what the survey *takes* and says nothing about what the person answering
+  *gets*. Closing that gap is our job, not the product team's.
 
 Related: [[invoked-5-proceedings-2026]] · [[invoked-5-concept-note-2026]] ·
 [[mitra-listening-at-scale-part1-2026]] · [[awards-2027-nominations-live-2026-05]]
