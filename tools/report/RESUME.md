@@ -1,6 +1,10 @@
 # ASC 3.0 report — where we left off (7 Aug 2026)
 
-Pick this up cold. Everything below is committed; nothing is pushed.
+Pick this up cold. **This is Ayush's queue — nothing here is waiting on anyone else.**
+
+Backed up off this machine in **PR #7** (branch `content/ayush-tank-20260807-091745`):
+<https://github.com/sahilmodi1965/shikshalokam/pull/7> — every commit, source only,
+verified to contain **no programme photographs and no build output**.
 
 ## Open it
 ```bash
@@ -38,9 +42,11 @@ Challenges / Learnings / Way Forward split (ours folds these into Reflections +
 Conclusion) · full-bleed photo dividers (~4 extra pages).
 
 ## Careful
-- `tools/report/` **collides with Sahil's engine on `origin/main`** (v2.0, HTML-in,
-  with `theme.css` + `check_report.py` + a `shikshalokam-report` skill, which shipped the
-  STEAM Manch report). Ours is a second, unpushed engine. **Resolve with Sahil before pushing.**
+- `tools/report/` has **two engines at one path**: this one (JSON-in) and an older v2.0 on
+  `origin/main` (HTML-in, with `theme.css` + `check_report.py` + a `shikshalokam-report` skill,
+  which shipped the STEAM Manch report). That's why PR #7 can't fast-merge. **Ayush's call
+  when he resumes** — the likely move is porting this content onto the merged engine, since the
+  JSON and photo picks carry over. Don't park this for anyone else.
   Local work is pinned at branch `asc-3-0-report-work` / tag `asc-3-0-2026-08-07`.
 - **Another session works in this repo concurrently.** On 7 Aug its `pull --rebase` ran while
   this one was committing: HEAD moved mid-command and a pin was dragged onto the wrong commit.
